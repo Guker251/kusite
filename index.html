@@ -372,6 +372,19 @@
             gap: 30px;
         }
 
+        .info-panels-row {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .info-panels-row .info-panel {
+            width: calc(50% - 10px);
+            max-width: 420px;
+            padding: 25px 28px;
+        }
+
         .info-panel {
             background: var(--glass-white);
             backdrop-filter: blur(20px);
@@ -416,179 +429,111 @@
             font-size: 14px;
         }
 
-        /* Forum Activity */
-        .forum-activity {
-            margin: 60px 0;
-        }
-
-        .forum-activity-block {
-            background: var(--glass-white);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 40px;
-        }
-
-        .forum-activity-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .forum-activity-title {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .forum-activity-title h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
+        /* Forum Compact Panel */
         .live-dot {
-            width: 12px;
-            height: 12px;
+            width: 9px;
+            height: 9px;
             background: #4ade80;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 0 10px rgba(74, 222, 128, 0.8);
+            box-shadow: 0 0 8px rgba(74, 222, 128, 0.9);
             animation: pulse-dot 2s ease-in-out infinite;
+            margin-right: 8px;
+            flex-shrink: 0;
         }
 
         @keyframes pulse-dot {
             0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.3); opacity: 0.7; }
+            50% { transform: scale(1.4); opacity: 0.6; }
         }
 
-        .forum-all-link {
-            color: var(--accent-cyan);
-            text-decoration: none;
-            font-size: 16px;
-            transition: gap 0.3s ease;
-        }
-
-        .forum-all-link:hover {
-            opacity: 0.8;
-        }
-
-        .forum-stats {
-            display: flex;
-            gap: 40px;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .forum-stat {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .forum-stat-number {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .forum-stat-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-
-        .forum-topics {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 30px;
-        }
-
-        .forum-topic {
+        .forum-panel-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid transparent;
-            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .forum-panel-header h3 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .forum-link-all {
+            color: var(--accent-cyan);
             text-decoration: none;
-            transition: all 0.3s ease;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0.8;
+            transition: opacity 0.2s;
         }
 
-        .forum-topic:hover {
-            border-color: var(--accent-cyan);
-            background: rgba(77, 212, 255, 0.08);
-            transform: translateX(5px);
-        }
+        .forum-link-all:hover { opacity: 1; }
 
-        .forum-topic-left {
+        .forum-panel-stats {
             display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .forum-topic-avatar {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 16px;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .forum-topic-title {
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-
-        .forum-topic-meta {
+            gap: 16px;
             font-size: 13px;
             color: var(--text-secondary);
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--glass-border);
         }
 
-        .forum-topic-replies {
-            font-size: 13px;
-            color: var(--accent-cyan);
-            white-space: nowrap;
-            flex-shrink: 0;
+        .forum-panel-stats b { color: var(--accent-cyan); }
+
+        .forum-panel-topics {
+            list-style: none;
+            margin: 0 0 14px;
+            padding: 0;
         }
 
-        .forum-cta {
-            text-align: center;
-        }
+        .forum-panel-topics li { padding: 0; margin: 0; }
+        .forum-panel-topics li::before { display: none; }
 
-        .forum-join-btn {
-            display: inline-flex;
+        .forum-panel-topics a {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
-            padding: 16px 40px;
+            padding: 7px 8px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .forum-panel-topics a:hover {
+            background: rgba(77, 212, 255, 0.08);
+            color: var(--text-primary);
+            padding-left: 12px;
+        }
+
+        .forum-panel-topics span {
+            font-size: 12px;
+            color: rgba(255,255,255,0.3);
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .forum-panel-btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(77, 212, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(77, 212, 255, 0.3);
         }
 
-        .forum-join-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(77, 212, 255, 0.6);
+        .forum-panel-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(77, 212, 255, 0.5);
         }
 
         /* Responsive */
@@ -626,6 +571,16 @@
 
             .situations-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .info-panels-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-panels-row .info-panel {
+                width: 100%;
+                max-width: 100%;
             }
 
             .forum-activity-block {
@@ -769,9 +724,9 @@
     <section class="methodology-section" style="margin: 20px 0;">
         <div class="container">
             <div class="methodology-card">
-                <h2>Методика контролируемого употребления</h2>
+                <h2>Программа 7 шагов КУ</h2>
                 <p>Вернуть контроль над алкоголем можно без полного отказа. Наша методика основана на научных публикациях и практическом опыте участников форума.</p>
-                <a href="#" class="cta-button">Подробнее →</a>
+                <a href="articles/7-shagov-ku.html" class="cta-button">Подробнее →</a>
             </div>
         </div>
     </section>
@@ -827,78 +782,34 @@
         </div>
     </section>
 
-    <!-- Forum Live Activity -->
-    <section class="forum-activity">
+    <!-- Panels: С чего начать + Форум -->
+    <section style="margin: 40px 0 40px;">
         <div class="container">
-            <div class="forum-activity-block">
-                <div class="forum-activity-header">
-                    <div class="forum-activity-title">
-                        <span class="live-dot"></span>
-                        <h2>Форум сейчас</h2>
-                    </div>
-                    <a href="#forum" class="forum-all-link">Все темы →</a>
+            <div class="info-panels-row">
+                <div class="info-panel">
+                    <h3>С чего начать?</h3>
+                    <ul>
+                        <li>20 минут: Прочитай "Как меньше пить" и выбери лимит</li>
+                        <li>10 минут: Настрой учёт ЛНА</li>
+                        <li>10 минут: Прочитай "Как не напиться" и выбери стоп-правило</li>
+                    </ul>
                 </div>
-
-                <div class="forum-stats">
-                    <div class="forum-stat">
-                        <span class="forum-stat-number">1 247</span>
-                        <span class="forum-stat-label">участников</span>
+                <div class="info-panel forum-panel">
+                    <div class="forum-panel-header">
+                        <h3><span class="live-dot"></span>Форум сейчас</h3>
+                        <a href="#forum" class="forum-link-all">Все темы →</a>
                     </div>
-                    <div class="forum-stat">
-                        <span class="forum-stat-number">3 891</span>
-                        <span class="forum-stat-label">сообщений</span>
+                    <div class="forum-panel-stats">
+                        <span><b>1 247</b> участников</span>
+                        <span><b>47</b> онлайн</span>
                     </div>
-                    <div class="forum-stat">
-                        <span class="forum-stat-number">47</span>
-                        <span class="forum-stat-label">онлайн сейчас</span>
-                    </div>
-                </div>
-
-                <div class="forum-topics">
-                    <a href="#forum" class="forum-topic">
-                        <div class="forum-topic-left">
-                            <div class="forum-topic-avatar">А</div>
-                            <div class="forum-topic-info">
-                                <div class="forum-topic-title">Как контролировать тягу к алкоголю?</div>
-                                <div class="forum-topic-meta">Андрей · 5 минут назад</div>
-                            </div>
-                        </div>
-                        <div class="forum-topic-replies">12 ответов</div>
-                    </a>
-                    <a href="#forum" class="forum-topic">
-                        <div class="forum-topic-left">
-                            <div class="forum-topic-avatar" style="background: linear-gradient(135deg, #ff6b9d, #ff9a3c);">М</div>
-                            <div class="forum-topic-info">
-                                <div class="forum-topic-title">Срывы: что делать дальше?</div>
-                                <div class="forum-topic-meta">Марина · 23 минуты назад</div>
-                            </div>
-                        </div>
-                        <div class="forum-topic-replies">28 ответов</div>
-                    </a>
-                    <a href="#forum" class="forum-topic">
-                        <div class="forum-topic-left">
-                            <div class="forum-topic-avatar" style="background: linear-gradient(135deg, #a78bfa, #4dd4ff);">С</div>
-                            <div class="forum-topic-info">
-                                <div class="forum-topic-title">Как заменить вечернее выпивание?</div>
-                                <div class="forum-topic-meta">Сергей · 41 минута назад</div>
-                            </div>
-                        </div>
-                        <div class="forum-topic-replies">7 ответов</div>
-                    </a>
-                    <a href="#forum" class="forum-topic">
-                        <div class="forum-topic-left">
-                            <div class="forum-topic-avatar" style="background: linear-gradient(135deg, #34d399, #4dd4ff);">Е</div>
-                            <div class="forum-topic-info">
-                                <div class="forum-topic-title">Алкоголь и спорт — делюсь опытом</div>
-                                <div class="forum-topic-meta">Елена · 1 час назад</div>
-                            </div>
-                        </div>
-                        <div class="forum-topic-replies">19 ответов</div>
-                    </a>
-                </div>
-
-                <div class="forum-cta">
-                    <a href="#forum" class="forum-join-btn">Присоединиться к форуму →</a>
+                    <ul class="forum-panel-topics">
+                        <li><a href="#forum">Как контролировать тягу к алкоголю?<span>5 мин</span></a></li>
+                        <li><a href="#forum">Срывы: что делать дальше?<span>23 мин</span></a></li>
+                        <li><a href="#forum">Как заменить вечернее выпивание?<span>41 мин</span></a></li>
+                        <li><a href="#forum">Алкоголь и спорт<span>1 час</span></a></li>
+                    </ul>
+                    <a href="#forum" class="forum-panel-btn">Присоединиться →</a>
                 </div>
             </div>
         </div>
@@ -972,23 +883,6 @@
     </div>-->
 </div>
                 <div class="info-panels">
-                    <div class="info-panel">
-                        <h3>С чего начать?</h3>
-                        <ul>
-                            <li>20 минут: Прочитай "Как меньше пить" и выбери лимит</li>
-                            <li>10 минут: Настрой учёт ЛНА</li>
-                            <li>10 минут: Прочитай "Как не напиться" и выбери стоп-правило</li>
-                        </ul>
-                    </div>
-                    <div class="info-panel">
-                        <h3>Последние темы на Форуме</h3>
-                        <ul>
-                            <li>Как контролировать тягу к алкоголю?</li>
-                            <li>Срывы: что делать дальше?</li>
-                            <li>Как заменить вечернее выпивание?</li>
-                            <li>Алкоголь и спорт</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
