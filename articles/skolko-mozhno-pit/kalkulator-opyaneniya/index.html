@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор алкогольного опьянения по формуле Видмарка | КУ</title>
+    <meta name="description" content="Рассчитайте промилле алкоголя в крови по формуле Видмарка: введите вес, пол, объём и крепость напитка. Онлайн-калькулятор + таблица степеней опьянения.">
+    <meta name="keywords" content="калькулятор алкогольного опьянения, формула Видмарка, норма промилле алкоголя, промилле калькулятор, степени алкогольного опьянения, допустимая норма промилле, расчёт промилле онлайн">
+    <link rel="canonical" href="https://alkonorm.ru/articles/skolko-mozhno-pit/kalkulator-opyaneniya/">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/article.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Главная","item":"https://alkonorm.ru/"},
+            {"@type":"ListItem","position":2,"name":"Сколько можно пить","item":"https://alkonorm.ru/articles/skolko-mozhno-pit/"},
+            {"@type":"ListItem","position":3,"name":"Калькулятор алкогольного опьянения по формуле Видмарка","item":"https://alkonorm.ru/articles/skolko-mozhno-pit/kalkulator-opyaneniya/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Как рассчитать промилле алкоголя по весу?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "По формуле Видмарка: C = A / (m × r), где A — масса этанола в граммах, m — вес тела (кг), r — коэффициент распределения (средние значения: мужчины ≈ 0,68, диапазон 0,60–0,80; женщины ≈ 0,55, диапазон 0,47–0,64). Масса этанола: объём (мл) × крепость (%) / 100 × 0,789."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Какая норма промилле алкоголя?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "По примечанию к ст. 12.8 КоАП РФ, ответственность наступает при концентрации этилового спирта 0,3 г/л и более в крови или 0,16 мг/л и более в выдыхаемом воздухе. Это порог для учёта погрешности приборов — не разрешение употреблять алкоголь перед поездкой. Лёгкое опьянение начинается примерно с 0,5‰."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "При каком промилле наступает тяжёлое опьянение?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "По обобщённым данным наркологической практики: лёгкая степень — около 0,5–1,5‰, средняя — около 1,5–2,5‰, тяжёлая — около 2,5–3,5‰. Свыше 3,5‰ — тяжёлое отравление с угрозой жизни. Диапазоны ориентировочны: точные границы зависят от применяемой классификации и индивидуальных особенностей."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Через сколько промилле алкоголя исчезают из крови?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "В фазе элиминации алкоголь выводится со скоростью от 0,10 до 0,25‰ в час и более — межиндивидуальный разброс значителен. При концентрации 1‰ полное выведение может занять от 4 до 10 часов в зависимости от индивидуальной скорости метаболизма. Ускорить вывод алкоголя невозможно."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Насколько точен калькулятор по формуле Видмарка?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Реальная концентрация может существенно отличаться от расчётной — из-за индивидуальной вариабельности всасывания (наличие еды, скорость употребления), распределения (r) и скорости выведения (β). Формула даёт ориентировочный диапазон, а не точное значение. Для решений о вождении результат калькулятора не является достаточным основанием."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<div class="starfield">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-inner">
+        <a href="../../../index.html" class="logo"><img src="../../../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../../../articles/soobschestvo.html">Сообщество</a>
+            <a href="../../../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru">Форум</a>
+            <a href="../../../articles/testy.html">Тесты</a>
+            <a href="../../../articles/knigi/">Книги</a>
+            <a href="../../../articles/stati/">Статьи</a>
+            <a href="../../../articles/karta-sayta/">Карта сайта</a>
+            <a href="../../../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+<div class="search-overlay" id="searchOverlay">
+    <span class="search-close" id="searchClose">✕</span>
+    <div class="search-overlay-inner">
+        <div class="search-label">Поиск по сайту</div>
+        <div class="search-input-row">
+            <input type="text" id="searchInput" placeholder="Введите запрос...">
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+</div>
+
+<div class="page-wrap">
+
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../../../index.html">Главная</a>
+        <span>›</span>
+        <a href="../../skolko-mozhno-pit/">Сколько можно пить</a>
+        <span>›</span>
+        Калькулятор опьянения по Видмарку
+    </nav>
+
+    <!-- Статья -->
+    <article>
+
+        <h1>Калькулятор алкогольного опьянения по формуле Видмарка</h1>
+
+        <p class="article-lead">
+            Концентрацию алкоголя в крови можно приблизительно рассчитать по формуле Видмарка — через вес тела, пол и количество выпитого этанола. Ниже — интерактивный калькулятор, объяснение формулы и таблица степеней опьянения. Реальная концентрация зависит от множества индивидуальных факторов и может существенно отличаться от расчётной.
+        </p>
+
+        <div class="quick-answer">
+            <div class="quick-answer-title">Коротко</div>
+            <ul>
+                <li><strong>Формула</strong> — C = A / (m × r), где A — граммы этанола, m — вес (кг), r — коэффициент распределения (муж. ≈ 0,68 / жен. ≈ 0,55, оба — средние популяционные)</li>
+                <li><strong>Юридический порог за рулём в РФ</strong> — 0,3 г/л и более в крови или 0,16 мг/л и более в выдыхаемом воздухе (КоАП РФ, ст. 12.8)</li>
+                <li><strong>Скорость вывода</strong> — от 0,10 до 0,25‰ в час и выше; разброс между людьми значителен; ускорить невозможно</li>
+            </ul>
+        </div>
+
+        <div class="article-body">
+
+            <h2 id="s1">Формула Видмарка: из чего складывается расчёт</h2>
+            <p>Шведский исследователь Эрик Матиас Видмарк предложил в 1930-х годах простую формулу для оценки концентрации алкоголя в крови. Она применяется в судебной медицине и наркологии как инструмент ориентировочных расчётов.</p>
+
+            <p>Базовая формула:</p>
+            <p><strong>C = A / (m × r)</strong></p>
+
+            <p class="table-name">Компоненты формулы Видмарка</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Символ</th>
+                            <th>Значение</th>
+                            <th>Примечание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hl">C</td>
+                            <td>Концентрация алкоголя в крови (‰)</td>
+                            <td>То, что нужно найти</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">A</td>
+                            <td>Масса потреблённого этанола (г)</td>
+                            <td>Объём (мл) × крепость / 100 × 0,789</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">m</td>
+                            <td>Вес тела (кг)</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">r</td>
+                            <td>Коэффициент распределения</td>
+                            <td>Муж.: среднее 0,68 (диапазон 0,60–0,80); жен.: среднее 0,55 (диапазон 0,47–0,64)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">Коэффициент r отражает долю воды в организме: у мужчин мышечной ткани, как правило, больше, поэтому этанол распределяется по большему объёму. Межиндивидуальная вариабельность r значительна — два человека одного пола и веса могут давать заметно разные значения.</p>
+
+            <h3>Фаза выведения и поправка на время</h3>
+            <p>Базовая формула описывает пиковую концентрацию — значение после завершения всасывания. Учесть снижение концентрации во времени позволяет поправка на скорость выведения (β-фаза элиминации):</p>
+            <p><strong>C(t) = C₀ − β × t</strong>, где t — часы в фазе элиминации (после завершения всасывания), результат не бывает ниже 0.</p>
+
+            <p>Важное ограничение: линейная модель описывает только фазу элиминации. Фаза всасывания занимает до 1–2 часов после употребления — в этот период концентрация ещё нарастает или находится вблизи пика. Применять поправку β × t с момента первого глотка физиологически некорректно.</p>
+
+            <p>Скорость выведения (β) значительно варьируется между людьми: типичный диапазон — от 0,10 до 0,25‰ в час, однако у отдельных людей значения выходят за эти границы. Для расчёта традиционно используют среднее β ≈ 0,15‰/ч, понимая, что реальное значение может быть заметно иным.</p>
+
+            <p>Пример — только C₀ (пиковое значение после всасывания): мужчина 80 кг, 500 мл пива 5%.</p>
+            <ul>
+                <li>Масса этанола: 500 × 0,05 × 0,789 ≈ 19,7 г</li>
+                <li>C₀ = 19,7 / (80 × 0,68) ≈ 0,36‰</li>
+                <li>Расчёт с β × t применим только спустя 1–2 часа, когда всасывание завершилось.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h2 id="s2">Калькулятор промилле онлайн</h2>
+            <p>Введите параметры и нажмите «Рассчитать». Можно указать несколько порций, суммировав их объём. Калькулятор считает один вид напитка за раз.</p>
+
+            <div class="calc-widget">
+                <div class="calc-row">
+                    <label class="calc-label" for="cw-weight">Вес тела, кг</label>
+                    <input class="calc-input" type="number" id="cw-weight" value="70" min="40" max="200">
+                </div>
+                <div class="calc-row">
+                    <label class="calc-label" for="cw-sex">Пол</label>
+                    <select class="calc-input" id="cw-sex">
+                        <option value="0.68">Мужской</option>
+                        <option value="0.55">Женский</option>
+                    </select>
+                </div>
+                <div class="calc-row">
+                    <label class="calc-label" for="cw-vol">Объём напитка, мл</label>
+                    <input class="calc-input" type="number" id="cw-vol" value="500" min="10" max="5000">
+                </div>
+                <div class="calc-row">
+                    <label class="calc-label" for="cw-str">Крепость, %</label>
+                    <input class="calc-input" type="number" id="cw-str" value="5" min="0.5" max="96" step="0.5">
+                </div>
+                <div class="calc-row">
+                    <label class="calc-label" for="cw-hrs">Часов после завершения всасывания</label>
+                    <input class="calc-input" type="number" id="cw-hrs" value="0" min="0" max="24" step="0.5">
+                </div>
+                <button class="btn-primary" type="button" onclick="calcWidmark()" style="margin-top:1rem;">Рассчитать →</button>
+                <div id="cw-result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <p class="table-note">Расчёт ориентировочный. Реальная концентрация зависит от скорости всасывания, наличия еды, индивидуального коэффициента r и скорости выведения β — каждый из этих факторов вносит существенную вариабельность. Для решений о вождении результат калькулятора не является достаточным основанием.</p>
+
+            <div class="divider"></div>
+
+            <h2 id="s3">Норма промилле алкоголя: таблица степеней опьянения</h2>
+            <p>Приведённые диапазоны — обобщённые значения, принятые в наркологической практике. Они не являются единым официальным стандартом: разные классификации (МКБ, отечественная наркология, зарубежные источники) дают немного разные границы. Реакция конкретного человека зависит от привычки к алкоголю, возраста, состояния здоровья.</p>
+
+            <p class="table-name">Степени алкогольного опьянения по концентрации в крови</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Концентрация</th>
+                            <th>Степень</th>
+                            <th>Типичные признаки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hl">менее 0,3 г/л</td>
+                            <td>Ниже юридического порога за рулём в РФ</td>
+                            <td>Нет видимых признаков</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">0,3–0,5 г/л</td>
+                            <td>Субклиническая</td>
+                            <td>Небольшое расслабление, снижение концентрации без явных внешних признаков</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">~0,5–1,5‰</td>
+                            <td>Лёгкая</td>
+                            <td>Эйфория, говорливость, замедление реакции, снижение самоконтроля</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">~1,5–2,5‰</td>
+                            <td>Средняя</td>
+                            <td>Нарушение координации, смазанная речь, потеря осторожности</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">~2,5–3,5‰</td>
+                            <td>Тяжёлая</td>
+                            <td>Потеря контроля над поведением, риск амнезии, нарушение дыхания</td>
+                        </tr>
+                        <tr>
+                            <td class="hl">&gt; ~3,5‰</td>
+                            <td>Тяжёлое отравление</td>
+                            <td>Угроза жизни, возможна кома</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">Юридический порог за рулём в РФ: КоАП РФ, ст. 12.8, примечание — 0,3 г/л и более в крови или 0,16 мг/л и более в выдыхаемом воздухе. Ответственность наступает при достижении порогового значения, не «выше него». Степени опьянения: обобщённые значения наркологической практики; точные границы зависят от применяемой классификации.</p>
+
+            <div class="divider"></div>
+
+            <h2 id="s4">Почему расчёт приблизительный: ограничения формулы</h2>
+            <p>Формула Видмарка даёт математическую модель, а не точный физиологический результат. Реальная концентрация алкоголя в крови зависит от множества переменных, которые формула не учитывает.</p>
+
+            <h3>Что влияет на результат, но не входит в формулу</h3>
+            <ul>
+                <li><strong>Еда в желудке.</strong> Жирная пища замедляет всасывание этанола — пик концентрации будет ниже и наступит позже, чем показывает расчёт.</li>
+                <li><strong>Скорость употребления.</strong> Быстрое поглощение алкоголя даёт более высокий пик, чем то же количество за несколько часов.</li>
+                <li><strong>Вариабельность r.</strong> Коэффициент распределения у конкретного человека зависит от доли мышечной и жировой ткани. Диапазон для мужчин — 0,60–0,80, для женщин — 0,47–0,64. Фиксированные средние значения (0,68 / 0,55) могут давать значительную погрешность у людей с нетипичным телосложением.</li>
+                <li><strong>Вариабельность β.</strong> Скорость выведения алкоголя существенно различается у разных людей: от 0,10 до 0,25‰/ч и более. Использование одного среднего значения (0,15‰/ч) не позволяет точно предсказать концентрацию в конкретный момент времени.</li>
+                <li><strong>Генетика.</strong> Активность алкогольдегидрогеназы (АДГ) — фермента, расщепляющего этанол — значительно варьируется у разных людей.</li>
+                <li><strong>Состояние печени.</strong> При хроническом употреблении или заболеваниях печени скорость метаболизма меняется.</li>
+            </ul>
+
+            <p>Из-за этих факторов результат расчёта следует воспринимать как диапазон возможных значений, а не точную цифру. Для практических целей — оценить, стоит ли садиться за руль — единственный надёжный инструмент — алкотестер или полный отказ от вождения после употребления алкоголя.</p>
+
+        </div><!-- /article-body -->
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>Как контролировать количество выпитого — на форуме КУ</h2>
+            <p>На kuforum.ru обсуждают реальный опыт контроля дозы: как удержаться в нужных рамках на вечеринке и зачем вообще считать промилле заранее.</p>
+            <a href="https://kuforum.ru" class="btn-primary">Перейти на форум →</a>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <h2 class="faq-title">Частые вопросы</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>Как рассчитать промилле алкоголя по весу?</summary>
+                    <div class="faq-answer">По формуле Видмарка: C = A / (m × r). A — масса этанола в граммах (объём в мл × крепость / 100 × 0,789), m — вес тела в кг, r — коэффициент распределения (муж.: среднее 0,68, диапазон 0,60–0,80; жен.: среднее 0,55, диапазон 0,47–0,64). Выше — интерактивный калькулятор для быстрого расчёта.</div>
+                </details>
+                <details>
+                    <summary>Какая норма промилле алкоголя?</summary>
+                    <div class="faq-answer">По примечанию к ст. 12.8 КоАП РФ, ответственность наступает при концентрации этилового спирта 0,3 г/л и более в крови или 0,16 мг/л и более в выдыхаемом воздухе. Это порог для учёта погрешности приборов — не разрешение выпить перед поездкой. Лёгкое опьянение начинается примерно с 0,5‰.</div>
+                </details>
+                <details>
+                    <summary>При каком промилле наступает тяжёлое опьянение?</summary>
+                    <div class="faq-answer">По обобщённым данным наркологической практики: лёгкая степень — около 0,5–1,5‰, средняя — около 1,5–2,5‰, тяжёлая — около 2,5–3,5‰. Свыше ~3,5‰ — тяжёлое отравление с угрозой жизни. Диапазоны ориентировочны: точные границы зависят от применяемой классификации и индивидуальных особенностей.</div>
+                </details>
+                <details>
+                    <summary>Через сколько промилле алкоголя исчезают из крови?</summary>
+                    <div class="faq-answer">В фазе элиминации алкоголь выводится со скоростью от 0,10 до 0,25‰ в час и более — межиндивидуальный разброс значителен. При концентрации 1‰ полное выведение может занять от 4 до 10 часов. Ускорить вывод алкоголя невозможно. Линейная модель применима только после завершения всасывания — не с первого момента употребления.</div>
+                </details>
+                <details>
+                    <summary>Насколько точен калькулятор по формуле Видмарка?</summary>
+                    <div class="faq-answer">Реальная концентрация может существенно отличаться от расчётной из-за индивидуальной вариабельности всасывания (наличие еды, скорость употребления), коэффициента распределения r и скорости выведения β. Результат — ориентировочный диапазон, не точное значение. Для решений о вождении он не является достаточным основанием.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Похожие статьи -->
+        <section class="related-section">
+            <div class="related-title">Читать также</div>
+            <ul class="related-list">
+                <li>
+                    <a href="../alkogolnoe-opyanenie/">Алкогольное опьянение: степени, признаки и что происходит с организмом</a>
+                    <span>Полная картина опьянения — от первого бокала до комы</span>
+                </li>
+                <li>
+                    <a href="../stadii-opyaneniya/">Стадии алкогольного опьянения: от лёгкой эйфории до комы</a>
+                    <span>Что происходит в организме на каждой стадии</span>
+                </li>
+                <li>
+                    <a href="../priznaki-opyaneniya/">Признаки алкогольного опьянения: как определить степень</a>
+                    <span>Внешние и поведенческие маркеры каждой степени</span>
+                </li>
+                <li>
+                    <a href="../promille-alkogolya/">Промилле алкоголя: что это такое и сколько это в напитках</a>
+                    <span>Что означает единица промилле и как перевести в бокалы</span>
+                </li>
+                <li>
+                    <a href="../norma-alkogolya-za-rulem/">Норма алкоголя за рулём: допустимые промилле в России 2026</a>
+                    <span>Юридическая граница и почему не стоит рассчитывать на неё</span>
+                </li>
+            </ul>
+        </section>
+
+    </article><!-- /article -->
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-toc">
+            <div class="sidebar-toc-title">Содержание</div>
+            <ul class="toc-list">
+                <li><a href="#s1">Формула Видмарка</a></li>
+                <li><a href="#s2">Калькулятор онлайн</a></li>
+                <li><a href="#s3">Таблица степеней</a></li>
+                <li><a href="#s4">Ограничения формулы</a></li>
+                <li><a href="#faq">Частые вопросы</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-hub">
+            <div class="sidebar-hub-label">Сколько можно пить</div>
+            <a href="../../skolko-mozhno-pit/">← Все статьи раздела</a>
+            <p>Нормы алкоголя, промилле, степени опьянения и влияние на организм — конкретные цифры и данные исследований.</p>
+        </div>
+
+    </aside>
+
+</div><!-- /page-wrap -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">© 2026 alkonorm.ru — информационный ресурс о контролируемом употреблении алкоголя</div>
+        <nav class="footer-links">
+            <a href="../../skolko-mozhno-pit/">Сколько можно пить</a>
+            <a href="../../kak-menshe-pit/">Как меньше пить</a>
+            <a href="../../pochemu-hochetsya-alkogolya/">Почему хочется алкоголя</a>
+            <a href="../../uznaki-alkogolizma/">Признаки алкоголизма</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+function calcWidmark() {
+    var weight = parseFloat(document.getElementById('cw-weight').value);
+    var r = parseFloat(document.getElementById('cw-sex').value);
+    var vol = parseFloat(document.getElementById('cw-vol').value);
+    var str = parseFloat(document.getElementById('cw-str').value);
+    var hrs = parseFloat(document.getElementById('cw-hrs').value) || 0;
+
+    if (!weight || weight < 1 || !vol || !str) {
+        document.getElementById('cw-result').style.display = 'block';
+        document.getElementById('cw-result').innerHTML = '<p>Заполните все поля корректными значениями.</p>';
+        return;
+    }
+
+    // Масса этанола (г): объём (мл) × крепость / 100 × плотность этанола 0,789
+    var ethanolGrams = (vol / 1000) * (str / 100) * 789;
+
+    // Пиковая концентрация после всасывания (среднее r)
+    var c0 = ethanolGrams / (weight * r);
+
+    // С поправкой на время в фазе элиминации (β ≈ 0,15 ‰/ч — среднее)
+    var ct = Math.max(0, c0 - 0.15 * hrs);
+    // Нижняя оценка при быстром выведении (β = 0,25)
+    var ctFast = Math.max(0, c0 - 0.25 * hrs);
+
+    function getDegree(c) {
+        if (c < 0.01) return 'Алкоголь выведен';
+        if (c < 0.3) return 'Ниже юридического порога за рулём в РФ (менее 0,3 г/л)';
+        if (c < 0.5) return 'Субклиническая стадия — видимых признаков нет';
+        if (c < 1.5) return 'Лёгкое опьянение';
+        if (c < 2.5) return 'Среднее опьянение';
+        if (c < 3.5) return 'Тяжёлое опьянение';
+        return 'Тяжёлое отравление — угроза жизни';
+    }
+
+    var timeNote = '';
+    if (hrs > 0) {
+        timeNote =
+            '<p><strong>Через ' + hrs + ' ч (β = 0,15‰/ч, среднее):</strong> ' + ct.toFixed(2) + ' ‰ — ' + getDegree(ct) + '</p>' +
+            '<p><strong>Через ' + hrs + ' ч (β = 0,25‰/ч, быстрый вывод):</strong> ' + ctFast.toFixed(2) + ' ‰ — ' + getDegree(ctFast) + '</p>';
+    }
+
+    var resultEl = document.getElementById('cw-result');
+    resultEl.style.display = 'block';
+    resultEl.innerHTML =
+        '<p><strong>Этанола в напитке:</strong> ' + ethanolGrams.toFixed(1) + ' г</p>' +
+        '<p><strong>Пик после всасывания (C₀):</strong> ' + c0.toFixed(2) + ' ‰ — ' + getDegree(c0) + '</p>' +
+        timeNote +
+        '<p style="font-size:0.85em;opacity:0.7;margin-top:0.75rem;">Расчёт ориентировочный. Реальная концентрация зависит от еды, скорости употребления, индивидуального r и β. Поправка на время применима только после завершения всасывания (не ранее чем через 1–2 ч после первого глотка). Не является основанием для решения о вождении.</p>';
+}
+</script>
+
+<script src="../../../search_index.js"></script>
+<script>
+(function() {
+    const overlay  = document.getElementById('searchOverlay');
+    const input    = document.getElementById('searchInput');
+    const closeBtn = document.getElementById('searchClose');
+    const results  = document.getElementById('searchResults');
+    let debounce;
+    function openSearch() { overlay.classList.add('active'); setTimeout(() => input.focus(), 50); }
+    function closeSearch() { overlay.classList.remove('active'); input.value = ''; results.innerHTML = ''; }
+    function highlight(text, words) {
+        let out = text;
+        words.forEach(w => { if (!w) return; const re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'); out = out.replace(re, '<mark>$1</mark>'); });
+        return out;
+    }
+    function getSnippet(content, words) {
+        const lower = content.toLowerCase(); let best = 0;
+        words.forEach(w => { const idx = lower.indexOf(w.toLowerCase()); if (idx !== -1) best = idx; });
+        const start = Math.max(0, best - 60);
+        let snippet = content.slice(start, start + 200);
+        if (start > 0) snippet = '\u2026' + snippet;
+        if (start + 200 < content.length) snippet += '\u2026';
+        return snippet;
+    }
+    function doSearch() {
+        const q = input.value.trim(); results.innerHTML = '';
+        if (!q || q.length < 2) return;
+        const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+        if (typeof SEARCH_INDEX === 'undefined') { results.innerHTML = '<div class="search-empty">\u0418\u043d\u0434\u0435\u043a\u0441 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0435\u0442\u0441\u044f\u2026</div>'; return; }
+        const scored = SEARCH_INDEX.map(doc => {
+            let score = 0;
+            const titleL = doc.title.toLowerCase(); const contentL = doc.content.toLowerCase();
+            words.forEach(w => {
+                if (titleL.includes(w)) score += 10;
+                if (contentL.includes(w)) score += contentL.split(w).length - 1;
+                (doc.sections || []).forEach(s => { if (s.heading.toLowerCase().includes(w)) score += 5; if (s.text.toLowerCase().includes(w)) score += 2; });
+            });
+            return {doc, score};
+        }).filter(x => x.score > 0).sort((a, b) => b.score - a.score).slice(0, 7);
+        if (!scored.length) { results.innerHTML = '<div class="search-empty">\u041d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e</div>'; return; }
+        scored.forEach(({doc}) => {
+            const snippet = highlight(getSnippet(doc.content, words), words);
+            const title = highlight(doc.title, words);
+            const a = document.createElement('a');
+            a.className = 'search-result'; a.href = doc.url;
+            a.innerHTML = `<div class="search-result-title">${title}</div><div class="search-result-snippet">${snippet}</div><div class="search-result-url">alkonorm.ru${doc.url}</div>`;
+            a.addEventListener('click', closeSearch);
+            results.appendChild(a);
+        });
+    }
+    document.querySelector('.nav-search').addEventListener('click', openSearch);
+    closeBtn.addEventListener('click', closeSearch);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+    input.addEventListener('input', function() { clearTimeout(debounce); debounce = setTimeout(doSearch, 200); });
+})();
+</script>
+</body>
+</html>

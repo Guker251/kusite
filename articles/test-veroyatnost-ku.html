@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Тест: вероятность успешного КУ — оценка готовности к контролируемому употреблению | КУ</title>
+    <meta name="description" content="20 вопросов для оценки вероятности успешного контролируемого употребления алкоголя. Автоматический подсчёт с инверсией рисковых вопросов, интерпретация результата и анализ красных флагов.">
+    <meta name="keywords" content="тест контролируемое употребление алкоголя, КУ оценка готовности, вероятность успеха КУ, умеренное употребление алкоголя тест">
+    <link rel="canonical" href="https://alkonorm.ru/articles/test-veroyatnost-ku.html">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --accent-orange: #ff9f4d;
+            --accent-green: #4dffb0;
+            --glass-border: rgba(255,255,255,0.13);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.75);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: #090a0f;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            pointer-events: none;
+        }
+        .stars {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
+                radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 82% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 60% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 92% 20%, rgba(255,255,255,0.6) 0%, transparent 100%);
+            animation: twinkle 8s ease-in-out infinite alternate;
+        }
+        .stars2 {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 65% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 80% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 55% 5%, rgba(255,255,255,0.7) 0%, transparent 100%);
+            animation: twinkle 12s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.7; }
+        }
+
+
+        .page-wrap {
+            display: block;
+            position: relative; z-index: 10;
+            max-width: 780px; margin: 0 auto;
+            padding: 40px 24px 100px;
+        }
+
+        .breadcrumbs {
+            font-size: 13px; color: rgba(255,255,255,0.38);
+            margin-bottom: 36px;
+        }
+        .breadcrumbs a {
+            color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s;
+        }
+        .breadcrumbs a:hover { color: var(--accent-cyan); }
+        .breadcrumbs span { margin: 0 6px; }
+
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.12), rgba(255,107,157,0.12));
+            border: 1px solid rgba(77,212,255,0.3);
+            border-radius: 30px; padding: 5px 16px;
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px; font-weight: 700;
+            line-height: 1.2; margin-bottom: 18px;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-lead {
+            font-size: 15px; color: rgba(255,255,255,0.65);
+            line-height: 1.85; margin-bottom: 32px;
+            border-left: 3px solid rgba(77,212,255,0.35);
+            padding-left: 18px;
+        }
+
+        .instruction {
+            background: rgba(77,212,255,0.05);
+            border: 1px solid rgba(77,212,255,0.18);
+            border-radius: 14px; padding: 22px 26px; margin-bottom: 36px;
+        }
+        .instruction-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 14px;
+        }
+        .score-scale {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+            margin-top: 12px;
+        }
+        .scale-item {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 10px 12px; text-align: center;
+        }
+        .scale-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px; font-weight: 700;
+            color: var(--accent-cyan); display: block; margin-bottom: 4px;
+        }
+        .scale-label { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+
+        .progress-wrap { margin-bottom: 32px; }
+        .progress-        .progress-label { font-size: 13px; color: rgba(255,255,255,0.45); }
+        .progress-count {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px; font-weight: 600; color: var(--accent-cyan);
+        }
+        .progress-bar { height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green));
+            border-radius: 2px; transition: width 0.4s ease;
+        }
+
+        .question-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 16px; padding: 22px 24px; margin-bottom: 14px;
+            transition: border-color 0.25s;
+        }
+        .question-card.answered { border-color: rgba(77,212,255,0.22); }
+
+        .question-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 10px;
+        }
+        .question-text {
+            font-size: 15px; color: rgba(255,255,255,0.85);
+            line-height: 1.65; margin-bottom: 18px;
+        }
+
+        .answer-buttons {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+        }
+        .ans-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px; padding: 10px 6px;
+            cursor: pointer; text-align: center;
+            transition: background 0.2s, border-color 0.2s;
+            color: var(--text-primary);
+        }
+        .ans-btn:hover {
+            background: rgba(77,212,255,0.1);
+            border-color: rgba(77,212,255,0.35);
+        }
+        .ans-btn.selected {
+            background: rgba(77,212,255,0.15);
+            border-color: rgba(77,212,255,0.55);
+        }
+        .ans-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px; font-weight: 700;
+            color: var(--accent-cyan); display: block; margin-bottom: 4px;
+        }
+        .ans-btn.selected .ans-num { color: #fff; }
+        .ans-text { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.35; }
+        .ans-btn.selected .ans-text { color: rgba(255,255,255,0.7); }
+
+        .question-card .answered-badge {
+            display: none; float: right;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 700;
+            color: var(--accent-cyan);
+            background: rgba(77,212,255,0.12);
+            border-radius: 20px; padding: 2px 10px;
+            margin-top: -2px;
+        }
+        .question-card.answered .answered-badge { display: inline-block; }
+
+        .submit-wrap { text-align: center; margin: 36px 0; }
+        .btn-submit {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.2), rgba(77,255,176,0.15));
+            border: 1px solid rgba(77,212,255,0.45);
+            color: var(--accent-cyan);
+            padding: 14px 44px; border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px; font-weight: 700; letter-spacing: 0.5px;
+            cursor: pointer; transition: all 0.25s;
+        }
+        .btn-submit:hover:not(:disabled) {
+            background: linear-gradient(135deg, rgba(77,212,255,0.32), rgba(77,255,176,0.25));
+            border-color: rgba(77,212,255,0.7);
+            transform: translateY(-1px);
+        }
+        .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-hint { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+        .result-block { display: none; border-radius: 20px; overflow: hidden; margin-top: 40px; }
+        .result-block.visible { display: block; }
+
+        .result-score-wrap { padding: 36px 32px; text-align: center; }
+        .result-score-wrap.low {
+            background: linear-gradient(135deg, rgba(255,107,157,0.1), rgba(255,159,77,0.08));
+            border: 1px solid rgba(255,107,157,0.25); border-radius: 20px 20px 0 0;
+        }
+        .result-score-wrap.medium {
+            background: linear-gradient(135deg, rgba(255,159,77,0.1), rgba(255,220,77,0.06));
+            border: 1px solid rgba(255,159,77,0.3); border-radius: 20px 20px 0 0;
+        }
+        .result-score-wrap.high {
+            background: linear-gradient(135deg, rgba(77,255,176,0.1), rgba(77,212,255,0.07));
+            border: 1px solid rgba(77,255,176,0.28); border-radius: 20px 20px 0 0;
+        }
+
+        .result-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;
+        }
+        .low .result-label { color: var(--accent-pink); }
+        .medium .result-label { color: var(--accent-orange); }
+        .high .result-label { color: var(--accent-green); }
+
+        .result-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 72px; font-weight: 700; line-height: 1; margin-bottom: 8px;
+        }
+        .low .result-number { color: var(--accent-pink); }
+        .medium .result-number { color: var(--accent-orange); }
+        .high .result-number { color: var(--accent-green); }
+
+        .result-max { font-size: 20px; color: rgba(255,255,255,0.3); }
+        .result-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px; font-weight: 700; color: var(--text-primary);
+        }
+
+        .result-body {
+            padding: 28px 32px;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-top: none; border-radius: 0 0 20px 20px;
+        }
+        .result-desc {
+            font-size: 15px; color: rgba(255,255,255,0.72);
+            line-height: 1.85; margin-bottom: 20px;
+        }
+        .result-step {
+            background: rgba(77,212,255,0.06);
+            border-left: 3px solid var(--accent-cyan);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.75;
+        }
+        .result-step strong { color: var(--text-primary); }
+
+        .red-flags-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--accent-pink); margin: 24px 0 10px;
+        }
+        .red-flags { display: flex; flex-direction: column; gap: 10px; }
+        .red-flag-item {
+            background: rgba(255,107,157,0.06);
+            border: 1px solid rgba(255,107,157,0.2);
+            border-radius: 10px; padding: 14px 18px;
+            font-size: 13px; color: rgba(255,255,255,0.65);
+            line-height: 1.65; display: none;
+        }
+        .red-flag-item.triggered { display: block; }
+        .red-flag-item strong { color: var(--accent-pink); }
+
+        .no-red-flags {
+            font-size: 13px; color: rgba(77,255,176,0.7);
+            padding: 12px 0; display: none;
+        }
+        .no-red-flags.visible { display: block; }
+
+        .retake-wrap { text-align: center; margin-top: 24px; }
+        .btn-retake {
+            background: none; border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.4); padding: 9px 22px; border-radius: 20px;
+            font-size: 13px; cursor: pointer; transition: all 0.2s;
+        }
+        .btn-retake:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+
+        .cta-block {
+            border-left: 3px solid var(--accent-cyan);
+            background: rgba(77,212,255,0.04);
+            border-radius: 0 14px 14px 0;
+            padding: 22px 26px; margin: 44px 0 0;
+        }
+        .cta-block p { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+        .btn-ku {
+            display: inline-block;
+            background: rgba(77,212,255,0.1);
+            border: 1px solid rgba(77,212,255,0.3);
+            color: var(--accent-cyan);
+            padding: 9px 20px; border-radius: 20px;
+            font-size: 13px; font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .btn-ku:hover { background: rgba(77,212,255,0.2); border-color: rgba(77,212,255,0.55); }
+
+        .footnote {
+            margin-top: 52px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .score-scale { grid-template-columns: repeat(2, 1fr); }
+            .answer-buttons { gap: 6px; }
+            .ans-btn { padding: 8px 4px; }
+            .ans-num { font-size: 17px; }
+            .ans-text { font-size: 10px; }
+            .result-number { font-size: 56px; }
+            .result-score-wrap, .result-body { padding: 22px 20px; }
+            .nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="starfield"><div class="stars"></div><div class="stars2"></div></div>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+<main class="page-wrap">
+    <nav class="breadcrumbs">
+        <a href="https://alkonorm.ru/">Главная</a>
+        <span>›</span>
+        <span>Тест: вероятность успешного КУ</span>
+    </nav>
+
+    <div class="article-tag">Самодиагностика · КУ</div>
+
+    <h1>Тест: вероятность успешного контролируемого употребления</h1>
+
+    <p class="article-lead">
+        20 вопросов для оценки стартовой позиции перед началом КУ. Часть вопросов — о рисках, часть — о ресурсах. Подсчёт учитывает это автоматически. Результат — не диагноз, а ориентир для выбора стратегии.
+    </p>
+
+    <div class="instruction">
+        <div class="instruction-title">Как проходить</div>
+        <p style="font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:16px;">
+            На каждый вопрос выберите один вариант. Баллы суммируются с учётом направленности вопроса. Затем нажмите «Подвести итог».
+        </p>
+        <div class="score-scale">
+            <div class="scale-item"><span class="scale-num">0</span><span class="scale-label">совсем не про меня</span></div>
+            <div class="scale-item"><span class="scale-num">1</span><span class="scale-label">скорее не про меня</span></div>
+            <div class="scale-item"><span class="scale-num">2</span><span class="scale-label">скорее про меня</span></div>
+            <div class="scale-item"><span class="scale-num">3</span><span class="scale-label">точно про меня</span></div>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+        <div class="progress-header">
+            <span class="progress-label">Отвечено вопросов</span>
+            <span class="progress-count" id="progress-count">0 / 20</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+
+    <!-- Questions -->
+    <div id="questions"></div>
+
+    <!-- Submit -->
+    <div class="submit-wrap">
+        <button class="btn-submit" id="btn-submit" disabled onclick="showResult()">Подвести итог</button>
+        <p class="btn-hint" id="btn-hint">Ответьте на все 20 вопросов</p>
+    </div>
+
+    <!-- Result -->
+    <div class="result-block" id="result-block">
+        <div class="result-score-wrap" id="result-score-wrap">
+            <div class="result-label" id="result-label"></div>
+            <div class="result-number" id="result-number"></div>
+            <div class="result-title" id="result-title"></div>
+        </div>
+        <div class="result-body">
+            <p class="result-desc" id="result-desc"></p>
+            <div class="result-step" id="result-step"></div>
+
+            <div id="red-flags-section" style="display:none">
+                <div class="red-flags-title">Красные флаги — независимо от суммы</div>
+                <div class="red-flags">
+                    <div class="red-flag-item" id="rf-6-12">
+                        <strong>Вопросы 6 или 12 — высокая опасность:</strong> признаки физической зависимости или провалы памяти / опасные ситуации из-за алкоголя — это аргумент в пользу трезвости и консультации специалиста, независимо от общего балла.
+                    </div>
+                    <div class="red-flag-item" id="rf-3-14-15">
+                        <strong>Вопросы 3, 14, 15 — слабая управляемость:</strong> суммарный балл по этим вопросам низкий, что говорит о трудностях с самоконтролем в моменте. Сначала стоит тренировать учёт и тактику, а не усложнять стратегию.
+                    </div>
+                    <div class="red-flag-item" id="rf-10">
+                        <strong>Вопрос 10 — социальная среда:</strong> окружение может разрушать режим КУ даже при хороших личных ресурсах. Стоит заранее продумать защиту от давления среды.
+                    </div>
+                </div>
+            </div>
+            <div class="no-red-flags" id="no-red-flags">Красных флагов не обнаружено.</div>
+
+            <div class="retake-wrap">
+                <button class="btn-retake" onclick="retake()">Пройти заново</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+        <h2>Оцениваете шансы КУ — обсудите на форуме</h2>
+        <p>На kuforum.ru люди рассказывают, с какими исходными условиями начинали КУ и что получилось. Чужой опыт помогает реалистично оценить свои шансы.</p>
+        <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+    </div>
+
+    <div class="cta-block">
+        <p>Обсудить результаты, задать вопрос или найти поддержку можно на форуме КУ — сообществе людей, которые работают над отношением к алкоголю.</p>
+        <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-ku">Перейти на kuforum.ru →</a>
+    </div>
+
+    <div class="footnote">
+        Вопросы о рисках (1, 2, 4, 5, 6, 7, 9, 11, 12) считаются в обратном порядке: чем сильнее выражен риск, тем ниже итоговый балл. Остальные вопросы считаются прямо.
+    </div>
+</main>
+
+<script>
+    // Risk questions: scoring is inverted (3→0, 2→1, 1→2, 0→3)
+    const RISK_QS = new Set([1, 2, 4, 5, 6, 7, 9, 11, 12]);
+    const TOTAL = 20;
+
+    const QUESTIONS = [
+        { n: 1,  text: 'За последние 12 месяцев у меня часто возникала сильная тяга выпить, которую трудно игнорировать.' },
+        { n: 2,  text: 'Я нередко пил больше или дольше, чем планировал.' },
+        { n: 3,  text: 'Мне удавалось остановиться на заранее заданной дозе, даже когда хотелось продолжать.' },
+        { n: 4,  text: 'У меня были повторные неудачные попытки сократить или контролировать употребление.' },
+        { n: 5,  text: 'Я продолжал пить, даже когда видел явный вред для здоровья, отношений или работы.' },
+        { n: 6,  text: 'У меня бывают признаки физической зависимости (плохое самочувствие и стойкое недомогание), и я пил, чтобы снять или предотвратить неприятные симптомы отмены употребления алкоголя.' },
+        { n: 7,  text: 'После употребления у меня часто бывают тяжёлые последствия на следующий день, которые реально мешают жить.' },
+        { n: 8,  text: 'Я могу спокойно выдерживать паузы без алкоголя несколько дней и дольше, без нарастания внутреннего напряжения.' },
+        { n: 9,  text: 'Я часто пью, чтобы справиться с тревогой, злостью, одиночеством, стрессом или бессонницей.' },
+        { n: 10, text: 'В моём окружении умеренность обычно воспринимается нормально, и на меня не давят, чтобы я пил больше.' },
+        { n: 11, text: 'У меня есть медицинские заболевания или я принимаю препараты, при которых алкоголь может быть опасен даже в малых дозах.' },
+        { n: 12, text: 'У меня бывают провалы памяти, рискованное поведение или опасные ситуации из-за алкоголя.' },
+        { n: 13, text: 'У меня есть понятные правила, в каких ситуациях я точно не пью, и я их обычно соблюдаю.' },
+        { n: 14, text: 'Я готов вести честный учёт эпизодов и доз в ЛЧА, без приукрашивания и пропусков.' },
+        { n: 15, text: 'Я умею заранее планировать эпизод употребления и придерживаться плана, включая точку завершения.' },
+        { n: 16, text: 'Я замечаю свои типовые триггеры до эпизода и умею включать защиту заранее.' },
+        { n: 17, text: 'У меня есть поддержка, которой я реально могу пользоваться, или я готов её организовать.' },
+        { n: 18, text: 'У меня есть устойчивый режим сна и восстановления без необходимости «поправляться» алкоголем.' },
+        { n: 19, text: 'Я могу принять жёсткое решение, если эксперимент с КУ показывает потерю управляемости.' },
+        { n: 20, text: 'Я воспринимаю КУ как систему с ревизией и корректировкой, а не как разовый рывок силы воли.' },
+    ];
+
+    const LABELS = ['совсем не про меня', 'скорее не про меня', 'скорее про меня', 'точно про меня'];
+
+    // Build question cards
+    const container = document.getElementById('questions');
+    QUESTIONS.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        card.dataset.q = q.n;
+
+        const btns = [0, 1, 2, 3].map(v =>
+            `<button class="ans-btn" onclick="selectAnswer(${q.n}, ${v}, this)">
+                <span class="ans-num">${v}</span>
+                <span class="ans-text">${LABELS[v]}</span>
+            </button>`
+        ).join('');
+
+        card.innerHTML = `
+            <div class="question-num">Вопрос ${q.n} <span class="answered-badge" id="badge-${q.n}"></span></div>
+            <div class="question-text">${q.text}</div>
+            <div class="answer-buttons">${btns}</div>
+        `;
+        container.appendChild(card);
+    });
+
+    // State
+    const raw = {}; // raw clicked values
+
+    function scoreQ(q, v) {
+        return RISK_QS.has(q) ? (3 - v) : v;
+    }
+
+    function selectAnswer(q, v, btn) {
+        btn.parentElement.querySelectorAll('.ans-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+
+        raw[q] = v;
+
+        const s = scoreQ(q, v);
+        const badge = document.getElementById('badge-' + q);
+        if (badge) badge.textContent = s + ' балл' + suf(s);
+
+        document.querySelector('.question-card[data-q="' + q + '"]').classList.add('answered');
+
+        const count = Object.keys(raw).length;
+        document.getElementById('progress-count').textContent = count + ' / ' + TOTAL;
+        document.getElementById('progress-fill').style.width = (count / TOTAL * 100) + '%';
+
+        if (count === TOTAL) {
+            document.getElementById('btn-submit').disabled = false;
+            document.getElementById('btn-hint').textContent = 'Готово — можно посмотреть результат';
+        }
+    }
+
+    function suf(n) {
+        if (n === 1) return '';
+        if (n >= 2 && n <= 4) return 'а';
+        return 'ов';
+    }
+
+    function showResult() {
+        const total = Object.entries(raw).reduce((acc, [q, v]) => acc + scoreQ(Number(q), v), 0);
+
+        document.getElementById('result-number').innerHTML =
+            total + '<span class="result-max"> / 60</span>';
+
+        const wrap  = document.getElementById('result-score-wrap');
+        const label = document.getElementById('result-label');
+        const title = document.getElementById('result-title');
+        const desc  = document.getElementById('result-desc');
+        const step  = document.getElementById('result-step');
+
+        wrap.className = 'result-score-wrap';
+
+        if (total <= 20) {
+            wrap.classList.add('low');
+            label.textContent = 'Вероятность успешного КУ низкая';
+            title.textContent = '0–20 баллов';
+            desc.textContent = 'Риск ошибки на старте высокий. Текущая конфигурация рисков и ресурсов делает контролируемое употребление трудно реализуемым без предварительной работы.';
+            step.innerHTML = '<strong>Практический шаг:</strong> логичнее выбирать трезвость как минимум на фиксированный срок и параллельно наращивать ресурсы — а затем возвращаться к оценке с новым результатом.';
+        } else if (total <= 40) {
+            wrap.classList.add('medium');
+            label.textContent = 'Пограничная зона';
+            title.textContent = '21–40 баллов';
+            desc.textContent = 'КУ возможно, но как осторожный эксперимент. Есть и ресурсы, и риски — баланс нестабильный, система требует жёстких условий и регулярного мониторинга.';
+            step.innerHTML = '<strong>Практический шаг:</strong> только короткие периоды с жёсткими условиями, учётом и заранее прописанным протоколом для нарушений. Без этих условий — трезвость.';
+        } else {
+            wrap.classList.add('high');
+            label.textContent = 'Вероятность успешного КУ относительно высокая';
+            title.textContent = '41–60 баллов';
+            desc.textContent = 'Ресурсов достаточно для запуска системы КУ. Стартовая позиция позволяет строить полноценный план.';
+            step.innerHTML = '<strong>Практический шаг:</strong> переходить к плану КУ с обязательным мониторингом, месячной ревизией и готовностью ужесточать правила при первых признаках падения управляемости.';
+        }
+
+        // Red flags
+        const r6  = raw[6]  ?? 0;
+        const r12 = raw[12] ?? 0;
+        const s3  = scoreQ(3,  raw[3]  ?? 0);
+        const s14 = scoreQ(14, raw[14] ?? 0);
+        const s15 = scoreQ(15, raw[15] ?? 0);
+        const s10 = scoreQ(10, raw[10] ?? 3);
+
+        const rf6_12   = (r6 >= 2 || r12 >= 2);
+        const rf3_14_15 = (s3 + s14 + s15 < 4);
+        const rf10     = (s10 <= 1);
+        const anyFlag  = rf6_12 || rf3_14_15 || rf10;
+
+        document.getElementById('rf-6-12').classList.toggle('triggered', rf6_12);
+        document.getElementById('rf-3-14-15').classList.toggle('triggered', rf3_14_15);
+        document.getElementById('rf-10').classList.toggle('triggered', rf10);
+
+        if (anyFlag) {
+            document.getElementById('red-flags-section').style.display = 'block';
+            document.getElementById('no-red-flags').classList.remove('visible');
+        } else {
+            document.getElementById('red-flags-section').style.display = 'none';
+            document.getElementById('no-red-flags').classList.add('visible');
+        }
+
+        const rb = document.getElementById('result-block');
+        rb.classList.add('visible');
+        setTimeout(() => rb.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+
+    function retake() {
+        for (const k in raw) delete raw[k];
+        document.querySelectorAll('.ans-btn').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('.question-card').forEach(c => c.classList.remove('answered'));
+        document.querySelectorAll('.answered-badge').forEach(b => b.textContent = '');
+        document.getElementById('progress-count').textContent = '0 / ' + TOTAL;
+        document.getElementById('progress-fill').style.width = '0%';
+        document.getElementById('btn-submit').disabled = true;
+        document.getElementById('btn-hint').textContent = 'Ответьте на все 20 вопросов';
+        document.getElementById('result-block').classList.remove('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

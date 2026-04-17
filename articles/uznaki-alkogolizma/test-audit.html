@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../../favicon-192.png">
+    <title>Тест AUDIT: выявление рискованного и вредного употребления алкоголя | КУ</title>
+    <meta name="description" content="Тест AUDIT — 10 вопросов для выявления рискованного и вредного употребления алкоголя, а также вероятной алкогольной зависимости. Автоматический подсчёт с интерпретацией по 4 зонам риска с учётом пола.">
+    <meta name="keywords" content="тест AUDIT алкоголь, AUDIT скрининг алкоголизм, выявление алкогольной зависимости тест, вредное употребление алкоголя тест">
+    <link rel="canonical" href="https://alkonorm.ru/articles/uznaki-alkogolizma/test-audit.html">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/article.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --accent-orange: #ff9f4d;
+            --accent-green: #4dffb0;
+            --accent-red: #ff4d4d;
+            --glass-border: rgba(255,255,255,0.13);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.75);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: #090a0f;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            pointer-events: none;
+        }
+        .stars {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
+                radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 82% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 60% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 92% 20%, rgba(255,255,255,0.6) 0%, transparent 100%);
+            animation: twinkle 8s ease-in-out infinite alternate;
+        }
+        .stars2 {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 65% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 80% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 55% 5%, rgba(255,255,255,0.7) 0%, transparent 100%);
+            animation: twinkle 12s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.7; }
+        }
+
+
+        .page-wrap {
+            display: block;
+            position: relative; z-index: 10;
+            max-width: 780px; margin: 0 auto;
+            padding: 40px 24px 100px;
+        }
+
+        .breadcrumbs {
+            font-size: 13px; color: rgba(255,255,255,0.38); margin-bottom: 36px;
+        }
+        .breadcrumbs a { color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+        .breadcrumbs a:hover { color: var(--accent-cyan); }
+        .breadcrumbs span { margin: 0 6px; }
+
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.12), rgba(255,107,157,0.12));
+            border: 1px solid rgba(77,212,255,0.3);
+            border-radius: 30px; padding: 5px 16px;
+            font-size: 12px; font-weight: 500;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px; font-weight: 700;
+            line-height: 1.2; margin-bottom: 18px;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        .article-lead {
+            font-size: 15px; color: rgba(255,255,255,0.65);
+            line-height: 1.85; margin-bottom: 32px;
+            border-left: 3px solid rgba(77,212,255,0.35); padding-left: 18px;
+        }
+
+        /* Instruction */
+        .instruction {
+            background: rgba(77,212,255,0.05);
+            border: 1px solid rgba(77,212,255,0.18);
+            border-radius: 14px; padding: 22px 26px; margin-bottom: 36px;
+        }
+        .instruction-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 14px;
+        }
+        .score-scale {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px;
+        }
+        .scale-item {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 10px 12px; text-align: center;
+        }
+        .scale-num {
+            font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700;
+            color: var(--accent-cyan); display: block; margin-bottom: 4px;
+        }
+        .scale-label { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+
+        /* Progress */
+        .progress-wrap { margin-bottom: 32px; }
+        .progress-        .progress-label { font-size: 13px; color: rgba(255,255,255,0.45); }
+        .progress-count {
+            font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent-cyan);
+        }
+        .progress-bar { height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green));
+            border-radius: 2px; transition: width 0.4s ease;
+        }
+
+        /* Question card */
+        .question-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 16px; padding: 22px 24px; margin-bottom: 14px;
+            transition: border-color 0.25s;
+        }
+        .question-card.answered { border-color: rgba(77,212,255,0.22); }
+        .question-num {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 10px;
+        }
+        .question-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.65; margin-bottom: 18px; }
+
+        .answered-badge {
+            display: none; float: right;
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            color: var(--accent-cyan); background: rgba(77,212,255,0.12);
+            border-radius: 20px; padding: 2px 10px; margin-top: -2px;
+        }
+        .question-card.answered .answered-badge { display: inline-block; }
+
+        /* Standard 5-option buttons (for Q1, Q3-Q8) */
+        .ans-btn-wrap { display: flex; flex-direction: column; gap: 7px; }
+        .ans-btn {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px; padding: 11px 16px;
+            cursor: pointer; text-align: left;
+            display: flex; align-items: center; gap: 14px;
+            transition: background 0.2s, border-color 0.2s;
+            color: var(--text-primary); width: 100%;
+        }
+        .ans-btn:hover { background: rgba(77,212,255,0.08); border-color: rgba(77,212,255,0.3); }
+        .ans-btn.selected { background: rgba(77,212,255,0.13); border-color: rgba(77,212,255,0.5); }
+        .ans-score {
+            font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700;
+            color: var(--accent-cyan); min-width: 22px; text-align: center; flex-shrink: 0;
+        }
+        .ans-btn.selected .ans-score { color: #fff; }
+        .ans-label { font-size: 14px; color: rgba(255,255,255,0.72); }
+        .ans-btn.selected .ans-label { color: rgba(255,255,255,0.9); }
+
+        /* Q2: drink type selector */
+        .drink-step-label {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600;
+            letter-spacing: 0.5px; text-transform: uppercase;
+            color: rgba(255,255,255,0.4); margin-bottom: 10px;
+        }
+        .drink-type-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px;
+        }
+        .drink-type-btn {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px; padding: 12px 14px; cursor: pointer; text-align: left;
+            transition: all 0.2s; color: var(--text-primary);
+        }
+        .drink-type-btn:hover { background: rgba(77,212,255,0.08); border-color: rgba(77,212,255,0.3); }
+        .drink-type-btn.selected { background: rgba(77,212,255,0.12); border-color: rgba(77,212,255,0.45); }
+        .drink-icon { font-size: 20px; margin-bottom: 4px; display: block; }
+        .drink-name { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85); display: block; }
+        .drink-type-btn.selected .drink-name { color: #fff; }
+
+        .portion-note {
+            background: rgba(255,255,255,0.035); border-radius: 10px; padding: 12px 16px;
+            margin-bottom: 16px; font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6;
+        }
+        .portion-note strong { color: rgba(255,255,255,0.75); }
+
+        /* Q2 volume options */
+        .volume-section { display: none; }
+        .volume-section.visible { display: block; }
+
+        /* Q9/Q10: 3-option buttons */
+        .ans-btn-3 {
+            display: flex; flex-direction: column; gap: 7px;
+        }
+
+        /* Submit */
+        .submit-wrap { text-align: center; margin: 36px 0; }
+        .btn-submit {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.2), rgba(77,255,176,0.15));
+            border: 1px solid rgba(77,212,255,0.45); color: var(--accent-cyan);
+            padding: 14px 44px; border-radius: 30px;
+            font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
+            cursor: pointer; transition: all 0.25s;
+        }
+        .btn-submit:hover:not(:disabled) {
+            background: linear-gradient(135deg, rgba(77,212,255,0.32), rgba(77,255,176,0.25));
+            border-color: rgba(77,212,255,0.7); transform: translateY(-1px);
+        }
+        .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-hint { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+        /* Result */
+        .result-block { display: none; margin-top: 40px; }
+        .result-block.visible { display: block; }
+
+        /* Gender selector in result */
+        .gender-select-wrap {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px; padding: 24px; margin-bottom: 24px; text-align: center;
+        }
+        .gender-select-title {
+            font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600;
+            color: rgba(255,255,255,0.5); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .gender-btns { display: flex; gap: 12px; justify-content: center; }
+        .gender-btn {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px; padding: 14px 32px; cursor: pointer;
+            font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600;
+            color: rgba(255,255,255,0.6); transition: all 0.2s;
+        }
+        .gender-btn:hover { border-color: rgba(77,212,255,0.4); color: var(--accent-cyan); }
+        .gender-btn.selected { background: rgba(77,212,255,0.13); border-color: rgba(77,212,255,0.5); color: #fff; }
+
+        /* Score display */
+        .score-display {
+            text-align: center; padding: 32px;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; margin-bottom: 16px;
+        }
+        .score-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 80px; font-weight: 700; line-height: 1;
+        }
+        .score-max { font-size: 24px; color: rgba(255,255,255,0.3); }
+        .score-subtext { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+
+        /* Zone result */
+        .zone-result { border-radius: 20px; overflow: hidden; display: none; }
+        .zone-result.visible { display: block; }
+
+        .zone-        .zone-header.z1 {
+            background: linear-gradient(135deg, rgba(77,255,176,0.1), rgba(77,212,255,0.07));
+            border: 1px solid rgba(77,255,176,0.28); border-radius: 20px 20px 0 0;
+        }
+        .zone-header.z2 {
+            background: linear-gradient(135deg, rgba(255,159,77,0.1), rgba(255,220,77,0.06));
+            border: 1px solid rgba(255,159,77,0.3); border-radius: 20px 20px 0 0;
+        }
+        .zone-header.z3 {
+            background: linear-gradient(135deg, rgba(255,107,157,0.1), rgba(255,77,77,0.07));
+            border: 1px solid rgba(255,107,157,0.28); border-radius: 20px 20px 0 0;
+        }
+        .zone-header.z4 {
+            background: linear-gradient(135deg, rgba(255,77,77,0.14), rgba(180,0,0,0.08));
+            border: 1px solid rgba(255,77,77,0.35); border-radius: 20px 20px 0 0;
+        }
+
+        .zone-tag {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;
+        }
+        .z1 .zone-tag { color: var(--accent-green); }
+        .z2 .zone-tag { color: var(--accent-orange); }
+        .z3 .zone-tag { color: var(--accent-pink); }
+        .z4 .zone-tag { color: var(--accent-red); }
+
+        .zone-name {
+            font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700;
+            color: var(--text-primary); line-height: 1.3;
+        }
+
+        .zone-body {
+            padding: 24px 32px;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-top: none; border-radius: 0 0 20px 20px;
+            font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.85;
+        }
+
+        .retake-wrap { text-align: center; margin-top: 20px; }
+        .btn-retake {
+            background: none; border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.4); padding: 9px 22px; border-radius: 20px;
+            font-size: 13px; cursor: pointer; transition: all 0.2s;
+        }
+        .btn-retake:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+
+
+        .footnote {
+            margin-top: 52px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .score-scale { grid-template-columns: repeat(2, 1fr); }
+            .drink-type-grid { grid-template-columns: 1fr 1fr; }
+            .gender-btns { flex-direction: column; }
+            .gender-btn { padding: 12px 20px; }
+            .score-number { font-size: 60px; }
+            .zone-header, .zone-body { padding: 20px; }
+            .nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="starfield"><div class="stars"></div><div class="stars2"></div></div>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="../../index.html" class="logo"><img src="../../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../../articles/soobschestvo.html">Сообщество</a>
+            <a href="../../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru">Форум</a>
+            <a href="../../articles/testy.html">Тесты</a>
+            <a href="../../articles/knigi/">Книги</a>
+            <a href="../../articles/stati/">Статьи</a>
+            <a href="../../articles/karta-sayta/">Карта сайта</a>
+            <a href="../../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+<main class="page-wrap">
+    <nav class="breadcrumbs">
+        <a href="https://alkonorm.ru/">Главная</a>
+        <span>›</span>
+        <span>Тест AUDIT</span>
+    </nav>
+
+    <div class="article-tag">Клинический скрининг · AUDIT</div>
+
+    <h1>Тест AUDIT: выявление рискованного и вредного употребления алкоголя</h1>
+
+    <p class="article-lead">
+        Тест AUDIT (Alcohol Use Disorders Identification Test) — стандартизированный скрининг ВОЗ. 10 вопросов, максимум 40 баллов. Результат интерпретируется по 4 зонам риска с учётом пола. Это не диагноз, а инструмент для первичной оценки.
+    </p>
+
+    <div class="instruction">
+        <div class="instruction-title">Как проходить</div>
+        <p style="font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:16px;">
+            На каждый вопрос выберите один вариант. После ответа на все 10 вопросов нажмите «Подвести итог» и укажите пол для точной интерпретации.
+        </p>
+        <div class="score-scale">
+            <div class="scale-item"><span class="scale-num">0</span><span class="scale-label">никогда / нет</span></div>
+            <div class="scale-item"><span class="scale-num">1</span><span class="scale-label">редко</span></div>
+            <div class="scale-item"><span class="scale-num">2</span><span class="scale-label">ежемесячно</span></div>
+            <div class="scale-item"><span class="scale-num">3–4</span><span class="scale-label">еженедельно / ежедневно</span></div>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+        <div class="progress-header">
+            <span class="progress-label">Отвечено вопросов</span>
+            <span class="progress-count" id="progress-count">0 / 10</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+
+    <!-- Questions -->
+    <div id="questions">
+
+        <!-- Q1 -->
+        <div class="question-card" data-q="1">
+            <div class="question-num">Вопрос 1 <span class="answered-badge" id="badge-1"></span></div>
+            <div class="question-text">Как часто Вы употребляете алкогольные напитки?</div>
+            <div class="ans-btn-wrap" id="q1-btns"></div>
+        </div>
+
+        <!-- Q2 special -->
+        <div class="question-card" data-q="2">
+            <div class="question-num">Вопрос 2 <span class="answered-badge" id="badge-2"></span></div>
+            <div class="question-text">Сколько алкогольных напитков (стандартных порций) Вы употребляете в типичный день, когда выпиваете? Выберите напиток, чтобы увидеть объёмы.</div>
+
+            <div class="drink-step-label">Шаг 1 — выберите напиток:</div>
+            <div class="drink-type-grid">
+                <button class="drink-type-btn" onclick="selectDrink(0, this)">
+                    <span class="drink-icon">🍷</span>
+                    <span class="drink-name">Вино / шампанское</span>
+                </button>
+                <button class="drink-type-btn" onclick="selectDrink(1, this)">
+                    <span class="drink-icon">🍺</span>
+                    <span class="drink-name">Пиво</span>
+                </button>
+                <button class="drink-type-btn" onclick="selectDrink(2, this)">
+                    <span class="drink-icon">🥂</span>
+                    <span class="drink-name">Крепленое вино</span>
+                </button>
+                <button class="drink-type-btn" onclick="selectDrink(3, this)">
+                    <span class="drink-icon">🥃</span>
+                    <span class="drink-name">Крепкий алкоголь</span>
+                </button>
+            </div>
+
+            <div class="portion-note" id="portion-note" style="display:none">
+                <strong>1 стандартная порция:</strong> <span id="portion-text"></span>
+            </div>
+
+            <div class="volume-section" id="q2-volume">
+                <div class="drink-step-label">Шаг 2 — выберите объём в типичный день:</div>
+                <div class="ans-btn-wrap" id="q2-btns"></div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-card" data-q="3">
+            <div class="question-num">Вопрос 3 <span class="answered-badge" id="badge-3"></span></div>
+            <div class="question-text">Как часто Вы употребляете как минимум 1,5 л пива, или как минимум 180 мл крепкого алкоголя, или как минимум бутылку вина / шампанского 750 мл в течение 4 часов?</div>
+            <div class="ans-btn-wrap" id="q3-btns"></div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-card" data-q="4">
+            <div class="question-num">Вопрос 4 <span class="answered-badge" id="badge-4"></span></div>
+            <div class="question-text">Как часто за последние 12 месяцев Вы не могли остановиться, начав употреблять алкогольные напитки?</div>
+            <div class="ans-btn-wrap" id="q4-btns"></div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-card" data-q="5">
+            <div class="question-num">Вопрос 5 <span class="answered-badge" id="badge-5"></span></div>
+            <div class="question-text">Как часто за последние 12 месяцев из-за выпивки Вы не сделали то, что от Вас обычно ожидалось?</div>
+            <div class="ans-btn-wrap" id="q5-btns"></div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question-card" data-q="6">
+            <div class="question-num">Вопрос 6 <span class="answered-badge" id="badge-6"></span></div>
+            <div class="question-text">Как часто за последние 12 месяцев Вам необходимо было выпить утром, чтобы прийти в себя после сильной выпивки?</div>
+            <div class="ans-btn-wrap" id="q6-btns"></div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="question-card" data-q="7">
+            <div class="question-num">Вопрос 7 <span class="answered-badge" id="badge-7"></span></div>
+            <div class="question-text">Как часто за последние 12 месяцев Вы испытывали чувство вины или сожаления после выпивки?</div>
+            <div class="ans-btn-wrap" id="q7-btns"></div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="question-card" data-q="8">
+            <div class="question-num">Вопрос 8 <span class="answered-badge" id="badge-8"></span></div>
+            <div class="question-text">Как часто за последние 12 месяцев Вы были неспособны вспомнить, что было накануне, из-за того, что выпивали?</div>
+            <div class="ans-btn-wrap" id="q8-btns"></div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="question-card" data-q="9">
+            <div class="question-num">Вопрос 9 <span class="answered-badge" id="badge-9"></span></div>
+            <div class="question-text">Являлось ли Ваше употребление алкогольных напитков причиной травмы у Вас или у других людей?</div>
+            <div class="ans-btn-wrap" id="q9-btns"></div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="question-card" data-q="10">
+            <div class="question-num">Вопрос 10 <span class="answered-badge" id="badge-10"></span></div>
+            <div class="question-text">Случалось ли, что Ваш близкий человек или родственник, друг или врач беспокоился насчёт употребления Вами алкоголя или советовал выпивать меньше?</div>
+            <div class="ans-btn-wrap" id="q10-btns"></div>
+        </div>
+
+    </div><!-- /questions -->
+
+    <!-- Submit -->
+    <div class="submit-wrap">
+        <button class="btn-submit" id="btn-submit" disabled onclick="showResult()">Подвести итог</button>
+        <p class="btn-hint" id="btn-hint">Ответьте на все 10 вопросов</p>
+    </div>
+
+    <!-- Result -->
+    <div class="result-block" id="result-block">
+
+        <!-- Score -->
+        <div class="score-display">
+            <div class="score-number" id="score-number"></div>
+            <div class="score-subtext">из 40 возможных баллов</div>
+        </div>
+
+        <!-- Gender selector -->
+        <div class="gender-select-wrap">
+            <div class="gender-select-title">Выберите пол для интерпретации</div>
+            <div class="gender-btns">
+                <button class="gender-btn" id="gender-f" onclick="selectGender('f', this)">Женский</button>
+                <button class="gender-btn" id="gender-m" onclick="selectGender('m', this)">Мужской</button>
+            </div>
+        </div>
+
+        <!-- Zone result (shown after gender selected) -->
+        <div class="zone-result" id="zone-result">
+            <div class="zone-header" id="zone-header">
+                <div class="zone-tag" id="zone-tag"></div>
+                <div class="zone-name" id="zone-name"></div>
+            </div>
+            <div class="zone-body" id="zone-body"></div>
+        </div>
+
+        <div class="retake-wrap" style="margin-top:24px;">
+            <button class="btn-retake" onclick="retake()">Пройти заново</button>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+        <h2>Обсудите результаты с теми, кто понимает</h2>
+        <p>Обсудить результаты, задать вопрос или найти поддержку можно на форуме КУ — сообществе людей, которые работают над отношением к алкоголю.</p>
+        <a href="https://kuforum.ru" class="btn-primary">Перейти на форум →</a>
+    </div>
+
+    <div class="footnote">
+        Тест AUDIT разработан ВОЗ. Интерпретация по зонам риска — с учётом пола. Результат не является медицинским диагнозом. При зоне III–IV рекомендована консультация специалиста.
+    </div>
+</main>
+
+<script>
+    // ─── Data ───────────────────────────────────────────────────────────────
+
+    const Q1_OPTS = [
+        { score: 0, label: 'Никогда' },
+        { score: 1, label: 'Раз в месяц или реже' },
+        { score: 2, label: '2–4 раза в месяц' },
+        { score: 3, label: '2–3 раза в неделю' },
+        { score: 4, label: '4 раза в неделю и чаще' },
+    ];
+
+    const Q3_8_OPTS = [
+        { score: 0, label: 'Никогда' },
+        { score: 1, label: 'Реже одного раза в месяц' },
+        { score: 2, label: 'Ежемесячно' },
+        { score: 3, label: 'Еженедельно' },
+        { score: 4, label: 'Ежедневно или почти ежедневно' },
+    ];
+
+    const Q9_10_OPTS = [
+        { score: 0, label: 'Никогда' },
+        { score: 2, label: 'Да, более 12 месяцев назад' },
+        { score: 4, label: 'Да, в течение последних 12 месяцев' },
+    ];
+
+    const DRINK_DATA = [
+        {
+            name: 'Вино / шампанское',
+            portion: '100 мл вина или шампанского (12–13%)',
+            volumes: [
+                'до 250 мл — 1–2 порции',
+                '251–450 мл — 3–4 порции',
+                '451–660 мл — 5–6 порций',
+                '661–970 мл — 7–9 порций',
+                'более 970 мл — 10 порций и больше',
+            ]
+        },
+        {
+            name: 'Пиво',
+            portion: '250 мл пива (4,5–5%)',
+            volumes: [
+                'до 650 мл — 1–2 порции',
+                '651–1200 мл — 3–4 порции',
+                '1201–1750 мл — 5–6 порций',
+                '1751–2500 мл — 7–9 порций',
+                'более 2500 мл — 10 порций и больше',
+            ]
+        },
+        {
+            name: 'Крепленое вино',
+            portion: '60 мл крепленого вина (16–22%)',
+            volumes: [
+                'до 170 мл — 1–2 порции',
+                '171–300 мл — 3–4 порции',
+                '301–430 мл — 5–6 порций',
+                '431–640 мл — 7–9 порций',
+                'более 640 мл — 10 порций и больше',
+            ]
+        },
+        {
+            name: 'Крепкий алкоголь',
+            portion: '30 мл крепкого алкоголя (40%)',
+            volumes: [
+                'до 80 мл — 1–2 порции',
+                '81–140 мл — 3–4 порции',
+                '141–210 мл — 5–6 порций',
+                '211–300 мл — 7–9 порций',
+                'более 300 мл — 10 порций и больше',
+            ]
+        },
+    ];
+
+    // Zone data: [women, men] thresholds & content
+    const ZONES = [
+        {
+            cls: 'z1',
+            tag: 'Зона I',
+            name: 'Относительно низкий риск',
+            body: 'Относительно низкий риск возникновения проблем, связанных с употреблением алкоголя. Текущий уровень потребления не указывает на опасные паттерны.',
+            ranges: { f: [0, 4], m: [0, 8] }
+        },
+        {
+            cls: 'z2',
+            tag: 'Зона II — Опасное употребление',
+            name: 'Опасное употребление алкоголя',
+            body: 'Опасное употребление алкоголя, при котором повышается риск неблагоприятных последствий для здоровья и социальной жизни. Рекомендовано профилактическое вмешательство и информирование о рисках.',
+            ranges: { f: [5, 9], m: [9, 13] }
+        },
+        {
+            cls: 'z3',
+            tag: 'Зона III — Пагубное употребление',
+            name: 'Пагубное употребление алкоголя',
+            body: 'Пагубное употребление алкоголя, уже сопровождающееся последствиями для физического или психического здоровья. Требуется профессиональная консультация и, при необходимости, начало лечения.',
+            ranges: { f: [10, 10], m: [14, 16] }
+        },
+        {
+            cls: 'z4',
+            tag: 'Зона IV — Риск зависимости',
+            name: 'Риск возможной алкогольной зависимости',
+            body: 'Риск возможной алкогольной зависимости, требующий дальнейшего обследования и консультации специалиста — нарколога или психиатра-нарколога. Самостоятельная коррекция на этом уровне крайне затруднена.',
+            ranges: { f: [11, 40], m: [17, 40] }
+        },
+    ];
+
+    // ─── State ───────────────────────────────────────────────────────────────
+
+    const raw = {};
+    const TOTAL = 10;
+    let selectedDrink = -1;
+    let selectedGenderVal = null;
+
+    // ─── Build standard buttons ──────────────────────────────────────────────
+
+    function buildBtns(containerId, opts, q) {
+        const wrap = document.getElementById(containerId);
+        opts.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'ans-btn';
+            btn.innerHTML = `<span class="ans-score">${opt.score}</span><span class="ans-label">${opt.label}</span>`;
+            btn.onclick = () => pickAnswer(q, opt.score, btn, wrap);
+            wrap.appendChild(btn);
+        });
+    }
+
+    buildBtns('q1-btns',  Q1_OPTS,    1);
+    buildBtns('q3-btns',  Q3_8_OPTS,  3);
+    buildBtns('q4-btns',  Q3_8_OPTS,  4);
+    buildBtns('q5-btns',  Q3_8_OPTS,  5);
+    buildBtns('q6-btns',  Q3_8_OPTS,  6);
+    buildBtns('q7-btns',  Q3_8_OPTS,  7);
+    buildBtns('q8-btns',  Q3_8_OPTS,  8);
+    buildBtns('q9-btns',  Q9_10_OPTS, 9);
+    buildBtns('q10-btns', Q9_10_OPTS, 10);
+
+    // ─── Generic answer pick ─────────────────────────────────────────────────
+
+    function pickAnswer(q, score, btn, wrap) {
+        wrap.querySelectorAll('.ans-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+
+        const wasAnswered = raw[q] !== undefined;
+        raw[q] = score;
+
+        const badge = document.getElementById('badge-' + q);
+        if (badge) badge.textContent = score + ' балл' + suf(score);
+        document.querySelector('.question-card[data-q="' + q + '"]').classList.add('answered');
+
+        updateProgress();
+    }
+
+    function suf(n) {
+        if (n === 1) return '';
+        if (n >= 2 && n <= 4) return 'а';
+        return 'ов';
+    }
+
+    // ─── Q2 drink type ───────────────────────────────────────────────────────
+
+    function selectDrink(idx, btn) {
+        document.querySelectorAll('.drink-type-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+
+        const d = DRINK_DATA[idx];
+        selectedDrink = idx;
+
+        // Update portion note
+        document.getElementById('portion-text').textContent = d.portion;
+        document.getElementById('portion-note').style.display = 'block';
+
+        // Update volume buttons
+        const volumeSection = document.getElementById('q2-volume');
+        volumeSection.classList.add('visible');
+        const wrap = document.getElementById('q2-btns');
+        wrap.innerHTML = '';
+
+        // Clear Q2 answer if drink type changed
+        if (raw[2] !== undefined) {
+            delete raw[2];
+            document.querySelector('.question-card[data-q="2"]').classList.remove('answered');
+            document.getElementById('badge-2').textContent = '';
+            updateProgress();
+        }
+
+        d.volumes.forEach((vol, i) => {
+            const btn2 = document.createElement('button');
+            btn2.className = 'ans-btn';
+            btn2.innerHTML = `<span class="ans-score">${i}</span><span class="ans-label">${vol}</span>`;
+            btn2.onclick = () => pickAnswer(2, i, btn2, wrap);
+            wrap.appendChild(btn2);
+        });
+    }
+
+    // ─── Progress ────────────────────────────────────────────────────────────
+
+    function updateProgress() {
+        const count = Object.keys(raw).length;
+        document.getElementById('progress-count').textContent = count + ' / ' + TOTAL;
+        document.getElementById('progress-fill').style.width = (count / TOTAL * 100) + '%';
+
+        if (count === TOTAL) {
+            document.getElementById('btn-submit').disabled = false;
+            document.getElementById('btn-hint').textContent = 'Готово — можно посмотреть результат';
+        } else {
+            document.getElementById('btn-submit').disabled = true;
+            document.getElementById('btn-hint').textContent = 'Ответьте на все 10 вопросов';
+        }
+    }
+
+    // ─── Show result ─────────────────────────────────────────────────────────
+
+    function showResult() {
+        const total = Object.values(raw).reduce((a, b) => a + b, 0);
+
+        document.getElementById('score-number').innerHTML =
+            total + '<span class="score-max"> / 40</span>';
+
+        // Reset gender
+        selectedGenderVal = null;
+        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected'));
+        document.getElementById('zone-result').classList.remove('visible');
+
+        // Store total for gender selection
+        document.getElementById('result-block').dataset.total = total;
+
+        const rb = document.getElementById('result-block');
+        rb.classList.add('visible');
+        setTimeout(() => rb.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+
+    // ─── Gender selection ────────────────────────────────────────────────────
+
+    function selectGender(g, btn) {
+        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedGenderVal = g;
+
+        const total = parseInt(document.getElementById('result-block').dataset.total);
+        renderZone(total, g);
+    }
+
+    function renderZone(total, gender) {
+        const zone = ZONES.find(z => total >= z.ranges[gender][0] && total <= z.ranges[gender][1]);
+        if (!zone) return;
+
+        const header = document.getElementById('zone-header');
+        header.className = 'zone-header ' + zone.cls;
+        document.getElementById('zone-tag').textContent = zone.tag;
+        document.getElementById('zone-name').textContent = zone.name;
+        document.getElementById('zone-body').textContent = zone.body;
+
+        const zr = document.getElementById('zone-result');
+        zr.classList.add('visible');
+        setTimeout(() => zr.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
+    }
+
+    // ─── Retake ──────────────────────────────────────────────────────────────
+
+    function retake() {
+        for (const k in raw) delete raw[k];
+        selectedDrink = -1;
+        selectedGenderVal = null;
+
+        document.querySelectorAll('.ans-btn').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('.drink-type-btn').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('.question-card').forEach(c => c.classList.remove('answered'));
+        document.querySelectorAll('.answered-badge').forEach(b => b.textContent = '');
+
+        document.getElementById('portion-note').style.display = 'none';
+        document.getElementById('q2-volume').classList.remove('visible');
+        document.getElementById('q2-btns').innerHTML = '';
+
+        document.getElementById('progress-count').textContent = '0 / ' + TOTAL;
+        document.getElementById('progress-fill').style.width = '0%';
+        document.getElementById('btn-submit').disabled = true;
+        document.getElementById('btn-hint').textContent = 'Ответьте на все 10 вопросов';
+        document.getElementById('result-block').classList.remove('visible');
+        document.getElementById('zone-result').classList.remove('visible');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

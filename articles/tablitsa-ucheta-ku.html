@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Таблица учёта в Excel и приложение для КУ — Шаг 4 | КУ</title>
+    <meta name="description" content="Как вести количественный и качественный учёт эпизодов употребления: Excel-таблица, мобильные приложения и колонка последствий — из книги «На краю Синей Бездны»">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        article { padding: 60px 0 100px; }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.7; }
+        .breadcrumb span { color: rgba(255,255,255,0.25); }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 50px 0 25px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 35px 0 20px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li, ol li {
+            position: relative;
+            padding: 12px 0 12px 35px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 { margin-top: 0; }
+        .cyan-box { border-color: rgba(77,212,255,0.3); background: rgba(77,212,255,0.06); }
+
+        .step-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 40px rgba(77, 212, 255, 0.2);
+        }
+
+        .step-box h3 { margin-top: 0; }
+
+        .step-box.bio { border-color: rgba(77,212,255,0.3); }
+        .step-box.psych { border-color: rgba(255,214,0,0.25); }
+        .step-box.psych h3 { color: #ffd600; }
+        .step-box.social { border-color: rgba(255,107,157,0.3); }
+        .step-box.social h3 { color: var(--accent-pink); }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 44px 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 { margin: 0 0 14px; padding: 0; font-size: 28px; }
+        .cta-box h2::before { display: none; }
+
+        .cta-box p {
+            font-size: 17px;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(77,212,255,0.45);
+        }
+
+        .related-links { margin: 40px 0; }
+
+        .related-links a {
+            display: block;
+            padding: 14px 22px;
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .related-links a:hover {
+            background: rgba(77,212,255,0.12);
+            border-color: var(--accent-cyan);
+            padding-left: 28px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover { gap: 12px; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+            p, ul li { font-size: 16px; }
+            .nav-links { display: none; }
+            .cta-box { padding: 30px 24px; }
+        }
+
+        /* Tracking example table */
+        .tracking-wrap {
+            overflow-x: auto;
+            margin: 28px 0;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+        .tracking-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            min-width: 960px;
+        }
+        .tracking-table th {
+            background: rgba(77,212,255,0.10);
+            color: var(--accent-cyan);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            padding: 10px 10px;
+            border-bottom: 1px solid rgba(77,212,255,0.3);
+            white-space: nowrap;
+        }
+        .tracking-table td {
+            padding: 7px 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: rgba(255,255,255,0.85);
+            vertical-align: top;
+        }
+        .tracking-table tr:last-child td { border-bottom: none; }
+        .tracking-table tr.row-simvol { background: rgba(77,212,255,0.04); }
+        .tracking-table tr.row-kanon  { background: rgba(255,255,255,0.018); }
+        .tracking-table .col-num  { text-align: center; color: rgba(255,255,255,0.35); width: 28px; }
+        .tracking-table .col-date { white-space: nowrap; font-size: 12px; }
+        .tracking-table .col-simvol { text-align: center; }
+        .badge-simvol {
+            display: inline-block;
+            background: rgba(77,212,255,0.13);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(77,212,255,0.3);
+            border-radius: 4px;
+            font-size: 11px;
+            padding: 1px 7px;
+            white-space: nowrap;
+        }
+        .badge-kanon {
+            display: inline-block;
+            background: rgba(180,180,255,0.1);
+            color: #b8b8ff;
+            border: 1px solid rgba(180,180,255,0.25);
+            border-radius: 4px;
+            font-size: 11px;
+            padding: 1px 7px;
+            white-space: nowrap;
+        }
+        .tracking-table .col-lcha  { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .tracking-table .col-total { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .tracking-table .col-dyn   { text-align: right; font-variant-numeric: tabular-nums; color: rgba(255,255,255,0.55); white-space: nowrap; }
+        .tracking-table .col-note  { font-size: 12px; color: rgba(255,107,157,0.85); min-width: 150px; }
+    </style>
+    <link rel="canonical" href="https://alkonorm.ru/articles/tablitsa-ucheta-ku.html">
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../index.html">Главная</a>
+                <span>›</span>
+                <a href="7-shagov-ku.html">Программа 7 шагов КУ</a>
+                <span>›</span>
+                Шаг 4 — Реализация плана
+            </div>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">Шаг 4 из 7</div>
+                <h1>Завести таблицу учёта в Excel и приложение в телефоне</h1>
+                <div class="article-meta">
+                    <span>Программа <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none;">7 шагов КУ</a></span>
+                    <span>·</span>
+                    <span>Инструменты учёта</span>
+                </div>
+            </div>
+
+            <div class="fade-in delay-1">
+
+                <p>Этот этап выглядит просто: ты перестаешь обсуждать правила и начинаешь по ним жить. Именно здесь выясняется, что из плана реально работает, а что существует только на бумаге. На предыдущих шагах можно построить красивую схему, но только практика показывает, насколько она совместима с твоей жизнью, твоим окружением, твоими привычками и твоими типами мероприятий.</p>
+
+                <p>Смысл этого этапа не в том, чтобы «попробовать» контролировать. Смысл в том, чтобы употреблять алкоголь по разработанным правилам строго, как по инструкции, и параллельно собирать данные. Если в момент эпизода ты начинаешь импровизировать и делать исключения, то ты уже не тестируешь план, ты тестируешь свою способность выкручиваться. А это совсем другая игра, в которой чаще побеждает не стратегия, а настроение и обстоятельства.</p>
+
+                <h2>Зачем нужен учёт</h2>
+
+                <p>Чтобы тактика реально улучшалась, нужен учет. Потому что мозг имеет свойство обманывать, он забывает неудобные детали, сглаживает провалы и приукрашивает успехи. Он легко находит оправдание срыву и потере контроля, уменьшает выпитую дозу, забывает косяки и потери. А уж похмелье и плохое самочувствие вообще не держится в памяти более пары суток. Без учета ты каждый раз начинаешь как будто с нуля, и опыт не накапливается.</p>
+
+                <h2>Два вида учёта</h2>
+
+                <p>Учет на этом этапе полезен двух видов: количественный и качественный. Количественный отвечает на вопрос «что именно произошло». Он фиксирует тип эпизода, лимит и факт выпитого в лча, время начала, длительность, были ли нарушения ключевых правил и какие последствия были на следующий день. Это сухие цифры, но они дают данные для анализа.</p>
+
+                <p>Качественный учет отвечает на вопрос «почему так получилось». Что именно подтолкнуло к продолжению, где ты сильнее всего ошибся, какая тактика сработала, а какая не сработала, и что ты изменишь в следующий раз.</p>
+
+                <h2>Таблица учёта в Excel</h2>
+
+                <p>Основную таблицу учета фактически выпитого удобнее всего вести в Excel. Таблица фиксирует каждый эпизод по нескольким параметрам: тип эпизода, выпитое количество в лча, время, длительность, нарушения правил и последствия на следующий день.</p>
+
+                <div class="step-box bio">
+                    <h3>Три типа эпизодов в таблице</h3>
+                    <ul>
+                        <li><strong>Канон</strong> — выпито в соответствии с ограничением, указанным в стратегии.</li>
+                        <li><strong>Символ</strong> — выпито не более 0,06 лча. Такой эпизод считается символическим.</li>
+                        <li><strong>Превыш</strong> — превышено ограничение, указанное в стратегии.</li>
+                    </ul>
+                </div>
+
+                <p>В таблице также есть колонка «Общее лча» — это выпитое количество за год. И отдельный прогнозный показатель «Динамика на год», который считается по формуле: Общее лча / количество дней, прошедших с начала года * 365. Этот параметр показывает, какое количество алкоголя человек выпьет за год, если будет пить с такой скоростью оставшееся в году время. Если частота и количество лча возрастает, показатель растет; если человек не пьет некоторое время, он начинает снижаться.</p>
+
+                <p>Дополнительно полезно ввести колонку «Последствия», в которой честно указываются негативные явления после очередного эпизода, если они присутствуют. Такая информация впоследствии помогает более точно определять приемлемые дозы и определять лимиты.</p>
+
+                <h3>Пример таблицы учёта из книги</h3>
+                <p>Ниже — фрагмент реальной таблицы из книги «На краю Синей Бездны»: первые 7 эпизодов января 2025 года. Строки, где в колонке «Символ» стоит «1», — это символические эпизоды (не более 0,06&nbsp;лча). «Динамика на год» — прогноз годового потребления на основе накопленного темпа.</p>
+
+                <div class="tracking-wrap">
+                    <table class="tracking-table">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата</th>
+                                <th>Символ</th>
+                                <th>ЛЧА</th>
+                                <th>Тип эпизода</th>
+                                <th>Общее ЛЧА</th>
+                                <th>Повод</th>
+                                <th>Тип пьянки</th>
+                                <th>Напиток</th>
+                                <th>Динамика на год</th>
+                                <th>Последствия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-simvol">
+                                <td class="col-num">1</td>
+                                <td class="col-date">03.01.2025</td>
+                                <td class="col-simvol"><span class="badge-simvol">1</span></td>
+                                <td class="col-lcha">0,030</td>
+                                <td><span class="badge-simvol">Символ</span></td>
+                                <td class="col-total">0,03</td>
+                                <td>ДР тещи</td>
+                                <td>семейная</td>
+                                <td>шампанское</td>
+                                <td class="col-dyn">3,7</td>
+                                <td class="col-note"></td>
+                            </tr>
+                            <tr class="row-kanon">
+                                <td class="col-num">2</td>
+                                <td class="col-date">06.01.2025</td>
+                                <td class="col-simvol"></td>
+                                <td class="col-lcha">0,065</td>
+                                <td><span class="badge-kanon">Канон</span></td>
+                                <td class="col-total">0,10</td>
+                                <td>Рождественский ужин с семьей</td>
+                                <td>семейная</td>
+                                <td>вино</td>
+                                <td class="col-dyn">5,8</td>
+                                <td class="col-note"></td>
+                            </tr>
+                            <tr class="row-kanon">
+                                <td class="col-num">3</td>
+                                <td class="col-date">09.01.2025</td>
+                                <td class="col-simvol"></td>
+                                <td class="col-lcha">0,088</td>
+                                <td><span class="badge-kanon">Канон</span></td>
+                                <td class="col-total">0,18</td>
+                                <td>Пиво под киношку один дома</td>
+                                <td>одинар</td>
+                                <td>пиво</td>
+                                <td class="col-dyn">7,4</td>
+                                <td class="col-note"></td>
+                            </tr>
+                            <tr class="row-kanon">
+                                <td class="col-num">4</td>
+                                <td class="col-date">11.01.2025</td>
+                                <td class="col-simvol"></td>
+                                <td class="col-lcha">0,153</td>
+                                <td><span class="badge-kanon">Канон</span></td>
+                                <td class="col-total">0,34</td>
+                                <td>В кино с другом</td>
+                                <td>публичная</td>
+                                <td>вино</td>
+                                <td class="col-dyn">11,1</td>
+                                <td class="col-note">Утром болела голова, целый день болел живот</td>
+                            </tr>
+                            <tr class="row-simvol">
+                                <td class="col-num">5</td>
+                                <td class="col-date">13.01.2025</td>
+                                <td class="col-simvol"><span class="badge-simvol">1</span></td>
+                                <td class="col-lcha">0,043</td>
+                                <td><span class="badge-simvol">Символ</span></td>
+                                <td class="col-total">0,38</td>
+                                <td>Старый Новый год с женой за ужином</td>
+                                <td>с женой</td>
+                                <td>шампанское</td>
+                                <td class="col-dyn">10,6</td>
+                                <td class="col-note"></td>
+                            </tr>
+                            <tr class="row-kanon">
+                                <td class="col-num">6</td>
+                                <td class="col-date">19.01.2025</td>
+                                <td class="col-simvol"></td>
+                                <td class="col-lcha">0,065</td>
+                                <td><span class="badge-kanon">Канон</span></td>
+                                <td class="col-total">0,44</td>
+                                <td>После ночной рыбалки с другом</td>
+                                <td>с женой</td>
+                                <td>вино</td>
+                                <td class="col-dyn">8,5</td>
+                                <td class="col-note">ночью подташнивало и было окно с 3 до 6</td>
+                            </tr>
+                            <tr class="row-simvol">
+                                <td class="col-num">7</td>
+                                <td class="col-date">20.01.2025</td>
+                                <td class="col-simvol"><span class="badge-simvol">1</span></td>
+                                <td class="col-lcha">0,033</td>
+                                <td><span class="badge-simvol">Символ</span></td>
+                                <td class="col-total">0,48</td>
+                                <td>Пиво с женой под рыбку</td>
+                                <td>с женой</td>
+                                <td>пиво</td>
+                                <td class="col-dyn">8,7</td>
+                                <td class="col-note">днем тянуло поджелудочную</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Мобильные приложения</h2>
+
+                <p>Таблицу в Excel можно вести параллельно с учетом в приложении телефона, поскольку у каждого варианта есть свой набор полезных данных. Приложение в телефоне фиксирует напитки, количество и иногда время употребления, а экселевская таблица хранит информацию о типе эпизода, поводе и последствиях.</p>
+
+                <p>Для учёта в телефоне подходят следующие приложения:</p>
+
+                <ul>
+                    <li><strong>АлкоСтат</strong> — для iPhone</li>
+                    <li><strong>Алкогольный Календарь</strong> — для iPhone</li>
+                    <li><strong>AlcoDroid</strong> — для Android</li>
+                </ul>
+
+                <div class="highlight-box cyan-box">
+                    <h3>Краткое резюме</h3>
+                    <ul>
+                        <li>смысл этапа реализации — жить строго по правилам и параллельно собирать данные, а не импровизировать;</li>
+                        <li>без учета мозг забывает неудобные детали, сглаживает провалы и опыт не накапливается;</li>
+                        <li>количественный учет фиксирует что произошло, качественный — почему так получилось;</li>
+                        <li>в таблице три типа эпизодов: Канон, Символ и Превыш;</li>
+                        <li>колонка «Последствия» помогает точнее определять приемлемые дозы и лимиты;</li>
+                        <li>Excel и мобильное приложение дополняют друг друга — каждый инструмент хранит свой набор данных.</li>
+                    </ul>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Поделитесь своим опытом учёта</h2>
+                    <p>На форуме в разделе личных тем можно рассказать, как вы ведёте учёт, и получить советы от людей с реальным опытом КУ.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также:</strong></p>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ — полная схема и все шаги</a>
+                </div>
+
+                <a href="7-shagov-ku.html" class="back-link">← Вернуться к программе 7 шагов КУ</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

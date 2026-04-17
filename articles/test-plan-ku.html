@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Тест: полнота и индивидуальность плана КУ — оценка Шага 3 | КУ</title>
+    <meta name="description" content="Авторский скрининг-тест по оценке полноты и учёта личных особенностей плана контролируемого употребления алкоголя (Шаг 3). 12 вопросов, автоматический подсчёт, проверка индивидуальности плана.">
+    <meta name="keywords" content="тест план КУ, контролируемое употребление алкоголя план, шаг 3 КУ, полнота плана употребления алкоголя">
+    <link rel="canonical" href="https://alkonorm.ru/articles/test-plan-ku.html">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --accent-orange: #ff9f4d;
+            --accent-green: #4dffb0;
+            --accent-blue: #7b9fff;
+            --glass-border: rgba(255,255,255,0.13);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.75);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: #090a0f;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            pointer-events: none;
+        }
+        .stars {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
+                radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 82% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 60% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 92% 20%, rgba(255,255,255,0.6) 0%, transparent 100%);
+            animation: twinkle 8s ease-in-out infinite alternate;
+        }
+        .stars2 {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 65% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 80% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 55% 5%, rgba(255,255,255,0.7) 0%, transparent 100%);
+            animation: twinkle 12s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.7; }
+        }
+
+
+        .page-wrap {
+            display: block;
+            position: relative; z-index: 10;
+            max-width: 780px; margin: 0 auto; padding: 40px 24px 100px;
+        }
+
+        .breadcrumbs { font-size: 13px; color: rgba(255,255,255,0.38); margin-bottom: 36px; }
+        .breadcrumbs a { color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+        .breadcrumbs a:hover { color: var(--accent-cyan); }
+        .breadcrumbs span { margin: 0 6px; }
+
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.12), rgba(255,107,157,0.12));
+            border: 1px solid rgba(77,212,255,0.3); border-radius: 30px; padding: 5px 16px;
+            font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 700;
+            line-height: 1.2; margin-bottom: 18px;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        .article-lead {
+            font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.85; margin-bottom: 32px;
+            border-left: 3px solid rgba(77,212,255,0.35); padding-left: 18px;
+        }
+        .article-lead a { color: var(--accent-cyan); text-decoration: none; }
+        .article-lead a:hover { text-decoration: underline; }
+
+        .instruction {
+            background: rgba(77,212,255,0.05); border: 1px solid rgba(77,212,255,0.18);
+            border-radius: 14px; padding: 22px 26px; margin-bottom: 36px;
+        }
+        .instruction-title {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 14px;
+        }
+        .score-scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
+        .scale-item {
+            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px; padding: 10px 12px; text-align: center;
+        }
+        .scale-num {
+            font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700;
+            color: var(--accent-cyan); display: block; margin-bottom: 4px;
+        }
+        .scale-label { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+
+        /* Progress */
+        .progress-wrap { margin-bottom: 32px; }
+        .progress-        .progress-label { font-size: 13px; color: rgba(255,255,255,0.45); }
+        .progress-count { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent-cyan); }
+        .progress-bar { height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green)); border-radius: 2px; transition: width 0.4s ease; }
+
+        /* Question card */
+        .question-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 16px; padding: 22px 24px; margin-bottom: 14px; transition: border-color 0.25s;
+        }
+        .question-card.answered { border-color: rgba(77,212,255,0.22); }
+        .question-num {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            letter-spacing: 0.8px; text-transform: uppercase; color: var(--accent-cyan); margin-bottom: 10px;
+        }
+        .question-text { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.65; margin-bottom: 18px; }
+        .answered-badge {
+            display: none; float: right;
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            color: var(--accent-cyan); background: rgba(77,212,255,0.12); border-radius: 20px; padding: 2px 10px; margin-top: -2px;
+        }
+        .question-card.answered .answered-badge { display: inline-block; }
+
+        /* Answer buttons */
+        .answer-buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .ans-btn {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px; padding: 10px 6px; cursor: pointer; text-align: center;
+            transition: background 0.2s, border-color 0.2s; color: var(--text-primary);
+        }
+        .ans-btn:hover { background: rgba(77,212,255,0.1); border-color: rgba(77,212,255,0.35); }
+        .ans-btn.selected { background: rgba(77,212,255,0.15); border-color: rgba(77,212,255,0.55); }
+        .ans-num {
+            font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700;
+            color: var(--accent-cyan); display: block; margin-bottom: 5px;
+        }
+        .ans-btn.selected .ans-num { color: #fff; }
+        .ans-text { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.35; }
+        .ans-btn.selected .ans-text { color: rgba(255,255,255,0.7); }
+
+        /* Submit */
+        .submit-wrap { text-align: center; margin: 36px 0; }
+        .btn-submit {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.2), rgba(77,255,176,0.15));
+            border: 1px solid rgba(77,212,255,0.45); color: var(--accent-cyan);
+            padding: 14px 44px; border-radius: 30px;
+            font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
+            cursor: pointer; transition: all 0.25s;
+        }
+        .btn-submit:hover:not(:disabled) {
+            background: linear-gradient(135deg, rgba(77,212,255,0.32), rgba(77,255,176,0.25));
+            border-color: rgba(77,212,255,0.7); transform: translateY(-1px);
+        }
+        .btn-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-hint { font-size: 13px; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+        /* Result */
+        .result-block { display: none; border-radius: 20px; overflow: hidden; margin-top: 40px; }
+        .result-block.visible { display: block; }
+
+        .result-score-wrap { padding: 36px 32px; text-align: center; }
+        .result-score-wrap.lvl1 {
+            background: linear-gradient(135deg, rgba(255,107,157,0.1), rgba(255,159,77,0.08));
+            border: 1px solid rgba(255,107,157,0.25); border-radius: 20px 20px 0 0;
+        }
+        .result-score-wrap.lvl2 {
+            background: linear-gradient(135deg, rgba(255,159,77,0.1), rgba(255,220,77,0.06));
+            border: 1px solid rgba(255,159,77,0.3); border-radius: 20px 20px 0 0;
+        }
+        .result-score-wrap.lvl3 {
+            background: linear-gradient(135deg, rgba(77,212,255,0.1), rgba(123,159,255,0.07));
+            border: 1px solid rgba(77,212,255,0.28); border-radius: 20px 20px 0 0;
+        }
+        .result-score-wrap.lvl4 {
+            background: linear-gradient(135deg, rgba(77,255,176,0.1), rgba(77,212,255,0.07));
+            border: 1px solid rgba(77,255,176,0.28); border-radius: 20px 20px 0 0;
+        }
+
+        .result-label {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;
+        }
+        .lvl1 .result-label { color: var(--accent-pink); }
+        .lvl2 .result-label { color: var(--accent-orange); }
+        .lvl3 .result-label { color: var(--accent-cyan); }
+        .lvl4 .result-label { color: var(--accent-green); }
+
+        .result-number {
+            font-family: 'Montserrat', sans-serif; font-size: 72px; font-weight: 700; line-height: 1; margin-bottom: 8px;
+        }
+        .lvl1 .result-number { color: var(--accent-pink); }
+        .lvl2 .result-number { color: var(--accent-orange); }
+        .lvl3 .result-number { color: var(--accent-cyan); }
+        .lvl4 .result-number { color: var(--accent-green); }
+        .result-max { font-size: 20px; color: rgba(255,255,255,0.3); }
+        .result-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: var(--text-primary); }
+
+        .result-body {
+            padding: 28px 32px;
+            background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.08);
+            border-top: none; border-radius: 0 0 20px 20px;
+        }
+        .result-desc { font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 20px; }
+        .result-step {
+            background: rgba(77,212,255,0.06); border-left: 3px solid var(--accent-cyan);
+            border-radius: 0 10px 10px 0; padding: 16px 20px;
+            font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.75;
+        }
+        .result-step strong { color: var(--text-primary); }
+
+        /* Individuality checks */
+        .checks-title {
+            font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--accent-orange); margin: 24px 0 10px;
+        }
+        .checks-list { display: flex; flex-direction: column; gap: 10px; }
+        .check-item {
+            background: rgba(255,159,77,0.06); border: 1px solid rgba(255,159,77,0.2);
+            border-radius: 10px; padding: 14px 18px;
+            font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.65; display: none;
+        }
+        .check-item.triggered { display: block; }
+        .check-item strong { color: var(--accent-orange); }
+
+        .all-checks-ok {
+            font-size: 13px; color: rgba(77,255,176,0.7); padding: 12px 0; display: none;
+        }
+        .all-checks-ok.visible { display: block; }
+
+        /* Retake */
+        .retake-wrap { text-align: center; margin-top: 24px; }
+        .btn-retake {
+            background: none; border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.4); padding: 9px 22px; border-radius: 20px;
+            font-size: 13px; cursor: pointer; transition: all 0.2s;
+        }
+        .btn-retake:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+
+        .cta-block {
+            border-left: 3px solid var(--accent-cyan); background: rgba(77,212,255,0.04);
+            border-radius: 0 14px 14px 0; padding: 22px 26px; margin: 44px 0 0;
+        }
+        .cta-block p { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+        .btn-ku {
+            display: inline-block; background: rgba(77,212,255,0.1);
+            border: 1px solid rgba(77,212,255,0.3); color: var(--accent-cyan);
+            padding: 9px 20px; border-radius: 20px; font-size: 13px; font-weight: 600;
+            font-family: 'Montserrat', sans-serif; text-decoration: none; transition: all 0.2s;
+        }
+        .btn-ku:hover { background: rgba(77,212,255,0.2); border-color: rgba(77,212,255,0.55); }
+
+        .footnote {
+            margin-top: 52px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            font-size: 12px; color: rgba(255,255,255,0.85); line-height: 1.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .score-scale { grid-template-columns: repeat(2, 1fr); }
+            .answer-buttons { gap: 6px; }
+            .ans-btn { padding: 8px 4px; }
+            .ans-num { font-size: 17px; }
+            .result-number { font-size: 56px; }
+            .result-score-wrap, .result-body { padding: 22px 20px; }
+            .nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="starfield"><div class="stars"></div><div class="stars2"></div></div>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+<main class="page-wrap">
+    <nav class="breadcrumbs">
+        <a href="https://alkonorm.ru/">Главная</a>
+        <span>›</span>
+        <span>Тест: полнота плана КУ</span>
+    </nav>
+
+    <div class="article-tag">Шаг 3 · Самодиагностика</div>
+
+    <h1>Тест: полнота и учёт личных особенностей плана КУ</h1>
+
+    <p class="article-lead">
+        Авторский скрининг-тест по оценке полноты и учёта личных особенностей при выполнении <a href="strategiya-ku.html">Шага 3</a>. Оцените свой план КУ по 12 вопросам и получите анализ слабых мест.
+    </p>
+
+    <div class="instruction">
+        <div class="instruction-title">Как проходить</div>
+        <p style="font-size:14px; color:rgba(255,255,255,0.65); margin-bottom:16px;">
+            На каждый вопрос выберите один вариант, оценивая <strong style="color:rgba(255,255,255,0.85)">свой реальный план КУ</strong>, а не намерения. Затем нажмите «Подвести итог».
+        </p>
+        <div class="score-scale">
+            <div class="scale-item"><span class="scale-num">0</span><span class="scale-label">Нет, этого в плане нет</span></div>
+            <div class="scale-item"><span class="scale-num">1</span><span class="scale-label">Есть частично или расплывчато</span></div>
+            <div class="scale-item"><span class="scale-num">2</span><span class="scale-label">Есть, но без проверяемых деталей</span></div>
+            <div class="scale-item"><span class="scale-num">3</span><span class="scale-label">Есть чётко, проверяемо и применимо</span></div>
+        </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+        <div class="progress-header">
+            <span class="progress-label">Отвечено вопросов</span>
+            <span class="progress-count" id="progress-count">0 / 12</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+
+    <!-- Questions -->
+    <div id="questions"></div>
+
+    <!-- Submit -->
+    <div class="submit-wrap">
+        <button class="btn-submit" id="btn-submit" disabled onclick="showResult()">Подвести итог</button>
+        <p class="btn-hint" id="btn-hint">Ответьте на все 12 вопросов</p>
+    </div>
+
+    <!-- Result -->
+    <div class="result-block" id="result-block">
+        <div class="result-score-wrap" id="result-score-wrap">
+            <div class="result-label" id="result-label"></div>
+            <div class="result-number" id="result-number"></div>
+            <div class="result-title" id="result-title"></div>
+        </div>
+        <div class="result-body">
+            <p class="result-desc" id="result-desc"></p>
+            <div class="result-step" id="result-step"></div>
+
+            <!-- Individuality checks -->
+            <div id="checks-section" style="display:none">
+                <div class="checks-title">Проверка индивидуальности плана</div>
+                <div class="checks-list">
+                    <div class="check-item" id="chk-individ">
+                        <strong>Вопросы 6, 7, 10 — индивидуализация:</strong> суммарный балл низкий. План, вероятно, описывает общий КУ без учёта личных триггеров, шаблонов и тактики для конкретных ситуаций.
+                    </div>
+                    <div class="check-item" id="chk-system">
+                        <strong>Вопросы 1, 2, 4, 12 — систематизация:</strong> суммарный балл низкий. Стратегическая и учётная часть плана слабо структурирована — правила расплывчаты или отсутствуют.
+                    </div>
+                    <div class="check-item" id="chk-psych">
+                        <strong>Вопросы 8, 9 — психологическая защита:</strong> суммарный балл низкий. План не защищает от провала внутри эпизода: нет прямых запретов для опасных функций и нет плана Б после достижения лимита.
+                    </div>
+                </div>
+            </div>
+            <div class="all-checks-ok" id="all-checks-ok">Все проверки пройдены — план учитывает личные особенности.</div>
+
+            <div class="retake-wrap">
+                <button class="btn-retake" onclick="retake()">Пройти заново</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+        <h2>Разбираем план КУ — на форуме</h2>
+        <p>На kuforum.ru участники делятся своими планами контроля — как составляли, что не сработало и как доработали правила под себя. Форум помогает увидеть слабые места плана.</p>
+        <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+    </div>
+
+    <div class="cta-block">
+        <p>Обсудить план, задать вопрос или получить обратную связь от сообщества — на форуме КУ.</p>
+        <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-ku">Перейти на kuforum.ru →</a>
+    </div>
+
+    <div class="footnote">
+        Авторский скрининг-тест по оценке Шага 3 программы КУ. Не является клиническим инструментом. Оценивайте реальный документ или конкретные правила — не намерения.
+    </div>
+</main>
+
+<script>
+    const LABELS = [
+        'Нет, этого в плане нет',
+        'Есть частично или расплывчато',
+        'Есть, но без проверяемых деталей',
+        'Есть чётко, проверяемо и применимо',
+    ];
+
+    const QUESTIONS = [
+        { n: 1,  text: 'Сформулирована стратегическая часть плана с короткими, проверяемыми правилами и без лазеек.' },
+        { n: 2,  text: 'Есть численные лимиты — годовой и суточный — и они однозначно связаны с ЛЧА и талонами.' },
+        { n: 3,  text: 'Определены типы мероприятий. Для каждого типового эпизода заранее задан класс (символический или умеренный) и верхняя граница ЛЧА для этого типа.' },
+        { n: 4,  text: 'Составлен календарный план на месяц, где заранее отмечены ожидаемые события и распределены талоны, плюс есть резерв на непредвиденные эпизоды.' },
+        { n: 5,  text: 'Прописаны правила перераспределения талонов внутри месяца без увеличения общего лимита, и определён порядок действий при превышении лимита.' },
+        { n: 6,  text: 'Описаны доминирующие контуры зависимости и связь с личными триггерами и шаблонами.' },
+        { n: 7,  text: 'Указаны ключевые триггеры и разделены на ненужные (исключаемые) и значимые (оставляемые).' },
+        { n: 8,  text: 'Для высокорисковых функций употребления установлены прямые запреты, и они сформулированы как личные правила, а не как намерения.' },
+        { n: 9,  text: 'План включает план Б после достижения лимита для каждого типа эпизодов.' },
+        { n: 10, text: 'Для каждого типа мероприятий есть отдельная тактика, отражающая реальные риски именно этого типа.' },
+        { n: 11, text: 'План содержит блок подготовки ресурсов (биологических, психологических и социальных) с конкретными действиями и минимальными стандартами: сон, режим, поддержка.' },
+        { n: 12, text: 'Задан механизм учёта ЛЧА, регулярного разбора результатов, критериев успеха и понятные условия, когда план ужесточается или когда выбирается трезвость.' },
+    ];
+
+    const TOTAL = 12;
+    const raw = {};
+
+    // Build question cards
+    const container = document.getElementById('questions');
+    QUESTIONS.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        card.dataset.q = q.n;
+
+        const btns = [0, 1, 2, 3].map(v =>
+            `<button class="ans-btn" onclick="selectAnswer(${q.n}, ${v}, this)">
+                <span class="ans-num">${v}</span>
+                <span class="ans-text">${LABELS[v]}</span>
+            </button>`
+        ).join('');
+
+        card.innerHTML = `
+            <div class="question-num">Вопрос ${q.n} <span class="answered-badge" id="badge-${q.n}"></span></div>
+            <div class="question-text">${q.text}</div>
+            <div class="answer-buttons">${btns}</div>
+        `;
+        container.appendChild(card);
+    });
+
+    function selectAnswer(q, v, btn) {
+        btn.parentElement.querySelectorAll('.ans-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        raw[q] = v;
+
+        const badge = document.getElementById('badge-' + q);
+        if (badge) badge.textContent = v + ' балл' + suf(v);
+        document.querySelector('.question-card[data-q="' + q + '"]').classList.add('answered');
+
+        const count = Object.keys(raw).length;
+        document.getElementById('progress-count').textContent = count + ' / ' + TOTAL;
+        document.getElementById('progress-fill').style.width = (count / TOTAL * 100) + '%';
+
+        if (count === TOTAL) {
+            document.getElementById('btn-submit').disabled = false;
+            document.getElementById('btn-hint').textContent = 'Готово — можно посмотреть результат';
+        }
+    }
+
+    function suf(n) {
+        if (n === 1) return '';
+        if (n >= 2 && n <= 4) return 'а';
+        return 'ов';
+    }
+
+    function showResult() {
+        const total = Object.values(raw).reduce((a, b) => a + b, 0);
+
+        document.getElementById('result-number').innerHTML =
+            total + '<span class="result-max"> / 36</span>';
+
+        const wrap  = document.getElementById('result-score-wrap');
+        const label = document.getElementById('result-label');
+        const title = document.getElementById('result-title');
+        const desc  = document.getElementById('result-desc');
+        const step  = document.getElementById('result-step');
+
+        wrap.className = 'result-score-wrap';
+
+        if (total <= 12) {
+            wrap.classList.add('lvl1');
+            label.textContent = '0–12 баллов';
+            title.textContent = 'План фрагментарный';
+            desc.textContent = 'Он больше похож на намерения, чем на систему. Есть риск, что в триггерной ситуации решения будут приниматься импульсивно — без заранее заданных правил и защиты.';
+            step.innerHTML = '<strong>Приоритет:</strong> начать с базовой структуры — зафиксировать лимиты в ЛЧА, типы эпизодов и хотя бы один запрет для высокорисковых ситуаций.';
+        } else if (total <= 24) {
+            wrap.classList.add('lvl2');
+            label.textContent = '13–24 балла';
+            title.textContent = 'План рабочий, но хрупкий';
+            desc.textContent = 'Есть элементы системы, но есть пробелы, где могут возникнуть опасные импровизации.';
+            step.innerHTML = '<strong>Приоритет:</strong> закрыть пробелы в триггерах, тактике и механизме коррекции — это слабые точки, где план чаще всего рассыпается на практике.';
+        } else if (total <= 32) {
+            wrap.classList.add('lvl3');
+            label.textContent = '25–32 балла';
+            title.textContent = 'План в целом системный';
+            desc.textContent = 'Он вероятно будет удерживать употребление в норме при большинстве типовых ситуаций, но потребует обкатки и уточнения на реальном опыте.';
+            step.innerHTML = '<strong>Приоритет:</strong> запустить план в работу, собрать первые данные за 4–6 недель и скорректировать тактику на основе реальных сбоев.';
+        } else {
+            wrap.classList.add('lvl4');
+            label.textContent = '33–36 баллов';
+            title.textContent = 'План близок к идеалу';
+            desc.textContent = 'Он описывает границы, допуск, тактику и механизмы корректировки. Это сильная стартовая позиция.';
+            step.innerHTML = '<strong>Приоритет:</strong> удерживать дисциплину учёта и проводить регулярные ревизии — план хорош тогда, когда он живёт в практике, а не только на бумаге.';
+        }
+
+        // Individuality checks
+        const individSum = (raw[6] ?? 0) + (raw[7] ?? 0) + (raw[10] ?? 0);
+        const systemSum  = (raw[1] ?? 0) + (raw[2] ?? 0) + (raw[4] ?? 0) + (raw[12] ?? 0);
+        const psychSum   = (raw[8] ?? 0) + (raw[9] ?? 0);
+
+        const chkI = individSum < 6;
+        const chkS = systemSum  < 8;
+        const chkP = psychSum   < 4;
+        const anyFail = chkI || chkS || chkP;
+
+        document.getElementById('chk-individ').classList.toggle('triggered', chkI);
+        document.getElementById('chk-system').classList.toggle('triggered',  chkS);
+        document.getElementById('chk-psych').classList.toggle('triggered',   chkP);
+
+        if (anyFail) {
+            document.getElementById('checks-section').style.display = 'block';
+            document.getElementById('all-checks-ok').classList.remove('visible');
+        } else {
+            document.getElementById('checks-section').style.display = 'none';
+            document.getElementById('all-checks-ok').classList.add('visible');
+        }
+
+        const rb = document.getElementById('result-block');
+        rb.classList.add('visible');
+        setTimeout(() => rb.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+
+    function retake() {
+        for (const k in raw) delete raw[k];
+        document.querySelectorAll('.ans-btn').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('.question-card').forEach(c => c.classList.remove('answered'));
+        document.querySelectorAll('.answered-badge').forEach(b => b.textContent = '');
+        document.getElementById('progress-count').textContent = '0 / ' + TOTAL;
+        document.getElementById('progress-fill').style.width = '0%';
+        document.getElementById('btn-submit').disabled = true;
+        document.getElementById('btn-hint').textContent = 'Ответьте на все 12 вопросов';
+        document.getElementById('result-block').classList.remove('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Определить календарный план в ЛЧА — Шаг 3 программы 7 шагов КУ | КУ</title>
+    <meta name="description" content="Как рассчитать суточный и годовой лимит лча, что такое умеренное употребление по данным науки и опыту форума, алгоритм месячного планирования.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        article { padding: 60px 0 100px; }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.7; }
+        .breadcrumb span { color: rgba(255,255,255,0.25); }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 50px 0 25px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 35px 0 20px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li, ol li {
+            position: relative;
+            padding: 12px 0 12px 35px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-size: 16px;
+        }
+
+        ol {
+            counter-reset: ol-counter;
+        }
+
+        ol li {
+            counter-increment: ol-counter;
+        }
+
+        ol li::before {
+            content: counter(ol-counter);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 26px;
+            height: 26px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--cosmic-dark);
+            line-height: 26px;
+            text-align: center;
+        }
+
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 { margin-top: 0; }
+        .cyan-box { border-color: rgba(77,212,255,0.3); background: rgba(77,212,255,0.06); }
+
+        .formula-box {
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .formula-box h3 { margin-top: 0; }
+
+        .formula {
+            font-family: 'Montserrat', monospace;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            background: rgba(77,212,255,0.08);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 10px;
+            padding: 16px 24px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .formula-example {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            margin: 8px 0;
+            padding-left: 12px;
+            border-left: 2px solid rgba(77,212,255,0.3);
+        }
+
+        .step-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 40px rgba(77, 212, 255, 0.2);
+        }
+
+        .step-box h3 { margin-top: 0; }
+
+        .step-box.who { border-color: rgba(77,212,255,0.3); }
+        .step-box.national { border-color: rgba(255,214,0,0.25); }
+        .step-box.national h3 { color: #ffd600; }
+        .step-box.community { border-color: rgba(255,107,157,0.3); }
+        .step-box.community h3 { color: var(--accent-pink); }
+
+        .rules-box {
+            background: rgba(255,107,157,0.06);
+            border: 1px solid rgba(255,107,157,0.25);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .rules-box h3 {
+            margin-top: 0;
+            color: var(--accent-pink);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 44px 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 { margin: 0 0 14px; padding: 0; font-size: 28px; }
+        .cta-box h2::before { display: none; }
+
+        .cta-box p {
+            font-size: 17px;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(77,212,255,0.45);
+        }
+
+        .related-links { margin: 40px 0; }
+
+        .related-links a {
+            display: block;
+            padding: 14px 22px;
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .related-links a:hover {
+            background: rgba(77,212,255,0.12);
+            border-color: var(--accent-cyan);
+            padding-left: 28px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover { gap: 12px; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+
+        .standards-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            font-size: 15px;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .standards-table th {
+            background: rgba(77, 212, 255, 0.12);
+            color: var(--accent-cyan);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 2px solid rgba(77, 212, 255, 0.35);
+            white-space: nowrap;
+        }
+
+        .standards-table td {
+            padding: 11px 14px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        .standards-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .standards-table tr:hover td {
+            background: rgba(77, 212, 255, 0.04);
+        }
+
+        .standards-table td.num {
+            text-align: center;
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .standards-table .country {
+            font-weight: 500;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+            p, ul li, ol li { font-size: 16px; }
+            .nav-links { display: none; }
+            .cta-box { padding: 30px 24px; }
+            .formula { font-size: 16px; }
+            .standards-table th, .standards-table td { font-size: 13px; padding: 9px 10px; }
+        }
+    </style>
+    <link rel="canonical" href="https://alkonorm.ru/articles/kalendarnyy-plan-lcha.html">
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../index.html">Главная</a>
+                <span>›</span>
+                <a href="7-shagov-ku.html">Программа 7 шагов КУ</a>
+                <span>›</span>
+                Шаг 3 — Разработка плана
+            </div>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">Шаг 3 из 7</div>
+                <h1>Определить календарный план в ЛЧА</h1>
+                <div class="article-meta">
+                    <span>Программа <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none;">7 шагов КУ</a></span>
+                    <span>·</span>
+                    <span>Годовой и месячный лимит употребления</span>
+                </div>
+            </div>
+
+            <div class="fade-in delay-1">
+
+                <h2>Немного о цифрах</h2>
+
+                <div class="formula-box">
+                    <h3>Единица измерения — литры чистого алкоголя (лча)</h3>
+                    <p>Это универсальный показатель, показывающий, сколько спирта содержится в любом объёме алкогольного напитка.</p>
+                    <div class="formula">лча = объём (л) × крепость (%) / 100</div>
+                    <p class="formula-example">Пример 1: 450 мл водки 40% — 0,45 × 40 / 100 = <strong>0,18 лча</strong></p>
+                    <p class="formula-example">Пример 2: 300 мл вина 13% — 0,300 × 13 / 100 = <strong>0,039 лча</strong></p>
+                    <p style="margin-top: 20px;">Типология эпизодов, выработанная сообществом КУшников на форуме kuforum.ru:</p>
+                    <ul>
+                        <li><strong>Символический эпизод:</strong> не более 0,06 лча</li>
+                        <li><strong>Умеренный эпизод:</strong> не более 0,15 лча</li>
+                    </ul>
+                </div>
+
+                <h2>Что такое умеренное употребление</h2>
+
+                <p>Существует три подхода к этому вопросу — позиция ВОЗ, национальные стандарты и мнение сообщества. Они дают разные ориентиры, но все сходятся в одном: объём имеет значение.</p>
+
+                <div class="step-box who">
+                    <h3>Подход первый: позиция ВОЗ</h3>
+                    <p>«Безопасной формы употребления алкоголя не существует. Даже низкий уровень его употребления чреват определёнными рисками и может причинить вред». Уровень риска зависит от нескольких факторов, включая количество потребляемого алкоголя, частоту его употребления, состояние здоровья человека, возраст, пол и другие личностные характеристики.</p>
+                    <p>Учёные из Кембриджского университета провели 83 исследования по почти 600 000 участникам в 19 странах. Результаты опубликованы в журнале The Lancet. Сокращение продолжительности жизни составляло:</p>
+                    <ul>
+                        <li>более 100–200 г в неделю — примерно 6 месяцев;</li>
+                        <li>более 200–350 г в неделю — 1–2 года;</li>
+                        <li>более 350 г в неделю — 4–5 лет.</li>
+                    </ul>
+                    <p>Таким образом, менее <strong>6,6 лча в год</strong> чистого алкоголя значимо не влияет на сокращение срока жизни.</p>
+                </div>
+
+                <div class="step-box national">
+                    <h3>Подход второй: национальные стандарты</h3>
+                    <p>Под национальными стандартами употребления алкоголя обычно понимают рекомендации государственных организаций на тему, сколько можно пить, чтобы риск для здоровья считался относительно низким. Обычно там есть три вещи: определение стандартной порции, недельный или дневной лимит и совет, как распределять алкоголь. Важно понимать, что это не норма безопасности, при которой всё будет хорошо, а практический ориентир для большинства людей, который по статистике снижает риски.</p>
+                    <p>Стандартная порция — это условная мера, чтобы считать не миллилитры вина или пива, а количество чистого спирта. Но есть проблема: стандартная порция не одинаковая во всём мире. В одной стране это 8 граммов чистого спирта, в другой — 10, 12 или 14. Поэтому 14 единиц алкоголя и 10 дринков нельзя сравнивать напрямую. Сначала надо перевести всё в граммы чистого спирта.</p>
+
+                    <table class="standards-table">
+                        <thead>
+                            <tr>
+                                <th>Страна</th>
+                                <th>Организация</th>
+                                <th>Рекомендация</th>
+                                <th>Ед.<br>(г спирта)</th>
+                                <th>Жен.<br>в нед., лча</th>
+                                <th>Жен.<br>в год, лча</th>
+                                <th>Муж.<br>в нед., лча</th>
+                                <th>Муж.<br>в год, лча</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="country">США</td>
+                                <td>NIAAA</td>
+                                <td>Муж.: не более 4 напитков в день или 14 в неделю; жен.: не более 3 в день и 7 в неделю</td>
+                                <td class="num">14</td>
+                                <td class="num">0,10</td>
+                                <td class="num">5,1</td>
+                                <td class="num">0,20</td>
+                                <td class="num">10,2</td>
+                            </tr>
+                            <tr>
+                                <td class="country">Великобритания</td>
+                                <td>NHS</td>
+                                <td>Муж. и жен.: 14 ед. в нед. за 3 и более дней</td>
+                                <td class="num">8</td>
+                                <td class="num">0,14</td>
+                                <td class="num">7,4</td>
+                                <td class="num">0,14</td>
+                                <td class="num">7,4</td>
+                            </tr>
+                            <tr>
+                                <td class="country">Германия</td>
+                                <td>Мин. здравоохранения</td>
+                                <td>Муж.: не более 24 г/сут, 5 дней в неделю; жен.: 12 г/сут, 5 дней в неделю</td>
+                                <td class="num">12</td>
+                                <td class="num">0,10</td>
+                                <td class="num">5,2</td>
+                                <td class="num">0,10</td>
+                                <td class="num">5,2</td>
+                            </tr>
+                            <tr>
+                                <td class="country">Франция</td>
+                                <td>Santé Publique France</td>
+                                <td>Муж. и жен.: не более 2 напитков в день и не более 10 в неделю</td>
+                                <td class="num">10</td>
+                                <td class="num">0,13</td>
+                                <td class="num">6,6</td>
+                                <td class="num">0,13</td>
+                                <td class="num">6,6</td>
+                            </tr>
+                            <tr>
+                                <td class="country">Испания</td>
+                                <td>Мин. здравоохранения</td>
+                                <td>Жен.: не более 10 г/день; муж.: не более 20 г/день; не менее 2 дней без алкоголя в неделю</td>
+                                <td class="num">10</td>
+                                <td class="num">0,06</td>
+                                <td class="num">3,3</td>
+                                <td class="num">0,13</td>
+                                <td class="num">6,6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>Как видим, рекомендации государственных ведомств значительно разнятся в разных странах, что говорит об отсутствии единого мнения о нормах умеренного употребления алкоголя. Это вызвано большим разбросом данных в научных исследованиях и особенностями культурных подходов к употреблению в разных странах.</p>
+                </div>
+
+                <div class="step-box community">
+                    <h3>Подход третий: мнение сообщества</h3>
+                    <p>На форуме kuforum.ru неоднократно проводилось голосование по поводу того, что считать контролируемым употреблением. Наиболее популярное мнение участников форума: умеренным можно считать употребление <strong>до 10 лча в год</strong>.</p>
+                </div>
+
+                <h2>Календарный уровень планирования</h2>
+
+                <p>Стратегия утверждается на год и служит основным законом употребления. После завершения года она анализируется, корректируется и преобразовывается в стратегию на следующий год.</p>
+
+                <p>Календарное планирование в КУ нужно для того, чтобы годовые ограничения превратить в реальное управление поведением на уровне месяца и конкретных мероприятий. Годовой лимит переводится в месячный лимит лча, который нельзя превышать. На практике удобнее делить год равномерно на 12 месяцев. Сезонное распределение выглядит логично на бумаге, но часто плохо выдерживается в жизни. Равномерное деление проще, понятнее и даёт постоянный ритм контроля.</p>
+
+                <p>Перед началом месяца КУшник смотрит на календарь, выписывает ожидаемые мероприятия и заранее решает, какие из них допускают эпизод, а какие нет. На выбранные события он распределяет часть месячного лимита, а небольшую часть (обычно не более 0,15 лча) оставляет свободной для непредвиденных внешних событий. Такая конструкция одновременно даёт контроль и оставляет необходимую свободу.</p>
+
+                <p>Отдельно важно обозначить отношение к неиспользованным в течение месяца талонам. Если человек видит, что отказ от употребления просто уничтожает ресурс, у него возникает соблазн «добрать до конца» и закрыть месяц полностью. Поэтому неиспользованные талоны не обязаны быть использованы в текущем месяце и остаются в распоряжении КУшника как психологическое подтверждение того, что он способен не тратить весь лимит.</p>
+
+                <h2>Алгоритм месячного планирования</h2>
+
+                <ol>
+                    <li>Рассчитать месячный лимит лча как одну двенадцатую годового лимита.</li>
+                    <li>Перед началом месяца выписать ожидаемые мероприятия и события.</li>
+                    <li>Отобрать мероприятия, на которых возможен эпизод употребления.</li>
+                    <li>Для каждого выбранного мероприятия заранее определить допустимый тип эпизода: символический или умеренный.</li>
+                    <li>Распределить часть месячного лимита по выбранным мероприятиям.</li>
+                    <li>Оставить часть лимита в резерве для непредвиденных мероприятий.</li>
+                </ol>
+
+                <p>Если превышено количество лча, надо высчитать оставшееся количество талонов и перераспределить их на оставшиеся эпизоды месяца. В случае превышения лча в эпизоды свыше 0,15 лча — проанализировать причину превышения, сделать выводы и продолжать контроль, не падая духом.</p>
+
+                <h2>Форс-мажорный клапан</h2>
+
+                <p>В план вводится форс-мажорный клапан в виде непредвиденных эпизодов, который допускает редкое небольшое превышение месячного лимита — но с автоматической компенсацией в следующем месяце и с запретом повторять это два месяца подряд.</p>
+
+                <div class="rules-box">
+                    <h3>Правила форс-мажора</h3>
+                    <ul>
+                        <li>В течение месяца разрешено перераспределять лимит между событиями, но суммарно не выходить за месячный потолок.</li>
+                        <li>Форс-мажор допускает превышение месячного лимита только в пределах не более 0,15 лча.</li>
+                        <li>Форс-мажор не может использоваться два месяца подряд.</li>
+                        <li>Форс-мажор допускается только по внешнему событию — внутреннее состояние основанием не является.</li>
+                        <li>Любое форс-мажорное превышение уменьшает лимит следующего месяца на ту же величину лча.</li>
+                    </ul>
+                </div>
+
+                <p>В результате временной уровень становится механизмом допуска, а не перечнем пожеланий. Он уменьшает число импульсивных эпизодов, делает расход лча конечным и видимым.</p>
+
+                <div class="cta-box">
+                    <h2>Поделитесь своим планом на форуме</h2>
+                    <p>В разделе личных тем можно опубликовать свой календарный план и получить обратную связь от людей с реальным опытом КУ.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также в Шаге 3:</strong></p>
+                    <a href="taktika-upotrebleniya.html">→ Тактика употребления на отдельных мероприятиях</a>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ — полная схема и все шаги</a>
+                    <a href="kniga-ku.html">→ Книга «На краю Синей Бездны»</a>
+                </div>
+
+                <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

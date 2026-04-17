@@ -1,0 +1,140 @@
+# Семантическое ядро — Хаб 3: Почему хочется алкоголя
+# hub: H3
+# url: articles/pochemu-hochetsya-alkogolya/
+
+hub: H3
+clusters:
+  К3:
+    keywords:
+    - query: спиртное
+      frequency: 179943
+      relevance: частично
+    - query: алкоголь это
+      frequency: 74088
+      relevance: частично
+    - query: спиртные напитки
+      frequency: 56964
+      relevance: частично
+    - query: влияние алкоголя
+      frequency: 22558
+      relevance: полностью
+    - query: что такое алкоголь
+      frequency: 14444
+      relevance: частично
+    - query: влияние алкоголя на человека
+      frequency: 5874
+      relevance: полностью
+    - query: почему люди пьют алкоголь
+      frequency: 1840
+      relevance: полностью
+    - query: виды алкогольных напитков
+      frequency: 1536
+      relevance: частично
+    - query: причины употребления алкоголя
+      frequency: 1418
+      relevance: полностью
+    - query: статистика употребления алкоголя
+      frequency: 649
+      relevance: частично
+    - query: кто употребляет алкоголь
+      frequency: 461
+      relevance: частично
+  К7:
+    keywords:
+    - query: стрессор
+      frequency: 5334
+      relevance: частично
+    - query: как избавиться от стресса
+      frequency: 4197
+      relevance: частично
+    - query: почему хочется алкоголя
+      frequency: 3566
+      relevance: полностью
+    - query: как успокоиться в стрессовой ситуации
+      frequency: 3367
+      relevance: частично
+    - query: пью от стресса
+      frequency: 3307
+      relevance: полностью
+    - query: почему хочется пива
+      frequency: 1818
+      relevance: полностью
+    - query: почему хочется выпить
+      frequency: 1494
+      relevance: полностью
+    - query: как быстро успокоиться в стрессовой ситуации
+      frequency: 1317
+      relevance: частично
+    - query: стресс и алкоголь
+      frequency: 1255
+      relevance: полностью
+    - query: алкоголь и стресс
+      frequency: 1248
+      relevance: полностью
+    - query: что пить от стресса
+      frequency: 1226
+      relevance: частично
+    - query: алкоголь и тревога
+      frequency: 655
+      relevance: полностью
+    - query: что пить от нервов и стресса
+      frequency: 526
+      relevance: частично
+    - query: алкоголь снять стресс
+      frequency: 354
+      relevance: полностью
+    - query: почему хочется выпить алкоголь
+      frequency: 290
+      relevance: полностью
+    - query: что можно пить от стресса
+      frequency: 209
+      relevance: частично
+    - query: что пить от стресса и нервов женщине
+      frequency: 168
+      relevance: частично
+    - query: какие витамины пить от стресса
+      frequency: 151
+      relevance: частично
+    - query: алкоголь чтобы расслабиться
+      frequency: 140
+      relevance: полностью
+    - query: что пить от стресса и тревоги
+      frequency: 133
+      relevance: частично
+    - query: алкоголь и стресс влияние
+      frequency: 126
+      relevance: полностью
+    - query: что можно пить от стресса и нервов
+      frequency: 121
+      relevance: частично
+    - query: почему вечером хочется выпить
+      frequency: 95
+      relevance: полностью
+    - query: алкоголь помогает расслабиться
+      frequency: 89
+      relevance: полностью
+    - query: что пить от нервов и стресса мужчине
+      frequency: 79
+      relevance: частично
+    - query: почему хочется выпить пиво
+      frequency: 68
+      relevance: полностью
+  К10:
+    keywords:
+    - query: алкоголь и женщины
+      frequency: 3218
+      relevance: частично
+    - query: алкоголь и отношения
+      frequency: 1305
+      relevance: частично
+    - query: алкоголь и семья
+      frequency: 1239
+      relevance: частично
+    - query: алкоголь и конфликт
+      frequency: 261
+      relevance: частично
+  К12:
+    keywords:
+    - query: алкоголь и работоспособность
+      frequency: 138
+      relevance: полностью

@@ -1,0 +1,166 @@
+# Семантическое ядро — новые кластеры
+# Источник: Яндекс.Вордстат, март 2026
+# Статус: не распределены по хабам
+
+clusters:
+
+  похмелье:
+    frequency_total: 432075
+    keywords:
+    - query: похмелье
+      frequency: 310619
+      relevance: полностью
+    - query: после похмелья
+      frequency: 20226
+      relevance: полностью
+    - query: похмелье пил
+      frequency: 19112
+      relevance: полностью
+    - query: таблетки от похмелья
+      frequency: 17446
+      relevance: частично
+    - query: почему похмелье
+      frequency: 15095
+      relevance: полностью
+    - query: средство от похмелья
+      frequency: 9560
+      relevance: частично
+    - query: эффективно похмелье
+      frequency: 8600
+      relevance: частично
+    - query: как избавиться от похмелья
+      frequency: 8792
+      relevance: частично
+    - query: что помогает от похмелья
+      frequency: 8404
+      relevance: частично
+    - query: можно ли с похмелья
+      frequency: 7716
+      relevance: полностью
+    - query: сильное похмелье
+      frequency: 6505
+      relevance: полностью
+
+  влияние_алкоголя_на_организм:
+    frequency_total: 6570
+    keywords:
+    - query: влияние алкоголя на организм
+      frequency: 4022
+      relevance: полностью
+    - query: влияние алкоголя на организм человека
+      frequency: 1820
+      relevance: полностью
+    - query: влияние алкоголя на организм подростка
+      frequency: 408
+      relevance: частично
+    - query: употребление алкоголя влияние на организм
+      frequency: 320
+      relevance: полностью
+
+  алкоголь_при_похудении:
+    frequency_total: 7154
+    keywords:
+    - query: алкоголь при похудении
+      frequency: 3095
+      relevance: полностью
+    - query: какой алкоголь при похудении
+      frequency: 1536
+      relevance: полностью
+    - query: какой алкоголь можно при похудении
+      frequency: 990
+      relevance: полностью
+    - query: какой алкоголь пить при похудении
+      frequency: 553
+      relevance: полностью
+    - query: низкокалорийный алкоголь при похудении
+      frequency: 502
+      relevance: полностью
+    - query: алкоголь при похудении женщине
+      frequency: 478
+      relevance: полностью
+
+  алкоголь_и_лекарства:
+    frequency_total: 2513
+    keywords:
+    - query: алкоголь и лекарства
+      frequency: 2079
+      relevance: полностью
+    - query: прием лекарств и алкоголь
+      frequency: 302
+      relevance: полностью
+    - query: алкоголь и лекарства совместимость
+      frequency: 132
+      relevance: полностью
+
+  алкоголь_и_беременность:
+    frequency_total: 1662
+    keywords:
+    - query: алкоголь и беременность
+      frequency: 1432
+      relevance: частично
+    - query: первый месяц беременности и алкоголь
+      frequency: 144
+      relevance: частично
+    - query: алкоголь и беременность на ранних сроках
+      frequency: 86
+      relevance: частично
+
+  алкоголь_и_спорт:
+    frequency_total: 1226
+    keywords:
+    - query: алкоголь и спорт
+      frequency: 985
+      relevance: полностью
+    - query: занятия спортом и алкоголь
+      frequency: 229
+      relevance: полностью
+    - query: совместим ли спорт и алкоголь
+      frequency: 12
+      relevance: полностью
+
+  алкоголь_и_сон:
+    frequency_total: 1179
+    keywords:
+    - query: алкоголь и сон
+      frequency: 1070
+      relevance: полностью
+    - query: плохой сон после алкоголя
+      frequency: 61
+      relevance: полностью
+    - query: отказ от алкоголя и сон
+      frequency: 48
+      relevance: полностью
+
+  алкоголь_как_привычка:
+    frequency_total: 4730
+    keywords:
+    - query: привычки алкоголь
+      frequency: 3258
+      relevance: полностью
+    - query: вредная привычка употребление алкоголя
+      frequency: 1043
+      relevance: частично
+    - query: привычка употреблять алкоголь
+      frequency: 105
+      relevance: полностью
+    - query: привычка пить алкоголь
+      frequency: 97
+      relevance: полностью
+    - query: вредные привычки злоупотребление алкоголем
+      frequency: 79
+      relevance: частично
+    - query: алкоголь пагубная привычка
+      frequency: 69
+      relevance: частично
+    - query: как избавиться от привычки алкоголя
+      frequency: 38
+      relevance: полностью
+    - query: как избавиться от привычки пить алкоголь
+      frequency: 23
+      relevance: полностью
+    - query: из за чего появляется привычка алкоголь
+      frequency: 10
+      relevance: полностью
+    - query: трекер привычек алкоголь
+      frequency: 8
+      relevance: полностью

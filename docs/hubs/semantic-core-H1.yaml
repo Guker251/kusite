@@ -1,0 +1,369 @@
+# Семантическое ядро — Хаб 1: Сколько можно пить
+# hub: H1
+# url: articles/skolko-mozhno-pit/
+
+hub: H1
+clusters:
+  К1:
+    keywords:
+    - query: сколько можно пить
+      frequency: 318405
+      relevance: полностью
+    - query: можно ли пить алкоголь
+      frequency: 135869
+      relevance: полностью
+    - query: сколько алкоголя можно
+      frequency: 81921
+      relevance: полностью
+    - query: сколько дней алкоголь
+      frequency: 27552
+      relevance: полностью
+    - query: через сколько можно пить алкоголь
+      frequency: 25475
+      relevance: полностью
+    - query: сколько выпил алкоголя
+      frequency: 20563
+      relevance: полностью
+    - query: норма алкоголя
+      frequency: 15818
+      relevance: полностью
+    - query: количество алкоголя
+      frequency: 12318
+      relevance: полностью
+    - query: сколько нужно алкоголя
+      frequency: 10382
+      relevance: полностью
+    - query: промилле это сколько алкоголя
+      frequency: 8200
+      relevance: частично
+    - query: сколько можно выпить алкоголя
+      frequency: 6014
+      relevance: полностью
+    - query: допустимая норма алкоголя
+      frequency: 5318
+      relevance: полностью
+    - query: безопасный алкоголь
+      frequency: 3279
+      relevance: полностью
+    - query: сколько можно употребить алкоголя
+      frequency: 3096
+      relevance: полностью
+    - query: норма алкоголя за рулем
+      frequency: 3054
+      relevance: частично
+    - query: допустимая норма алкоголя за рулем
+      frequency: 2798
+      relevance: частично
+    - query: сколько можно пить в неделю
+      frequency: 1846
+      relevance: полностью
+    - query: норма алкоголя в крови
+      frequency: 1505
+      relevance: частично
+    - query: норма алкоголя в выдыхаемом
+      frequency: 1358
+      relevance: частично
+    - query: норма алкоголя воздухе
+      frequency: 1347
+      relevance: частично
+    - query: норма алкоголя в выдыхаемом воздухе
+      frequency: 1293
+      relevance: частично
+    - query: рекомендации по алкоголю
+      frequency: 1074
+      relevance: полностью
+    - query: безопасные дозы алкоголя
+      frequency: 1071
+      relevance: полностью
+    - query: какая норма алкоголя
+      frequency: 1025
+      relevance: полностью
+    - query: безопасная доза алкоголя
+      frequency: 986
+      relevance: полностью
+    - query: россия норма алкоголя
+      frequency: 850
+      relevance: полностью
+    - query: сколько норма алкоголя
+      frequency: 674
+      relevance: полностью
+    - query: нормы алкоголя для водителей
+      frequency: 631
+      relevance: частично
+    - query: допустимая норма алкоголя в выдыхаемом
+      frequency: 602
+      relevance: частично
+    - query: допустимая норма алкоголя в воздухе
+      frequency: 581
+      relevance: частично
+    - query: допустимая норма алкоголя в выдыхаемом воздухе
+      frequency: 574
+      relevance: частично
+    - query: норма алкоголя в крови водителя
+      frequency: 547
+      relevance: частично
+    - query: допустимая норма алкоголя в крови
+      frequency: 521
+      relevance: частично
+    - query: норма алкоголя в выдыхаемом воздухе водителя
+      frequency: 498
+      relevance: частично
+    - query: допустимая норма алкоголя за рулем 2026
+      frequency: 458
+      relevance: частично
+    - query: норма алкоголя в год
+      frequency: 439
+      relevance: полностью
+    - query: допустимая норма алкоголя россия
+      frequency: 362
+      relevance: полностью
+    - query: норма алкоголя в день
+      frequency: 341
+      relevance: полностью
+    - query: допустимая норма алкоголя 2025
+      frequency: 316
+      relevance: полностью
+    - query: норма алкоголя за рулем 2025
+      frequency: 301
+      relevance: частично
+    - query: какая допустимая норма алкоголя
+      frequency: 275
+      relevance: полностью
+    - query: допустимая норма алкоголя за рулем 2025
+      frequency: 271
+      relevance: частично
+    - query: допустимые нормы алкоголя для водителей
+      frequency: 268
+      relevance: частично
+    - query: нормы алкоголя за рулем в россии
+      frequency: 238
+      relevance: частично
+    - query: норма алкоголя время
+      frequency: 233
+      relevance: полностью
+    - query: допустимая норма алкоголя в год
+      frequency: 229
+      relevance: полностью
+    - query: допустимая норма алкоголя за рулем в россии
+      frequency: 218
+      relevance: частично
+    - query: допустимая норма алкоголя мг л
+      frequency: 199
+      relevance: частично
+    - query: норма алкоголя для человека
+      frequency: 183
+      relevance: полностью
+    - query: норма алкоголя в багаже
+      frequency: 177
+      relevance: частично
+    - query: какая норма алкоголя за рулем
+      frequency: 175
+      relevance: частично
+    - query: разрешенная норма алкоголя
+      frequency: 172
+      relevance: полностью
+    - query: нормы алкоголя для мужчин
+      frequency: 159
+      relevance: полностью
+    - query: безопасное употребление алкоголя
+      frequency: 153
+      relevance: полностью
+    - query: сколько допустимая норма алкоголя
+      frequency: 153
+      relevance: полностью
+    - query: какая допустимая норма алкоголя за рулем
+      frequency: 136
+      relevance: частично
+    - query: норма алкоголя в неделю
+      frequency: 133
+      relevance: полностью
+    - query: норма алкоголя в крови россия
+      frequency: 130
+      relevance: частично
+    - query: сколько норма алкоголя за рулем
+      frequency: 122
+      relevance: частично
+    - query: норма алкоголя в самолете
+      frequency: 112
+      relevance: частично
+    - query: допустимая норма алкоголя в крови для водителей
+      frequency: 109
+      relevance: частично
+    - query: норма алкоголя в моче
+      frequency: 108
+      relevance: частично
+    - query: норма алкоголя в россии в год
+      frequency: 106
+      relevance: полностью
+    - query: сколько алкоголя безопасно
+      frequency: 105
+      relevance: полностью
+    - query: нормы алкоголя тайланд
+      frequency: 101
+      relevance: частично
+    - query: норма алкоголя в месяц
+      frequency: 98
+      relevance: полностью
+    - query: норма алкоголя рф
+      frequency: 93
+      relevance: полностью
+    - query: норма алкоголя в организме
+      frequency: 91
+      relevance: полностью
+    - query: норма алкоголя в крови водителя в россии
+      frequency: 89
+      relevance: частично
+    - query: норма алкоголя в выдыхаемом воздухе водителя 2026
+      frequency: 88
+      relevance: частично
+    - query: сколько допустимая норма алкоголя за рулем
+      frequency: 84
+      relevance: частично
+    - query: допустимая норма алкоголя в крови в россии
+      frequency: 84
+      relevance: частично
+    - query: норма алкоголя для водителя в россии
+      frequency: 84
+      relevance: частично
+    - query: разрешенная норма алкоголя за рулем
+      frequency: 81
+      relevance: частично
+    - query: норма алкоголя для женщин
+      frequency: 79
+      relevance: полностью
+    - query: допустимая норма алкоголя в день
+      frequency: 73
+      relevance: полностью
+    - query: таблица нормы алкоголя
+      frequency: 73
+      relevance: полностью
+    - query: норма алкоголя на работе
+      frequency: 72
+      relevance: полностью
+    - query: норма алкоголя для человека в день
+      frequency: 70
+      relevance: полностью
+    - query: как пить алкоголь без вреда
+      frequency: 68
+      relevance: полностью
+    - query: нормы алкоголя в турции
+      frequency: 64
+      relevance: частично
+    - query: норма алкоголя в алкотестере
+      frequency: 62
+      relevance: частично
+    - query: предельная норма алкоголя
+      frequency: 60
+      relevance: полностью
+    - query: безопасные нормы алкоголя
+      frequency: 58
+      relevance: полностью
+    - query: норма алкоголя в крови за рулем
+      frequency: 55
+      relevance: частично
+    - query: норма алкоголя дьюти фри
+      frequency: 54
+      relevance: частично
+    - query: какая норма алкоголя в россии
+      frequency: 53
+      relevance: полностью
+    - query: какая норма алкоголя разрешается
+      frequency: 52
+      relevance: полностью
+  К4:
+    keywords:
+    - query: алкогольное опьянение
+      frequency: 94826
+      relevance: полностью
+    - query: состояние алкогольного опьянения
+      frequency: 43905
+      relevance: полностью
+    - query: алкогольный синдром
+      frequency: 15442
+      relevance: полностью
+    - query: признаки алкогольного опьянения
+      frequency: 2671
+      relevance: полностью
+    - query: норма промилле алкоголя
+      frequency: 2583
+      relevance: полностью
+    - query: степени алкогольного опьянения
+      frequency: 2471
+      relevance: полностью
+    - query: допустимая норма промилле алкоголя
+      frequency: 2106
+      relevance: полностью
+    - query: норма промилле алкоголя за рулем
+      frequency: 2016
+      relevance: частично
+    - query: допустимая норма алкоголя за рулем в промилле
+      frequency: 1921
+      relevance: частично
+    - query: стадии алкогольного опьянения
+      frequency: 552
+      relevance: полностью
+    - query: допустимая норма промилле 2025 алкоголя
+      frequency: 264
+      relevance: полностью
+    - query: нормы промилле алкоголя в россии
+      frequency: 257
+      relevance: полностью
+    - query: калькулятор алкогольного опьянения
+      frequency: 226
+      relevance: полностью
+    - query: какая норма промилле алкоголя
+      frequency: 164
+      relevance: полностью
+    - query: нормы промилле алкоголя в россии 2025
+      frequency: 148
+      relevance: полностью
+    - query: сколько норма промилле алкоголя
+      frequency: 146
+      relevance: полностью
+    - query: какая допустимая норма промилле алкоголя
+      frequency: 99
+      relevance: полностью
+    - query: норма промилле алкоголя для водителей
+      frequency: 78
+      relevance: частично
+    - query: разрешенная норма промилле алкоголя
+      frequency: 78
+      relevance: полностью
+    - query: норма промилле алкоголя в крови
+      frequency: 76
+      relevance: полностью
+    - query: сколько допустимая норма промилле алкоголя
+      frequency: 72
+      relevance: полностью
+    - query: нормы промилле алкоголя в выдыхаемом
+      frequency: 63
+      relevance: частично
+    - query: нормы промилле алкоголя в выдыхаемом воздухе
+      frequency: 63
+      relevance: частично
+    - query: сколько допустимая норма промилле алкоголя за рулем
+      frequency: 56
+      relevance: частично
+  К8:
+    keywords:
+    - query: алкоголь и печень
+      frequency: 4506
+      relevance: частично
+    - query: алкоголь и давление
+      frequency: 2778
+      relevance: частично
+    - query: влияние алкоголя на организм человека
+      frequency: 1785
+      relevance: полностью
+    - query: как влияет алкоголь на время реакции водителя
+      frequency: 1217
+      relevance: частично
+    - query: алкоголь и сон
+      frequency: 1179
+      relevance: полностью
+    - query: вред алкоголя для здоровья
+      frequency: 947
+      relevance: полностью
+    - query: алкогольная депрессия
+      frequency: 723
+      relevance: частично

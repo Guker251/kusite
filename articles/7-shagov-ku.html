@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Программа 7 шагов КУ — контролируемое употребление алкоголя | КУ</title>
-    <meta name="description" content="Полный алгоритм контролируемого употребления алкоголя: 7 шагов от желания изменить жизнь до стабильного КУ. Основано на книге «На краю Синей Бездны».">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Программа 7 шагов КУ — контролируемое употребление алкоголя</title>
+    <link rel="canonical" href="https://alkonorm.ru/articles/7-shagov-ku.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="КУ — контролируемое употребление алкоголя">
+    <meta property="og:url" content="https://alkonorm.ru/articles/7-shagov-ku.html">
+    <meta property="og:title" content="Программа 7 шагов КУ — контролируемое употребление алкоголя">
+    <meta property="og:description" content="Программа 7 шагов КУ: от решения изменить отношение к алкоголю до устойчивого результата. Стратегия, личные нормы, учёт и разбор сбоев — всё пошагово.">
+    <meta property="og:image" content="https://alkonorm.ru/pic/algoritm.jpg">
+    <meta name="description" content="Программа 7 шагов КУ: от решения изменить отношение к алкоголю до устойчивого результата. Стратегия, личные нормы, учёт и разбор сбоев — всё пошагово.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
     <style>
         * {
             margin: 0;
@@ -19,9 +43,12 @@
             --accent-cyan: #4dd4ff;
             --accent-pink: #ff6b9d;
             --glass-white: rgba(255, 255, 255, 0.07);
+            --glass-white-hover: rgba(255, 255, 255, 0.12);
             --glass-border: rgba(255, 255, 255, 0.15);
+            --glass-border-hover: rgba(77, 212, 255, 0.4);
             --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-secondary: rgba(255, 255, 255, 0.75);
+            --text-muted: rgba(255, 255, 255, 0.5);
         }
 
         body {
@@ -29,277 +56,288 @@
             background: var(--cosmic-dark);
             color: var(--text-primary);
             overflow-x: hidden;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
-        /* Starfield */
+        /* ── Starfield ── */
         .starfield {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            inset: 0;
             z-index: 0;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            background: radial-gradient(ellipse at 30% 20%, #0d1f3c 0%, #050d1a 60%);
+            pointer-events: none;
         }
 
-        .stars {
+        .stars-layer {
             position: absolute;
-            width: 100%; height: 100%;
-            background-image:
-                radial-gradient(2px 2px at 20px 30px, white, transparent),
-                radial-gradient(2px 2px at 60px 70px, white, transparent),
-                radial-gradient(1px 1px at 50px 50px, white, transparent),
-                radial-gradient(1px 1px at 130px 80px, white, transparent),
-                radial-gradient(2px 2px at 90px 10px, white, transparent),
-                radial-gradient(1px 1px at 170px 40px, white, transparent),
-                radial-gradient(1px 1px at 40px 120px, white, transparent),
-                radial-gradient(2px 2px at 150px 150px, white, transparent);
+            inset: 0;
             background-repeat: repeat;
-            background-size: 200px 200px;
-            animation: twinkle 4s ease-in-out infinite;
-            opacity: 0.5;
+            animation: drift linear infinite;
         }
-
-        .stars-2 {
-            position: absolute;
-            width: 100%; height: 100%;
+        .stars-layer-1 {
             background-image:
-                radial-gradient(1px 1px at 80px 20px, rgba(255,255,255,0.6), transparent),
-                radial-gradient(1px 1px at 110px 90px, rgba(255,255,255,0.6), transparent),
-                radial-gradient(2px 2px at 180px 60px, rgba(255,255,255,0.6), transparent),
-                radial-gradient(1px 1px at 30px 160px, rgba(255,255,255,0.6), transparent);
-            background-repeat: repeat;
-            background-size: 300px 300px;
-            animation: twinkle 6s ease-in-out infinite reverse;
-            opacity: 0.4;
+                radial-gradient(1.5px 1.5px at 22px 44px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 80px 20px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 140px 90px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 60px 130px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 180px 60px, rgba(77,212,255,0.6), transparent),
+                radial-gradient(1px 1px at 30px 170px, rgba(255,255,255,0.7), transparent);
+            background-size: 220px 220px;
+            animation-duration: 120s;
+        }
+        .stars-layer-2 {
+            background-image:
+                radial-gradient(1px 1px at 50px 50px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 110px 30px, rgba(255,107,157,0.5), transparent),
+                radial-gradient(1px 1px at 170px 140px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 180px, rgba(255,255,255,0.5), transparent);
+            background-size: 280px 280px;
+            animation-duration: 180s;
+            animation-direction: reverse;
+        }
+        .stars-layer-3 {
+            background-image:
+                radial-gradient(2px 2px at 70px 80px, rgba(255,255,255,0.4), transparent),
+                radial-gradient(1px 1px at 150px 50px, rgba(77,212,255,0.4), transparent),
+                radial-gradient(1.5px 1.5px at 40px 140px, rgba(255,255,255,0.6), transparent);
+            background-size: 350px 350px;
+            animation-duration: 240s;
+            opacity: 0.6;
         }
 
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.9; }
+        @keyframes drift {
+            from { transform: translateX(0); }
+            to { transform: translateX(-220px); }
         }
 
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
 
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(5, 13, 26, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            padding: 18px 0;
-        }
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
-            font-weight: 700;
-            text-decoration: none;
-            color: var(--text-primary);
-            letter-spacing: 1px;
-        }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
             flex-shrink: 0;
         }
 
         .nav-links {
             display: flex;
-            gap: 35px;
+            gap: 36px;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 400;
             font-size: 15px;
-            transition: color 0.3s ease;
+            font-weight: 400;
+            transition: color 0.3s;
+            position: relative;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-cyan);
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-cyan);
+            transition: width 0.3s;
         }
 
-        /* Article layout */
-        article {
-            padding: 55px 0 100px;
+        .nav-links a:hover { color: var(--accent-cyan); }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* ── Page wrapper ── */
+        .page-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 0;
         }
 
-        .article-header {
+        /* ── Hero ── */
+        .article-hero {
             text-align: center;
-            margin-bottom: 55px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--glass-border);
+            padding: 72px 0 0;
         }
 
-        .tag {
-            display: inline-block;
-            background: rgba(77, 212, 255, 0.12);
+        .article-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(77, 212, 255, 0.1);
             border: 1px solid rgba(77, 212, 255, 0.3);
-            color: var(--accent-cyan);
+            border-radius: 40px;
+            padding: 6px 18px;
             font-size: 13px;
             font-weight: 500;
-            letter-spacing: 2px;
+            color: var(--accent-cyan);
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: 22px;
+            margin-bottom: 28px;
         }
 
-        .article-header h1 {
+        .article-hero h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 44px;
-            font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: 22px;
-            background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan));
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 60%, var(--accent-pink) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .article-intro p {
+        .article-hero .lead {
             font-size: 18px;
             color: var(--text-secondary);
-            line-height: 1.85;
-            margin-bottom: 20px;
-            max-width: 780px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Back link */
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--accent-cyan);
-            text-decoration: none;
-            font-size: 15px;
-            margin-bottom: 35px;
-            transition: gap 0.3s ease;
-            opacity: 0.85;
-        }
-
-        .back-link:hover {
-            gap: 14px;
-            opacity: 1;
-        }
-
-        /* Typography */
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
-            font-weight: 700;
-            margin: 55px 0 22px;
-            color: var(--text-primary);
-            position: relative;
-            padding-left: 22px;
-        }
-
-        h2::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 72%;
-            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
-            border-radius: 2px;
-        }
-
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            margin: 32px 0 16px;
-            color: var(--accent-cyan);
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.85;
-            margin-bottom: 18px;
-            color: var(--text-secondary);
-        }
-
-        ul, ol {
-            margin: 20px 0;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        ul li, ol li {
-            position: relative;
-            padding: 10px 0 10px 35px;
-            font-size: 16px;
+            font-weight: 300;
+            max-width: 620px;
+            margin: 0 auto 0;
             line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 4px;
         }
 
-        ul li::before {
-            content: '▸';
-            position: absolute;
-            left: 10px;
-            color: var(--accent-cyan);
-            font-size: 15px;
+        /* ── Divider ── */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+            margin: 20px 0;
         }
 
-        ol {
-            counter-reset: item;
-        }
-
-        ol li::before {
-            content: counter(item) ".";
-            counter-increment: item;
-            position: absolute;
-            left: 8px;
-            color: var(--accent-cyan);
-            font-weight: 600;
-        }
-
-        /* Step cards — главный элемент страницы */
-        .step-card {
+        /* ── Steps overview diagram ── */
+        .steps-overview {
             background: var(--glass-white);
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px 36px;
+            margin-bottom: 64px;
+        }
+
+        .steps-overview h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .steps-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .step-connector-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 44px;
+            flex-shrink: 0;
+        }
+
+        .step-num-badge {
+            min-width: 70px;
+            height: 44px;
+            padding: 0 12px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .step-num-badge:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 18px rgba(77, 212, 255, 0.35);
+        }
+
+        .step-connector-line {
+            width: 2px;
+            flex: 1;
+            min-height: 24px;
+            background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-pink));
+            opacity: 0.3;
+            margin: 0 auto;
+        }
+
+        .step-name-row {
+            flex: 1;
+            padding: 10px 0 28px;
+        }
+
+        .step-name-row a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .step-name-row a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Color sequence for badges */
+        .step-row:nth-child(1) .step-num-badge { background: rgba(77,212,255,0.15); border: 1.5px solid rgba(77,212,255,0.5); color: var(--accent-cyan); }
+        .step-row:nth-child(2) .step-num-badge { background: rgba(100,200,255,0.12); border: 1.5px solid rgba(100,200,255,0.4); color: #7de0ff; }
+        .step-row:nth-child(3) .step-num-badge { background: rgba(130,180,255,0.12); border: 1.5px solid rgba(130,180,255,0.4); color: #9eceff; }
+        .step-row:nth-child(4) .step-num-badge { background: rgba(160,160,255,0.12); border: 1.5px solid rgba(160,160,255,0.4); color: #b8b8ff; }
+        .step-row:nth-child(5) .step-num-badge { background: rgba(200,130,255,0.12); border: 1.5px solid rgba(200,130,255,0.4); color: #d49eff; }
+        .step-row:nth-child(6) .step-num-badge { background: rgba(230,110,200,0.12); border: 1.5px solid rgba(230,110,200,0.4); color: #e87ed0; }
+        .step-row:nth-child(7) .step-num-badge { background: rgba(255,107,157,0.15); border: 1.5px solid rgba(255,107,157,0.5); color: var(--accent-pink); }
+
+        .step-row:last-child .step-connector-line { display: none; }
+        .step-row:last-child .step-name-row { padding-bottom: 0; }
+
+        /* ── Step cards ── */
+        .steps-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .step-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
             border-radius: 20px;
-            padding: 36px 38px;
-            margin: 30px 0;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 36px;
+            margin-bottom: 24px;
+            transition: border-color 0.35s, background 0.35s, transform 0.35s;
             position: relative;
             overflow: hidden;
         }
@@ -307,733 +345,678 @@
         .step-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.35s;
         }
 
         .step-card:hover {
-            border-color: rgba(77, 212, 255, 0.4);
-            box-shadow: 0 12px 45px rgba(77, 212, 255, 0.12);
+            background: var(--glass-white-hover);
+            border-color: var(--glass-border-hover);
+            transform: translateY(-3px);
         }
 
-        .step-card:hover::before {
-            opacity: 1;
-        }
+        .step-card:hover::before { opacity: 1; }
 
-        .step-header {
+        /* Individual card accent colors */
+        #step-1::before { background: linear-gradient(90deg, var(--accent-cyan), #7de0ff); }
+        #step-2::before { background: linear-gradient(90deg, #7de0ff, #9eceff); }
+        #step-3::before { background: linear-gradient(90deg, #9eceff, #b8b8ff); }
+        #step-4::before { background: linear-gradient(90deg, #b8b8ff, #d49eff); }
+        #step-5::before { background: linear-gradient(90deg, #d49eff, #e87ed0); }
+        #step-6::before { background: linear-gradient(90deg, #e87ed0, var(--accent-pink)); }
+        #step-7::before { background: linear-gradient(90deg, var(--accent-pink), #ff9bc0); }
+
+        .step-card-
+        .step-card-num {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 24px;
-        }
-
-        .step-badge {
-            display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
-            border-radius: 16px;
-            flex-shrink: 0;
-            box-shadow: 0 6px 20px rgba(77, 212, 255, 0.3);
-        }
-
-        .step-badge .step-num {
             font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            color: rgba(255,255,255,0.75);
-            letter-spacing: 0.5px;
-            line-height: 1;
-        }
-
-        .step-badge .step-digit {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
             font-weight: 800;
-            color: #fff;
-            line-height: 1;
+            font-size: 20px;
+            flex-shrink: 0;
         }
 
-        .step-title-block h2 {
+        #step-1 .step-card-num { background: rgba(77,212,255,0.15); color: var(--accent-cyan); border: 1px solid rgba(77,212,255,0.3); }
+        #step-2 .step-card-num { background: rgba(100,200,255,0.12); color: #7de0ff; border: 1px solid rgba(100,200,255,0.3); }
+        #step-3 .step-card-num { background: rgba(130,180,255,0.12); color: #9eceff; border: 1px solid rgba(130,180,255,0.3); }
+        #step-4 .step-card-num { background: rgba(160,160,255,0.12); color: #b8b8ff; border: 1px solid rgba(160,160,255,0.3); }
+        #step-5 .step-card-num { background: rgba(200,130,255,0.12); color: #d49eff; border: 1px solid rgba(200,130,255,0.3); }
+        #step-6 .step-card-num { background: rgba(230,110,200,0.12); color: #e87ed0; border: 1px solid rgba(230,110,200,0.3); }
+        #step-7 .step-card-num { background: rgba(255,107,157,0.15); color: var(--accent-pink); border: 1px solid rgba(255,107,157,0.3); }
+
+        .step-card-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
+            font-size: 17px;
             font-weight: 700;
-            margin: 0;
-            padding: 0;
+            line-height: 1.3;
             color: var(--text-primary);
         }
 
-        .step-title-block h2::before {
-            display: none;
-        }
-
-        .step-subtitle {
-            font-size: 14px;
-            color: var(--accent-cyan);
-            opacity: 0.8;
-            margin-top: 5px;
-            font-weight: 400;
-            letter-spacing: 0.3px;
-        }
-
-        .step-body p {
-            margin-bottom: 16px;
-        }
-
-        .step-body h3 {
-            margin-top: 24px;
-        }
-
-        /* Quote from book */
-        .book-quote {
-            background: rgba(77, 212, 255, 0.06);
-            border-left: 3px solid var(--accent-cyan);
-            padding: 18px 22px;
-            margin: 22px 0;
-            border-radius: 0 10px 10px 0;
-            font-style: italic;
-        }
-
-        .book-quote .source {
-            font-style: normal;
-            font-size: 13px;
-            color: var(--accent-cyan);
-            opacity: 0.7;
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-
-        /* Checklist (todo items) */
-        .checklist {
-            background: rgba(255,255,255,0.04);
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 20px 0;
-        }
-
-        .checklist-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--accent-pink);
-            margin-bottom: 14px;
-        }
-
-        .checklist ul li::before {
-            content: '✓';
-            color: var(--accent-cyan);
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        /* Warning / highlight */
-        .warning-box {
-            background: rgba(255, 107, 157, 0.1);
-            border-left: 4px solid var(--accent-pink);
-            padding: 18px 22px;
-            margin: 24px 0;
-            border-radius: 0 10px 10px 0;
-        }
-
-        .warning-box strong {
-            color: var(--accent-pink);
-            display: block;
-            margin-bottom: 7px;
-            font-size: 15px;
-        }
-
-        .warning-box p {
-            margin-bottom: 0;
-        }
-
-        /* Highlight box */
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(77, 212, 255, 0.08), rgba(255, 107, 157, 0.08));
-            border: 1px solid rgba(77, 212, 255, 0.25);
-            border-radius: 14px;
-            padding: 26px 30px;
-            margin: 28px 0;
-        }
-
-        .highlight-box h3 {
-            margin-top: 0;
-            color: #fff;
-        }
-
-        /* Step nav (overview) */
-        .steps-overview {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-            gap: 14px;
-            margin: 35px 0;
-        }
-
-        .step-nav-item {
-            background: var(--glass-white);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            padding: 16px 18px;
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 14px;
-            transition: all 0.3s ease;
+        /* Sub-items list */
+        .step-items {
+            list-style: none;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .step-items li {
+            display: flex;
+            align-items: flex-start;
             gap: 12px;
         }
 
-        .step-nav-item:hover {
-            border-color: var(--accent-cyan);
-            color: var(--text-primary);
-            transform: translateY(-2px);
-        }
-
-        .step-nav-num {
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            color: #fff;
+        .step-items li .bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
             flex-shrink: 0;
+            margin-top: 9px;
+            background: var(--accent-cyan);
+            opacity: 0.6;
         }
 
-        /* CTA block */
-        .cta-box {
-            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
-            border: 2px solid var(--accent-cyan);
-            border-radius: 22px;
-            padding: 42px 40px;
-            margin: 65px 0 40px;
-            text-align: center;
-        }
+        .step-card:nth-child(4) .bullet,
+        .step-card:nth-child(5) .bullet { background: #b8b8ff; }
+        .step-card:nth-child(6) .bullet,
+        .step-card:nth-child(7) .bullet { background: var(--accent-pink); }
 
-        .cta-box h2 {
-            margin: 0 0 16px;
-            padding: 0;
-            font-size: 28px;
-        }
-
-        .cta-box h2::before { display: none; }
-
-        .cta-box p {
-            font-size: 17px;
-            max-width: 580px;
-            margin: 0 auto 28px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 36px;
-            border-radius: 50px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+        .step-items li a {
             font-size: 16px;
+            color: var(--text-secondary);
             text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            transition: color 0.25s;
+            line-height: 1.55;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-cyan), #2ab8e8);
-            color: var(--cosmic-dark);
-            box-shadow: 0 8px 25px rgba(77, 212, 255, 0.35);
+        .step-items li a:hover {
+            color: var(--accent-cyan);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(77, 212, 255, 0.5);
+        /* ── Forum block ── */
+        .forum-block {
+            margin-top: 64px;
+            background: linear-gradient(135deg, rgba(77,212,255,0.06) 0%, rgba(255,107,157,0.06) 100%);
+            border: 1px solid rgba(77,212,255,0.2);
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Footer */
+        .forum-block::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(77,212,255,0.08) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .forum-block .forum-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .forum-block h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .forum-block p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .forum-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            color: #050d1a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .forum-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(77, 212, 255, 0.35);
+        }
+
+        .forum-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ── Footer ── */
         footer {
             position: relative;
             z-index: 1;
             border-top: 1px solid var(--glass-border);
-            padding: 35px 0;
+            padding: 32px 24px;
             text-align: center;
-            color: rgba(255,255,255,0.4);
+        }
+
+        footer p {
             font-size: 14px;
+            color: var(--text-muted);
         }
 
-        /* Fade animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.3s;
         }
 
-        .fade-in {
-            animation: fadeInUp 0.75s ease-out forwards;
-        }
+        footer a:hover { opacity: 0.7; }
 
-        .delay-1 { animation-delay: 0.1s; opacity: 0; }
-        .delay-2 { animation-delay: 0.2s; opacity: 0; }
-        .delay-3 { animation-delay: 0.35s; opacity: 0; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .article-header h1 { font-size: 32px; }
-            .step-card { padding: 26px 22px; }
-            .step-header { flex-direction: row; }
-            .step-title-block h2 { font-size: 22px; }
-            h2 { font-size: 26px; }
-            h3 { font-size: 20px; }
-            p, ul li, ol li { font-size: 16px; }
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
             .nav-links { display: none; }
-            .cta-box { padding: 30px 22px; }
-            .steps-overview { grid-template-columns: 1fr 1fr; }
+            .steps-overview { padding: 28px 20px; }
+            .step-card { padding: 24px 20px; }
+            .forum-block { padding: 36px 24px; }
+            .article-hero { padding: 48px 0 40px; }
+        }
+
+        /* Algorithm diagram */
+        .algorithm-section {
+            margin: 0 0 60px;
+        }
+        .algorithm-section h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+        .algorithm-section h2::before { display: none; }
+        .algo-svg-wrap {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 32px 16px;
+            overflow-x: auto;
+        }
+        .algo-svg-wrap svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* ── Scroll reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Программа 7 шагов КУ — контролируемое употребление алкоголя",
+  "description": "Программа 7 шагов КУ — пошаговая система контролируемого употребления алкоголя. Как выстроить стратегию, установить личные нормы и придерживаться их без срывов.",
+  "image": "https://alkonorm.ru/pic/algoritm.jpg",
+  "url": "https://alkonorm.ru/articles/7-shagov-ku.html",
+  "datePublished": "2026-03-02",
+  "dateModified": "2026-03-02",
+  "inLanguage": "ru-RU",
+  "author": {
+    "@type": "Organization",
+    "name": "КУ — контролируемое употребление алкоголя",
+    "url": "https://alkonorm.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alkonorm.ru/favicon-192.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "КУ — контролируемое употребление алкоголя",
+    "url": "https://alkonorm.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alkonorm.ru/favicon-192.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alkonorm.ru/articles/7-shagov-ku.html"
+  }
+}
+    </script>
 </head>
 <body>
 
-<!-- Starfield -->
-<div class="starfield">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-</div>
+    <!-- Starfield background -->
+    <div class="starfield" aria-hidden="true">
+        <div class="stars-layer stars-layer-1"></div>
+        <div class="stars-layer stars-layer-2"></div>
+        <div class="stars-layer stars-layer-3"></div>
+    </div>
 
-<!-- Header -->
-<header>
-    <div class="header-container">
-        <nav>
-            <a href="index.html" class="logo">
-                <div class="logo-icon">🛡️</div>
-                <span>КУ</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="kak-menshe-pit.html">Как пить меньше</a></li>
-                <li><a href="kak-ne-napitsya.html">Как не напиться</a></li>
-                <li><a href="skolko-mozno-pit.html">Сколько можно пить</a></li>
-                <li><a href="pochemu-hochetsya-pit.html">Почему хочется пить</a></li>
-            </ul>
+    <!-- Header -->
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
         </nav>
+        <div class="nav-search">🔍</div>
     </div>
 </header>
 
-<!-- Article -->
-<article>
-    <div class="container">
+    <!-- Page content -->
+    <main>
+        <div class="page-wrapper">
 
-        <a href="index.html" class="back-link">← Вернуться на главную</a>
+            <!-- Back link top -->
+            <a href="../index.html" style="display:inline-flex; align-items:center; gap:8px; margin-bottom:24px; color:var(--accent-cyan); text-decoration:none; font-family:'Jost',sans-serif; font-size:15px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">← Главная страница</a>
 
-        <!-- Header -->
-        <div class="article-header fade-in">
-            <div class="tag">Полный алгоритм КУ</div>
-            <h1>Программа 7 шагов контролируемого употребления</h1>
-            <div class="article-intro">
-                <p>Контролируемое употребление — это не сила воли и не характер. Это система. Семь шагов, которые здесь описаны, выведены из личного опыта и сотен обсуждений на форуме людей, которые прошли этот путь. Каждый шаг опирается на материалы книги <em>«На краю Синей Бездны»</em>.</p>
-                <p>Прежде чем читать — важный момент: КУ подходит не всем. <a href="skolko-mozno-pit.html" style="color: var(--accent-cyan);">Оценить свою ситуацию</a> честно — это уже часть первого шага.</p>
+            <!-- Hero -->
+            <div class="article-hero reveal">
+                <div class="article-eyebrow">⚙️ Методология</div>
+                <h1>Программа 7 шагов КУ</h1>
+                <p class="lead">
+                    Пошаговая система для тех, кто хочет взять употребление алкоголя под контроль — без полного отказа. Программа основана на научных данных и практическом опыте участников форума.
+                </p>
+                <p style="font-family: 'Jost', sans-serif; font-size: 17px; color: rgba(255,255,255,0.75); line-height: 1.8; margin-top: 20px;">
+                    Большинство людей, которые хотят пить меньше, пробуют один и тот же путь: сила воли и обещания себе. Это работает плохо, потому что каждый вечер приходится принимать решение заново — на фоне усталости, привычки и социального давления. Программа КУ решает эту проблему иначе: вы принимаете решения один раз, а не каждый день.
+                </p>
+                <p style="font-family: 'Jost', sans-serif; font-size: 17px; color: rgba(255,255,255,0.75); line-height: 1.8; margin-top: 16px;">
+                    Семь шагов — это последовательность: сначала вы честно оцениваете свою ситуацию и ресурсы, потом разрабатываете личную стратегию с конкретными правилами, потом реализуете её с учётом и анализом. Если что-то не работает — программа предполагает корректировку, а не самобичевание.
+                </p>
             </div>
-        </div>
 
-        <!-- Навигация по шагам -->
-        <div class="fade-in delay-1">
-            <div class="steps-overview">
-                <a href="#step1" class="step-nav-item"><span class="step-nav-num">1</span> Желание изменить жизнь</a>
-                <a href="#step2" class="step-nav-item"><span class="step-nav-num">2</span> Оценка вероятности КУ</a>
-                <a href="#step3" class="step-nav-item"><span class="step-nav-num">3</span> Разработка плана</a>
-                <a href="#step4" class="step-nav-item"><span class="step-nav-num">4</span> Реализация плана</a>
-                <a href="#step5" class="step-nav-item"><span class="step-nav-num">5</span> Оценка успешности</a>
-                <a href="#step6" class="step-nav-item"><span class="step-nav-num">6</span> Корректировка</a>
-                <a href="#step7" class="step-nav-item"><span class="step-nav-num">7</span> Стабильное КУ</a>
-            </div>
-        </div>
-
-        <!-- ШАГ 1 -->
-        <div id="step1" class="step-card fade-in delay-2">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">1</span>
-                </div>
-                <div class="step-title-block">
-                    <h2>Желание изменить свою жизнь</h2>
-                    <div class="step-subtitle">Осознание и проверка внутреннего импульса</div>
-                </div>
-            </div>
-            <div class="step-body">
-                <p>Первый шаг — это осознание и фиксация подлинного желания изменить свою жизнь, а не стремление просто убрать неприятные последствия. На этом этапе человек проверяет: есть ли внутренний импульс к переменам, готовность прикладывать усилия и принимать неизбежный дискомфорт.</p>
-
-                <div class="book-quote">
-                    <p>«Я помню, как после письма моей любимой жены мне пришло ясное осознание, что так жить дальше нельзя. Я четко и ясно понял: всё, баста, больше так жить не желаю и не буду. Вот это желание изменить жизнь — и есть самый главный импульс для контролируемого употребления.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 1</p>
-                </div>
-
-                <p>Желание меняться рождается не из силы характера, а из сочетания нескольких факторов: нарастающей боли от текущей жизни, образа желаемого будущего и хотя бы минимальной веры в то, что изменения возможны. Одного из них недостаточно — нужны все три.</p>
-
-                <h3>Взрослая позиция или детская?</h3>
-                <p>Алгоритм КУ требует взрослого подхода. Это значит: брать ответственность за каждый эпизод, честно фиксировать реальные цифры, выдерживать дискомфорт от ограничений. Если человек ждёт «волшебную таблетку» — результат без усилий, КУ превращается в самообман.</p>
-
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно сделать на этом шаге</div>
-                    <ul>
-                        <li>Проверить, есть ли подлинное желание менять употребление (а не просто устранить последствия)</li>
-                        <li>Сформулировать, готовы ли вы прикладывать усилия и мириться с дискомфортом</li>
-                        <li>Определить, что конкретно изменится к лучшему в режиме КУ</li>
-                        <li>Если желания нет или оно слабое — рассмотреть путь полной трезвости</li>
-                    </ul>
-                </div>
-
-                <div class="warning-box">
-                    <strong>Важно знать</strong>
-                    <p>Отсутствие мотивации не говорит о слабом характере. Это определённая стадия. Желание не включается силой воли — оно формируется через честное видение своих ценностей и небольшие эксперименты с изменениями.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ШАГ 2 -->
-        <div id="step2" class="step-card">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">2</span>
-                </div>
-                <div class="step-title-block">
-                    <h2>Оценка вероятности успешного КУ</h2>
-                    <div class="step-subtitle">Честная инвентаризация перед стартом</div>
-                </div>
-            </div>
-            <div class="step-body">
-                <p>Второй шаг — это трезвая оценка того, насколько режим КУ реально достижим для вас в текущем состоянии. Проверяются три характеристики: сила приобретённой зависимости, существующие ограничения и имеющиеся ресурсы.</p>
-
-                <div class="book-quote">
-                    <p>«Шаг 2 нужен не для того, чтобы человек "уговорил" себя пить умеренно, и не для того, чтобы припугнуть его и заставить бросить. Его смысл другой: снизить риск ошибки на старте.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 2</p>
-                </div>
-
-                <h3>Три плоскости оценки</h3>
-                <ul>
-                    <li><strong>Сила зависимости по МКБ-11:</strong> лёгкая, средняя или тяжёлая. Чем выше степень — тем меньше шансов на устойчивое КУ. При сомнениях — лучше проконсультироваться с наркологом.</li>
-                    <li><strong>Ограничения:</strong> биологические (печень, здоровье), психологические (сопутствующие расстройства), социальные (работа с нулевой толерантностью, давление окружения).</li>
-                    <li><strong>Ресурсы:</strong> мотивация, навыки саморегуляции, поддерживающая среда, согласованность КУ с жизненными ценностями.</li>
+            <!-- Для кого -->
+            <div style="background: rgba(77,212,255,0.06); border: 1px solid rgba(77,212,255,0.25); border-radius: 16px; padding: 28px 32px; margin: 30px 0; font-family: 'Jost', sans-serif;">
+                <p style="font-size: 16px; font-weight: 600; color: #4dd4ff; margin-bottom: 14px;">Программа подходит вам, если:</p>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="padding: 8px 0 8px 24px; position: relative; font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.07);">
+                        <span style="position:absolute;left:0;color:#4dd4ff;">▸</span> вы пьёте регулярно и хотите снизить частоту или объём, но не готовы к полному отказу
+                    </li>
+                    <li style="padding: 8px 0 8px 24px; position: relative; font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.07);">
+                        <span style="position:absolute;left:0;color:#4dd4ff;">▸</span> вы теряете контроль в компании, на праздниках или после стресса
+                    </li>
+                    <li style="padding: 8px 0 8px 24px; position: relative; font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.6; border-bottom: 1px solid rgba(255,255,255,0.07);">
+                        <span style="position:absolute;left:0;color:#4dd4ff;">▸</span> обещания «пить меньше» не работают — нужна система
+                    </li>
+                    <li style="padding: 8px 0 8px 24px; position: relative; font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.6;">
+                        <span style="position:absolute;left:0;color:#4dd4ff;">▸</span> у вас ещё сохранён контроль — нет запоев, утреннего похмеления, провалов в памяти
+                    </li>
                 </ul>
+            </div>
 
-                <div class="highlight-box">
-                    <h3>Три возможных исхода</h3>
-                    <p><strong>КУ реалистично</strong> — лёгкая зависимость, нет серьёзных ограничений, хорошие ресурсы. Можно пробовать при строгих количественных рамках.</p>
-                    <p><strong>Пограничная зона</strong> — средняя степень зависимости или выраженные ограничения, но сильная мотивация. Нужны серьёзные меры по изменению образа жизни.</p>
-                    <p><strong>КУ нереалистично</strong> — высокий уровень по МКБ, значимые ограничения, минимальные ресурсы. Единственная безопасная стратегия — трезвость.</p>
-                </div>
+            <div class="section-divider"></div>
 
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно сделать на этом шаге</div>
-                    <ul>
-                        <li>Оценить силу зависимости по МКБ-11 (при сомнениях — обратиться к наркологу)</li>
-                        <li>Выявить ограничения, которые исключают или сильно затрудняют КУ</li>
-                        <li>Оценить ресурсы, которые повышают или снижают вероятность успеха</li>
-                        <li>Принять решение: КУ или полная трезвость</li>
-                    </ul>
+            <!-- Overview diagram -->
+            <div class="steps-overview reveal">
+                <h2>Схема программы</h2>
+                <div class="steps-flow">
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-1" class="step-num-badge">Шаг 1</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-1">Желание изменить свою жизнь</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-2" class="step-num-badge">Шаг 2</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-2">Оценка вероятности успешного КУ</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-3" class="step-num-badge">Шаг 3</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-3">Разработка плана контроля употребления</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-4" class="step-num-badge">Шаг 4</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-4">Реализация плана и проверка его работоспособности</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-5" class="step-num-badge">Шаг 5</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-5">Оценка успешности плана</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-6" class="step-num-badge">Шаг 6</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-6">Оценка наличия вариантов корректировки</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <a href="#step-7" class="step-num-badge">Шаг 7</a>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-7">Поддержание стабильного КУ</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
 
-        <!-- ШАГ 3 -->
-        <div id="step3" class="step-card">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">3</span>
-                </div>
-                <div class="step-title-block">
-                    <h2>Разработка плана контроля употребления</h2>
-                    <div class="step-subtitle">Стратегия, тактика и личные правила</div>
+            <!-- Steps detail -->
+            <p class="steps-section-title reveal">Шаги подробно</p>
+
+            <!-- Algorithm flowchart -->
+            <div class="algorithm-section reveal">
+                <h2>Алгоритм методики КУ</h2>
+                <div class="algo-svg-wrap">
+                    <img src="../pic/algoritm.jpg" alt="Алгоритм методики КУ" style="max-width:100%;height:auto;display:block;margin:0 auto;border-radius:12px;">
                 </div>
             </div>
-            <div class="step-body">
-                <p>План КУ складывается из трёх связанных элементов: стратегии с жёсткими ограничениями, календарного распределения лча (литров чистого алкоголя) и тактики поведения внутри разрешённых эпизодов. Система не появляется сразу в идеальном виде — она уточняется через учёт, анализ и корректировки.</p>
 
-                <p>Ключевая идея: опираться не на волевые усилия каждый раз, а на <strong>заранее заданные правила</strong>. Именно правила, а не решения на месте, делают КУ устойчивым.</p>
-
-                <h3>Что входит в план</h3>
-
-                <div class="book-quote">
-                    <p>«На предыдущих шагах можно построить красивую схему, но только практика показывает, насколько она совместима с твоей жизнью, твоим окружением, твоими привычками и твоими типами мероприятий.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 3</p>
+            <!-- Step 1 -->
+            <div class="step-card reveal" id="step-1">
+                <div class="step-card-header">
+                    <div class="step-card-num">1</div>
+                    <div class="step-card-title">Желание изменить свою жизнь</div>
                 </div>
-
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно сделать на этом шаге</div>
-                    <ul>
-                        <li>Подготовить ресурсы и убрать избыточные запасы алкоголя дома</li>
-                        <li>Определить свои триггеры — ситуации, эмоции, окружение, которые запускают тягу</li>
-                        <li>Выявить шаблоны употребления (когда, с кем, по каким поводам)</li>
-                        <li>Разделить шаблоны на допустимые и вредные</li>
-                        <li>Сформулировать личные правила — свою стратегию КУ</li>
-                        <li>Определить годовой и месячный лимит лча</li>
-                        <li>Разработать тактику для допустимых эпизодов (как пить, сколько, когда останавливаться)</li>
-                    </ul>
-                </div>
-
-                <div class="warning-box">
-                    <strong>Про срывы на старте</strong>
-                    <p>Срывы в начале — это не повод бросать. Это обратная связь от реальной жизни. Каждый сбой — информация для оптимизации правил.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ШАГ 4 -->
-        <div id="step4" class="step-card">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">4</span>
-                </div>
-                <div class="step-title-block">
-                    <h2>Реализация плана и проверка его работоспособности</h2>
-                    <div class="step-subtitle">Учёт, контроль и накопление опыта</div>
-                </div>
-            </div>
-            <div class="step-body">
-                <p>Этап реализации — это проверка правил в реальной жизни. Смысл не в том, чтобы «попробовать» контролировать, а в том, чтобы строго следовать плану и параллельно собирать данные.</p>
-
-                <div class="book-quote">
-                    <p>«Без учёта ты каждый раз начинаешь как будто с нуля, и опыт не накапливается. Мозг имеет свойство обманывать: он забывает неудобные детали, сглаживает провалы и приукрашивает успехи.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 4</p>
-                </div>
-
-                <h3>Три уровня плана и скорость их изменения</h3>
-                <ul>
-                    <li><strong>Стратегия</strong> — годовой каркас. Меняется редко, только при накоплении серьёзных причин.</li>
-                    <li><strong>Месячный план</strong> — раскладка лча по периодам. Уточняется ежемесячно под реальную жизнь.</li>
-                    <li><strong>Тактика</strong> — что делать прямо в эпизоде. Может перестраиваться после каждого случая.</li>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="zhelanie-menyatsya.html">Проверить, есть ли желание менять</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="gotovnost-k-usiliyam.html">Сформулировать, есть ли готовность прикладывать усилия</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="chto-izmenit-ku.html">Определить, что изменится к лучшему в режиме КУ</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="esli-net-zhelaniya-ku.html">Если нет сильного желания — перейти в полную трезвость</a>
+                    </li>
                 </ul>
-
-                <h3>Два вида учёта</h3>
-                <p><strong>Количественный учёт</strong> отвечает на вопрос «что произошло»: тип эпизода, лимит и факт выпитого в лча, время начала, нарушения правил, последствия на следующий день.</p>
-                <p><strong>Качественный учёт</strong> отвечает на вопрос «почему так получилось»: что подтолкнуло к продолжению, где ошибся, какая тактика сработала, что изменить в следующий раз.</p>
-
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно сделать на этом шаге</div>
-                    <ul>
-                        <li>Завести таблицу учёта в Excel и приложение на телефоне</li>
-                        <li>Планировать, учитывать и анализировать все эпизоды без исключений</li>
-                        <li>Следовать плану строго, без импровизаций — иначе вы тестируете не план, а свою способность выкручиваться</li>
-                        <li>Проводить общий анализ каждого месяца</li>
-                        <li>Вносить корректировки в тактику и стратегию на основе данных</li>
-                    </ul>
-                </div>
             </div>
-        </div>
 
-        <!-- ШАГ 5 -->
-        <div id="step5" class="step-card">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">5</span>
+            <!-- Step 2 -->
+            <div class="step-card reveal" id="step-2">
+                <div class="step-card-header">
+                    <div class="step-card-num">2</div>
+                    <div class="step-card-title">Оценка вероятности успешного КУ</div>
                 </div>
-                <div class="step-title-block">
-                    <h2>Оценка успешности плана</h2>
-                    <div class="step-subtitle">Годовой анализ по данным, а не по ощущениям</div>
-                </div>
-            </div>
-            <div class="step-body">
-                <p>Раз в год проводится пересмотр плана и общей стратегии. К этому моменту накоплена статистика. Оценка строится не вокруг отдельных сбоев, а вокруг общих показателей и динамики за год.</p>
-
-                <div class="book-quote">
-                    <p>«Годовое решение об успешности реализации плана КУ лучше делать по данным учёта и контроля. Смысл решения простой: либо стратегия действительно ведёт к сокращению употребления и сохраняет управляемость, либо нет.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 5</p>
-                </div>
-
-                <h3>Три критерия успеха</h3>
-                <ol>
-                    <li><strong>Выполнение годового лимита лча</strong> — самый главный критерий. Падает ли суммарная лча за период?</li>
-                    <li><strong>Управляемость не ухудшилась</strong> — нет роста нарушений, нет серий эпизодов, нет тяжёлых последствий.</li>
-                    <li><strong>Негативные последствия минимальны</strong> — если их много или они критично влияют на жизнь, план не может считаться успешным.</li>
-                </ol>
-
-                <div class="highlight-box">
-                    <h3>Два возможных итога года</h3>
-                    <p><strong>Успех:</strong> употребление сокращается, управляемость сохраняется. Сохранить стратегию, скорректировать распределение лча на следующий год.</p>
-                    <p><strong>Неуспех:</strong> сокращения нет или управляемость ухудшилась. Либо радикально менять стратегию, либо выбирать полную трезвость. Трезвость — это не наказание, это управленческое решение.</p>
-                </div>
-
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно сделать на этом шаге</div>
-                    <ul>
-                        <li>Провести анализ успешности плана по выполнению годовой нормы лча</li>
-                        <li>Оценить количество нарушений стратегии (превышений лимитов)</li>
-                        <li>Оценить характер и тяжесть негативных последствий</li>
-                        <li>Сделать короткий технический вывод без самообвинений</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- ШАГ 6 -->
-        <div id="step6" class="step-card">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">6</span>
-                </div>
-                <div class="step-title-block">
-                    <h2>Оценка наличия вариантов корректировки</h2>
-                    <div class="step-subtitle">Плановая перенастройка на основе фактов</div>
-                </div>
-            </div>
-            <div class="step-body">
-                <p>Корректировка — это не переписывание всего заново, а инженерная работа: усилить то, что работало; изменить то, что регулярно давало сбой. Смысл в том, чтобы следующий год начинался не с надежды, а с уточнённой стратегии.</p>
-
-                <div class="book-quote">
-                    <p>«Важно не путать причину и повод. Поводом может быть праздник или компания. Причиной чаще оказывается структура ситуации: слишком ранний старт, отсутствие еды, неподходящий формат мероприятия, давление окружения. Корректировка должна отвечать именно на причины, а не на поводы.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 6</p>
-                </div>
-
-                <h3>Когда КУ пора заканчивать</h3>
-                <p>Если за последние 2–3 месяца регулярно проявляются один или несколько сигналов — разумно принять трезвость на фиксированный срок (например, 3 месяца):</p>
-                <ul>
-                    <li>Повторяющиеся нарушения, которые не удаётся исправить настройкой тактики</li>
-                    <li>Остановка внутри эпизода почти никогда не происходит по собственному решению</li>
-                    <li>Сдвиг границ: утреннее употребление, опохмел, рост одиночных эпизодов</li>
-                    <li>Провалы памяти, рискованное поведение, конфликты</li>
-                    <li>Устойчивое ухудшение самочувствия и работоспособности</li>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="sila-zavisimosti-mkb-11.html">Оценить силу своей зависимости по МКБ-11</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="ogranicheniya-ku.html">Оценить ограничения, исключающие или сильно затрудняющие КУ</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="resursy-ku.html">Оценить ресурсы, повышающие или снижающие вероятность успешного КУ</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="matrica-resheniy-ku.html">Принять решение: КУ или полная трезвость</a>
+                    </li>
                 </ul>
-
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно сделать на этом шаге</div>
-                    <ul>
-                        <li>Скорректировать стратегию на основе анализа прошлого периода</li>
-                        <li>Провести ревизию шаблонов: надёжные остаются в плане, проблемные исключаются</li>
-                        <li>Пересмотреть тактику для значимых шаблонов</li>
-                        <li>Если нет обоснованных способов корректировки — принять решение о полной трезвости</li>
-                    </ul>
-                </div>
             </div>
-        </div>
 
-        <!-- ШАГ 7 -->
-        <div id="step7" class="step-card">
-            <div class="step-header">
-                <div class="step-badge">
-                    <span class="step-num">ШАГ</span>
-                    <span class="step-digit">7</span>
+            <!-- Step 3 -->
+            <div class="step-card reveal" id="step-3">
+                <div class="step-card-header">
+                    <div class="step-card-num">3</div>
+                    <div class="step-card-title">Разработка плана контроля употребления</div>
                 </div>
-                <div class="step-title-block">
-                    <h2>Поддержание стабильного КУ</h2>
-                    <div class="step-subtitle">Система, которая работает сама</div>
-                </div>
-            </div>
-            <div class="step-body">
-                <p>После того как система КУ построена и проверена, задача меняется. Вы уже не ищете новые решения для каждого эпизода — вы поддерживаете устойчивость режима. Управлять нужно не отдельными случаями, а поддерживающим контуром.</p>
-
-                <div class="book-quote">
-                    <p>«После системного и осознанного следования алгоритму КУ наступает момент, когда личная система уже построена и проверена на практике. Мозг научился получать удовольствие от малых доз алкоголя и давать команду остановки даже на бурных и шумных вечеринках.»</p>
-                    <p class="source">— «На краю Синей Бездны», Шаг 7</p>
-                </div>
-
-                <h3>Ядро поддерживающего контура</h3>
-                <p>Если этот контур работает, отдельные эпизоды не превращаются в цепочку. Если контур рассыпается — начинается медленное сползание к старому шаблону:</p>
-                <ul>
-                    <li>Учёт каждого эпизода</li>
-                    <li>График эпизодов и пауз</li>
-                    <li>Правила поводов</li>
-                    <li>Заранее продуманные меры защиты от триггеров</li>
-                    <li>Чёткий протокол действий на случай нарушения</li>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="podgotovka-resursov-ku.html">Подготовить ресурсы</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kontury-zavisimosti.html">Определить контуры своей зависимости</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="triggery-ku.html">Определить свои триггеры</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="shablony-upotrebleniya.html">Определить свои шаблоны употребления</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="znachimye-i-vrednye-shablony.html">Разделить шаблоны на значимые и вредные</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="strategiya-ku.html">Сформулировать свою стратегию (личные правила)</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kalendarnyy-plan-lcha.html">Определить календарный план в ЛЧА</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="taktika-upotrebleniya.html">Определить для значимых шаблонов тактику употребления</a>
+                    </li>
                 </ul>
-
-                <h3>Регулярный техосмотр</h3>
-                <p><strong>Раз в месяц</strong> — подводить итоги, анализировать нарушения и их причины, вносить одну точечную корректировку. <strong>Раз в год</strong> — пересматривать стратегическую часть, обновлять карту триггеров.</p>
-
-                <p>Нарушения на этом этапе воспринимаются как диагностический сигнал, а не как поломка системы. Признать факт → определить ошибку → на 7–14 дней усилить защиту в сбойном контуре → внеплановый техосмотр с одной коррекцией.</p>
-
-                <div class="checklist">
-                    <div class="checklist-title">Что нужно делать на этом шаге</div>
-                    <ul>
-                        <li>Сохранять дисциплину в учёте и анализе эпизодов</li>
-                        <li>Постоянно помнить о стратегии и тактике</li>
-                        <li>Замечать ранние признаки рассинхронизации до реальных превышений</li>
-                        <li>Совершенствовать систему, менять только то, что не работает</li>
-                    </ul>
-                </div>
-
-                <div class="highlight-box">
-                    <h3>Формула шага 7</h3>
-                    <p>«Я уже не борюсь с каждым эпизодом отдельно — я поддерживаю систему, которая делает КУ устойчивым и предсказуемым.»</p>
-                    <p>В идеале КУ становится не героической борьбой, а спокойным режимом, который занимает отведённое ему место в жизни.</p>
-                </div>
             </div>
+
+            <!-- Step 4 -->
+            <div class="step-card reveal" id="step-4">
+                <div class="step-card-header">
+                    <div class="step-card-num">4</div>
+                    <div class="step-card-title">Реализация плана и проверка его работоспособности</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="tablitsa-ucheta-ku.html">Завести таблицу по учёту в Excel и приложение в телефоне</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="uchet-epizodov-ku.html">Планировать, учитывать и анализировать все эпизоды</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="analiz-mesyatsa-ku.html">Проводить общий анализ месяца</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="korrektsiyu-taktiki-ku.html">Делать корректировки тактики и стратегии</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card reveal" id="step-5">
+                <div class="step-card-header">
+                    <div class="step-card-num">5</div>
+                    <div class="step-card-title">Оценка успешности плана</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="analiz-uspeshnosti-plana.html">Провести анализ успешности плана по соблюдению годовой нормы употребления</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="analiz-narusheniy-strategii.html">Провести анализ нарушений стратегии и сделать выводы</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card reveal" id="step-6">
+                <div class="step-card-header">
+                    <div class="step-card-num">6</div>
+                    <div class="step-card-title">Оценка наличия вариантов корректировки</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="korrektsiya-strategii-ku.html">Скорректировать стратегию на основании анализа прошлого периода</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="reviziya-shablonov-ku.html">Провести ревизию шаблонов, исключить вредные</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="reviziya-taktiki-znachimykh.html">Провести ревизию тактики для значимых шаблонов</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="reshenie-o-trezvosti.html">Если нет обоснованных способов корректировки — принять решение о полной трезвости</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card reveal" id="step-7">
+                <div class="step-card-header">
+                    <div class="step-card-num">7</div>
+                    <div class="step-card-title">Поддержание стабильного КУ</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="distsiplina-ucheta-ku.html">Сохранять дисциплину в учёте и анализе эпизодов</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="pamyat-o-strategii-ku.html">Постоянно помнить о стратегии и тактике</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="sovershenstvovanie-sistemy-ku.html">Совершенствовать систему контроля</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="priznaki-oslableniya-ku.html">Внимательно следить за признаками ослабления контроля</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h2>Обсудите свой путь в 7 шагах на форуме</h2>
+                <p>На kuforum.ru люди делятся тем, как шли по программе — где застряли, что помогло, как выстраивали свои правила. Живой опыт, без лекций.</p>
+                <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- CTA -->
-        <div class="cta-box">
-            <h2>Готовы начать?</h2>
-            <p>На форуме КУ тысячи людей, которые прошли через эти шаги. Там можно задать вопросы, получить поддержку и найти тех, кто понимает изнутри.</p>
-            <a href="https://kuforum.ru" class="btn btn-primary" target="_blank" rel="noopener">Перейти на форум КУ</a>
-        </div>
-
-        <!-- Ссылки на другие статьи -->
-        <div style="margin-top: 50px;">
-            <h2>Читайте также</h2>
-            <p>Чтобы пройти программу эффективно, изучите практические материалы:</p>
-            <ul>
-                <li><a href="kak-menshe-pit.html" style="color: var(--accent-cyan);">Как пить меньше алкоголя вечером и перестать пить каждый день</a> — конкретные техники для снижения употребления</li>
-                <li><a href="pochemu-hochetsya-pit.html" style="color: var(--accent-cyan);">Почему хочется пить</a> — о природе тяги и триггерах, которые необходимо знать для шага 3</li>
-                <li><a href="skolko-mozno-pit.html" style="color: var(--accent-cyan);">Сколько можно пить</a> — научные нормы, которые помогут правильно рассчитать лча</li>
-            </ul>
-        </div>
-
-        <a href="index.html" class="back-link" style="margin-top: 50px; display: inline-flex;">← Вернуться на главную</a>
-
+    <!-- Связанные статьи -->
+    <div style="max-width: 900px; margin: 0 auto 20px; padding: 0 20px;">
+        <p style="font-size: 17px; font-weight: 600; margin-bottom: 15px; color: rgba(255,255,255,0.9); font-family: 'Jost', sans-serif;">Читайте также:</p>
+        <a href="kak-menshe-pit/kak-menshe-pit.html" style="display: block; padding: 15px 25px; background: rgba(77, 212, 255, 0.1); border: 1px solid rgba(77, 212, 255, 0.6); border-radius: 12px; color: #4dd4ff; text-decoration: none; font-size: 16px; font-family: 'Jost', sans-serif; margin-bottom: 12px; transition: all 0.3s ease;">→ Как меньше пить алкоголь вечером и перестать пить каждый день</a>
+        <a href="pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html" style="display: block; padding: 15px 25px; background: rgba(77, 212, 255, 0.1); border: 1px solid rgba(77, 212, 255, 0.6); border-radius: 12px; color: #4dd4ff; text-decoration: none; font-size: 16px; font-family: 'Jost', sans-serif; margin-bottom: 12px; transition: all 0.3s ease;">→ Почему хочется алкоголя: причины тяги и как с ней справляться</a>
+        <a href="chto-takoe-ku.html" style="display: block; padding: 15px 25px; background: rgba(77, 212, 255, 0.1); border: 1px solid rgba(77, 212, 255, 0.6); border-radius: 12px; color: #4dd4ff; text-decoration: none; font-size: 16px; font-family: 'Jost', sans-serif; transition: all 0.3s ease;">→ Что такое КУ: принципы и с чего начать контролируемое употребление</a>
     </div>
-</article>
 
-<footer>
-    <div class="container">
-        <p>КУ — контролируемое употребление алкоголя &nbsp;|&nbsp; Материалы носят информационный характер и не заменяют консультацию специалиста</p>
+    <!-- Back link bottom -->
+    <div style="text-align:center; padding:40px 20px 8px;">
+        <a href="../index.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--accent-cyan); text-decoration:none; font-family:'Jost',sans-serif; font-size:15px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">← Главная страница</a>
     </div>
-</footer>
 
-<script>
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.07,
-        rootMargin: '0px 0px -40px 0px'
-    };
+    <!-- Footer -->
+    <footer>
+        <p>КУ — контролируемое употребление алкоголя &nbsp;·&nbsp; <a href="https://kuforum.ru" target="_blank" rel="noopener">kuforum.ru</a></p>
+    </footer>
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                entry.target.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
-            }
+    <script>
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.style.transitionDelay = `${(i % 5) * 0.06}s`;
+            revealObserver.observe(el);
         });
-    }, observerOptions);
 
-    document.querySelectorAll('.step-card').forEach((el, i) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(28px)';
-        observer.observe(el);
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = 90;
-                const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
-            }
+        // Smooth scroll for diagram links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 96;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
         });
-    });
-</script>
-
+    </script>
 </body>
 </html>

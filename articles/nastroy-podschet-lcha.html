@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Как настроить подсчёт ЛЧА: учёт алкоголя в контролируемом употреблении | КУ</title>
+    <link rel="canonical" href="https://alkonorm.ru/articles/nastroy-podschet-lcha.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="КУ — контролируемое употребление алкоголя">
+    <meta property="og:url" content="https://alkonorm.ru/articles/nastroy-podschet-lcha.html">
+    <meta property="og:title" content="Как настроить подсчёт ЛЧА: учёт алкоголя в контролируемом употреблении | КУ">
+    <meta property="og:description" content="Что такое ЛЧА, как считать литры чистого алкоголя, как вести дневник КУшника и зачем нужен учёт выпитого — полное руководство по настройке системы подсчёта.">
+    <meta property="og:image" content="https://alkonorm.ru/pic/mozg.jpg">
+    <meta name="description" content="Что такое ЛЧА, как считать литры чистого алкоголя, как вести дневник КУшника и зачем нужен учёт выпитого — полное руководство по настройке системы подсчёта.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Starfield */
+        .starfield {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent),
+                radial-gradient(1px 1px at 170px 40px, white, transparent),
+                radial-gradient(2px 2px at 40px 150px, white, transparent),
+                radial-gradient(1px 1px at 110px 120px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 4s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        .stars2 {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 80px 20px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 160px 90px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 10px 100px, white, transparent),
+                radial-gradient(1px 1px at 190px 60px, rgba(255,255,255,0.7), transparent);
+            background-repeat: repeat;
+            background-size: 220px 180px;
+            animation: twinkle 6s ease-in-out infinite reverse;
+            opacity: 0.4;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.9; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Article Layout */
+        article {
+            padding: 60px 0 100px;
+        }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+            background: rgba(77, 212, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(77, 212, 255, 0.3);
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-intro {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 720px;
+            margin: 0 auto 30px;
+        }
+
+        /* Content */
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 55px 0 22px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 22px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 35px 0 15px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.85;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        /* Formula block */
+        .formula-block {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.08), rgba(255, 107, 157, 0.08));
+            border: 1px solid var(--accent-cyan);
+            border-radius: 16px;
+            padding: 30px 35px;
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .formula-block .formula-label {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .formula-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .formula-examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .formula-example {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .formula-example strong {
+            display: block;
+            color: var(--accent-pink);
+            margin-bottom: 4px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Episode types */
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .episode-card {
+            border-radius: 14px;
+            padding: 22px 20px;
+            text-align: center;
+        }
+
+        .episode-card.symbolic {
+            background: rgba(77, 212, 255, 0.1);
+            border: 1px solid rgba(77, 212, 255, 0.4);
+        }
+
+        .episode-card.moderate {
+            background: rgba(147, 255, 153, 0.08);
+            border: 1px solid rgba(147, 255, 153, 0.35);
+        }
+
+        .episode-card.violation {
+            background: rgba(255, 107, 157, 0.1);
+            border: 1px solid rgba(255, 107, 157, 0.4);
+        }
+
+        .episode-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .symbolic .episode-label { color: var(--accent-cyan); }
+        .moderate .episode-label { color: #93ff99; }
+        .violation .episode-label { color: var(--accent-pink); }
+
+        .episode-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .episode-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Limits box */
+        .limits-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px 35px;
+            margin: 35px 0;
+        }
+
+        .limits-box h3 {
+            margin-top: 0;
+        }
+
+        .limit-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .limit-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .limit-name {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .limit-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        /* Table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 14px;
+            border: 1px solid var(--glass-border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead {
+            background: rgba(77, 212, 255, 0.12);
+        }
+
+        th {
+            padding: 14px 16px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        tr:hover td {
+            background: rgba(77, 212, 255, 0.04);
+        }
+
+        .td-violation {
+            color: var(--accent-pink);
+            font-weight: 600;
+        }
+
+        .td-symbol {
+            color: var(--accent-cyan);
+        }
+
+        /* Steps */
+        .steps-list {
+            margin: 30px 0;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .step-item:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .step-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: rgba(255, 107, 157, 0.1);
+            border-left: 4px solid var(--accent-pink);
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box strong {
+            color: var(--accent-pink);
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .info-box {
+            background: rgba(77, 212, 255, 0.07);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .info-box strong {
+            color: var(--accent-cyan);
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Lists */
+        ul {
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding: 10px 0 10px 32px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: var(--accent-cyan);
+        }
+
+        ol {
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+            counter-reset: item;
+        }
+
+        ol li {
+            position: relative;
+            padding: 10px 0 10px 36px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        ol li::before {
+            content: counter(item) ".";
+            counter-increment: item;
+            position: absolute;
+            left: 8px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* Dynamic forecast */
+        .forecast-formula {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px;
+            padding: 16px 22px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 15px;
+            color: var(--accent-cyan);
+        }
+
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 1px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 50px 0 35px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin-top: 0;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .cta-box h2::before {
+            display: none;
+        }
+
+        /* Related links */
+        .related-links {
+            margin: 45px 0 30px;
+        }
+
+        .related-links-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .related-link {
+            display: block;
+            padding: 16px 24px;
+            background: rgba(77, 212, 255, 0.07);
+            border: 1px solid rgba(77, 212, 255, 0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-bottom: 12px;
+        }
+
+        .related-link:hover {
+            background: rgba(77, 212, 255, 0.15);
+            border-color: var(--accent-cyan);
+            transform: translateX(4px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 1;
+            background: rgba(5, 13, 26, 0.95);
+            border-top: 1px solid var(--glass-border);
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .footer-note {
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 28px; }
+            .formula-examples { grid-template-columns: 1fr; }
+            .episode-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            h2 { font-size: 24px; }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Как настроить подсчёт ЛЧА: учёт алкоголя в контролируемом употреблении | КУ",
+  "description": "Что такое ЛЧА, как считать литры чистого алкоголя, как вести дневник КУшника и зачем нужен учёт выпитого — полное руководство по настройке системы подсчёта.",
+  "image": "https://alkonorm.ru/pic/mozg.jpg",
+  "url": "https://alkonorm.ru/articles/nastroy-podschet-lcha.html",
+  "datePublished": "2026-02-27",
+  "dateModified": "2026-02-27",
+  "inLanguage": "ru-RU",
+  "author": {
+    "@type": "Organization",
+    "name": "КУ — контролируемое употребление алкоголя",
+    "url": "https://alkonorm.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alkonorm.ru/favicon-192.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "КУ — контролируемое употребление алкоголя",
+    "url": "https://alkonorm.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alkonorm.ru/favicon-192.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alkonorm.ru/articles/nastroy-podschet-lcha.html"
+  }
+}
+    </script>
+</head>
+<body>
+
+<div class="starfield">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+</div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+<article>
+    <div class="container">
+        <div class="article-header">
+            <div class="article-tag">Инструменты КУ</div>
+            <h1>Настрой подсчёт ЛЧА</h1>
+            <p class="article-intro">
+                Контроль без цифр — это иллюзия контроля. ЛЧА — единственная единица измерения, которая позволяет честно сравнивать рюмку водки, бокал вина и кружку пива между собой и вести надёжный учёт на день, месяц и год.
+            </p>
+        </div>
+
+        <div>
+
+            <p>Если вы только начинаете разбираться в методике КУ, <a href="7-shagov-ku.html" style="color: var(--accent-cyan);">сначала стоит познакомиться с алгоритмом семи шагов</a> — там подсчёт ЛЧА встроен в общую систему. А эта статья — подробное руководство именно по технической стороне: что такое ЛЧА, как считать, как вести дневник и что делать с цифрами.</p>
+
+            <h2>Что такое ЛЧА и зачем оно нужно</h2>
+
+            <p>Разные напитки содержат разное количество спирта. Бутылка пива и рюмка водки — не одно и то же, хотя по объёму разница небольшая. Стакан вина и стакан пива — тоже разные вещи по воздействию на организм. Чтобы честно учитывать всё это в одной системе, нужна универсальная единица.</p>
+
+            <p>ЛЧА — литры чистого алкоголя. Это количество этанола в том, что вы выпили, вне зависимости от вида напитка. Именно эта единица принята в медицинской и научной литературе для измерения алкогольной нагрузки. Она позволяет сравнивать рюмку коньяка, бокал шампанского и кружку пива на одном языке.</p>
+
+            <p>Без подсчёта нет контроля. Мозг зависимого человека имеет свойство обманывать: он занижает выпитую дозу, сглаживает провалы и забывает похмелье через двое суток. Учёт в ЛЧА — это защита от самообмана. Без цифр невозможно увидеть динамику, сравнить месяцы между собой, оценить, выполняете ли вы план.</p>
+
+            <div class="formula-block">
+                <div class="formula-label">Формула расчёта</div>
+                <div class="formula-main">ЛЧА = объём (л) × крепость (%) ÷ 100</div>
+                <div class="formula-examples">
+                    <div class="formula-example">
+                        <strong>Пример 1 — Водка</strong>
+                        450 мл × 40% ÷ 100 = <strong style="color:#fff">0,18 ЛЧА</strong>
+                    </div>
+                    <div class="formula-example">
+                        <strong>Пример 2 — Вино</strong>
+                        300 мл × 13% ÷ 100 = <strong style="color:#fff">0,039 ЛЧА</strong>
+                    </div>
+                    <div class="formula-example">
+                        <strong>Пример 3 — Пиво</strong>
+                        500 мл × 5% ÷ 100 = <strong style="color:#fff">0,025 ЛЧА</strong>
+                    </div>
+                    <div class="formula-example">
+                        <strong>Пример 4 — Коньяк</strong>
+                        100 мл × 40% ÷ 100 = <strong style="color:#fff">0,04 ЛЧА</strong>
+                    </div>
+                </div>
+            </div>
+
+            <p>Крепость написана на этикетке. Объём можно измерить по объёму налитого стакана или по объёму бутылки. Первое время считать непривычно, но быстро становится автоматическим.</p>
+
+            <h2>Три типа эпизода: на каком языке говорит система</h2>
+
+            <p>Сообщество КУшников на форуме kuforum.ru выработало практическую типологию эпизодов употребления. Она не имеет строгого научного обоснования, но опирается на реальный опыт людей, которые годами ведут учёт.</p>
+
+            <div class="episode-grid">
+                <div class="episode-card symbolic">
+                    <div class="episode-label">Символический</div>
+                    <div class="episode-value">≤ 0,06</div>
+                    <div class="episode-desc">Небольшое отмечание события. Присутствие на ритуале, а не изменение состояния.</div>
+                </div>
+                <div class="episode-card moderate">
+                    <div class="episode-label">Умеренный</div>
+                    <div class="episode-value">≤ 0,15</div>
+                    <div class="episode-desc">Допустимый эпизод. Суточная граница режима КУ — жёсткая и не обсуждается.</div>
+                </div>
+                <div class="episode-card violation">
+                    <div class="episode-label">Превышение</div>
+                    <div class="episode-value">&gt; 0,15</div>
+                    <div class="episode-desc">Нарушение стратегии. Требует анализа причины и корректировки правил.</div>
+                </div>
+            </div>
+
+            <p>Суточный лимит 0,15 ЛЧА — это жёсткая граница режима КУ. Она не обсуждается и не зависит от повода, компании или настроения. Любое превышение переводит эпизод в категорию нарушения, как бы оно ни оправдывалось.</p>
+
+            <div class="info-box">
+                <strong>О символических эпизодах</strong>
+                Символический эпизод до 0,06 ЛЧА — не «почти ничего». Это конкретная форма присутствия: отметить событие, остаться в социальном ритуале, но не ждать эффекта опьянения. Если вам кажется, что «нет смысла пить так мало» — это сигнал о высокой зависимости, а не повод снять ограничение.
+            </div>
+
+            <h2>Лимиты: суточный и годовой</h2>
+
+            <div class="limits-box">
+                <h3>Базовые ограничения КУ</h3>
+                <div class="limit-row">
+                    <span class="limit-name">Суточный лимит</span>
+                    <span class="limit-value">≤ 0,15 ЛЧА</span>
+                </div>
+                <div class="limit-row">
+                    <span class="limit-name">Годовой лимит (рекомендованный)</span>
+                    <span class="limit-value">≤ 10 ЛЧА</span>
+                </div>
+                <div class="limit-row">
+                    <span class="limit-name">Месячный лимит (1/12 годового)</span>
+                    <span class="limit-value">≈ 0,83 ЛЧА</span>
+                </div>
+            </div>
+
+            <p>Годовой лимит 10 ЛЧА — практический ориентир, выработанный сообществом КУшников. Он не является медицинской нормой. Каждый может установить собственный годовой лимит, но с одним условием: первый год лимит задаётся как гипотеза, а дальше — становится выводом из реальных цифр. По итогам первого года годовой лимит на следующий период устанавливается на основе фактического суммарного ЛЧА, частоты эпизодов и доли нарушений.</p>
+
+            <p>Суточный лимит — это абсолютная граница, годовой — долгий горизонт контроля. Месячный лимит — это рабочий инструмент: каждый месяц вы видите, сколько ЛЧА у вас есть, и распределяете их по конкретным событиям заранее.</p>
+
+            <h2>Как вести дневник: таблица учёта</h2>
+
+            <p>Основной инструмент — таблица учёта в Excel или аналоге. Она фиксирует не только факт выпитого, но и контекст: повод, тип компании, последствия. Именно контекст даёт материал для анализа и улучшения тактики.</p>
+
+            <p>Вот структура таблицы, которая используется в сообществе КУшников:</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Дата</th>
+                            <th>Символ</th>
+                            <th>ЛЧА</th>
+                            <th>Тип эпизода</th>
+                            <th>Общее ЛЧА</th>
+                            <th>Повод</th>
+                            <th>Компания</th>
+                            <th>Напиток</th>
+                            <th>Динамика на год</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>03.01</td>
+                            <td class="td-symbol">✓</td>
+                            <td>0,030</td>
+                            <td class="td-symbol">Символ</td>
+                            <td>0,03</td>
+                            <td>День рождения</td>
+                            <td>Семья</td>
+                            <td>Шампанское</td>
+                            <td>3,7</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>06.01</td>
+                            <td></td>
+                            <td>0,065</td>
+                            <td>Канон</td>
+                            <td>0,10</td>
+                            <td>Рождественский ужин</td>
+                            <td>Семья</td>
+                            <td>Вино</td>
+                            <td>5,8</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>15.03</td>
+                            <td></td>
+                            <td>0,170</td>
+                            <td class="td-violation">Превыш</td>
+                            <td>1,66</td>
+                            <td>Выезд на природу</td>
+                            <td>Друзья</td>
+                            <td>Водка</td>
+                            <td>8,2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Пояснения к столбцам:</p>
+            <ul>
+                <li><strong style="color:#fff">Символ</strong> — отметка, если выпито не более 0,06 ЛЧА (символический эпизод).</li>
+                <li><strong style="color:#fff">Тип эпизода</strong> — Символ, Канон (в рамках стратегии) или Превыш (нарушение).</li>
+                <li><strong style="color:#fff">Общее ЛЧА</strong> — накопленная сумма с начала года.</li>
+                <li><strong style="color:#fff">Динамика на год</strong> — прогнозный параметр: сколько ЛЧА вы выпьете к концу года, если будете пить с текущей скоростью.</li>
+            </ul>
+
+            <p>Формула прогноза на год простая:</p>
+
+            <div class="forecast-formula">
+                Динамика на год = Общее ЛЧА ÷ количество дней с начала года × 365
+            </div>
+
+            <p>Этот параметр — ранний сигнал тревоги. Если в феврале он уже показывает 12 ЛЧА, а годовой лимит 10, — значит план идёт под откос и нужна корректировка сейчас, а не в декабре.</p>
+
+            <h2>Как считать, когда нет телефона под рукой</h2>
+
+            <p>Иногда доставать телефон и вносить данные на людях неудобно или нежелательно. В этом случае учёт возможен без приложения — считайте не ЛЧА, а порции.</p>
+
+            <div class="steps-list">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Решите заранее</div>
+                        <p class="step-text">До мероприятия определите, сколько порций допустимо. Одна порция — это примерно один стандартный бокал вина (150 мл), одна кружка пива (330 мл) или одна рюмка крепкого (40 мл). Это примерно 0,02–0,05 ЛЧА в зависимости от напитка.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Используйте «талоны»</div>
+                        <p class="step-text">Положите в карман монеты, скрепки или бумажки — по одной на каждую допустимую порцию. После каждой выпитой порции перекладывайте одну в другой карман. Когда талоны кончились — лимит исчерпан.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Внесите данные позже</div>
+                        <p class="step-text">После мероприятия пересчитайте порции в ЛЧА по формуле и внесите в таблицу. Важно сделать это в тот же вечер или утром, пока память свежа.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>Про «каминг-аут»</strong>
+                Если вечеринка дружеская, можно просто сказать: «Я записываю выпитое, у меня есть причины это делать». Сначала возможны подшучивания, но потом окружение привыкает. Те, кто продолжает давить после объяснения, — не лучшие помощники в контроле.
+            </div>
+
+            <h2>Как считать месячный план в ЛЧА</h2>
+
+            <p>Годовой лимит делится на 12 равных частей. Равномерное деление проще и устойчивее, чем попытки учесть «пьяные месяцы». Увеличивать расход в праздничные месяцы легко, а вот уменьшать в спокойные — очень трудно.</p>
+
+            <p>Алгоритм месячного планирования:</p>
+
+            <ol>
+                <li>Рассчитать месячный лимит ЛЧА как одну двенадцатую годового.</li>
+                <li>Перед началом месяца выписать ожидаемые мероприятия и события.</li>
+                <li>Отобрать мероприятия, на которых возможен эпизод, и принять, что в остальных случаях алкоголя не будет.</li>
+                <li>Для каждого выбранного мероприятия заранее определить тип эпизода — символический или умеренный — и допустимую дозу ЛЧА.</li>
+                <li>Распределить часть месячного лимита по событиям, оставив резерв ≈ 0,15 ЛЧА для непредвиденных ситуаций.</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>Форс-мажорный клапан</strong>
+                Жизнь непредсказуема. Если месячный лимит превышен из-за внешнего события, допускается разовое превышение не более чем на 0,15 ЛЧА — но с автоматической компенсацией в следующем месяце. Нельзя использовать это два месяца подряд. И только внешнее событие является основанием: внутреннее состояние, усталость или плохое настроение — не форс-мажор.
+            </div>
+
+            <h2>Что делать с данными: анализ и корректировка</h2>
+
+            <p>Данные без анализа — это просто цифры. Смысл учёта — в регулярном разборе.</p>
+
+            <p>После каждого эпизода делайте короткий разбор: что планировал, что получилось, где отклонился и почему. И самое главное — одно конкретное изменение тактики на будущее. Не пять выводов, не список решений. Одно действие. Иначе начинается хаос правил, и в следующий раз вы помните не тактику, а усталость от неё.</p>
+
+            <p>Раз в месяц — сводный отчёт самому себе. Не философия, а простые вопросы:</p>
+            <ul>
+                <li>Выполнен ли месячный лимит ЛЧА?</li>
+                <li>Сколько было нарушений, и что их спровоцировало?</li>
+                <li>После каких типов эпизодов хуже самочувствие?</li>
+                <li>Что идёт по плану, а что нет?</li>
+            </ul>
+
+            <p>По итогам года главный критерий успешности — выполнение годового лимита ЛЧА. Второй критерий — снижение доли эпизодов с превышением. Третий — отсутствие или снижение негативных последствий употребления. Если все три показателя в норме и динамика положительная, система работает.</p>
+
+            <div class="highlight-box">
+                <h3>Приложения для учёта</h3>
+                <p>Параллельно с таблицей удобно использовать приложение на телефоне — например, «Алкостат». Приложение фиксирует напитки, объём и время прямо в момент употребления, а таблица хранит информацию о типе эпизода, поводе и последствиях. У каждого инструмента свой набор полезных данных, и они хорошо дополняют друг друга.</p>
+            </div>
+
+            <h2>Частые ошибки при подсчёте</h2>
+
+            <ul>
+                <li>Считать «примерно» и округлять в меньшую сторону — это и есть самообман, который обнуляет смысл учёта.</li>
+                <li>Не учитывать малые дозы — «это же почти ничего». Всё, что выпито, вносится в таблицу. Именно из «почти ничего» складывается реальная годовая цифра.</li>
+                <li>Вносить данные спустя несколько дней — память искажает факты, занижает объём, забывает нарушения.</li>
+                <li>Не фиксировать повод и последствия — без этого анализ невозможен, есть только колонка цифр.</li>
+                <li>Считать только в «плохие» месяцы — учёт работает только если он непрерывный.</li>
+            </ul>
+
+            <div class="cta-box">
+                <h2>Что сделать сегодня</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Три конкретных шага для запуска подсчёта:</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Создайте таблицу с колонками: дата, ЛЧА, тип эпизода, общее ЛЧА, динамика на год.</li>
+                    <li>Установите годовой лимит — для начала можно взять 10 ЛЧА как ориентир сообщества.</li>
+                    <li>Внесите последний эпизод, который помните, и пересчитайте его в ЛЧА по формуле.</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h2>Обмен опытом по ведению учёта — на форуме КУ</h2>
+                <p>На форуме участники делятся своими таблицами, обсуждают ошибки подсчёта и рассказывают, как настроили систему учёта ЛЧА под себя. Живые примеры из практики КУшников.</p>
+                <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+            </div>
+
+            <div class="related-links">
+                <div class="related-links-title">Связанные статьи:</div>
+                <a href="skolko-mozno-pit.html" class="related-link">→ Сколько можно пить: нормы потребления алкоголя</a>
+                <a href="kak-menshe-pit/kak-menshe-pit.html" class="related-link">→ Как пить меньше алкоголя: практическое руководство</a>
+            </div>
+
+            <a href="../index.html" class="back-link">← Вернуться на главную</a>
+        </div>
+    </div>
+</article>
+
+<footer>
+    <div class="footer-note">
+        Материалы сайта носят информационный характер и не заменяют медицинскую помощь. Если вы испытываете серьёзные проблемы с алкоголем, обратитесь к специалисту.
+    </div>
+</footer>
+
+<script>
+    // Intersection Observer for subtle fade-in
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('h2, .formula-block, .episode-grid, .limits-box, .highlight-box, .warning-box, .info-box, .cta-box').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(el);
+    });
+
+    // Related links hover
+    document.querySelectorAll('.related-link').forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(8px)';
+        });
+        link.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
+        });
+    });
+</script>
+
+</body>
+</html>

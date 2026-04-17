@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--
+  КАРКАС СТАТЬИ — alkonorm.ru
+  Путь к файлу: articles/[хаб]/[слаг]/index.html
+
+  CSS: ../../assets/article.css   (3 уровня = articles/хаб/слаг/)
+  Если статья лежит в articles/хаб/ напрямую: ../assets/article.css
+
+  Перед публикацией заменить все [PLACEHOLDER] на реальные данные.
+-->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: title = точный заголовок | КУ, не более 60 символов -->
+    <title>[Заголовок статьи] | КУ</title>
+
+    <!-- SEO: description = прямой ответ на вопрос + цифра, до 160 символов -->
+    <meta name="description" content="[Прямой ответ на вопрос статьи с конкретной цифрой или фактом. До 160 символов.]">
+
+    <!-- SEO: 5–10 точных ключей через запятую из semantic-core.yaml -->
+    <meta name="keywords" content="[ключ1], [ключ2], [ключ3]">
+
+    <!-- Canonical: всегда с финальным слешем для директорий -->
+    <link rel="canonical" href="https://alkonorm.ru/articles/[хаб]/[слаг]/">
+
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Общий CSS (путь зависит от глубины вложенности) -->
+    <link rel="stylesheet" href="../../../assets/article.css">
+    <!-- Для articles/хаб/index.html: ../../assets/article.css -->
+
+    <!-- Структурированные данные -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Главная","item":"https://alkonorm.ru/"},
+            {"@type":"ListItem","position":2,"name":"[Название хаба]","item":"https://alkonorm.ru/articles/[хаб]/"},
+            {"@type":"ListItem","position":3,"name":"[Название статьи]","item":"https://alkonorm.ru/articles/[хаб]/[слаг]/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "[Вопрос 1 — точная форма запроса]",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "[Прямой ответ. Цифры брать из docs/facts.md.]"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "[Вопрос 2]",
+              "acceptedAnswer": {"@type":"Answer","text":"[Ответ 2]"}
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<div class="starfield">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-inner">
+        <a href="../../../index.html" class="logo">
+            <img src="../../../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ
+        </a>
+        <!-- Активный пункт = текущий хаб, class="active" -->
+        <nav class="nav">
+            <a href="../../skolko-mozhno-pit/">Сколько можно пить</a>
+            <a href="../../kak-menshe-pit/">Как меньше пить</a>
+            <a href="../../pochemu-hochetsya-alkogolya/">Почему хочется алкоголя</a>
+            <a href="../../uznaki-alkogolizma/">Признаки алкоголизма</a>
+        </nav>
+    </div>
+</header>
+
+<!-- page-wrap: article (левая колонка) + sidebar (правая) -->
+<div class="page-wrap">
+
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../../../index.html">Главная</a>
+        <span>›</span>
+        <a href="../../[хаб]/">[Название хаба]</a>
+        <span>›</span>
+        [Название статьи]
+    </nav>
+
+    <!-- Статья -->
+    <article>
+
+        <!-- H1: точная форма основного запроса -->
+        <h1>[Заголовок статьи — точная форма основного запроса]</h1>
+
+        <!-- Ссылка на оригинал (удалить если статья не по конкретному источнику) -->
+        <p class="article-source">Статья написана с использованием материалов: <a href="/books/[имя-файла.pdf]" target="_blank" rel="noopener">[Автор. «Название» // Издание, год]</a></p>
+
+        <!-- Лид: 2–4 предложения. Первое = прямой ответ с цифрой. -->
+        <p class="article-lead">
+            [Первое предложение: прямой ответ на H1 с конкретной цифрой из docs/facts.md.]
+            [Второе: уточнение или важная оговорка.]
+            [Третье: что найдёт читатель ниже — без слов «в этой статье».]
+        </p>
+
+        <!-- Блок быстрого ответа (оставить, если H1 = вопрос с цифрой или списком) -->
+        <div class="quick-answer">
+            <div class="quick-answer-title">Коротко</div>
+            <ul>
+                <li><strong>[Факт 1]</strong> — [пояснение]</li>
+                <li><strong>[Факт 2]</strong> — [пояснение]</li>
+                <li><strong>[Факт 3]</strong> — [пояснение]</li>
+            </ul>
+        </div>
+
+        <!-- Основной текст -->
+        <div class="article-body">
+
+            <h2 id="s1">[H2 — точный ключевой запрос или прямое утверждение]</h2>
+            <p>[Текст. Один абзац — одна мысль. Не более 4–5 строк.]</p>
+            <p>[Следующий абзац.]</p>
+
+            <!-- Таблица (если нужна) -->
+            <p class="table-name">[Название таблицы]</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>[Столбец 1]</th>
+                            <th>[Столбец 2]</th>
+                            <th>[Столбец 3]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hl">[Значение]</td>
+                            <td>[Значение]</td>
+                            <td class="dim">[Примечание]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">[Источник или пояснение к таблице]</p>
+
+            <h2 id="s2">[H2 второй раздел]</h2>
+            <p>[Текст.]</p>
+
+            <h3>[H3 — уточнение или подтема]</h3>
+            <p>[Текст.]</p>
+
+            <div class="divider"></div>
+
+            <!-- H2 третий раздел -->
+            <h2 id="s3">[H2 третий раздел]</h2>
+            <p>[Текст.]</p>
+            <ul>
+                <li>[Пункт списка]</li>
+                <li>[Пункт списка]</li>
+            </ul>
+
+        </div><!-- /article-body -->
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>[Заголовок: что обсуждают на форуме по теме статьи]</h2>
+            <p>[1–2 предложения: что именно можно найти/обсудить на форуме КУ по теме этой статьи]</p>
+            <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+        </div>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <h2 class="faq-title">Частые вопросы</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>[Вопрос 1 — дублирует FAQPage в JSON-LD]</summary>
+                    <div class="faq-answer">[Ответ. Цифры из docs/facts.md.]</div>
+                </details>
+                <details>
+                    <summary>[Вопрос 2]</summary>
+                    <div class="faq-answer">[Ответ.]</div>
+                </details>
+                <details>
+                    <summary>[Вопрос 3]</summary>
+                    <div class="faq-answer">[Ответ.]</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Похожие статьи -->
+        <section class="related-section">
+            <div class="related-title">Читать также</div>
+            <ul class="related-list">
+                <li>
+                    <a href="../[слаг-1]/">[Заголовок статьи 1]</a>
+                    <span>[Короткое описание]</span>
+                </li>
+                <li>
+                    <a href="../[слаг-2]/">[Заголовок статьи 2]</a>
+                    <span>[Короткое описание]</span>
+                </li>
+                <li>
+                    <span class="r-soon">[Заголовок готовящейся статьи]</span>
+                    <span>Скоро</span>
+                </li>
+            </ul>
+        </section>
+
+    </article><!-- /article -->
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <!-- Содержание -->
+        <div class="sidebar-toc">
+            <div class="sidebar-toc-title">Содержание</div>
+            <ul class="toc-list">
+                <li><a href="#s1">[Раздел 1]</a></li>
+                <li><a href="#s2">[Раздел 2]</a></li>
+                <li><a href="#s3">[Раздел 3]</a></li>
+                <li><a href="#faq">Частые вопросы</a></li>
+            </ul>
+        </div>
+
+        <!-- Хаб -->
+        <div class="sidebar-hub">
+            <div class="sidebar-hub-label">[Название хаба]</div>
+            <a href="../../[хаб]/">← Все статьи раздела</a>
+            <p>[Короткое описание хаба, 1–2 строки.]</p>
+        </div>
+
+    </aside>
+
+</div><!-- /page-wrap -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">© 2026 alkonorm.ru — информационный ресурс о контролируемом употреблении алкоголя</div>
+        <nav class="footer-links">
+            <a href="../../skolko-mozhno-pit/">Сколько можно пить</a>
+            <a href="../../kak-menshe-pit/">Как меньше пить</a>
+            <a href="../../pochemu-hochetsya-alkogolya/">Почему хочется алкоголя</a>
+            <a href="../../uznaki-alkogolizma/">Признаки алкоголизма</a>
+        </nav>
+    </div>
+</footer>
+
+</body>
+</html>

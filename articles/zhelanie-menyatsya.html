@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Проверить, есть ли желание меняться — Шаг 1 программы 7 шагов КУ | КУ</title>
+    <meta name="description" content="Откуда берётся желание изменить свою жизнь и как его проверить — из книги «На краю Синей Бездны».">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        article { padding: 60px 0 100px; }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.7; }
+        .breadcrumb span { color: rgba(255,255,255,0.25); }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 50px 0 25px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 35px 0 20px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li, ol li {
+            position: relative;
+            padding: 12px 0 12px 35px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-size: 16px;
+        }
+
+        ol { counter-reset: item; }
+
+        ol li::before {
+            content: counter(item) ".";
+            counter-increment: item;
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 { margin-top: 0; }
+        .cyan-box { border-color: rgba(77,212,255,0.3); background: rgba(77,212,255,0.06); }
+        .pink-box { border-color: rgba(255,107,157,0.3); background: rgba(255,107,157,0.06); }
+
+        .step-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 40px rgba(77, 212, 255, 0.2);
+        }
+
+        .step-box h3 { margin-top: 0; }
+
+        .book-quote {
+            border-left: 3px solid var(--accent-cyan);
+            padding: 20px 28px;
+            margin: 30px 0;
+            background: rgba(77,212,255,0.04);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .book-quote p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 6px; }
+        .book-quote cite { font-size: 13px; color: rgba(255,255,255,0.3); font-style: normal; }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 44px 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 { margin: 0 0 14px; padding: 0; font-size: 28px; }
+        .cta-box h2::before { display: none; }
+
+        .cta-box p {
+            font-size: 17px;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(77,212,255,0.45);
+        }
+
+        .related-links { margin: 40px 0; }
+
+        .related-links a {
+            display: block;
+            padding: 14px 22px;
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .related-links a:hover {
+            background: rgba(77,212,255,0.12);
+            border-color: var(--accent-cyan);
+            padding-left: 28px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover { gap: 12px; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+            p, ul li, ol li { font-size: 16px; }
+            .nav-links { display: none; }
+            .cta-box { padding: 30px 24px; }
+        }
+    </style>
+    <link rel="canonical" href="https://alkonorm.ru/articles/zhelanie-menyatsya.html">
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../index.html">Главная</a>
+                <span>›</span>
+                <a href="7-shagov-ku.html">Программа 7 шагов КУ</a>
+                <span>›</span>
+                Шаг 1 — Желание меняться
+            </div>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">Шаг 1 из 7</div>
+                <h1>Проверить, есть ли желание меняться</h1>
+                <div class="article-meta">
+                    <span>Программа <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none;">7 шагов КУ</a></span>
+                    <span>·</span>
+                    <span>Первая проверка Шага 1</span>
+                </div>
+            </div>
+
+            <div class="fade-in delay-1">
+
+                <p>Я помню, как после письма моей любимой жены мне пришло ясное осознание, что так жить дальше нельзя и что надо изменить свою жизнь. Я четко и прозрачно понял: все, баста, больше так жить не желаю и не буду. И начал искать пути выхода из ситуации. Вот это желание изменить жизнь — и есть самый главный импульс для контролируемого употребления.</p>
+
+                <h2>Откуда берётся желание перемен</h2>
+
+                <p>Иногда человек просыпается утром с неприятным, но очень чётким ощущением: так, как я живу сейчас, продолжаться больше не может. Или случается что-то такое, после чего он понимает: так дальше жить нельзя. Ещё вчера казалось, что всё более-менее терпимо, сегодня же знакомая жизнь начинает давить, как тесная одежда. Возникает мысль, что надо что-то менять. Но откуда вообще у одного берётся это желание изменить свою жизнь, а у другого, вроде бы в похожих обстоятельствах, его нет?</p>
+
+                <p>Прежде всего, желание перемен почти никогда не возникает в состоянии полного комфорта. Оно вырастает из боли и неудовлетворённости. Пока человеку не слишком плохо, он может годами откладывать любые шаги, мирясь с тем, что есть. Но постепенно накапливаются сигналы: здоровье пошаливает, работа не приносит радости, отношения превращаются в рутину или поле постоянных конфликтов, внутренний голос всё чаще шепчет, что жизнь идёт не туда. Сначала человек отмахивается: «пью, как все», «это возраст», «переживу», «за темной полосой будет светлая». Потом начинает замечать, что плохое самочувствие и раздражение стали обычным делом, что он чаще думает о том, как ему плохо, а не о том, как ему хорошо. В какой-то момент сумма мелких неудобств превращается в качественно новое переживание — и это уже не просто дискомфорт, а ощущение «я живу не так, как хочу». Именно эта внутренняя боль создаёт первую опору для желания перемен.</p>
+
+                <p>Однако одной боли недостаточно. Нужен хотя бы примерный образ того, ради чего всё менять. Человек может ясно понимать, что его нынешняя жизнь не устраивает, но если впереди только пустота, то желание изменений часто превращается в унылое ворчание и жалобы. Когда же появляется картинка желаемого будущего, всё меняется. Это может быть очень простое видение: жить без постоянного страха за здоровье, иметь более тёплые отношения с близкими, просыпаться по утрам без болезненных ощущений. Важно не то, насколько эта картинка детализирована, а то, насколько она привлекательна и значима. Для меня было очень важно вернуть уважительное отношение ко мне со стороны близких и друзей.</p>
+
+                <p>Когда человек не просто рассуждает «наверное, было бы неплохо», а действительно чувствует, что хочет другого состояния, другого качества жизни, тогда у желания изменений появляется направление. Особенно важно, чтобы этот образ был своим, а не навязанным. «Мне надо так, потому что так правильно» работает гораздо слабее, чем «я сам так хочу».</p>
+
+                <p>Есть ещё один ключевой компонент, без которого желание изменений либо не возникает, либо быстро гаснет — это ощущение, что изменения в принципе возможны. Можно страдать от нынешней жизни, можно мечтать о другой, но быть внутренне уверенным, что всё равно ничего не получится. Тогда любая мысль о переменах обрывается, не успев сформироваться. Здесь большую роль играет то, что психологи называют фокусом контроля, то есть честный ответ человека на вопрос: кто или что управляет моей жизнью? Если человек склонен видеть во всём только внешние силы — обстоятельства, начальство, государство, «карму» или Демона (так зависимые часто называют алкоголь) — и почти никогда не замечает своего вклада, то у него просто нет основания верить, что его собственные действия могут что-то изменить. Если же у него хотя бы частично есть ощущение «да, многое от меня не зависит, что-то всё-таки я могу», — то и желание изменений получает поддержку.</p>
+
+                <p>На этот внутренний компас сильно влияет существующий опыт. Если человек хотя бы раз в жизни осознанно что-то менял и видел результат, даже небольшой, у него остаётся об этом воспоминание «я уже однажды смог». Кто-то вспоминает, как сумел похудеть на несколько килограммов, кто-то — как сменил место работы, кто-то — как справился с трудной ситуацией в отношениях. Эти воспоминания работают как опора: если получилось тогда, значит, теоретически может получиться и сейчас. А если весь опыт сводится к череде попыток, которые заканчивались провалом, и человек привык считать себя неудачником, у кого никогда ничего не выходит, то желание менять что-то всерьёз кажется опасной иллюзией.</p>
+
+                <p>На склонность к изменениям влияют и личностные особенности. Есть люди, достаточно открытые новому: они легче соглашаются пробовать, меньше боятся неизвестности, с интересом относятся к возможным вариантам жизни. Есть более консервативные, которым гораздо важнее стабильность, даже если эта стабильность не очень приятна. Важна и способность к самонаблюдению: человек, привыкший время от времени задавать себе вопросы — что я чувствую, чего хочу, почему живу именно так — чаще замечает несоответствие между своими ценностями и реальным поведением. Для кого-то эта трещина внутри становится невыносимой и толкает к переменам, а кто-то старается её не замечать и живёт по принципу «как придётся».</p>
+
+                <p>Нельзя забывать и про социальное окружение, ведь обычно человек живёт не в вакууме, а в социуме. Желание изменить жизнь легче формируется и поддерживается, когда рядом есть кто-то, кто не высмеивает эту потребность, а относится к ней серьёзно. Иногда решимость укрепляется, когда мы видим живой пример: например, знакомого, которому удалось выйти из похожей ситуации. По поводу зависимости наибольшее влияние имеет успешный опыт контроля, осуществляемый другими, как свидетельство того, что такой режим возможен и реален. Сам факт, что кто-то смог, делает идею перемен менее фантастической. Иногда внешнее давление тоже играет роль: угрозы развода, жёсткий разговор врача, условие работодателя. Если человек считает это давление справедливым, то осознаёт собственную ответственность за происходящее, и это может его сподвигнуть к переменам.</p>
+
+                <p>Наконец, у многих людей толчком к желанию перемен становится кризис. Далеко не всегда изменения вызревают постепенно. Иногда они вспыхивают после одного события: тяжёлой болезни, потери близкого, серьёзного конфликта, аварии, особенно тяжёлого запоя, стыдной сцены на людях. Для меня таким событием стало письмо жены — вещественное и убедительное доказательство моей тяжёлой зависимости. В такие моменты человек как будто видит свою жизнь со стороны и ясно понимает: продолжение текущей траектории ведёт к результату, который он принять не готов. Среди аддиктологов есть расхожее выражение «достигнуть дна». Если достиг, то человек может от него оттолкнуться и вынырнуть на поверхность. Однако людям интеллектуальным часто не требуется большая беда в реальности, путём размышлений и самоанализа они могут проецировать обстоятельства на будущее и понимать, к чему ведёт их образ жизни.</p>
+
+                <p>Если попробовать свести всё сказанное воедино, желание изменить свою жизнь не падает с неба и не зависит от одной-единственной причины. Оно появляется там, где одновременно соединяются несколько вещей: становится по-настоящему больно жить по-старому, возникает хотя бы смутный образ того, ради чего стоит меняться, появляется хоть какая-то вера, что изменения возможны, личные черты и окружение хотя бы частично поддерживают эту идею, а иногда ещё и кризисное событие подсвечивает, чем закончится путь без перемен. У кого-то эти элементы складываются раньше, у кого-то позже, а у кого-то, к сожалению, так и не возникают.</p>
+
+                <div class="book-quote">
+                    <p>Само по себе желание — только начало, но без него ничего не сдвинется. Пока человек честно не почувствует, что ему больно так, как он живёт сейчас, не увидит, хотя бы в общих чертах, другую жизнь, которую он хотел бы, не допустит мысль, что он имеет право пробовать менять курс, не поверит в себя — все разговоры о переменах будут оставаться пустой болтовнёй. Настоящее желание изменений — это не красивый лозунг, а внутреннее решение перестать плыть по течению и крепко взяться за руль собственной жизни, при всей сложности и непредсказуемости будущего курса.</p>
+                    <cite>Из книги «На краю Синей Бездны» — практическое руководство по системе КУ</cite>
+                </div>
+
+                <div class="highlight-box cyan-box">
+                    <h3>Краткое резюме</h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 16px;">Почему у человека может появиться желание изменить свою жизнь:</p>
+                    <ul>
+                        <li>нарастание боли и неудовлетворённости текущей жизнью;</li>
+                        <li>осознание негативных последствий образа жизни (здоровье, отношения, работа);</li>
+                        <li>внутреннее чувство «я живу не так, как хотел бы»;</li>
+                        <li>появление привлекательного образа желаемого будущего;</li>
+                        <li>опыт прошлых, пусть небольших, успешных изменений («я уже однажды смог»);</li>
+                        <li>ощущение, что от собственных усилий многое зависит;</li>
+                        <li>кризисное событие или момент истины, после которого дальше так жить нельзя;</li>
+                        <li>влияние окружения: пример людей, которым удалось изменить свою жизнь;</li>
+                        <li>внешнее давление значимых людей (семья, партнёр, врачи, работа), превращающееся во внутреннее решение;</li>
+                        <li>личностные особенности: открытость новому, склонность к самонаблюдению и самоанализу;</li>
+                        <li>осознание конечности времени: возрастные рубежи, мысль о том, что жизнь конечна и её жалко тратить таким образом.</li>
+                    </ul>
+                    <p>У меня, надо сказать, присутствовали практически все факторы из списка, так что желание измениться было горячим и сильным.</p>
+                    <p>Если в указанном списке вы обнаружили хоть что-то, что соответствует вашим ощущениям, значит вы готовы к изменениям своего употребления.</p>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Есть ли у вас желание меняться?</h2>
+                    <p>Обсудите на форуме — там люди, которые уже прошли этот путь.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также — Шаг 1:</strong></p>
+                    <a href="gotovnost-k-usiliyam.html">→ Готовность прикладывать усилия</a>
+                    <a href="esli-net-zhelaniya-ku.html">→ Если нет сильного желания — полная трезвость</a>
+                    <a href="chto-izmenit-ku.html">→ Что изменится к лучшему в режиме КУ</a>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ</a>
+                </div>
+
+                <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

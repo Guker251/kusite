@@ -1,0 +1,188 @@
+# Семантическое ядро — Хаб 2: Как меньше пить
+# hub: H2
+# url: articles/kak-menshe-pit/
+
+hub: H2
+clusters:
+  К5:
+    keywords:
+    - query: как меньше пить
+      frequency: 3806
+      relevance: полностью
+    - query: как не пить алкоголь
+      frequency: 2907
+      relevance: полностью
+    - query: ограничить алкоголь
+      frequency: 1756
+      relevance: полностью
+    - query: культура пития
+      frequency: 956
+      relevance: полностью
+    - query: культура питья
+      frequency: 956
+      relevance: полностью
+    - query: правильное употребление алкоголя
+      frequency: 882
+      relevance: полностью
+    - query: как научиться пить
+      frequency: 831
+      relevance: полностью
+    - query: как пить и не пьянеть
+      frequency: 806
+      relevance: полностью
+    - query: умеренное употребление алкоголя
+      frequency: 478
+      relevance: полностью
+    - query: накатильня культура пития
+      frequency: 321
+      relevance: частично
+    - query: накатильня культура пития ул станиславского
+      frequency: 283
+      relevance: частично
+    - query: накатильня культура пития ул станиславского 118 25
+      frequency: 283
+      relevance: частично
+    - query: культура употребления алкоголя
+      frequency: 208
+      relevance: полностью
+    - query: безопасное употребление алкоголя
+      frequency: 153
+      relevance: полностью
+    - query: как контролировать алкоголь
+      frequency: 148
+      relevance: полностью
+    - query: как пить меньше алкоголя
+      frequency: 132
+      relevance: полностью
+    - query: как меньше пить алкоголя
+      frequency: 132
+      relevance: полностью
+    - query: как пить и не напиваться
+      frequency: 111
+      relevance: полностью
+    - query: культура питья ростов
+      frequency: 109
+      relevance: полностью
+    - query: накатильня культура пития ростов на дону
+      frequency: 107
+      relevance: частично
+    - query: накатильня культура пития меню
+      frequency: 92
+      relevance: частично
+    - query: контролируемое употребление алкоголя
+      frequency: 90
+      relevance: полностью
+    - query: как пить умеренно
+      frequency: 67
+      relevance: полностью
+    - query: культура пития спиртных
+      frequency: 50
+      relevance: полностью
+  К6:
+    keywords:
+    - query: пил пиво каждый день
+      frequency: 6392
+      relevance: частично
+    - query: пью пиво каждый день
+      frequency: 6343
+      relevance: частично
+    - query: снова я напиваюсь
+      frequency: 4431
+      relevance: частично
+    - query: если пить пиво каждый день
+      frequency: 3135
+      relevance: частично
+    - query: пить надо меньше
+      frequency: 2497
+      relevance: полностью
+    - query: много пью алкоголя
+      frequency: 2492
+      relevance: частично
+    - query: пью каждый день что делать
+      frequency: 1859
+      relevance: полностью
+    - query: толерантность к алкоголю
+      frequency: 1638
+      relevance: полностью
+    - query: не могу остановиться пить
+      frequency: 785
+      relevance: частично
+    - query: почему не пьянею от алкоголя
+      frequency: 719
+      relevance: частично
+    - query: всегда напиваюсь
+      frequency: 529
+      relevance: частично
+    - query: как перестать пить каждый день
+      frequency: 482
+      relevance: полностью
+    - query: как не пить каждый день
+      frequency: 429
+      relevance: полностью
+    - query: выпиваю каждую пятницу
+      frequency: 418
+      relevance: частично
+    - query: год пил пиво каждый день
+      frequency: 413
+      relevance: частично
+    - query: мужчина пил пиво каждый день
+      frequency: 278
+      relevance: частично
+    - query: пил пиво каждый день форум
+      frequency: 176
+      relevance: частично
+    - query: алкоголь каждый день что делать
+      frequency: 174
+      relevance: полностью
+    - query: пью пиво каждый день форум
+      frequency: 170
+      relevance: частично
+    - query: пил пиво каждый день отзывы
+      frequency: 159
+      relevance: частично
+    - query: пью пиво каждый день отзывы
+      frequency: 156
+      relevance: частично
+    - query: не могу остановиться когда пью
+      frequency: 109
+      relevance: частично
+    - query: много пью пиво каждый день
+      frequency: 109
+      relevance: частично
+    - query: пью пиво каждый день девушка
+      frequency: 77
+      relevance: частично
+    - query: перестать пить каждый вечер
+      frequency: 62
+      relevance: полностью
+    - query: пил пиво каждый день последствия
+      frequency: 52
+      relevance: частично
+    - query: пью пиво каждый день последствия
+      frequency: 52
+      relevance: частично
+  К9:
+    keywords:
+    - query: как не напиться
+      frequency: 2375
+      relevance: полностью
+    - query: как не напиваться
+      frequency: 2363
+      relevance: полностью
+    - query: алкоголь в праздники
+      frequency: 1928
+      relevance: полностью
+    - query: алкоголь и друзья
+      frequency: 1481
+      relevance: полностью
+    - query: алкоголь и компания
+      frequency: 532
+      relevance: полностью
+    - query: как не напиться на празднике
+      frequency: 53
+      relevance: полностью
+  К12:
+    keywords:
+    - query: алкоголь и работа
+      frequency: 2443
+      relevance: полностью

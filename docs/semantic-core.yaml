@@ -1,0 +1,1118 @@
+hubs:
+  H1:
+    clusters:
+      К1:
+        keywords:
+        - query: сколько можно пить
+          frequency: 318405
+          relevance: полностью
+        - query: можно ли пить алкоголь
+          frequency: 135869
+          relevance: полностью
+        - query: сколько алкоголя можно
+          frequency: 81921
+          relevance: полностью
+        - query: сколько дней алкоголь
+          frequency: 27552
+          relevance: полностью
+        - query: через сколько можно пить алкоголь
+          frequency: 25475
+          relevance: полностью
+        - query: сколько выпил алкоголя
+          frequency: 20563
+          relevance: полностью
+        - query: норма алкоголя
+          frequency: 15818
+          relevance: полностью
+        - query: количество алкоголя
+          frequency: 12318
+          relevance: полностью
+        - query: сколько нужно алкоголя
+          frequency: 10382
+          relevance: полностью
+        - query: промилле это сколько алкоголя
+          frequency: 8200
+          relevance: частично
+        - query: сколько можно выпить алкоголя
+          frequency: 6014
+          relevance: полностью
+        - query: допустимая норма алкоголя
+          frequency: 5318
+          relevance: полностью
+        - query: безопасный алкоголь
+          frequency: 3279
+          relevance: полностью
+        - query: сколько можно употребить алкоголя
+          frequency: 3096
+          relevance: полностью
+        - query: норма алкоголя за рулем
+          frequency: 3054
+          relevance: частично
+        - query: допустимая норма алкоголя за рулем
+          frequency: 2798
+          relevance: частично
+        - query: сколько можно пить в неделю
+          frequency: 1846
+          relevance: полностью
+        - query: норма алкоголя в крови
+          frequency: 1505
+          relevance: частично
+        - query: норма алкоголя в выдыхаемом
+          frequency: 1358
+          relevance: частично
+        - query: норма алкоголя воздухе
+          frequency: 1347
+          relevance: частично
+        - query: норма алкоголя в выдыхаемом воздухе
+          frequency: 1293
+          relevance: частично
+        - query: рекомендации по алкоголю
+          frequency: 1074
+          relevance: полностью
+        - query: безопасные дозы алкоголя
+          frequency: 1071
+          relevance: полностью
+        - query: какая норма алкоголя
+          frequency: 1025
+          relevance: полностью
+        - query: безопасная доза алкоголя
+          frequency: 986
+          relevance: полностью
+        - query: россия норма алкоголя
+          frequency: 850
+          relevance: полностью
+        - query: сколько норма алкоголя
+          frequency: 674
+          relevance: полностью
+        - query: нормы алкоголя для водителей
+          frequency: 631
+          relevance: частично
+        - query: допустимая норма алкоголя в выдыхаемом
+          frequency: 602
+          relevance: частично
+        - query: допустимая норма алкоголя в воздухе
+          frequency: 581
+          relevance: частично
+        - query: допустимая норма алкоголя в выдыхаемом воздухе
+          frequency: 574
+          relevance: частично
+        - query: норма алкоголя в крови водителя
+          frequency: 547
+          relevance: частично
+        - query: допустимая норма алкоголя в крови
+          frequency: 521
+          relevance: частично
+        - query: норма алкоголя в выдыхаемом воздухе водителя
+          frequency: 498
+          relevance: частично
+        - query: допустимая норма алкоголя за рулем 2026
+          frequency: 458
+          relevance: частично
+        - query: норма алкоголя в год
+          frequency: 439
+          relevance: полностью
+        - query: допустимая норма алкоголя россия
+          frequency: 362
+          relevance: полностью
+        - query: норма алкоголя в день
+          frequency: 341
+          relevance: полностью
+        - query: допустимая норма алкоголя 2025
+          frequency: 316
+          relevance: полностью
+        - query: норма алкоголя за рулем 2025
+          frequency: 301
+          relevance: частично
+        - query: какая допустимая норма алкоголя
+          frequency: 275
+          relevance: полностью
+        - query: допустимая норма алкоголя за рулем 2025
+          frequency: 271
+          relevance: частично
+        - query: допустимые нормы алкоголя для водителей
+          frequency: 268
+          relevance: частично
+        - query: нормы алкоголя за рулем в россии
+          frequency: 238
+          relevance: частично
+        - query: норма алкоголя время
+          frequency: 233
+          relevance: полностью
+        - query: допустимая норма алкоголя в год
+          frequency: 229
+          relevance: полностью
+        - query: допустимая норма алкоголя за рулем в россии
+          frequency: 218
+          relevance: частично
+        - query: допустимая норма алкоголя мг л
+          frequency: 199
+          relevance: частично
+        - query: норма алкоголя для человека
+          frequency: 183
+          relevance: полностью
+        - query: норма алкоголя в багаже
+          frequency: 177
+          relevance: частично
+        - query: какая норма алкоголя за рулем
+          frequency: 175
+          relevance: частично
+        - query: разрешенная норма алкоголя
+          frequency: 172
+          relevance: полностью
+        - query: нормы алкоголя для мужчин
+          frequency: 159
+          relevance: полностью
+        - query: безопасное употребление алкоголя
+          frequency: 153
+          relevance: полностью
+        - query: сколько допустимая норма алкоголя
+          frequency: 153
+          relevance: полностью
+        - query: какая допустимая норма алкоголя за рулем
+          frequency: 136
+          relevance: частично
+        - query: норма алкоголя в неделю
+          frequency: 133
+          relevance: полностью
+        - query: норма алкоголя в крови россия
+          frequency: 130
+          relevance: частично
+        - query: сколько норма алкоголя за рулем
+          frequency: 122
+          relevance: частично
+        - query: норма алкоголя в самолете
+          frequency: 112
+          relevance: частично
+        - query: допустимая норма алкоголя в крови для водителей
+          frequency: 109
+          relevance: частично
+        - query: норма алкоголя в моче
+          frequency: 108
+          relevance: частично
+        - query: норма алкоголя в россии в год
+          frequency: 106
+          relevance: полностью
+        - query: сколько алкоголя безопасно
+          frequency: 105
+          relevance: полностью
+        - query: нормы алкоголя тайланд
+          frequency: 101
+          relevance: частично
+        - query: норма алкоголя в месяц
+          frequency: 98
+          relevance: полностью
+        - query: норма алкоголя рф
+          frequency: 93
+          relevance: полностью
+        - query: норма алкоголя в организме
+          frequency: 91
+          relevance: полностью
+        - query: норма алкоголя в крови водителя в россии
+          frequency: 89
+          relevance: частично
+        - query: норма алкоголя в выдыхаемом воздухе водителя 2026
+          frequency: 88
+          relevance: частично
+        - query: сколько допустимая норма алкоголя за рулем
+          frequency: 84
+          relevance: частично
+        - query: допустимая норма алкоголя в крови в россии
+          frequency: 84
+          relevance: частично
+        - query: норма алкоголя для водителя в россии
+          frequency: 84
+          relevance: частично
+        - query: разрешенная норма алкоголя за рулем
+          frequency: 81
+          relevance: частично
+        - query: норма алкоголя для женщин
+          frequency: 79
+          relevance: полностью
+        - query: допустимая норма алкоголя в день
+          frequency: 73
+          relevance: полностью
+        - query: таблица нормы алкоголя
+          frequency: 73
+          relevance: полностью
+        - query: норма алкоголя на работе
+          frequency: 72
+          relevance: полностью
+        - query: норма алкоголя для человека в день
+          frequency: 70
+          relevance: полностью
+        - query: как пить алкоголь без вреда
+          frequency: 68
+          relevance: полностью
+        - query: нормы алкоголя в турции
+          frequency: 64
+          relevance: частично
+        - query: норма алкоголя в алкотестере
+          frequency: 62
+          relevance: частично
+        - query: предельная норма алкоголя
+          frequency: 60
+          relevance: полностью
+        - query: безопасные нормы алкоголя
+          frequency: 58
+          relevance: полностью
+        - query: норма алкоголя в крови за рулем
+          frequency: 55
+          relevance: частично
+        - query: норма алкоголя дьюти фри
+          frequency: 54
+          relevance: частично
+        - query: какая норма алкоголя в россии
+          frequency: 53
+          relevance: полностью
+        - query: какая норма алкоголя разрешается
+          frequency: 52
+          relevance: полностью
+      К4:
+        keywords:
+        - query: алкогольное опьянение
+          frequency: 94826
+          relevance: полностью
+        - query: состояние алкогольного опьянения
+          frequency: 43905
+          relevance: полностью
+        - query: алкогольный синдром
+          frequency: 15442
+          relevance: полностью
+        - query: признаки алкогольного опьянения
+          frequency: 2671
+          relevance: полностью
+        - query: норма промилле алкоголя
+          frequency: 2583
+          relevance: полностью
+        - query: степени алкогольного опьянения
+          frequency: 2471
+          relevance: полностью
+        - query: допустимая норма промилле алкоголя
+          frequency: 2106
+          relevance: полностью
+        - query: норма промилле алкоголя за рулем
+          frequency: 2016
+          relevance: частично
+        - query: допустимая норма алкоголя за рулем в промилле
+          frequency: 1921
+          relevance: частично
+        - query: стадии алкогольного опьянения
+          frequency: 552
+          relevance: полностью
+        - query: допустимая норма промилле 2025 алкоголя
+          frequency: 264
+          relevance: полностью
+        - query: нормы промилле алкоголя в россии
+          frequency: 257
+          relevance: полностью
+        - query: калькулятор алкогольного опьянения
+          frequency: 226
+          relevance: полностью
+        - query: какая норма промилле алкоголя
+          frequency: 164
+          relevance: полностью
+        - query: нормы промилле алкоголя в россии 2025
+          frequency: 148
+          relevance: полностью
+        - query: сколько норма промилле алкоголя
+          frequency: 146
+          relevance: полностью
+        - query: какая допустимая норма промилле алкоголя
+          frequency: 99
+          relevance: полностью
+        - query: норма промилле алкоголя для водителей
+          frequency: 78
+          relevance: частично
+        - query: разрешенная норма промилле алкоголя
+          frequency: 78
+          relevance: полностью
+        - query: норма промилле алкоголя в крови
+          frequency: 76
+          relevance: полностью
+        - query: сколько допустимая норма промилле алкоголя
+          frequency: 72
+          relevance: полностью
+        - query: нормы промилле алкоголя в выдыхаемом
+          frequency: 63
+          relevance: частично
+        - query: нормы промилле алкоголя в выдыхаемом воздухе
+          frequency: 63
+          relevance: частично
+        - query: сколько допустимая норма промилле алкоголя за рулем
+          frequency: 56
+          relevance: частично
+      К8:
+        keywords:
+        - query: алкоголь и печень
+          frequency: 4506
+          relevance: частично
+        - query: алкоголь и давление
+          frequency: 2778
+          relevance: частично
+        - query: влияние алкоголя на организм человека
+          frequency: 1785
+          relevance: полностью
+        - query: как влияет алкоголь на время реакции водителя
+          frequency: 1217
+          relevance: частично
+        - query: алкоголь и сон
+          frequency: 1179
+          relevance: полностью
+        - query: вред алкоголя для здоровья
+          frequency: 947
+          relevance: полностью
+        - query: алкогольная депрессия
+          frequency: 723
+          relevance: частично
+  H2:
+    clusters:
+      К5:
+        keywords:
+        - query: как меньше пить
+          frequency: 3806
+          relevance: полностью
+        - query: как не пить алкоголь
+          frequency: 2907
+          relevance: полностью
+        - query: ограничить алкоголь
+          frequency: 1756
+          relevance: полностью
+        - query: культура пития
+          frequency: 956
+          relevance: полностью
+        - query: культура питья
+          frequency: 956
+          relevance: полностью
+        - query: правильное употребление алкоголя
+          frequency: 882
+          relevance: полностью
+        - query: как научиться пить
+          frequency: 831
+          relevance: полностью
+        - query: как пить и не пьянеть
+          frequency: 806
+          relevance: полностью
+        - query: умеренное употребление алкоголя
+          frequency: 478
+          relevance: полностью
+        - query: накатильня культура пития
+          frequency: 321
+          relevance: частично
+        - query: накатильня культура пития ул станиславского
+          frequency: 283
+          relevance: частично
+        - query: накатильня культура пития ул станиславского 118 25
+          frequency: 283
+          relevance: частично
+        - query: культура употребления алкоголя
+          frequency: 208
+          relevance: полностью
+        - query: безопасное употребление алкоголя
+          frequency: 153
+          relevance: полностью
+        - query: как контролировать алкоголь
+          frequency: 148
+          relevance: полностью
+        - query: как пить меньше алкоголя
+          frequency: 132
+          relevance: полностью
+        - query: как меньше пить алкоголя
+          frequency: 132
+          relevance: полностью
+        - query: как пить и не напиваться
+          frequency: 111
+          relevance: полностью
+        - query: культура питья ростов
+          frequency: 109
+          relevance: полностью
+        - query: накатильня культура пития ростов на дону
+          frequency: 107
+          relevance: частично
+        - query: накатильня культура пития меню
+          frequency: 92
+          relevance: частично
+        - query: контролируемое употребление алкоголя
+          frequency: 90
+          relevance: полностью
+        - query: как пить умеренно
+          frequency: 67
+          relevance: полностью
+        - query: культура пития спиртных
+          frequency: 50
+          relevance: полностью
+      К6:
+        keywords:
+        - query: пил пиво каждый день
+          frequency: 6392
+          relevance: частично
+        - query: пью пиво каждый день
+          frequency: 6343
+          relevance: частично
+        - query: снова я напиваюсь
+          frequency: 4431
+          relevance: частично
+        - query: если пить пиво каждый день
+          frequency: 3135
+          relevance: частично
+        - query: пить надо меньше
+          frequency: 2497
+          relevance: полностью
+        - query: много пью алкоголя
+          frequency: 2492
+          relevance: частично
+        - query: пью каждый день что делать
+          frequency: 1859
+          relevance: полностью
+        - query: толерантность к алкоголю
+          frequency: 1638
+          relevance: полностью
+        - query: не могу остановиться пить
+          frequency: 785
+          relevance: частично
+        - query: почему не пьянею от алкоголя
+          frequency: 719
+          relevance: частично
+        - query: всегда напиваюсь
+          frequency: 529
+          relevance: частично
+        - query: как перестать пить каждый день
+          frequency: 482
+          relevance: полностью
+        - query: как не пить каждый день
+          frequency: 429
+          relevance: полностью
+        - query: выпиваю каждую пятницу
+          frequency: 418
+          relevance: частично
+        - query: год пил пиво каждый день
+          frequency: 413
+          relevance: частично
+        - query: мужчина пил пиво каждый день
+          frequency: 278
+          relevance: частично
+        - query: пил пиво каждый день форум
+          frequency: 176
+          relevance: частично
+        - query: алкоголь каждый день что делать
+          frequency: 174
+          relevance: полностью
+        - query: пью пиво каждый день форум
+          frequency: 170
+          relevance: частично
+        - query: пил пиво каждый день отзывы
+          frequency: 159
+          relevance: частично
+        - query: пью пиво каждый день отзывы
+          frequency: 156
+          relevance: частично
+        - query: не могу остановиться когда пью
+          frequency: 109
+          relevance: частично
+        - query: много пью пиво каждый день
+          frequency: 109
+          relevance: частично
+        - query: пью пиво каждый день девушка
+          frequency: 77
+          relevance: частично
+        - query: перестать пить каждый вечер
+          frequency: 62
+          relevance: полностью
+        - query: пил пиво каждый день последствия
+          frequency: 52
+          relevance: частично
+        - query: пью пиво каждый день последствия
+          frequency: 52
+          relevance: частично
+      К9:
+        keywords:
+        - query: как не напиться
+          frequency: 2375
+          relevance: полностью
+        - query: как не напиваться
+          frequency: 2363
+          relevance: полностью
+        - query: алкоголь в праздники
+          frequency: 1928
+          relevance: полностью
+        - query: алкоголь и друзья
+          frequency: 1481
+          relevance: полностью
+        - query: алкоголь и компания
+          frequency: 532
+          relevance: полностью
+        - query: как не напиться на празднике
+          frequency: 53
+          relevance: полностью
+      К12:
+        keywords:
+        - query: алкоголь и работа
+          frequency: 2443
+          relevance: полностью
+  H3:
+    clusters:
+      К3:
+        keywords:
+        - query: спиртное
+          frequency: 179943
+          relevance: частично
+        - query: алкоголь это
+          frequency: 74088
+          relevance: частично
+        - query: спиртные напитки
+          frequency: 56964
+          relevance: частично
+        - query: влияние алкоголя
+          frequency: 22558
+          relevance: полностью
+        - query: что такое алкоголь
+          frequency: 14444
+          relevance: частично
+        - query: влияние алкоголя на человека
+          frequency: 5874
+          relevance: полностью
+        - query: почему люди пьют алкоголь
+          frequency: 1840
+          relevance: полностью
+        - query: виды алкогольных напитков
+          frequency: 1536
+          relevance: частично
+        - query: причины употребления алкоголя
+          frequency: 1418
+          relevance: полностью
+        - query: статистика употребления алкоголя
+          frequency: 649
+          relevance: частично
+        - query: кто употребляет алкоголь
+          frequency: 461
+          relevance: частично
+      К7:
+        keywords:
+        - query: стрессор
+          frequency: 5334
+          relevance: частично
+        - query: как избавиться от стресса
+          frequency: 4197
+          relevance: частично
+        - query: почему хочется алкоголя
+          frequency: 3566
+          relevance: полностью
+        - query: как успокоиться в стрессовой ситуации
+          frequency: 3367
+          relevance: частично
+        - query: пью от стресса
+          frequency: 3307
+          relevance: полностью
+        - query: почему хочется пива
+          frequency: 1818
+          relevance: полностью
+        - query: почему хочется выпить
+          frequency: 1494
+          relevance: полностью
+        - query: как быстро успокоиться в стрессовой ситуации
+          frequency: 1317
+          relevance: частично
+        - query: стресс и алкоголь
+          frequency: 1255
+          relevance: полностью
+        - query: алкоголь и стресс
+          frequency: 1248
+          relevance: полностью
+        - query: что пить от стресса
+          frequency: 1226
+          relevance: частично
+        - query: алкоголь и тревога
+          frequency: 655
+          relevance: полностью
+        - query: что пить от нервов и стресса
+          frequency: 526
+          relevance: частично
+        - query: алкоголь снять стресс
+          frequency: 354
+          relevance: полностью
+        - query: почему хочется выпить алкоголь
+          frequency: 290
+          relevance: полностью
+        - query: что можно пить от стресса
+          frequency: 209
+          relevance: частично
+        - query: что пить от стресса и нервов женщине
+          frequency: 168
+          relevance: частично
+        - query: какие витамины пить от стресса
+          frequency: 151
+          relevance: частично
+        - query: алкоголь чтобы расслабиться
+          frequency: 140
+          relevance: полностью
+        - query: что пить от стресса и тревоги
+          frequency: 133
+          relevance: частично
+        - query: алкоголь и стресс влияние
+          frequency: 126
+          relevance: полностью
+        - query: что можно пить от стресса и нервов
+          frequency: 121
+          relevance: частично
+        - query: почему вечером хочется выпить
+          frequency: 95
+          relevance: полностью
+        - query: алкоголь помогает расслабиться
+          frequency: 89
+          relevance: полностью
+        - query: что пить от нервов и стресса мужчине
+          frequency: 79
+          relevance: частично
+        - query: почему хочется выпить пиво
+          frequency: 68
+          relevance: полностью
+      К10:
+        keywords:
+        - query: алкоголь и женщины
+          frequency: 3218
+          relevance: частично
+        - query: алкоголь и отношения
+          frequency: 1305
+          relevance: частично
+        - query: алкоголь и семья
+          frequency: 1239
+          relevance: частично
+        - query: алкоголь и конфликт
+          frequency: 261
+          relevance: частично
+      К12:
+        keywords:
+        - query: алкоголь и работоспособность
+          frequency: 138
+          relevance: полностью
+  H4:
+    clusters:
+      К2:
+        keywords:
+        - query: признаки алкоголизма
+          frequency: 5784
+          relevance: частично
+        - query: как не спиться
+          frequency: 653
+          relevance: полностью
+        - query: держусь не пью
+          frequency: 565
+          relevance: частично
+        - query: тест AUDIT
+          frequency: 527
+          relevance: частично
+        - query: тест на алкогольную зависимость
+          frequency: 421
+          relevance: частично
+        - query: признаки алкогольной зависимости
+          frequency: 416
+          relevance: частично
+        - query: тест CAGE
+          frequency: 174
+          relevance: частично
+        - query: алкоголизм это болезнь или нет
+          frequency: 97
+          relevance: частично
+        - query: как не стать алкоголиком
+          frequency: 78
+          relevance: полностью
+        - query: алкогольная зависимость
+          frequency: 33661
+          relevance: частично
+        - query: женский алкоголизм
+          frequency: 5091
+          relevance: частично
+        - query: пивной алкоголизм
+          frequency: 2722
+          relevance: частично
+        - query: чем отличается алкоголик от пьяницы
+          frequency: 888
+          relevance: частично
+      К11:
+        keywords:
+        - query: алкогольная интоксикация
+          frequency: 25410
+          relevance: частично
+        - query: что помогает от похмелья
+          frequency: 8101
+          relevance: частично
+        - query: сильное похмелье
+          frequency: 6716
+          relevance: частично
+        - query: выведение алкоголя из организма
+          frequency: 6110
+          relevance: полностью
+        - query: похмельный синдром
+          frequency: 5568
+          relevance: частично
+        - query: тошнит после алкоголя
+          frequency: 5314
+          relevance: частично
+        - query: как быстро избавиться от похмелья
+          frequency: 3749
+          relevance: частично
+        - query: как снять похмелье
+          frequency: 3459
+          relevance: частично
+        - query: что будет если бросить пить
+          frequency: 3146
+          relevance: частично
+        - query: без похмелья
+          frequency: 2890
+          relevance: частично
+        - query: как облегчить похмелье
+          frequency: 2288
+          relevance: частично
+        - query: что делать при похмелье
+          frequency: 2279
+          relevance: частично
+        - query: тошнит после алкоголя что делать
+          frequency: 2075
+          relevance: частично
+        - query: как быстро снять похмелье
+          frequency: 1825
+          relevance: частично
+        - query: похмелье симптомы
+          frequency: 1676
+          relevance: частично
+        - query: что такое похмелье
+          frequency: 1221
+          relevance: полностью
+        - query: что делать если тошнит после алкоголя
+          frequency: 1003
+          relevance: частично
+        - query: как снять похмелье в домашних
+          frequency: 999
+          relevance: частично
+        - query: почему сильное похмелье
+          frequency: 838
+          relevance: полностью
+        - query: как снять похмелье в домашних условиях
+          frequency: 832
+          relevance: частично
+        - query: как эффективно снять похмелье
+          frequency: 825
+          relevance: частично
+        - query: как эффективно снять похмелье быстро
+          frequency: 822
+          relevance: частично
+        - query: почему плохо после алкоголя
+          frequency: 806
+          relevance: полностью
+        - query: после сильного похмелья
+          frequency: 798
+          relevance: частично
+        - query: как избавиться от похмелья в домашних быстро
+          frequency: 760
+          relevance: частично
+        - query: слабость после алкоголя
+          frequency: 749
+          relevance: полностью
+        - query: как снять похмелье быстро в домашних
+          frequency: 706
+          relevance: частично
+        - query: как избавиться от похмелья быстро и эффективно
+          frequency: 691
+          relevance: частично
+        - query: похмелье на работе
+          frequency: 655
+          relevance: частично
+        - query: как быстро снять похмелье в домашних условиях
+          frequency: 587
+          relevance: частично
+        - query: как снять похмельный синдром
+          frequency: 550
+          relevance: частично
+        - query: алкогольная амнезия
+          frequency: 536
+          relevance: полностью
+        - query: очень сильное похмелье
+          frequency: 513
+          relevance: частично
+        - query: как быстро избавиться от перегара похмельного
+          frequency: 506
+          relevance: частично
+        - query: что делать при сильном похмелье
+          frequency: 416
+          relevance: частично
+        - query: как снять похмелье дома
+          frequency: 408
+          relevance: частично
+        - query: как облегчить похмелье в домашних
+          frequency: 401
+          relevance: частично
+        - query: как быстро снять похмелье дома
+          frequency: 389
+          relevance: частично
+        - query: похмелье как облегчить свое состояние
+          frequency: 381
+          relevance: частично
+        - query: как снять похмелье быстро и эффективно дома
+          frequency: 362
+          relevance: частично
+        - query: как быстро избавиться от похмельного синдрома
+          frequency: 336
+          relevance: частично
+        - query: как облегчить похмелье на утро
+          frequency: 328
+          relevance: частично
+        - query: что делать при похмелье чтоб
+          frequency: 325
+          relevance: частично
+        - query: что делать при похмелье чтоб быстрее
+          frequency: 316
+          relevance: частично
+        - query: как быстро избавиться от похмелья дома
+          frequency: 311
+          relevance: частично
+        - query: что делать при похмелье чтоб быстрее прошло
+          frequency: 305
+          relevance: частично
+        - query: сильнейшее похмелье после запоя
+          frequency: 303
+          relevance: частично
+        - query: как снять отеки с похмелья
+          frequency: 294
+          relevance: частично
+        - query: как снять отеки с лица с похмелья
+          frequency: 263
+          relevance: частично
+        - query: как пережить похмелье
+          frequency: 253
+          relevance: частично
+        - query: как облегчить похмелье после запоя
+          frequency: 245
+          relevance: частично
+        - query: провалы памяти после алкоголя
+          frequency: 244
+          relevance: полностью
+        - query: сильно болит голова с похмелья
+          frequency: 229
+          relevance: частично
+        - query: похмельный синдром лечение
+          frequency: 215
+          relevance: частично
+        - query: сильно болеет с похмелья
+          frequency: 213
+          relevance: частично
+        - query: чем снять похмельный синдром
+          frequency: 205
+          relevance: частично
+        - query: как избавиться от похмельного состояния
+          frequency: 185
+          relevance: частично
+        - query: что помогает от сильного похмелья
+          frequency: 175
+          relevance: частично
+        - query: симптомы похмелья у женщин
+          frequency: 174
+          relevance: частично
+        - query: очень сильное похмелье что делать
+          frequency: 173
+          relevance: частично
+        - query: как избавиться от сильного похмелья
+          frequency: 166
+          relevance: частично
+        - query: как облегчить похмелье на утро после пьянки
+          frequency: 163
+          relevance: частично
+        - query: как убрать похмельный синдром
+          frequency: 161
+          relevance: частично
+        - query: как облегчить похмелье после запоя без капельницы
+          frequency: 160
+          relevance: частично
+        - query: похмелье сильно тошнит
+          frequency: 159
+          relevance: частично
+        - query: как ускорить выведение алкоголя из организма
+          frequency: 158
+          relevance: полностью
+        - query: человек с сильного похмелья
+          frequency: 158
+          relevance: частично
+        - query: похмельный синдром быстрое избавление
+          frequency: 153
+          relevance: частично
+        - query: как снять похмелье в дом условиях
+          frequency: 146
+          relevance: частично
+        - query: похмелье как облегчить свое состояние в домашних
+          frequency: 142
+          relevance: частично
+        - query: как облегчить похмелье в домашних условиях
+          frequency: 142
+          relevance: частично
+        - query: как снять похмелье быстро отек
+          frequency: 138
+          relevance: частично
+        - query: голова при похмелье что делать
+          frequency: 137
+          relevance: частично
+        - query: как лучше снять похмелье
+          frequency: 127
+          relevance: частично
+        - query: сильно потею с похмелья
+          frequency: 127
+          relevance: частично
+        - query: что делать после сильного похмелья
+          frequency: 123
+          relevance: частично
+        - query: с похмелья сильно бьется
+          frequency: 119
+          relevance: частично
+        - query: симптомы похмелья у мужчин
+          frequency: 117
+          relevance: частично
+        - query: симптомы после похмелья
+          frequency: 115
+          relevance: частично
+        - query: как облегчить похмельный синдром
+          frequency: 112
+          relevance: частично
+        - query: почему очень сильное похмелье
+          frequency: 104
+          relevance: частично
+        - query: сколько длится похмельный синдром
+          frequency: 98
+          relevance: частично
+        - query: болит голова при похмелье что делать
+          frequency: 96
+          relevance: частично
+        - query: средства помогающие от похмелья
+          frequency: 96
+          relevance: частично
+        - query: как снять сильное похмелье
+          frequency: 96
+          relevance: частично
+        - query: почему сильно болеешь с похмелья
+          frequency: 96
+          relevance: полностью
+        - query: похмелье симптомы и признаки
+          frequency: 95
+          relevance: частично
+        - query: как снять синдром похмелья
+          frequency: 91
+          relevance: частично
+        - query: почему с похмелья сильно потеешь
+          frequency: 91
+          relevance: частично
+        - query: что выпить при сильном похмелье
+          frequency: 88
+          relevance: частично
+        - query: что принять при сильном похмелье
+          frequency: 88
+          relevance: частично
+        - query: сильное похмелье форум
+          frequency: 87
+          relevance: частично
+        - query: как снять симптомы похмелья
+          frequency: 86
+          relevance: частично
+        - query: похмельный синдром лечение на дому быстро
+          frequency: 81
+          relevance: частично
+        - query: что пить при сильном похмелье
+          frequency: 81
+          relevance: частично
+        - query: сильно плохо с похмелья
+          frequency: 80
+          relevance: частично
+        - query: похмелье сильно болит голова что делать
+          frequency: 80
+          relevance: частично
+        - query: сильное похмелье рвота
+          frequency: 79
+          relevance: частично
+        - query: что делать при похмелье когда тошнит
+          frequency: 77
+          relevance: частично
+        - query: давление при похмелье что делать
+          frequency: 75
+          relevance: частично
+        - query: сильно трясти с похмелья
+          frequency: 75
+          relevance: частично
+        - query: как снять головную боль с похмелья
+          frequency: 73
+          relevance: частично
+        - query: как снять похмелье после запоя
+          frequency: 71
+          relevance: частично
+        - query: что пить при похмельном состоянии
+          frequency: 68
+          relevance: частично
+        - query: с похмелья сильно болит голова как помочь
+          frequency: 68
+          relevance: частично
+        - query: средства избавиться от похмелья
+          frequency: 65
+          relevance: частично
+        - query: как утром быстро избавиться от похмелья
+          frequency: 64
+          relevance: частично
+        - query: очень сильно болит голова похмелье
+          frequency: 64
+          relevance: частично
+        - query: сильное похмелье рвет
+          frequency: 63
+          relevance: частично
+        - query: как быстро избавиться от сильного похмелья
+          frequency: 62
+          relevance: частично
+        - query: как быстро снять похмелье и убрать
+          frequency: 60
+          relevance: частично
+        - query: что можно от сильного похмелья
+          frequency: 60
+          relevance: частично
+        - query: как быстро снять похмелье и тряску
+          frequency: 59
+          relevance: частично
+        - query: похмелье сильное сердцебиение
+          frequency: 59
+          relevance: частично
+        - query: как убрать симптомы похмелья
+          frequency: 59
+          relevance: частично
+        - query: похмелье очень сильно плохо
+          frequency: 57
+          relevance: частично
+        - query: сильное похмелье от пива
+          frequency: 56
+          relevance: частично
+        - query: человек сильно болеет с похмелья
+          frequency: 56
+          relevance: частично
+        - query: самое сильное похмелье
+          frequency: 55
+          relevance: частично
+        - query: стало сильное похмелье
+          frequency: 54
+          relevance: частично
+        - query: что делать при похмелье в домашних
+          frequency: 53
+          relevance: частично
+        - query: что делать при сильном похмелье тошнит
+          frequency: 52
+          relevance: частично
+        - query: какое средство помогает от похмелья
+          frequency: 52
+          relevance: частично
+        - query: сильная головная боль с похмелья
+          frequency: 52
+          relevance: частично
+        - query: что поможет после сильного похмелья
+          frequency: 51
+          relevance: частично
+        - query: что выпить после сильного похмелья
+          frequency: 51
+          relevance: частично
+        - query: как отойти от сильного похмелья
+          frequency: 51
+          relevance: частично
+        - query: что делать при сильном похмелье трясет
+          frequency: 50
+          relevance: частично
+        - query: почему тяжелое похмелье
+          frequency: 250
+          relevance: частично

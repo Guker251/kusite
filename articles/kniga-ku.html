@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>На краю Синей Бездны — книга о контролируемом употреблении алкоголя | КУ</title>
+    <link rel="canonical" href="https://alkonorm.ru/articles/kniga-ku.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="КУ — контролируемое употребление алкоголя">
+    <meta property="og:url" content="https://alkonorm.ru/articles/kniga-ku.html">
+    <meta property="og:title" content="На краю Синей Бездны — книга о контролируемом употреблении алкоголя | КУ">
+    <meta property="og:description" content="Книга о том, как вернуть управляемость употреблению алкоголя без рехабов и докторов. Практическое руководство по системе КУ. Выход — июнь 2026.">
+    <meta property="og:image" content="https://alkonorm.ru/pic/book.png">
+    <meta name="description" content="Книга о том, как вернуть управляемость употреблению алкоголя без рехабов и докторов. Практическое руководство по системе КУ. Выход — июнь 2026.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Starfield */
+        .starfield {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        .stars {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent),
+                radial-gradient(1px 1px at 190px 140px, white, transparent),
+                radial-gradient(2px 2px at 260px 60px, white, transparent),
+                radial-gradient(1px 1px at 320px 110px, white, transparent);
+            background-repeat: repeat;
+            background-size: 350px 200px;
+            animation: twinkle 4s ease-in-out infinite;
+            opacity: 0.5;
+        }
+        .stars2 {
+            position: absolute; width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 45px 120px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 110px 185px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 200px 95px, rgba(255,255,255,0.5), transparent),
+                radial-gradient(1px 1px at 280px 160px, rgba(255,255,255,0.7), transparent);
+            background-repeat: repeat;
+            background-size: 310px 220px;
+            animation: twinkle 7s ease-in-out infinite reverse;
+            opacity: 0.35;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.95; }
+        }
+
+        .container {
+            position: relative; z-index: 1;
+            max-width: 900px; margin: 0 auto; padding: 0 20px;
+        }
+
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-icon {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+        }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 16px; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        /* Article */
+        article { padding: 60px 0 100px; }
+
+        .article-        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px; font-weight: 500;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--accent-cyan); margin-bottom: 24px;
+        }
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 44px; font-weight: 700;
+            line-height: 1.2; margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .article-header .subtitle {
+            font-size: 20px; color: rgba(255,255,255,0.5);
+            font-style: italic; margin-bottom: 20px;
+        }
+        .article-meta {
+            display: flex; justify-content: center; align-items: center;
+            gap: 16px; flex-wrap: wrap;
+            font-size: 14px; color: rgba(255,255,255,0.4);
+        }
+
+        /* Book Hero */
+        .book-hero {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 50px; align-items: start;
+            margin: 0 0 70px;
+        }
+        .book-cover-wrap { position: sticky; top: 100px; }
+        .book-cover {
+            width: 400px; height: auto;
+            border-radius: 6px 14px 14px 6px;
+            box-shadow: -8px 4px 0 rgba(0,0,0,0.5), 0 25px 60px rgba(77,212,255,0.12);
+            display: block;
+        }
+        
+        
+        
+        @keyframes abyss-pulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(77,212,255,0.15), inset 0 0 15px rgba(0,0,10,0.8); }
+            50% { box-shadow: 0 0 35px rgba(77,212,255,0.35), inset 0 0 20px rgba(0,0,10,0.9); }
+        }
+        
+        
+        
+        .book-release { margin-top: 14px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+        .annotation-block {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 36px 40px;
+        }
+        .annotation-block p { font-size: 18px; line-height: 1.9; color: var(--text-secondary); margin-bottom: 0; }
+
+        /* Typography */
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px; font-weight: 600;
+            margin: 55px 0 24px; color: var(--text-primary);
+            position: relative; padding-left: 20px;
+        }
+        h2::before {
+            content: ''; position: absolute; left: 0; top: 50%;
+            transform: translateY(-50%);
+            width: 4px; height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px; font-weight: 600;
+            margin: 28px 0 14px; color: var(--accent-cyan);
+        }
+        p { font-size: 17px; line-height: 1.85; margin-bottom: 20px; color: var(--text-secondary); }
+        ul, ol { margin: 18px 0; padding-left: 0; list-style: none; }
+        ul li, ol li {
+            position: relative; padding: 9px 0 9px 35px;
+            font-size: 16px; line-height: 1.7;
+            color: var(--text-secondary); margin-bottom: 4px;
+        }
+        ul li::before { content: '▸'; position: absolute; left: 10px; color: var(--accent-cyan); font-size: 14px; }
+        ol { counter-reset: item; }
+        ol li::before { content: counter(item) "."; counter-increment: item; position: absolute; left: 10px; color: var(--accent-cyan); font-weight: 600; }
+
+        /* Boxes */
+        .highlight-box {
+            background: var(--glass-white); backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px; padding: 28px 32px; margin: 30px 0;
+        }
+        .highlight-box h3 { margin-top: 0; }
+        .cyan-box { border-color: rgba(77,212,255,0.3); background: rgba(77,212,255,0.06); }
+        .pink-box { border-color: rgba(255,107,157,0.3); background: rgba(255,107,157,0.06); }
+
+        /* Quote */
+        .book-quote {
+            border-left: 3px solid var(--accent-cyan);
+            padding: 20px 28px; margin: 30px 0;
+            background: rgba(77,212,255,0.04);
+            border-radius: 0 12px 12px 0; font-style: italic;
+        }
+        .book-quote p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 6px; }
+        .book-quote cite { font-size: 13px; color: rgba(255,255,255,0.3); font-style: normal; }
+
+        /* TOC */
+        .toc-block {
+            background: var(--glass-white); backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 36px; margin: 30px 0;
+        }
+        .toc-part { margin-bottom: 26px; }
+        .toc-part:last-child { margin-bottom: 0; }
+        .toc-part-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px; font-weight: 700;
+            letter-spacing: 1.2px; text-transform: uppercase;
+            color: var(--accent-pink); margin-bottom: 12px;
+            padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .toc-item {
+            display: flex; align-items: baseline; gap: 10px;
+            padding: 5px 0; font-size: 15px; color: var(--text-secondary); line-height: 1.5;
+        }
+        .toc-num {
+            font-size: 12px; font-weight: 600;
+            color: var(--accent-cyan); min-width: 44px; flex-shrink: 0;
+        }
+
+        /* Steps */
+        .steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
+        .step-card {
+            background: var(--glass-white); border: 1px solid var(--glass-border);
+            border-radius: 14px; padding: 22px;
+            transition: all 0.3s ease;
+        }
+        .step-card:hover { border-color: rgba(77,212,255,0.4); box-shadow: 0 8px 30px rgba(77,212,255,0.12); transform: translateY(-2px); }
+        .step-num {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50%;
+            font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; color: white;
+            margin-bottom: 12px;
+        }
+        .step-title { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; color: var(--text-primary); line-height: 1.4; margin-bottom: 8px; }
+        .step-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+        /* Fork */
+        .fork-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 28px 0; }
+        .fork-card { border-radius: 14px; padding: 22px 18px; text-align: center; }
+        .fork-card.green { background: rgba(77,212,255,0.08); border: 1px solid rgba(77,212,255,0.35); }
+        .fork-card.yellow { background: rgba(255,214,0,0.06); border: 1px solid rgba(255,214,0,0.25); }
+        .fork-card.red { background: rgba(255,107,157,0.08); border: 1px solid rgba(255,107,157,0.3); }
+        .fork-icon { font-size: 30px; margin-bottom: 10px; }
+        .fork-label { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        .fork-card.green .fork-label { color: var(--accent-cyan); }
+        .fork-card.yellow .fork-label { color: #ffd600; }
+        .fork-card.red .fork-label { color: var(--accent-pink); }
+        .fork-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+        /* Big 5 */
+        .bigfive-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0; }
+        .bigfive-card {
+            background: var(--glass-white); border: 1px solid var(--glass-border);
+            border-radius: 12px; padding: 20px;
+            display: flex; gap: 14px; align-items: flex-start;
+        }
+        .bigfive-icon { font-size: 26px; flex-shrink: 0; }
+        .bigfive-title { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; }
+        .bigfive-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+        /* Author */
+        .author-block {
+            background: linear-gradient(135deg, rgba(77,212,255,0.06), rgba(255,107,157,0.06));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px; padding: 36px; margin: 50px 0;
+            display: grid; grid-template-columns: 70px 1fr; gap: 28px; align-items: start;
+        }
+        .author-avatar {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; flex-shrink: 0;
+        }
+        .author-label { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-pink); margin-bottom: 6px; }
+        .author-name { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; }
+        .author-bio { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77,212,255,0.12), rgba(255,107,157,0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px; padding: 44px 40px;
+            margin: 60px 0 40px; text-align: center;
+        }
+        .cta-box h2 { margin: 0 0 14px; padding: 0; font-size: 28px; }
+        .cta-box h2::before { display: none; }
+        .cta-box p { font-size: 17px; margin-bottom: 28px; max-width: 560px; margin-left: auto; margin-right: auto; }
+        .cta-btn {
+            display: inline-block; padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px; color: white; text-decoration: none;
+            font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 16px;
+            transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(77,212,255,0.45); }
+
+        /* Related */
+        .related-links { margin: 40px 0; }
+        .related-links a {
+            display: block; padding: 14px 22px;
+            background: rgba(77,212,255,0.06); border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px; color: var(--accent-cyan);
+            text-decoration: none; font-size: 15px;
+            transition: all 0.3s ease; margin-bottom: 10px;
+        }
+        .related-links a:hover { background: rgba(77,212,255,0.12); border-color: var(--accent-cyan); padding-left: 28px; }
+
+        .back-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: var(--accent-cyan); text-decoration: none;
+            font-size: 16px; margin-bottom: 30px; transition: gap 0.3s ease;
+        }
+        .back-link:hover { gap: 14px; }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            .book-hero { grid-template-columns: 1fr; }
+            .book-cover-wrap { position: static; display: flex; flex-direction: column; align-items: center; }
+            .steps-grid, .fork-grid, .bigfive-grid { grid-template-columns: 1fr; }
+            .author-block { grid-template-columns: 1fr; }
+            h2 { font-size: 24px; }
+            .annotation-block { padding: 24px; }
+            .cta-box { padding: 30px 24px; }
+            .nav-links { display: none; }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "На краю Синей Бездны — книга о контролируемом употреблении алкоголя | КУ",
+  "description": "Книга о том, как вернуть управляемость употреблению алкоголя без рехабов и докторов. Практическое руководство по системе КУ. Выход — июнь 2026.",
+  "image": "https://alkonorm.ru/pic/book.png",
+  "url": "https://alkonorm.ru/articles/kniga-ku.html",
+  "datePublished": "2026-02-27",
+  "dateModified": "2026-02-27",
+  "inLanguage": "ru-RU",
+  "author": {
+    "@type": "Organization",
+    "name": "КУ — контролируемое употребление алкоголя",
+    "url": "https://alkonorm.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alkonorm.ru/favicon-192.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "КУ — контролируемое употребление алкоголя",
+    "url": "https://alkonorm.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alkonorm.ru/favicon-192.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alkonorm.ru/articles/kniga-ku.html"
+  }
+}
+    </script>
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">📖 Книга</div>
+                <h1>На краю Синей Бездны</h1>
+                <div class="subtitle">как вернуть контроль над алкоголем</div>
+                <div class="article-meta">
+                    <span>📅 Выход: июнь 2026</span>
+                    <span>·</span>
+                    <span>Практическое руководство по системе КУ</span>
+                </div>
+            </div>
+
+            <!-- Book Hero -->
+            <div class="book-hero fade-in delay-1">
+                <div class="book-cover-wrap">
+                    <img src="../pic/book.png" alt="На краю Синей Бездны" class="book-cover">
+                    <div class="book-release">Выход: июнь 2026</div>
+                </div>
+
+                <div class="annotation-block">
+                    <p>Книга о том, как вернуть управляемость употреблению алкоголя без рехабов и докторов. Автор описывает путь от потери контроля к построению системы управления КУ: ясные ограничения, учёт, календарное планирование, тактика на мероприятиях, анализ сбоев и корректировка по данным. В книге есть развилка — когда КУ реалистично, когда погранично, и когда честнее выбрать трезвость. Это практическое руководство для людей, которые уже видят свою проблему, но не готовы идти лечиться или в группы анонимных алкоголиков, поэтому хотят понять, что реально работает.</p>
+                </div>
+            </div>
+
+            <div class="fade-in delay-2">
+
+                <!-- Эпиграф -->
+                <div class="book-quote">
+                    <p>«Когда б мы праздновали каждый день, то праздник был бы тягостней работы. Но праздник — редкость, праздник — торжество...»</p>
+                    <cite>Уильям Шекспир. «Король Генрих IV»</cite>
+                </div>
+
+                <!-- О чём книга -->
+                <h2>О чём эта книга</h2>
+                <p>Сейчас почти нет книг для тех, кто не хочет становиться трезвенником, но понимает, что его употребление зашло слишком далеко. Всё это пространство занято крайностями: либо «пей, пока не сдохнешь», либо «навсегда брось и иди в АА». Большинство книг о зависимости озвучивают позицию, что алкоголь — абсолютное зло, и только отказ от него спасёт от смерти.</p>
+                <p>Эта книга показывает третий путь — между полным отрицанием и бесконтрольным потреблением: сознательное, системное, подкреплённое опытом контролируемое употребление. Не эзотерика, не проповедь — а методология, которую автор испробовал на себе за четыре года экспериментов, и которую отшлифовали вместе с участниками форума KUforum.ru.</p>
+
+                <div class="highlight-box cyan-box">
+                    <h3>Для кого эта книга</h3>
+                    <ul>
+                        <li>вы уже видите свою проблему, но не считаете себя «алкоголиком» в клиническом смысле;</li>
+                        <li>вы не готовы идти к наркологу или в группы АА;</li>
+                        <li>вы хотите понять, что реально работает, а не просто «обещать себе пить меньше»;</li>
+                        <li>у вас аналитический склад ума — вы склонны к самонаблюдению и планированию;</li>
+                        <li>вы готовы быть активным субъектом самонастройки, а не пассивным объектом лечения.</li>
+                    </ul>
+                </div>
+
+                <!-- Полное оглавление -->
+                <h2>Полное оглавление книги</h2>
+
+                <div class="toc-block">
+                    <div class="toc-part">
+                        <div class="toc-part-title">Предисловие</div>
+                        <div class="toc-item"><span class="toc-num"></span>История автора, принципы книги, для кого она написана</div>
+                    </div>
+                    <div class="toc-part">
+                        <div class="toc-part-title">На краю Синей Бездны — вступление</div>
+                        <div class="toc-item"><span class="toc-num"></span>Метафора воронки зависимости. Кто такой КУшник и где его место в этом мире</div>
+                    </div>
+                    <div class="toc-part">
+                        <div class="toc-part-title">Часть 1. Перелом</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Мой путь в КУ — честный личный рассказ автора</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Первое письмо жены автора</div>
+                        <div class="toc-item"><span class="toc-num">·</span>На перепутье — первые эксперименты и осознание</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Понимание — ключ к проблеме</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Мои первые правила</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Второе письмо жены автора</div>
+                    </div>
+                    <div class="toc-part">
+                        <div class="toc-part-title">Часть 2. Научный подход</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Безграмотное исполнение убивает идею</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Биопсихосоциальная модель зависимости</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Биологический уровень</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Психологический уровень</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Социальный уровень</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Взаимодействие факторов</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Нейрофизиология зависимости</div>
+                    </div>
+                    <div class="toc-part">
+                        <div class="toc-part-title">Часть 3. Семь шагов КУ</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Алгоритм КУ — общая схема</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 1</span>Осознание желания изменить свою жизнь</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 2</span>Оценка вероятности успешного КУ</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 3</span>Разработка плана контроля употребления</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 4</span>Реализация плана и проверка его работоспособности</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 5</span>Оценка успешности плана</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 6</span>Оценка наличия вариантов корректировки</div>
+                        <div class="toc-item"><span class="toc-num">Шаг 7</span>Поддержание стабильного КУ</div>
+                    </div>
+                    <div class="toc-part">
+                        <div class="toc-part-title">Часть 4. Большая пятёрка</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Осознанность</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Мотивация</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Тренировка сознания</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Сила воли</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Поддержка</div>
+                    </div>
+                    <div class="toc-part" style="margin-bottom:0">
+                        <div class="toc-part-title">Заключение и Приложения</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Приложение 1. Тест на наличие желания изменить свою жизнь + промпт для ИИ</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Приложение 2. Тест по оценке вероятности успешного КУ + промпт для ИИ</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Приложение 3. Тест на полноту плана контроля употребления</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Приложение 4. Ссылки на электронные ресурсы</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Приложение 5. Практики, сообщества и методы работы с зависимостью</div>
+                        <div class="toc-item"><span class="toc-num">·</span>Приложение 6. Список литературы</div>
+                    </div>
+                </div>
+
+                <!-- 7 шагов -->
+                <h2>Семь шагов КУ — ядро книги</h2>
+                <p>Центральная часть книги — пошаговый алгоритм, который превращает намерение в систему. По этому алгоритму строится система КУ — правила и установки по контролю над алкоголем.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <div class="step-title">Осознание желания изменить свою жизнь</div>
+                        <div class="step-desc">Почему человек хочет измениться. Детская роль и ловушка «хочу без усилий». КУ как способ изменить жизнь к лучшему.</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <div class="step-title">Оценка вероятности успешного КУ</div>
+                        <div class="step-desc">Честная развилка перед стартом. Сила зависимости, ограничения, ресурсы. Матрица решений: КУ реалистично / погранично / маловероятно.</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <div class="step-title">Разработка плана контроля</div>
+                        <div class="step-desc">Контуры зависимости, триггеры, шаблоны употребления. Календарный уровень планирования. Тактика на мероприятиях. Компромиссы убивают стратегию.</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">4</div>
+                        <div class="step-title">Реализация и проверка плана</div>
+                        <div class="step-desc">Учёт и контроль в процессе. Малодозное употребление. Как бороться с тягой — конкретные техники из опыта автора и форумчан.</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">5</div>
+                        <div class="step-title">Оценка успешности плана</div>
+                        <div class="step-desc">Измеримые критерии, а не эмоциональные: годовой лимит лча, число нарушений стратегии, наличие и тяжесть негативных последствий.</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">6</div>
+                        <div class="step-title">Корректировка стратегии</div>
+                        <div class="step-desc">Как корректировать план по данным. Срыв — не катастрофа, а сигнал. Если способа корректировки нет — честный выбор в пользу трезвости.</div>
+                    </div>
+                    <div class="step-card" style="grid-column: span 2;">
+                        <div class="step-num">7</div>
+                        <div class="step-title">Поддержание стабильного КУ</div>
+                        <div class="step-desc">Главная работа — не постоянная мобилизация, а профилактика и упреждение триггеров. Система становится надёжнее с каждым циклом. Поддерживающий контур: учёт, заранее прописанные правила, простые решения до того, как появилась непреодолимая тяга.</div>
+                    </div>
+                </div>
+
+                <!-- Развилка -->
+                <h2>Ключевая развилка: КУ или трезвость?</h2>
+                <p>Один из самых важных блоков книги — честный ответ на вопрос, который многие боятся задавать себе. Матрицу решений нельзя проходить на эмоциях — её нужно проходить по данным и последствиям.</p>
+
+                <div class="fork-grid">
+                    <div class="fork-card green">
+                        <div class="fork-icon">✅</div>
+                        <div class="fork-label">КУ реалистично</div>
+                        <div class="fork-text">Получается выполнять годовой лимит лча. Нарушения редки и предсказуемы. Негативные последствия минимальны и не накапливаются.</div>
+                    </div>
+                    <div class="fork-card yellow">
+                        <div class="fork-icon">⚠️</div>
+                        <div class="fork-label">Пограничная зона</div>
+                        <div class="fork-text">КУ может работать при жёстких условиях и дополнительных ресурсах поддержки. Требует особой честности с собой.</div>
+                    </div>
+                    <div class="fork-card red">
+                        <div class="fork-icon">🛑</div>
+                        <div class="fork-label">Честнее — трезвость</div>
+                        <div class="fork-text">Лимиты регулярно превышаются, любой разовый объём ведёт к потере контроля, последствия затрагивают здоровье, работу, отношения.</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box pink-box">
+                    <p style="margin-bottom:0; font-style: italic; color: rgba(255,255,255,0.65);">«Здесь нет правильного ответа для всех. Есть задача выбрать то, что даёт реальный контроль и снижает ущерб именно для вас.» — из книги</p>
+                </div>
+
+                <!-- Большая пятёрка -->
+                <h2>Большая пятёрка — ресурсы устойчивости</h2>
+                <p>Четвёртая часть книги — о пяти ключевых ресурсах, без которых система КУ не держится. Это не абстрактные добродетели, а конкретные навыки, которые можно тренировать.</p>
+
+                <div class="bigfive-grid">
+                    <div class="bigfive-card">
+                        <div class="bigfive-icon">🎯</div>
+                        <div>
+                            <div class="bigfive-title">Осознанность</div>
+                            <div class="bigfive-desc">Умение замечать триггеры и шаблоны до того, как они сработали автоматически.</div>
+                        </div>
+                    </div>
+                    <div class="bigfive-card">
+                        <div class="bigfive-icon">🔥</div>
+                        <div>
+                            <div class="bigfive-title">Мотивация</div>
+                            <div class="bigfive-desc">Не «сила воли», а ясность цели. Зачем именно вам нужен контроль над алкоголем.</div>
+                        </div>
+                    </div>
+                    <div class="bigfive-card">
+                        <div class="bigfive-icon">🧠</div>
+                        <div>
+                            <div class="bigfive-title">Тренировка сознания</div>
+                            <div class="bigfive-desc">Практики, которые укрепляют способность принимать решения в сложных моментах.</div>
+                        </div>
+                    </div>
+                    <div class="bigfive-card">
+                        <div class="bigfive-icon">💪</div>
+                        <div>
+                            <div class="bigfive-title">Сила воли</div>
+                            <div class="bigfive-desc">Как она работает, почему истощается и как её беречь через правильную архитектуру решений.</div>
+                        </div>
+                    </div>
+                    <div class="bigfive-card" style="grid-column: span 2;">
+                        <div class="bigfive-icon">🤝</div>
+                        <div>
+                            <div class="bigfive-title">Поддержка</div>
+                            <div class="bigfive-desc">Форум, близкие, сообщество — как выстроить окружение, которое помогает держать систему, а не подрывает её. Форум KUforum.ru стал первым местом, где автор проверял свои методы и собирал опыт других КУшников.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Об авторе -->
+                <div class="author-block">
+                    <div class="author-avatar">🧑‍🔬</div>
+                    <div>
+                        <div class="author-label">Об авторе</div>
+                        <div class="author-name">Участник и основатель KUforum.ru</div>
+                        <div class="author-bio">Физик по первому образованию, экономист по второму, кандидат наук. Не нарколог и не психолог — человек, который столкнулся с проблемой и подошёл к ней аналитически: изучил явление, нашёл методы контроля и разработал систему управления. Четыре года экспериментов и опыт участников форума. Опирается на труды Марка Льюиса, Стэнтона Пила, Келли Макгоникал, Чарльза Дахигга, Джеймса Прохазки, Джеймса Клира и других.</div>
+                    </div>
+                </div>
+
+                <!-- Связь с программой -->
+                <h2>Книга и программа 7 шагов КУ</h2>
+                <p>Книга является расширенным изложением методологии, которая лежит в основе <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px solid rgba(77,212,255,0.3);">программы 7 шагов КУ →</a> Если вы хотите начать прямо сейчас, до выхода книги, программа даёт ту же структуру в компактном формате — с возможностью обсудить прогресс на форуме.</p>
+
+                <div class="cta-box">
+                    <h2>Обсудите книгу на форуме</h2>
+                    <p>Присоединяйтесь к сообществу, где уже сейчас обсуждают методологию КУ, делятся опытом и разбирают сложные ситуации вместе.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также:</strong></p>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ — полная методология в открытом доступе</a>
+                    <a href="kak-menshe-pit/kak-menshe-pit.html">→ Как меньше пить: практические техники контроля</a>
+                </div>
+
+                <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

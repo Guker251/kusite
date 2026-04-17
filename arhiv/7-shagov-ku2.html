@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Программа 7 шагов КУ — контролируемое употребление алкоголя</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.07);
+            --glass-white-hover: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --glass-border-hover: rgba(77, 212, 255, 0.4);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.75);
+            --text-muted: rgba(255, 255, 255, 0.5);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.75;
+        }
+
+        /* ── Starfield ── */
+        .starfield {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(ellipse at 30% 20%, #0d1f3c 0%, #050d1a 60%);
+            pointer-events: none;
+        }
+
+        .stars-layer {
+            position: absolute;
+            inset: 0;
+            background-repeat: repeat;
+            animation: drift linear infinite;
+        }
+        .stars-layer-1 {
+            background-image:
+                radial-gradient(1.5px 1.5px at 22px 44px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 80px 20px, rgba(255,255,255,0.7), transparent),
+                radial-gradient(1.5px 1.5px at 140px 90px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 60px 130px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(2px 2px at 180px 60px, rgba(77,212,255,0.6), transparent),
+                radial-gradient(1px 1px at 30px 170px, rgba(255,255,255,0.7), transparent);
+            background-size: 220px 220px;
+            animation-duration: 120s;
+        }
+        .stars-layer-2 {
+            background-image:
+                radial-gradient(1px 1px at 50px 50px, rgba(255,255,255,0.6), transparent),
+                radial-gradient(1.5px 1.5px at 110px 30px, rgba(255,107,157,0.5), transparent),
+                radial-gradient(1px 1px at 170px 140px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 180px, rgba(255,255,255,0.5), transparent);
+            background-size: 280px 280px;
+            animation-duration: 180s;
+            animation-direction: reverse;
+        }
+        .stars-layer-3 {
+            background-image:
+                radial-gradient(2px 2px at 70px 80px, rgba(255,255,255,0.4), transparent),
+                radial-gradient(1px 1px at 150px 50px, rgba(77,212,255,0.4), transparent),
+                radial-gradient(1.5px 1.5px at 40px 140px, rgba(255,255,255,0.6), transparent);
+            background-size: 350px 350px;
+            animation-duration: 240s;
+            opacity: 0.6;
+        }
+
+        @keyframes drift {
+            from { transform: translateX(0); }
+            to { transform: translateX(-220px); }
+        }
+
+        /* ── Header ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 13, 26, 0.88);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 18px 0;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-cyan);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* ── Page wrapper ── */
+        .page-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 0;
+        }
+
+        /* ── Hero ── */
+        .article-hero {
+            text-align: center;
+            padding: 72px 0 0;
+        }
+
+        .article-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(77, 212, 255, 0.1);
+            border: 1px solid rgba(77, 212, 255, 0.3);
+            border-radius: 40px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent-cyan);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .article-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(28px, 5vw, 44px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 60%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-hero .lead {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            max-width: 620px;
+            margin: 0 auto 0;
+            line-height: 1.7;
+        }
+
+        /* ── Divider ── */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+            margin: 20px 0;
+        }
+
+        /* ── Steps overview diagram ── */
+        .steps-overview {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px 36px;
+            margin-bottom: 64px;
+        }
+
+        .steps-overview h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .steps-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .step-connector-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 44px;
+            flex-shrink: 0;
+        }
+
+        .step-num-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-connector-line {
+            width: 2px;
+            flex: 1;
+            min-height: 24px;
+            background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-pink));
+            opacity: 0.3;
+            margin: 0 auto;
+        }
+
+        .step-name-row {
+            flex: 1;
+            padding: 10px 0 28px;
+        }
+
+        .step-name-row a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .step-name-row a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Color sequence for badges */
+        .step-row:nth-child(1) .step-num-badge { background: rgba(77,212,255,0.15); border: 1.5px solid rgba(77,212,255,0.5); color: var(--accent-cyan); }
+        .step-row:nth-child(2) .step-num-badge { background: rgba(100,200,255,0.12); border: 1.5px solid rgba(100,200,255,0.4); color: #7de0ff; }
+        .step-row:nth-child(3) .step-num-badge { background: rgba(130,180,255,0.12); border: 1.5px solid rgba(130,180,255,0.4); color: #9eceff; }
+        .step-row:nth-child(4) .step-num-badge { background: rgba(160,160,255,0.12); border: 1.5px solid rgba(160,160,255,0.4); color: #b8b8ff; }
+        .step-row:nth-child(5) .step-num-badge { background: rgba(200,130,255,0.12); border: 1.5px solid rgba(200,130,255,0.4); color: #d49eff; }
+        .step-row:nth-child(6) .step-num-badge { background: rgba(230,110,200,0.12); border: 1.5px solid rgba(230,110,200,0.4); color: #e87ed0; }
+        .step-row:nth-child(7) .step-num-badge { background: rgba(255,107,157,0.15); border: 1.5px solid rgba(255,107,157,0.5); color: var(--accent-pink); }
+
+        .step-row:last-child .step-connector-line { display: none; }
+        .step-row:last-child .step-name-row { padding-bottom: 0; }
+
+        /* ── Step cards ── */
+        .steps-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .step-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 36px;
+            margin-bottom: 24px;
+            transition: border-color 0.35s, background 0.35s, transform 0.35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+
+        .step-card:hover {
+            background: var(--glass-white-hover);
+            border-color: var(--glass-border-hover);
+            transform: translateY(-3px);
+        }
+
+        .step-card:hover::before { opacity: 1; }
+
+        /* Individual card accent colors */
+        .step-card:nth-child(1)::before { background: linear-gradient(90deg, var(--accent-cyan), #7de0ff); }
+        .step-card:nth-child(2)::before { background: linear-gradient(90deg, #7de0ff, #9eceff); }
+        .step-card:nth-child(3)::before { background: linear-gradient(90deg, #9eceff, #b8b8ff); }
+        .step-card:nth-child(4)::before { background: linear-gradient(90deg, #b8b8ff, #d49eff); }
+        .step-card:nth-child(5)::before { background: linear-gradient(90deg, #d49eff, #e87ed0); }
+        .step-card:nth-child(6)::before { background: linear-gradient(90deg, #e87ed0, var(--accent-pink)); }
+        .step-card:nth-child(7)::before { background: linear-gradient(90deg, var(--accent-pink), #ff9bc0); }
+
+        .step-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .step-card-num {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .step-card:nth-child(1) .step-card-num { background: rgba(77,212,255,0.15); color: var(--accent-cyan); border: 1px solid rgba(77,212,255,0.3); }
+        .step-card:nth-child(2) .step-card-num { background: rgba(100,200,255,0.12); color: #7de0ff; border: 1px solid rgba(100,200,255,0.3); }
+        .step-card:nth-child(3) .step-card-num { background: rgba(130,180,255,0.12); color: #9eceff; border: 1px solid rgba(130,180,255,0.3); }
+        .step-card:nth-child(4) .step-card-num { background: rgba(160,160,255,0.12); color: #b8b8ff; border: 1px solid rgba(160,160,255,0.3); }
+        .step-card:nth-child(5) .step-card-num { background: rgba(200,130,255,0.12); color: #d49eff; border: 1px solid rgba(200,130,255,0.3); }
+        .step-card:nth-child(6) .step-card-num { background: rgba(230,110,200,0.12); color: #e87ed0; border: 1px solid rgba(230,110,200,0.3); }
+        .step-card:nth-child(7) .step-card-num { background: rgba(255,107,157,0.15); color: var(--accent-pink); border: 1px solid rgba(255,107,157,0.3); }
+
+        .step-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+
+        /* Sub-items list */
+        .step-items {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .step-items li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .step-items li .bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 9px;
+            background: var(--accent-cyan);
+            opacity: 0.6;
+        }
+
+        .step-card:nth-child(4) .bullet,
+        .step-card:nth-child(5) .bullet { background: #b8b8ff; }
+        .step-card:nth-child(6) .bullet,
+        .step-card:nth-child(7) .bullet { background: var(--accent-pink); }
+
+        .step-items li a {
+            font-size: 16px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.25s;
+            line-height: 1.55;
+        }
+
+        .step-items li a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* ── Forum block ── */
+        .forum-block {
+            margin-top: 64px;
+            background: linear-gradient(135deg, rgba(77,212,255,0.06) 0%, rgba(255,107,157,0.06) 100%);
+            border: 1px solid rgba(77,212,255,0.2);
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .forum-block::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(77,212,255,0.08) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .forum-block .forum-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .forum-block h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .forum-block p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .forum-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            color: #050d1a;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .forum-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(77, 212, 255, 0.35);
+        }
+
+        .forum-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid var(--glass-border);
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        footer a:hover { opacity: 0.7; }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .steps-overview { padding: 28px 20px; }
+            .step-card { padding: 24px 20px; }
+            .forum-block { padding: 36px 24px; }
+            .article-hero { padding: 48px 0 40px; }
+        }
+
+        /* ── Scroll reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Starfield background -->
+    <div class="starfield" aria-hidden="true">
+        <div class="stars-layer stars-layer-1"></div>
+        <div class="stars-layer stars-layer-2"></div>
+        <div class="stars-layer stars-layer-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🌌</div>
+                КУ
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="kak-menshe-pit.html">Как меньше пить</a></li>
+                    <li><a href="kak-ne-napitsya.html">Как не напиться</a></li>
+                    <li><a href="skolko-mozno-pit.html">Сколько можно пить</a></li>
+                    <li><a href="pochemu-hochetsya-pit.html">Почему хочется пить</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page content -->
+    <main>
+        <div class="page-wrapper">
+
+            <!-- Back link top -->
+            <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; margin-bottom:24px; color:var(--accent-cyan); text-decoration:none; font-family:'Jost',sans-serif; font-size:15px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">← Главная страница</a>
+
+            <!-- Hero -->
+            <div class="article-hero reveal">
+                <div class="article-eyebrow">⚙️ Методология</div>
+                <h1>Программа 7 шагов КУ</h1>
+                <p class="lead">
+                    Пошаговая система для тех, кто хочет взять употребление алкоголя под контроль — без полного отказа. Программа основана на научных данных и практическом опыте участников форума.
+                </p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Overview diagram -->
+            <div class="steps-overview reveal">
+                <h2>Схема программы</h2>
+                <div class="steps-flow">
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">1</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-1">Желание изменить свою жизнь</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">2</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-2">Оценка вероятности успешного КУ</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">3</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-3">Разработка плана контроля употребления</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">4</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-4">Реализация плана и проверка его работоспособности</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">5</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-5">Оценка успешности плана</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">6</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-6">Оценка наличия вариантов корректировки</a>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <div class="step-connector-col">
+                            <div class="step-num-badge">7</div>
+                            <div class="step-connector-line"></div>
+                        </div>
+                        <div class="step-name-row">
+                            <a href="#step-7">Поддержание стабильного КУ</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Steps detail -->
+            <p class="steps-section-title reveal">Шаги подробно</p>
+
+            <!-- Step 1 -->
+            <div class="step-card reveal" id="step-1">
+                <div class="step-card-header">
+                    <div class="step-card-num">1</div>
+                    <div class="step-card-title">Желание изменить свою жизнь</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="pochemu-hochetsya-pit.html">Проверить, есть ли желание менять</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Сформулировать, есть ли готовность прикладывать усилия</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Определить, что изменится к лучшему в режиме КУ</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Если нет сильного желания — перейти в полную трезвость</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card reveal" id="step-2">
+                <div class="step-card-header">
+                    <div class="step-card-num">2</div>
+                    <div class="step-card-title">Оценка вероятности успешного КУ</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="skolko-mozno-pit.html">Оценить силу своей зависимости по МКБ-11</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="skolko-mozno-pit.html">Оценить ограничения, исключающие или сильно затрудняющие КУ</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="skolko-mozno-pit.html">Оценить ресурсы, повышающие или снижающие вероятность успешного КУ</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Принять решение: КУ или полная трезвость</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card reveal" id="step-3">
+                <div class="step-card-header">
+                    <div class="step-card-num">3</div>
+                    <div class="step-card-title">Разработка плана контроля употребления</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Подготовить ресурсы</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="pochemu-hochetsya-pit.html">Определить контуры своей зависимости</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="pochemu-hochetsya-pit.html">Определить свои триггеры</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Определить свои шаблоны употребления</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Разделить шаблоны на значимые и вредные</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Сформулировать свою стратегию (личные правила)</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="skolko-mozno-pit.html">Определить календарный план в ЛЧА</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Определить для значимых шаблонов тактику употребления</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card reveal" id="step-4">
+                <div class="step-card-header">
+                    <div class="step-card-num">4</div>
+                    <div class="step-card-title">Реализация плана и проверка его работоспособности</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Завести таблицу по учёту в Excel и приложение в телефоне</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Планировать, учитывать и анализировать все эпизоды</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Проводить общий анализ месяца</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Делать корректировки тактики и стратегии</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card reveal" id="step-5">
+                <div class="step-card-header">
+                    <div class="step-card-num">5</div>
+                    <div class="step-card-title">Оценка успешности плана</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="skolko-mozno-pit.html">Провести анализ успешности плана по соблюдению годовой нормы употребления</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Провести анализ нарушений стратегии и сделать выводы</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card reveal" id="step-6">
+                <div class="step-card-header">
+                    <div class="step-card-num">6</div>
+                    <div class="step-card-title">Оценка наличия вариантов корректировки</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Скорректировать стратегию на основании анализа прошлого периода</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Провести ревизию шаблонов, исключить вредные</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Провести ревизию тактики для значимых шаблонов</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Если нет обоснованных способов корректировки — принять решение о полной трезвости</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card reveal" id="step-7">
+                <div class="step-card-header">
+                    <div class="step-card-num">7</div>
+                    <div class="step-card-title">Поддержание стабильного КУ</div>
+                </div>
+                <ul class="step-items">
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Сохранять дисциплину в учёте и анализе эпизодов</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-ne-napitsya.html">Постоянно помнить о стратегии и тактике</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="kak-menshe-pit.html">Совершенствовать систему контроля</a>
+                    </li>
+                    <li>
+                        <span class="bullet"></span>
+                        <a href="pochemu-hochetsya-pit.html">Внимательно следить за признаками ослабления контроля</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Forum block -->
+            <div class="forum-block reveal">
+                <span class="forum-icon">💬</span>
+                <h3>Обсудите программу на форуме</h3>
+                <p>
+                    Любой шаг программы, отдельный пункт или всю программу целиком можно обсудить с единомышленниками. Делитесь опытом, задавайте вопросы и получайте поддержку сообщества.
+                </p>
+                <a href="https://kuforum.ru" class="forum-btn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Перейти на kuforum.ru
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Back link bottom -->
+    <div style="text-align:center; padding:40px 20px 8px;">
+        <a href="index.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--accent-cyan); text-decoration:none; font-family:'Jost',sans-serif; font-size:15px; opacity:0.85; transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">← Главная страница</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>КУ — контролируемое употребление алкоголя &nbsp;·&nbsp; <a href="https://kuforum.ru" target="_blank" rel="noopener">kuforum.ru</a></p>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            el.style.transitionDelay = `${(i % 5) * 0.06}s`;
+            revealObserver.observe(el);
+        });
+
+        // Smooth scroll for diagram links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 96;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МАКЕТ — Нормы алкоголя | КУ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --accent-orange: #ff9f4d;
+            --accent-green: #4dffb0;
+            --glass-white: rgba(255,255,255,0.07);
+            --glass-border: rgba(255,255,255,0.13);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.75);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: #090a0f;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Starfield */
+        .starfield {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            pointer-events: none;
+        }
+        .stars {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
+                radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 82% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 90% 45%, rgba(255,255,255,0.7) 0%, transparent 100%),
+                radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 35% 88%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 60% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 75% 90%, rgba(255,255,255,0.3) 0%, transparent 100%),
+                radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 48% 35%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 92% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 20% 95%, rgba(255,255,255,0.5) 0%, transparent 100%);
+            animation: twinkle 8s ease-in-out infinite alternate;
+        }
+        .stars2 {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1px 1px at 65% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 80% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+                radial-gradient(1px 1px at 45% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+                radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
+                radial-gradient(1px 1px at 95% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+                radial-gradient(1.5px 1.5px at 55% 5%, rgba(255,255,255,0.7) 0%, transparent 100%);
+            animation: twinkle 12s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        /* Dev Banner */
+        .dev-banner {
+            position: relative;
+            z-index: 100;
+            background: #ffdd00;
+            color: #000;
+            text-align: center;
+            padding: 8px 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: rgba(5, 13, 26, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .nav {
+            display: flex;
+            gap: 24px;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav a:hover, .nav a.active {
+            color: var(--accent-cyan);
+        }
+        .search-icon {
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+            flex-shrink: 0;
+        }
+        .search-icon:hover { color: var(--accent-cyan); }
+
+        /* Main content */
+        .page-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 20px 0 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .breadcrumbs a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover { color: var(--accent-cyan); }
+        .breadcrumbs span { color: rgba(255,255,255,0.4); margin: 0 6px; }
+
+        /* Hero */
+        .hero {
+            padding: 48px 0 56px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            align-items: start;
+        }
+        .hero-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            background: rgba(77, 212, 255, 0.1);
+            border: 1px solid rgba(77, 212, 255, 0.3);
+            border-radius: 20px;
+            padding: 4px 14px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-sub {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .hero-desc {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            margin-bottom: 28px;
+            max-width: 560px;
+        }
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .chip {
+            background: rgba(77, 212, 255, 0.08);
+            border: 1px solid rgba(77, 212, 255, 0.25);
+            color: var(--accent-cyan);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            text-decoration: none;
+        }
+        .chip:hover {
+            background: rgba(77, 212, 255, 0.15);
+            border-color: rgba(77, 212, 255, 0.5);
+        }
+
+        /* Stat card */
+        .stat-card {
+            background: rgba(77, 212, 255, 0.06);
+            border: 1px solid rgba(77, 212, 255, 0.2);
+            border-radius: 20px;
+            padding: 28px;
+        }
+        .stat-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+        }
+        .stat-item {
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(77, 212, 255, 0.1);
+        }
+        .stat-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .stat-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 56px;
+        }
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .section-klass {
+            font-size: 12px;
+            color: rgba(255,255,255,0.4);
+            font-weight: 500;
+        }
+        .section-line {
+            height: 1px;
+            background: rgba(77, 212, 255, 0.2);
+            margin-bottom: 28px;
+        }
+
+        /* Cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .cards-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        /* Article card */
+        .article-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(77, 212, 255, 0.25);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(77, 212, 255, 0.55);
+            box-shadow: 0 8px 32px rgba(77, 212, 255, 0.15);
+        }
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(77, 212, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            flex: 1;
+        }
+        .card-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4px;
+        }
+        .badge-soon {
+            background: rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.4);
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .card-arrow {
+            color: rgba(77, 212, 255, 0.5);
+            font-size: 18px;
+            margin-left: auto;
+        }
+
+        /* KU Bridge */
+        .ku-bridge {
+            background: rgba(255,255,255,0.04);
+            border-left: 3px solid var(--accent-cyan);
+            border-radius: 0 16px 16px 0;
+            padding: 28px 32px;
+            margin-bottom: 56px;
+        }
+        .ku-bridge p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .btn-ku {
+            display: inline-block;
+            background: rgba(77, 212, 255, 0.12);
+            border: 1px solid rgba(77, 212, 255, 0.35);
+            color: var(--accent-cyan);
+            padding: 10px 22px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .btn-ku:hover {
+            background: rgba(77, 212, 255, 0.22);
+            border-color: rgba(77, 212, 255, 0.6);
+        }
+
+        /* Other hubs */
+        .other-hubs {
+            margin-bottom: 56px;
+        }
+        .other-hubs-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hubs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .hub-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+        .hub-card:hover {
+            transform: translateY(-3px);
+        }
+        .hub-card.orange {
+            border: 1px solid rgba(255, 159, 77, 0.25);
+        }
+        .hub-card.orange:hover {
+            box-shadow: 0 8px 24px rgba(255, 159, 77, 0.15);
+            border-color: rgba(255, 159, 77, 0.5);
+        }
+        .hub-card.pink {
+            border: 1px solid rgba(255, 107, 157, 0.25);
+        }
+        .hub-card.pink:hover {
+            box-shadow: 0 8px 24px rgba(255, 107, 157, 0.15);
+            border-color: rgba(255, 107, 157, 0.5);
+        }
+        .hub-card.green {
+            border: 1px solid rgba(77, 255, 176, 0.25);
+        }
+        .hub-card.green:hover {
+            box-shadow: 0 8px 24px rgba(77, 255, 176, 0.15);
+            border-color: rgba(77, 255, 176, 0.5);
+        }
+        .hub-card-accent {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .hub-card-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .hub-card.orange .hub-card-name { color: var(--accent-orange); }
+        .hub-card.pink .hub-card-name { color: var(--accent-pink); }
+        .hub-card.green .hub-card-name { color: var(--accent-green); }
+        .hub-card-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            position: relative;
+            z-index: 10;
+            border-top: 1px solid var(--glass-border);
+            background: rgba(5, 13, 26, 0.8);
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-copy {
+            font-size: 13px;
+            color: rgba(255,255,255,0.35);
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--accent-cyan); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 34px; }
+            .cards-grid, .cards-grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .hubs-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="starfield">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+</div>
+
+<!-- Dev Banner -->
+<div class="dev-banner">МАКЕТ — не деплоить</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo" style="display:inline-flex;align-items:center;gap:10px;"><img src="favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="hub-normy.html" class="active">Нормы алкоголя</a>
+            <a href="hub-problema.html">Признаки проблемы</a>
+            <a href="hub-zhizn.html">Алкоголь и жизнь</a>
+            <a href="hub-menshe.html">Как пить меньше</a>
+        </nav>
+        <span class="search-icon">🔍</span>
+    </div>
+</header>
+
+<!-- Content -->
+<main class="page-content">
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>›</span>
+        Нормы алкоголя
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Нормы алкоголя</h1>
+            <div class="hero-sub">Сколько можно пить без вреда — и как это посчитать</div>
+            <p class="hero-desc">
+                Безопасная доза алкоголя существует — но она зависит от веса, пола, возраста и состояния здоровья. ВОЗ и ведущие наркологи дают конкретные цифры: разбираемся, что они означают на практике и как применять их к себе.
+            </p>
+            <div class="chips">
+                <a href="#" class="chip">Доза по весу</a>
+                <a href="#" class="chip">Промилле</a>
+                <a href="#" class="chip">Алкоголь на диете</a>
+                <a href="#" class="chip">Можно каждый день?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section K1 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-title">K1 — Безопасная доза</div>
+            <div class="section-klass">8 статей</div>
+        </div>
+        <div class="section-line"></div>
+        <div class="cards-grid">
+            <a href="#" class="article-card">
+                <div class="card-icon">✅</div>
+                <div class="card-title">Сколько можно пить без вреда для здоровья</div>
+                <div class="card-desc">Основная инструкция с конкретными цифрами и расчётами по весу</div>
+                <div class="card-footer">
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">✅</div>
+                <div class="card-title">Безопасная доза алкоголя: мифы и факты</div>
+                <div class="card-desc">Разбор заблуждений о допустимом употреблении</div>
+                <div class="card-footer">
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Можно ли пить алкоголь каждый день?</div>
+                <div class="card-desc">Риски ежедневного употребления и что говорит наука</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Норма алкоголя в неделю: рекомендации ВОЗ</div>
+                <div class="card-desc">Официальные цифры и что за ними стоит</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Промилле: как считать и что они означают</div>
+                <div class="card-desc">Практический расчёт: от бокала вина до уровня в крови</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Алкоголь за рулём: когда можно садиться</div>
+                <div class="card-desc">Правила и реальность: сколько выводится из организма</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Какой алкоголь менее вреден для здоровья</div>
+                <div class="card-desc">Сравниваем вино, пиво, водку и коктейли по реальному вреду</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Польза алкоголя в малых дозах: миф или факт?</div>
+                <div class="card-desc">Научные данные о пользе умеренного употребления</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section K4 -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-title">K4 — Алкоголь и калории</div>
+            <div class="section-klass">5 статей</div>
+        </div>
+        <div class="section-line"></div>
+        <div class="cards-grid">
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Калории в алкоголе: вино, пиво, водка, коктейли</div>
+                <div class="card-desc">Подробная таблица калорийности популярных напитков</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Алкоголь и похудение: можно ли совместить</div>
+                <div class="card-desc">Практичный разбор: как алкоголь влияет на обмен веществ</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Пиво и лишний вес: правда о «пивном животе»</div>
+                <div class="card-desc">Факты против мифов: откуда берётся пивной живот</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Алкоголь на диете: как минимизировать вред</div>
+                <div class="card-desc">Советы для тех, кто хочет и выпить, и не испортить результат</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title">Безалкогольное пиво и вино: насколько это лучше</div>
+                <div class="card-desc">Сравнение: состав, калории, польза и разочарования</div>
+                <div class="card-footer">
+                    <span class="badge-soon">Скоро</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- KU Bridge -->
+    <div class="ku-bridge">
+        <p>Знать дозу — первый шаг к контролируемому употреблению (КУ). Но важно не просто считать — важно чувствовать свой предел.</p>
+        <a href="https://kuforum.ru" class="btn-ku">Что такое КУ →</a>
+    </div>
+
+    <!-- Other hubs -->
+    <div class="other-hubs">
+        <div class="other-hubs-title">Другие хабы</div>
+        <div class="hubs-grid">
+            <a href="hub-problema.html" class="hub-card orange">
+                <div class="hub-card-accent">⚠️</div>
+                <div class="hub-card-name">Признаки проблемы</div>
+                <div class="hub-card-desc">Где граница между «нормально» и «уже проблема»</div>
+            </a>
+            <a href="hub-zhizn.html" class="hub-card pink">
+                <div class="hub-card-accent">🌱</div>
+                <div class="hub-card-name">Алкоголь и жизнь</div>
+                <div class="hub-card-desc">Как алкоголь влияет на всё остальное в жизни</div>
+            </a>
+            <a href="hub-menshe.html" class="hub-card green">
+                <div class="hub-card-accent">📉</div>
+                <div class="hub-card-name">Как пить меньше</div>
+                <div class="hub-card-desc">Практика контролируемого употребления</div>
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-copy">© 2026 alkonorm.ru — информационный ресурс о контролируемом употреблении алкоголя</div>
+        <div class="footer-links">
+            <a href="hub-normy.html">Нормы алкоголя</a>
+            <a href="hub-problema.html">Признаки проблемы</a>
+            <a href="hub-zhizn.html">Алкоголь и жизнь</a>
+            <a href="hub-menshe.html">Как пить меньше</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

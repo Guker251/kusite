@@ -1,0 +1,21 @@
+# Отключить кеш для HTML
+<FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</FilesMatch>
+
+RewriteEngine On
+
+# 301 redirect www -> non-www
+RewriteCond %{HTTP_HOST} ^www\.alkonorm\.ru$ [NC]
+RewriteRule ^(.*)$ https://alkonorm.ru/$1 [R=301,L]
+
+# 301 redirects: .html -> canonical directory versions
+Redirect 301 /articles/kak-menshe-pit.html https://alkonorm.ru/articles/kak-menshe-pit/
+Redirect 301 /articles/kak-menshe-pit/alkogol-v-prazdniki.html https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-prazdniki/
+Redirect 301 /articles/kak-menshe-pit/kak-menshe-pit.html https://alkonorm.ru/articles/kak-menshe-pit/kak-menshe-pit/
+Redirect 301 /articles/kak-menshe-pit/kak-ne-napitsya.html https://alkonorm.ru/articles/kak-menshe-pit/kak-ne-napitsya/
+Redirect 301 /articles/pochemu-hochetsya-pit.html https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html
+Redirect 301 /articles/alkogol-v-kompanii.html https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-kompanii.html
+Redirect 301 /articles/skolko-mozno-pit.html https://alkonorm.ru/articles/skolko-mozhno-pit/

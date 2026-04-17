@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Готовность прикладывать усилия — Шаг 1 программы 7 шагов КУ | КУ</title>
+    <meta name="description" content="КУ требует взрослого подхода: готовы ли вы прикладывать усилия? Из книги «На краю Синей Бездны».">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        article { padding: 60px 0 100px; }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.7; }
+        .breadcrumb span { color: rgba(255,255,255,0.25); }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 50px 0 25px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 35px 0 20px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li, ol li {
+            position: relative;
+            padding: 12px 0 12px 35px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-size: 16px;
+        }
+
+        ol { counter-reset: item; }
+
+        ol li::before {
+            content: counter(item) ".";
+            counter-increment: item;
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 { margin-top: 0; }
+        .cyan-box { border-color: rgba(77,212,255,0.3); background: rgba(77,212,255,0.06); }
+        .pink-box { border-color: rgba(255,107,157,0.3); background: rgba(255,107,157,0.06); }
+
+        .step-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 40px rgba(77, 212, 255, 0.2);
+        }
+
+        .step-box h3 { margin-top: 0; }
+
+        .book-quote {
+            border-left: 3px solid var(--accent-cyan);
+            padding: 20px 28px;
+            margin: 30px 0;
+            background: rgba(77,212,255,0.04);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .book-quote p { color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 6px; }
+        .book-quote cite { font-size: 13px; color: rgba(255,255,255,0.3); font-style: normal; }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 44px 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 { margin: 0 0 14px; padding: 0; font-size: 28px; }
+        .cta-box h2::before { display: none; }
+
+        .cta-box p {
+            font-size: 17px;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(77,212,255,0.45);
+        }
+
+        .related-links { margin: 40px 0; }
+
+        .related-links a {
+            display: block;
+            padding: 14px 22px;
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .related-links a:hover {
+            background: rgba(77,212,255,0.12);
+            border-color: var(--accent-cyan);
+            padding-left: 28px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover { gap: 12px; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+            p, ul li, ol li { font-size: 16px; }
+            .nav-links { display: none; }
+            .cta-box { padding: 30px 24px; }
+        }
+    </style>
+    <link rel="canonical" href="https://alkonorm.ru/articles/gotovnost-k-usiliyam.html">
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../index.html">Главная</a>
+                <span>›</span>
+                <a href="7-shagov-ku.html">Программа 7 шагов КУ</a>
+                <span>›</span>
+                Шаг 1 — Готовность к усилиям
+            </div>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">Шаг 1 из 7</div>
+                <h1>Готовность прикладывать усилия</h1>
+                <div class="article-meta">
+                    <span>Программа <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none;">7 шагов КУ</a></span>
+                    <span>·</span>
+                    <span>Вторая проверка Шага 1</span>
+                </div>
+            </div>
+
+            <div class="fade-in delay-1">
+
+                <p>Когда взрослый человек недоволен последствиями употребления, но при этом не хочет ничего менять в самом употреблении, возникает типичная картина «детской» позиции в терминах транзактного анализа Эрика Берна. Его внутренний запрос звучит так: «сделайте так, чтобы мне было хорошо, но чтобы я ничего для этого не делал и ничего не терял». Это ожидание внешнего чуда, а не готовность к взрослому подходу и прикладыванию собственных усилий.</p>
+
+                <h2>Детская и взрослая позиция</h2>
+
+                <p>В модели Берна «ребёнок» ориентирован на удовольствие, избегание боли и перекладывание ответственности на кого-то другого. Оправдания могут звучать как «у меня тяжёлая работа, поэтому расслабление необходимо», «мне не повезло в жизни», «мне нужно пить алкоголь, иначе я сойду с ума». Или просто «что ж делать, я зависимый, поэтому ничего не могу изменить». Как и все зависимые, я тоже оправдывал своё бесконтрольное употребление шаблонными мыслями: «все же пьют так же» (на самом деле нет), «я же не валяюсь под забором» (морально и психологически — валяешься, особенно в глазах близких), «это разовые срывы» (на самом деле это уже была стойкая система).</p>
+
+                <p>Взрослая позиция, наоборот, предполагает признание причинно-следственной связи: я и только я виновен в своём злоупотреблении алкоголем, ведь насильно никто никому в рот напитки не заливает. Для КУ эта разница принципиальна и определяет зрелость личности, от которой кардинально зависит успех или неуспех контроля. В этом и есть осознанность, которую предполагает Первый шаг.</p>
+
+                <div class="highlight-box">
+                    <h3>Что требует КУ от взрослого человека</h3>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 8px;">Методика КУ требует набора взрослых способностей:</p>
+                    <ul>
+                        <li>выдерживать столкновение с препятствиями, когда хочется пить больше, но нужно остановиться;</li>
+                        <li>брать на себя ответственность за планирование дозы, частоты и преодоление триггеров;</li>
+                        <li>честно фиксировать реальные цифры, а не желаемую картину;</li>
+                        <li>менять среду и привычки, а не только жаловаться на последствия.</li>
+                    </ul>
+                </div>
+
+                <h2>Что происходит при детской позиции</h2>
+
+                <p>Если человек внутренне остаётся в детской позиции, он хочет убрать боль, но не хочет брать на себя труд изменений. Тогда КУ превращается в форму самоуспокоения: «я вроде как занимаюсь своим употреблением», но по факту ни один ключевой элемент не реализуется — ни честный самоанализ, ни реальное ограничение, ни способы для нейтрализации триггеров. Вероятность устойчивого контролируемого употребления в такой конфигурации крайне мала.</p>
+
+                <p>Отсюда следует прагматичный вывод: если человек хронически застрял в детской позиции — то есть хочет, чтобы исчезли последствия, но категорически не готов к внутренней работе по изменению шаблонов поведения — то попытки КУ будут напоминать игру в иллюзию контроля. Возникает замкнутый круг: решил — не получилось — пьёт как раньше — расстроился — решил — не получилось, и так без конца. В этом случае модель абсолютной трезвости может быть более реалистичным и безопасным решением: она снимает необходимость тонкой саморегуляции в зоне, где человек не готов брать ответственность, и переводит задачу в категоричный режим «пью/не пью», который психологически проще поддерживать.</p>
+
+                <p>Чтобы вытащить человека из детской позиции, нужно приложить немалые усилия. Как правило, эффективно работают шоковые меры. На нашем форуме часто приходится говорить людям нелицеприятные вещи об их употреблении, чтобы открыть глаза и прояснить действительное положение вещей.</p>
+
+                <h2>Интервенция</h2>
+
+                <p>А вот на западе принято устраивать такое мероприятие, как интервенция. Обычно она начинается не с разговора, а с тишины перед разговором. С той паузы, когда человек ещё не знает, зачем его позвали, но уже чувствует, что обычной встречи не получится. Комната может быть любой — гостиная, кабинет консультанта, кухня в доме родителей. Стулья стоят слишком правильно. Люди сидят слишком прямо. И в их взглядах нет привычной бытовой рассеянности.</p>
+
+                <p>Он входит и сначала раздражается. От внезапной серьёзности, от ненужной торжественности, от ощущения, что сценарий написан без его участия. Это почти всегда воспринимается как давление, иногда как предательство. Он ещё не слушает — он оценивает, ищет выход, собирает аргументы защиты.</p>
+
+                <div class="book-quote">
+                    <p>Потом начинают говорить. Говорят по очереди. Не спорят, не перебивают. Не читают нотаций. Каждый рассказывает о своём — не о нормах и морали, а о пережитом опыте. О ночных звонках, о сорванных планах, о тревоге, которая стала привычным фоном жизни. Эти слова не обвиняют напрямую, но они лишают привычной защиты — потому что не обсуждают его поведение как абстракцию, а показывают последствия как прожитую реальность других людей.</p>
+                    <cite>Из книги «На краю Синей Бездны» — практическое руководство по системе КУ</cite>
+                </div>
+
+                <p>В этом месте обычно происходит внутренний сдвиг. Не обязательно признание — чаще усталость от сопротивления. Иногда злость, иногда молчание, иногда холодная рационализация. Интервенция не гарантирует поворотного момента и не стремится к драматическим решениям, она просто создаёт пространство, где отрицание становится труднее отстаивать.</p>
+
+                <p>Затем звучит предложение. Не совет, не пожелание — конкретный путь: консультация, программа лечения, сопровождение. И вместе с этим обозначаются границы: что изменится в поведении близких, если помощь будет отвергнута. Это не угроза. Это попытка вернуть ответственность на её естественное место.</p>
+
+                <p>После встречи редко происходит немедленная трансформация. Человек может уйти раздражённым или замкнутым. Может согласиться из рационального расчёта, а не из внутреннего убеждения. Может отвергнуть всё сказанное. Интервенция не завершает историю — она только делает невозможным прежнее незнание того, что «всё идёт нормально».</p>
+
+                <p>И в этом её смысл: не сломать волю, не навязать решение, а зафиксировать момент, в котором реальность произнесена вслух и больше не может быть полностью отодвинута на периферию сознания.</p>
+
+                <div class="highlight-box cyan-box">
+                    <h3>Краткое резюме</h3>
+                    <p>КУ требует взрослого подхода, при котором человек согласен платить определённую цену за свободу (усилия, дисциплина, дискомфорт, ограничения). Если же кто-то хочет «волшебную таблетку» в виде результата без усилий, методика КУ лишается опор и превращается в форму самообмана, а не в инструмент изменения. Прогноз в этом случае отрицательный.</p>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Готовы к усилиям?</h2>
+                    <p>Обсудите на форуме — там люди, которые уже прошли этот путь.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также — Шаг 1:</strong></p>
+                    <a href="zhelanie-menyatsya.html">→ Проверить, есть ли желание меняться</a>
+                    <a href="esli-net-zhelaniya-ku.html">→ Если нет сильного желания — полная трезвость</a>
+                    <a href="chto-izmenit-ku.html">→ Что изменится к лучшему в режиме КУ</a>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ</a>
+                </div>
+
+                <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

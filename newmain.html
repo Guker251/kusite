@@ -1,0 +1,1314 @@
+<!-- МАКЕТ НОВОЙ ГЛАВНОЙ — не деплоить -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МАКЕТ — КУ: новая главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        /* Starfield */
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        .stars-2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(1px 1px at 40px 60px, white, transparent),
+                radial-gradient(1px 1px at 110px 20px, white, transparent),
+                radial-gradient(2px 2px at 170px 90px, white, transparent),
+                radial-gradient(1px 1px at 75px 135px, white, transparent);
+            background-repeat: repeat;
+            background-size: 250px 250px;
+            animation: twinkle 5s ease-in-out infinite 1.5s;
+            opacity: 0.3;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 13, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .search-icon:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 40px;
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.7;
+            margin-top: 12px;
+        }
+
+        .brain-illustration {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .brain-illustration img {
+            width: 100%;
+            max-width: 520px;
+            filter: drop-shadow(0 0 60px rgba(77, 212, 255, 0.5));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Hubs section */
+        .hubs-section {
+            padding: 60px 0 20px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hubs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .hub-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.4s ease;
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Цветной верхний бордер */
+        .hub-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 24px 24px 0 0;
+        }
+
+        .hub-card.hub-cyan::before   { background: #4dd4ff; }
+        .hub-card.hub-orange::before { background: #ff9f4d; }
+        .hub-card.hub-pink::before   { background: #ff6b9d; }
+        .hub-card.hub-green::before  { background: #4dffb0; }
+
+        /* Glow при hover по цвету акцента */
+        .hub-card.hub-cyan:hover {
+            border-color: #4dd4ff;
+            box-shadow: 0 24px 64px rgba(77, 212, 255, 0.25);
+            transform: translateY(-6px);
+        }
+
+        .hub-card.hub-orange:hover {
+            border-color: #ff9f4d;
+            box-shadow: 0 24px 64px rgba(255, 159, 77, 0.25);
+            transform: translateY(-6px);
+        }
+
+        .hub-card.hub-pink:hover {
+            border-color: #ff6b9d;
+            box-shadow: 0 24px 64px rgba(255, 107, 157, 0.25);
+            transform: translateY(-6px);
+        }
+
+        .hub-card.hub-green:hover {
+            border-color: #4dffb0;
+            box-shadow: 0 24px 64px rgba(77, 255, 176, 0.25);
+            transform: translateY(-6px);
+        }
+
+        .hub-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .hub-icon {
+            font-size: 40px;
+            flex-shrink: 0;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .hub-titles {}
+
+        .hub-titles h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .hub-card.hub-cyan   .hub-titles h3 { color: #4dd4ff; }
+        .hub-card.hub-orange .hub-titles h3 { color: #ff9f4d; }
+        .hub-card.hub-pink   .hub-titles h3 { color: #ff6b9d; }
+        .hub-card.hub-green  .hub-titles h3 { color: #4dffb0; }
+
+        .hub-subtitle {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+
+        .hub-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .hub-articles {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hub-articles a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            padding: 2px 0;
+            display: block;
+        }
+
+        .hub-articles a::before {
+            content: '→ ';
+            font-size: 12px;
+        }
+
+        .hub-card.hub-cyan   .hub-articles a:hover { color: #4dd4ff; }
+        .hub-card.hub-orange .hub-articles a:hover { color: #ff9f4d; }
+        .hub-card.hub-pink   .hub-articles a:hover { color: #ff6b9d; }
+        .hub-card.hub-green  .hub-articles a:hover { color: #4dffb0; }
+
+        .hub-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 1px solid currentColor;
+            transition: all 0.3s ease;
+        }
+
+        .hub-card.hub-cyan   .hub-cta { color: #4dd4ff; }
+        .hub-card.hub-orange .hub-cta { color: #ff9f4d; }
+        .hub-card.hub-pink   .hub-cta { color: #ff6b9d; }
+        .hub-card.hub-green  .hub-cta { color: #4dffb0; }
+
+        .hub-card.hub-cyan   .hub-cta:hover { background: rgba(77,212,255,0.15); }
+        .hub-card.hub-orange .hub-cta:hover { background: rgba(255,159,77,0.15); }
+        .hub-card.hub-pink   .hub-cta:hover { background: rgba(255,107,157,0.15); }
+        .hub-card.hub-green  .hub-cta:hover { background: rgba(77,255,176,0.15); }
+
+        /* Quick start section */
+        .quickstart-section {
+            padding: 60px 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin: 0 0 20px;
+        }
+
+        .card {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 20px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.08), rgba(255, 107, 157, 0.08));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card:hover::before { opacity: 1; }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 60px rgba(77, 212, 255, 0.25);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .card-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(77, 212, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 0 14px rgba(77, 212, 255, 0.35));
+        }
+
+        .card-icon svg { width: 38px; height: 38px; }
+
+        .card-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-text p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: gap 0.3s ease;
+        }
+
+        .card-link:hover { gap: 10px; }
+
+        /* Situations */
+        .situations {
+            padding: 40px 0;
+        }
+
+        .situations-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .situations-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .view-all {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.3s ease;
+        }
+
+        .view-all:hover { gap: 10px; }
+
+        .situations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .situation-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 260px;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .situation-card:hover { transform: scale(1.04); }
+
+        .situation-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .situation-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.88), transparent);
+        }
+
+        .situation-overlay h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Bottom panels */
+        .bottom-panels {
+            padding: 40px 0 80px;
+        }
+
+        .info-panels-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .info-panel {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .info-panel.start-panel {
+            width: calc(50% - 10px);
+            flex-shrink: 0;
+        }
+
+        .info-panel.forum-panel {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .info-panel h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-panel ul {
+            list-style: none;
+        }
+
+        .info-panel li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .info-panel li:last-child { border-bottom: none; }
+
+        .info-panel li::before {
+            content: '▸';
+            color: var(--accent-cyan);
+            font-size: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .info-panel li a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(77, 212, 255, 0.35);
+            transition: border-color 0.2s;
+        }
+
+        .info-panel li a:hover { border-color: var(--accent-cyan); }
+
+        /* Forum panel */
+        .live-dot {
+            width: 9px;
+            height: 9px;
+            background: #4ade80;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px rgba(74, 222, 128, 0.9);
+            animation: pulse-dot 2s ease-in-out infinite;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.6; }
+        }
+
+        .forum-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .forum-panel-header h3 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .forum-link-all {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 13px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .forum-link-all:hover { opacity: 1; }
+
+        .forum-panel-topics {
+            list-style: none;
+            margin: 0 0 16px;
+            padding: 0;
+        }
+
+        .forum-panel-topics li { padding: 0; margin: 0; }
+        .forum-panel-topics li::before { display: none; }
+
+        .forum-panel-topics a {
+            display: block;
+            padding: 9px 8px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .forum-panel-topics a:hover {
+            background: rgba(77, 212, 255, 0.08);
+            color: var(--text-primary);
+            padding-left: 12px;
+        }
+
+        .forum-panel-topics .post-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .forum-panel-topics .post-title strong {
+            font-size: 14px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .forum-panel-topics span {
+            font-size: 12px;
+            color: rgba(255,255,255,0.3);
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .forum-panel-topics .post-author {
+            color: var(--accent-cyan);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .forum-panel-topics .post-snippet {
+            display: block;
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+
+        .forum-panel-topics .post-item {
+            display: block;
+            padding: 9px 8px;
+            border-radius: 7px;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .forum-panel-topics .post-item:hover {
+            background: rgba(77, 212, 255, 0.08);
+        }
+
+        .forum-panel-btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(77, 212, 255, 0.3);
+        }
+
+        .forum-panel-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(77, 212, 255, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid var(--glass-border);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.35);
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: var(--accent-cyan); }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+
+        /* Dev banner */
+        .dev-banner {
+            position: relative;
+            z-index: 200;
+            background: linear-gradient(90deg, rgba(255,159,77,0.2), rgba(255,107,157,0.2));
+            border-bottom: 1px solid rgba(255,159,77,0.4);
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.05em;
+        }
+
+        .dev-banner strong { color: #ff9f4d; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .brain-illustration {
+                order: -1;
+                text-align: center;
+            }
+
+            .brain-illustration img {
+                max-width: 380px;
+            }
+
+            .hubs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .situations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .info-panels-row {
+                flex-direction: column;
+            }
+
+            .info-panel.start-panel {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .situations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .section-header h2 {
+                font-size: 26px;
+            }
+
+            .hub-card {
+                padding: 24px;
+            }
+
+            .hub-titles h3 {
+                font-size: 19px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links li:not(:first-child) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dev banner -->
+    <div class="dev-banner"><strong>МАКЕТ</strong> — новая главная страница, не деплоить</div>
+
+    <!-- Starfield Background -->
+    <div class="starfield">
+        <div class="stars"></div>
+        <div class="stars-2"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">&#128737;</div>
+                    <span>КУ</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="http://kuforum.ru">Форум</a></li>
+                    <li><a href="articles/chto-takoe-ku.html">Что такое КУ</a></li>
+                    <li><a href="articles/soobschestvo.html">Сообщество КУ</a></li>
+                </ul>
+                <div class="search-icon">&#128269;</div>
+            
+            <a href="articles/stati/">Статьи</a>
+        </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-in">
+                    <h1>КУ – контролируемое употребление алкоголя</h1>
+                    <p>Если вы хотите пить меньше, но не готовы отказываться полностью — вы попали по адресу.</p>
+                    <p style="font-size:16px; color:rgba(255,255,255,0.6); margin-top:14px;">КУ — это метод управления употреблением через личные правила, учёт и работу с триггерами.</p>
+                </div>
+                <div class="brain-illustration animate-in delay-2">
+                    <img src="pic/mozg.jpg" alt="КУ — контролируемое употребление алкоголя">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hubs Section -->
+    <section class="hubs-section">
+        <div class="container">
+            <div class="section-title">С чего начать — выбери своё</div>
+            <div class="hubs-grid">
+
+                <!-- Хаб 1: Нормы алкоголя -->
+                <div class="hub-card hub-cyan">
+                    <div class="hub-header">
+                        <div class="hub-icon">&#9878;</div>
+                        <div class="hub-titles">
+                            <h3>Нормы алкоголя</h3>
+                            <div class="hub-subtitle">Сколько можно пить без вреда</div>
+                        </div>
+                    </div>
+                    <p class="hub-desc">Нормы ВОЗ, личный лимит, промилле, безопасные дозы — всё что нужно знать до того, как устанавливать свои правила.</p>
+                    <div class="hub-articles">
+                        <a href="#">Сколько можно пить в день и в неделю</a>
+                        <a href="#">Нормы алкоголя: таблица доз</a>
+                        <a href="#">Через сколько алкоголь выводится</a>
+                    </div>
+                    <a href="#" class="hub-cta">Смотреть всё →</a>
+                </div>
+
+                <!-- Хаб 2: Признаки проблемы -->
+                <div class="hub-card hub-orange">
+                    <div class="hub-header">
+                        <div class="hub-icon">&#128269;</div>
+                        <div class="hub-titles">
+                            <h3>Признаки проблемы</h3>
+                            <div class="hub-subtitle">Я алкоголик или нет?</div>
+                        </div>
+                    </div>
+                    <p class="hub-desc">Тесты, самодиагностика, пью каждый день — что делать. Без стыда, честно про симптомы и что они значат.</p>
+                    <div class="hub-articles">
+                        <a href="#">Тест AUDIT: есть ли зависимость</a>
+                        <a href="#">Пью каждый день — что это значит</a>
+                        <a href="#">Признаки алкогольной зависимости</a>
+                        <a href="#">Почему не могу остановиться</a>
+                    </div>
+                    <a href="#" class="hub-cta">Смотреть всё →</a>
+                </div>
+
+                <!-- Хаб 3: Алкоголь и жизнь -->
+                <div class="hub-card hub-pink">
+                    <div class="hub-header">
+                        <div class="hub-icon">&#128154;</div>
+                        <div class="hub-titles">
+                            <h3>Алкоголь и жизнь</h3>
+                            <div class="hub-subtitle">Последствия, которые мотивируют</div>
+                        </div>
+                    </div>
+                    <p class="hub-desc">Здоровье, стресс, отношения, работа — реальный ущерб от лишнего. Не запугивание, а честная картина.</p>
+                    <div class="hub-articles">
+                        <a href="#">Алкоголь и печень: что происходит</a>
+                        <a href="#">Пью от стресса: замкнутый круг</a>
+                        <a href="#">Алкоголь и отношения</a>
+                        <a href="#">Похмелье: почему становится хуже</a>
+                    </div>
+                    <a href="#" class="hub-cta">Смотреть всё →</a>
+                </div>
+
+                <!-- Хаб 4: Как пить меньше -->
+                <div class="hub-card hub-green">
+                    <div class="hub-header">
+                        <div class="hub-icon">&#128737;</div>
+                        <div class="hub-titles">
+                            <h3>Как пить меньше</h3>
+                            <div class="hub-subtitle">Метод КУ — контроль без запрета</div>
+                        </div>
+                    </div>
+                    <p class="hub-desc">Личные правила, план, учёт, стоп-правила для вечеринок. Практические инструменты, которые реально работают.</p>
+                    <div class="hub-articles">
+                        <a href="articles/kak-menshe-pit/kak-menshe-pit.html">Как меньше пить: с чего начать</a>
+                        <a href="articles/kak-menshe-pit/kak-ne-napitsya.html">Как не напиться на празднике</a>
+                        <a href="#">Контроль на вечеринке</a>
+                        <a href="articles/7-shagov-ku.html">Программа 7 шагов КУ</a>
+                    </div>
+                    <a href="articles/7-shagov-ku.html" class="hub-cta">Начать →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start: 6 карточек -->
+    <section class="quickstart-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Начать прямо сейчас</h2>
+            </div>
+            <div class="cards-grid">
+
+                <a href="articles/kak-menshe-pit/kak-menshe-pit.html" class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4dd4ff"/><stop offset="100%" stop-color="#ff6b9d"/></linearGradient></defs>
+                                <rect x="3" y="4" width="18" height="17" rx="3" stroke="url(#g1)" stroke-width="1.8" fill="none"/>
+                                <path d="M3 9h18" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M8 2v4M16 2v4" stroke="url(#g1)" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M7 12l3 2 3-1.5 4 3" stroke="url(#g1)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Как меньше пить</h3>
+                            <p>Снижение частоты и объема, план, учёт, корректировка</p>
+                            <span class="card-link">Перейти к теме →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="articles/kak-menshe-pit/kak-ne-napitsya.html" class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg viewBox="5.5 0.5 13 23" fill="none">
+                                <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4dd4ff"/><stop offset="100%" stop-color="#ff6b9d"/></linearGradient></defs>
+                                <rect x="7" y="2" width="10" height="18" rx="5" stroke="url(#g2)" stroke-width="1.8" fill="none"/>
+                                <circle cx="12" cy="7" r="1.8" fill="url(#g2)"/>
+                                <circle cx="12" cy="12" r="1.8" fill="url(#g2)" opacity="0.45"/>
+                                <circle cx="12" cy="17" r="1.8" fill="url(#g2)" opacity="0.12"/>
+                                <path d="M7 21h10" stroke="url(#g2)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Как не напиться</h3>
+                            <p>Контроль на вечеринке, темп, стоп-правила, ситуации</p>
+                            <span class="card-link">Перейти к теме →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="articles/skolko-mozno-pit.html" class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4dd4ff"/><stop offset="100%" stop-color="#ff6b9d"/></linearGradient></defs>
+                                <rect x="33" y="90" width="34" height="8" rx="4" fill="url(#g3)"/>
+                                <rect x="46" y="22" width="8" height="70" rx="4" fill="url(#g3)"/>
+                                <circle cx="50" cy="18" r="8" fill="url(#g3)"/>
+                                <rect x="10" y="12" width="80" height="8" rx="4" fill="url(#g3)" transform="rotate(-6 50 16)"/>
+                                <line x1="22" y1="24" x2="4" y2="48" stroke="url(#g3)" stroke-width="4" stroke-linecap="round"/>
+                                <line x1="22" y1="24" x2="40" y2="48" stroke="url(#g3)" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M2 48 Q22 80 42 48 Z" fill="url(#g3)"/>
+                                <line x1="78" y1="24" x2="60" y2="48" stroke="url(#g3)" stroke-width="4" stroke-linecap="round"/>
+                                <line x1="78" y1="24" x2="96" y2="48" stroke="url(#g3)" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M58 48 Q78 80 98 48 Z" fill="url(#g3)"/>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Сколько можно пить</h3>
+                            <p>Личный лимит, план на неделю, как держать контроль</p>
+                            <span class="card-link">Перейти к теме →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html" class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4dd4ff"/><stop offset="100%" stop-color="#ff6b9d"/></linearGradient></defs>
+                                <circle cx="12" cy="12" r="9" stroke="url(#g4)" stroke-width="1.8" fill="none"/>
+                                <path d="M9.5 9a2.5 2.5 0 014.8 1c0 2-2.8 2.5-2.8 4.5" stroke="url(#g4)" stroke-width="1.8" stroke-linecap="round"/>
+                                <circle cx="11.5" cy="17" r="1" fill="url(#g4)"/>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Почему хочется пить алкоголь</h3>
+                            <p>Тяга, триггеры, стресс, шаблоны поведения</p>
+                            <span class="card-link">Перейти к теме →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="articles/cherez-skolko-mozhno-pit.html" class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4dd4ff"/><stop offset="100%" stop-color="#ff6b9d"/></linearGradient></defs>
+                                <circle cx="12" cy="12" r="9" stroke="url(#g5)" stroke-width="1.8" fill="none"/>
+                                <path d="M12 7v5l3 3" stroke="url(#g5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Через сколько можно пить снова</h3>
+                            <p>Интервалы между эпизодами, вывод алкоголя, правила пауз</p>
+                            <span class="card-link">Перейти к теме →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="articles/skolko-mozhno-alkogolya.html" class="card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4dd4ff"/><stop offset="100%" stop-color="#ff6b9d"/></linearGradient></defs>
+                                <path d="M9 3h6l1 5H8L9 3z" stroke="url(#g6)" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+                                <path d="M8 8c0 6 2 9 4 10s4-4 4-10" stroke="url(#g6)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                                <path d="M8 14h8" stroke="url(#g6)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <h3>Нормы и дозы алкоголя</h3>
+                            <p>Нормы ВОЗ в граммах, таблица доз по напиткам</p>
+                            <span class="card-link">Перейти к теме →</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Situations Section -->
+    <section class="situations">
+        <div class="container">
+            <div class="situations-header">
+                <h2>Алкоголь в ситуациях</h2>
+                <a href="#" class="view-all">Все ситуации →</a>
+            </div>
+            <div class="situations-grid">
+                <a href="articles/alkogol-v-otpuske.html" class="situation-card">
+                    <img src="pic/holiday2.jpg" alt="Алкоголь в отпуске">
+                    <div class="situation-overlay">
+                        <h4>Алкоголь в отпуске</h4>
+                    </div>
+                </a>
+                <a href="articles/kak-menshe-pit/alkogol-v-kompanii.html" class="situation-card">
+                    <img src="pic/friends2.jpg" alt="Алкоголь в компании">
+                    <div class="situation-overlay">
+                        <h4>Алкоголь в компании</h4>
+                    </div>
+                </a>
+                <a href="articles/alkogol-na-korporative.html" class="situation-card">
+                    <img src="pic/korporat2.png" alt="Алкоголь на корпоративе">
+                    <div class="situation-overlay">
+                        <h4>Алкоголь на корпоративе</h4>
+                    </div>
+                </a>
+                <a href="articles/kak-menshe-pit/alkogol-v-prazdniki.html" class="situation-card">
+                    <img src="pic/firework2.jpg" alt="Алкоголь в праздники">
+                    <div class="situation-overlay">
+                        <h4>Алкоголь в праздники</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Panels: С чего начать + Форум -->
+    <section class="bottom-panels">
+        <div class="container">
+            <div class="info-panels-row">
+                <div class="info-panel start-panel">
+                    <h3>С чего начать?</h3>
+                    <ul>
+                        <li>20 минут: <a href="articles/kak-menshe-pit/kak-menshe-pit.html">Прочитай "Как меньше пить"</a> и выбери лимит</li>
+                        <li>10 минут: <a href="articles/nastroy-podschet-lcha.html">Прочитай "Как настроить подсчёт лча"</a> и выбери инструмент учёта</li>
+                        <li>10 минут: <a href="articles/kak-menshe-pit/kak-ne-napitsya.html">Прочитай "Как не напиться"</a> и выбери стоп-правило</li>
+                    </ul>
+                </div>
+                <div class="info-panel forum-panel">
+                    <div class="forum-panel-header">
+                        <h3><span class="live-dot"></span>Последние обсуждения</h3>
+                        <a href="https://kuforum.ru" target="_blank" rel="noopener" class="forum-link-all">Все темы →</a>
+                    </div>
+                    <ul class="forum-panel-topics" id="forum-topics-list">
+                        <li><a href="https://kuforum.ru" style="opacity:0.5">Загрузка…</a></li>
+                    </ul>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="forum-panel-btn">Присоединиться к форуму →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="index.html">alkonorm.ru</a> &nbsp;|&nbsp;
+                <a href="http://kuforum.ru" target="_blank" rel="noopener">kuforum.ru</a> &nbsp;|&nbsp;
+                <a href="articles/chto-takoe-ku.html">Что такое КУ</a> &nbsp;|&nbsp;
+                <a href="articles/7-shagov-ku.html">Программа 7 шагов</a>
+            </p>
+            <p style="margin-top:12px;">Сайт не является медицинским ресурсом. При зависимости обратитесь к врачу.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Карточки — hover через JS (для data-href совместимости, если нужно)
+        document.querySelectorAll('.hub-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const cta = this.querySelector('.hub-cta');
+                if (cta && !e.target.closest('a') && cta.href !== '#') {
+                    window.location.href = cta.href;
+                }
+            });
+        });
+
+        // Smooth scroll для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // IntersectionObserver для анимаций
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+        // Форум: загрузка последних тем
+        (function() {
+            const PROXY = 'https://kuforum.ru/ku/proxy.php';
+            const list = document.getElementById('forum-topics-list');
+
+            function timeAgo(ts) {
+                const diff = Math.floor((Date.now() / 1000 - ts) / 60);
+                if (diff < 1)  return 'только что';
+                if (diff < 60) return diff + ' мин';
+                const h = Math.floor(diff / 60);
+                if (h < 24)    return h + ' ч';
+                return Math.floor(h / 24) + ' д';
+            }
+
+            fetch(PROXY)
+                .then(r => r.json())
+                .then(posts => {
+                    if (!posts.length) throw new Error();
+                    list.innerHTML = posts.slice(0, 4).map(p => {
+                        const ago = timeAgo(p.date);
+                        const snippet = p.snippet
+                            ? `<div class="post-snippet"><em class="post-author">${p.author}:</em> ${p.snippet}</div>`
+                            : '';
+                        const link = p.post_url || p.url;
+                        return `<li>
+                            <a href="${link}" target="_blank" rel="noopener" class="post-item">
+                                <div class="post-title">
+                                    <strong>${p.title}</strong>
+                                    <span>${ago}</span>
+                                </div>
+                                ${snippet}
+                            </a>
+                        </li>`;
+                    }).join('');
+                })
+                .catch(() => {
+                    list.innerHTML = '<li><a href="https://kuforum.ru" target="_blank" rel="noopener">Перейти на форум →</a></li>';
+                });
+        })();
+    </script>
+
+</body>
+</html>

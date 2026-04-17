@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Сформулировать свою стратегию КУ — Шаг 3 программы 7 шагов КУ | КУ</title>
+    <meta name="description" content="Как разработать личную стратегию КУ: алгоритм из 6 шагов, типы триггеров по управляемости, пример готовой стратегии из книги.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        article { padding: 60px 0 100px; }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover { opacity: 0.7; }
+        .breadcrumb span { color: rgba(255,255,255,0.25); }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 50px 0 25px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 35px 0 20px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li, ol li {
+            position: relative;
+            padding: 12px 0 12px 35px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-size: 16px;
+        }
+
+        ol {
+            counter-reset: ol-counter;
+        }
+
+        ol li {
+            counter-increment: ol-counter;
+        }
+
+        ol li::before {
+            content: counter(ol-counter) '.';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-size: 17px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 { margin-top: 0; }
+        .cyan-box { border-color: rgba(77,212,255,0.3); background: rgba(77,212,255,0.06); }
+        .example-box { border-color: rgba(255,214,0,0.25); background: rgba(255,214,0,0.04); }
+        .example-box h3 { color: #ffd600; }
+
+        .step-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 40px rgba(77, 212, 255, 0.2);
+        }
+
+        .step-box h3 { margin-top: 0; }
+
+        .step-box.managed   { border-color: rgba(77,212,255,0.3); }
+        .step-box.partial   { border-color: rgba(255,214,0,0.25); }
+        .step-box.partial h3 { color: #ffd600; }
+        .step-box.fixed     { border-color: rgba(255,107,157,0.3); }
+        .step-box.fixed h3  { color: var(--accent-pink); }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 44px 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 { margin: 0 0 14px; padding: 0; font-size: 28px; }
+        .cta-box h2::before { display: none; }
+
+        .cta-box p {
+            font-size: 17px;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(77,212,255,0.45);
+        }
+
+        .related-links { margin: 40px 0; }
+
+        .related-links a {
+            display: block;
+            padding: 14px 22px;
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .related-links a:hover {
+            background: rgba(77,212,255,0.12);
+            border-color: var(--accent-cyan);
+            padding-left: 28px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover { gap: 12px; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+            p, ul li, ol li { font-size: 16px; }
+            .nav-links { display: none; }
+            .cta-box { padding: 30px 24px; }
+        }
+    </style>
+    <link rel="canonical" href="https://alkonorm.ru/articles/strategiya-ku.html">
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="../index.html">Главная</a>
+                <span>›</span>
+                <a href="7-shagov-ku.html">Программа 7 шагов КУ</a>
+                <span>›</span>
+                Шаг 3 — Разработка плана
+            </div>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">Шаг 3 из 7</div>
+                <h1>Сформулировать свою стратегию КУ</h1>
+                <div class="article-meta">
+                    <span>Программа <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none;">7 шагов КУ</a></span>
+                    <span>·</span>
+                    <span>Алгоритм разработки личного плана</span>
+                </div>
+            </div>
+
+            <div class="fade-in delay-1">
+
+                <h2>Компромиссы убивают стратегию</h2>
+
+                <p>Стратегическая часть плана нужна не для того, чтобы красиво описать намерения, а для того, чтобы уменьшать вероятность эпизодов употребления и удерживать их в безопасных рамках. Этот уровень определяется ещё до конкретной даты и ещё до конкретного вечера. Он заранее ограничивает пространство возможного, чтобы в момент тяги не приходилось вести переговоры с самим собой.</p>
+
+                <p>Начинать разумнее не с абстрактных рассуждений, а с фактов. Нужно выписать свои наиболее частые ситуации, которые предшествуют алкогольному эпизоду. Важно фиксировать не только внешнее событие, но и то, что обычно происходит дальше, какая мысль возникает, какое оправдание включается, как быстро появляется решение.</p>
+
+                <p>Функция — это ответ на вопрос «зачем алкоголь нужен именно здесь и сейчас»: снять тревогу, погасить раздражение, отключиться от усталости, наградить себя, облегчить общение, усилить удовольствие, заполнить пустой вечер, поддержать ритуал. Пока функция не названа прямо, правила будут слабые.</p>
+
+                <h2>Три группы триггеров по управляемости</h2>
+
+                <div class="step-box managed">
+                    <h3>Первая группа — управляемые триггеры</h3>
+                    <p>Это внешние условия, которые можно убрать или резко ослабить без серьёзного ущерба для жизни: хранение алкоголя дома, маршруты через магазин, привычные ритуалы «под фильм» или «для окончания дня». Здесь стратегия должна быть жёсткой и простой — приоритетом становится устранение, а не героическая борьба с собой.</p>
+                </div>
+
+                <div class="step-box partial">
+                    <h3>Вторая группа — частично управляемые триггеры</h3>
+                    <p>Их нельзя исключить полностью, потому что они связаны с социальной жизнью и календарём: гости, встречи, праздники, мероприятия. Задача стратегии не в том, чтобы убрать событие, а в том, чтобы заранее задать условия допуска. Стратегия задаёт принцип: эпизод возможен только внутри заранее выделенного ресурса, без расширения лимитов.</p>
+                </div>
+
+                <div class="step-box fixed">
+                    <h3>Третья группа — неустранимые триггеры</h3>
+                    <p>Это состояния и события жизни, которые невозможно отменить: тревога, усталость, конфликт, одиночество, горе. Здесь ключевое — не пытаться победить тягу волей, а заранее определить протокол обработки.</p>
+                    <p>Важно различать два инструмента: отказ и замена. Отказ оправдан там, где функция высокорисковая. Замена нужна там, где функция более нейтральна — с ритуалом, скукой, завершением дня. В этих случаях запрет без замены создаёт накопление напряжения, а затем внезапный срыв.</p>
+                </div>
+
+                <h2>Алгоритм создания стратегии</h2>
+
+                <ol>
+                    <li>Определить наиболее частые ситуации, предшествующие эпизоду, и зафиксировать тип эпизода.</li>
+                    <li>Для каждой ситуации определить функцию — зачем нужен алкоголь.</li>
+                    <li>Разделить триггеры на три группы: управляемые, частично управляемые, неустранимые.</li>
+                    <li>Для управляемых триггеров ввести правила устранения или ослабления.</li>
+                    <li>Для частично управляемых и неустранимых сформулировать правила и протокол замены.</li>
+                    <li>Для высокорисковых ситуаций задать прямые запреты.</li>
+                </ol>
+
+                <p>Суточное ограничение является жёсткой границей режима КУ. Оно не обсуждается и не зависит от повода, компании или настроения. Годовое ограничение вводит долгий горизонт контроля.</p>
+
+                <p>Стратегия должна быть короткой и без лазеек. Если правил слишком много или они сформулированы расплывчато, они не работают. Каждое правило должно читаться как проверяемое условие «если так, то так».</p>
+
+                <h2>Пример готовой стратегии</h2>
+
+                <div class="highlight-box example-box">
+                    <h3>Пример стратегии для КУшника</h3>
+                    <ul>
+                        <li>Суточный лимит: не более 0,15 лча — никогда и ни при каких обстоятельствах.</li>
+                        <li>Годовой лимит: не более 10 лча.</li>
+                        <li>Каждый эпизод возможен только при наличии талонов на текущий месяц.</li>
+                        <li>Ритуал в конце дня: отделить завершение дня от алкоголя, заменить ритуалом разрядки без алкоголя.</li>
+                        <li>Маршруты и покупки: не заходить в алкогольные отделы без заранее заданной цели и талона.</li>
+                        <li>Праздники и гости: эпизод возможен только если остались талоны и заранее выбран класс эпизода.</li>
+                        <li>Встречи с друзьями: выбирать формат, где алкоголь не является центром события.</li>
+                        <li>Запрещены эпизоды употребления из-за тревоги, злости, сильного стресса.</li>
+                        <li>Эпизод запрещён, если есть признаки выраженной усталости или недосыпа.</li>
+                        <li>Допустимые функции: социальный ритуал, гастрономическое удовольствие, значимый повод.</li>
+                        <li>Запрещённые функции: снятие тревоги, подавление злости, обезболивание переживаний, компенсация одиночества.</li>
+                        <li>Категорический запрет на опохмеление.</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 15px; color: rgba(255,255,255,0.5);">Это лишь пример для определённого контура зависимости, шаблонов поведения и триггеров. Не является общеприменимым и универсальным.</p>
+                </div>
+
+                <!-- Test promo -->
+                <div style="background: rgba(77,212,255,0.07); border: 1px solid rgba(77,212,255,0.3); border-radius: 16px; padding: 28px 32px; margin: 40px 0;">
+                    <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-cyan); margin-bottom: 10px; font-family: 'Montserrat', sans-serif;">Тест к Шагу 3</p>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Полнота и учёт личных особенностей плана КУ</h3>
+                    <p style="color: rgba(255,255,255,0.75); margin-bottom: 20px; font-size: 15px;">12 вопросов — проверка, насколько ваш план стратегии конкретен, проверяем и защищён от психологических ловушек.</p>
+                    <a href="test-plan-ku.html" style="display:inline-block; background: var(--accent-cyan); color: #050d1a; font-weight: 700; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-size: 15px; font-family: 'Montserrat', sans-serif;">Пройти тест →</a>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Разработайте свою стратегию вместе с форумом</h2>
+                    <p>В разделе личных тем можно поделиться своей стратегией, получить обратную связь и сравнить опыт с людьми, которые уже прошли этот путь.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также в Шаге 3:</strong></p>
+                    <a href="znachimye-i-vrednye-shablony.html">→ Разделить шаблоны на значимые и вредные — пять функций алкоголя</a>
+                    <a href="podgotovka-resursov-ku.html">→ Подготовка ресурсов для КУ</a>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ — полная схема и все шаги</a>
+                </div>
+
+                <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

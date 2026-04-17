@@ -1,0 +1,218 @@
+/* hub.css — стили для хаб-страниц alkonorm.ru */
+/* Подключать ПОСЛЕ article.css:
+   <link rel="stylesheet" href="../../assets/article.css">
+   <link rel="stylesheet" href="../../assets/hub.css">
+   Хаб-классы на <body>:
+     body.hub-narrow      — узкий контент (900px): kak-menshe, pochemu, uznaki
+     body.hub-green       — акцент зелёный (kak-menshe-pit)
+     body.hub-pink        — акцент розовый (pochemu-hochetsya-alkogolya)
+     body.hub-orange      — акцент оранжевый (uznaki-alkogolizma)
+     без класса           — акцент голубой (skolko-mozhno-pit, значение из article.css) */
+
+/* ─── hub-narrow: узкие хабы (900px) ──────────────────────── */
+body.hub-narrow .page-content { max-width: 900px; }
+body.hub-narrow .logo { font-size: 22px; color: var(--text-primary); }
+body.hub-narrow .hero { max-width: none; padding: 40px 0 48px; }
+body.hub-narrow h1 { font-size: 44px; line-height: 1.15; margin-bottom: 16px;
+    background: none; -webkit-text-fill-color: #ffffff; color: #ffffff; }
+body.hub-narrow .breadcrumbs { padding: 24px 0 0; color: rgba(255,255,255,0.5); }
+body.hub-narrow .breadcrumbs a { color: rgba(255,255,255,0.5); }
+
+/* article-list: flex-column для новых хабов */
+body.hub-narrow .article-list li {
+    display: flex; flex-direction: column;
+    gap: 4px; padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    align-items: flex-start;
+}
+body.hub-narrow .article-list a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 19px; font-family: 'Montserrat', sans-serif;
+    font-weight: 600; line-height: 1.35;
+    transition: color 0.2s;
+}
+body.hub-narrow .badge-soon {
+    display: inline-block; margin-left: 8px; vertical-align: middle;
+    background: rgba(255,255,255,0.06);
+}
+
+/* ─── Общие классы для новых хабов ────────────────────────── */
+
+.hero-desc {
+    font-size: 16px; color: rgba(255,255,255,0.7);
+    line-height: 1.8; max-width: 680px;
+}
+
+.hero-tag {
+    display: inline-block; font-size: 12px; font-weight: 600;
+    font-family: 'Montserrat', sans-serif; letter-spacing: 1px;
+    text-transform: uppercase; border-radius: 20px;
+    padding: 4px 14px; margin-bottom: 20px;
+    color: var(--accent-green);
+    background: rgba(77,255,176,0.1);
+    border: 1px solid rgba(77,255,176,0.3);
+}
+
+/* ─── anchor-nav (новые хабы, vs anchor-menu в старом) ──────── */
+.anchor-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
+.anchor-nav a {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7); text-decoration: none;
+    font-size: 13px; font-family: 'Montserrat', sans-serif;
+    padding: 7px 16px; border-radius: 20px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.anchor-nav a:hover {
+    background: rgba(77,212,255,0.1); border-color: rgba(77,212,255,0.35);
+    color: var(--accent-cyan);
+}
+
+/* ─── .section (новые хабы; .content-section — для старого) ─── */
+.section { margin-bottom: 56px; }
+.section h2 {
+    font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700;
+    margin-bottom: 8px; color: rgba(77,212,255,0.9);
+}
+.section-desc {
+    font-size: 14px; color: rgba(77,212,255,0.75); margin-bottom: 20px; line-height: 1.6;
+}
+body.hub-narrow .section-line { background: rgba(77,212,255,0.18); } /* переопределяется per-hub */
+
+/* ─── .soon-title и .annot ─────────────────────────────────── */
+.soon-title {
+    font-size: 19px; font-family: 'Montserrat', sans-serif;
+    font-weight: 600; color: rgba(255,255,255,0.35); line-height: 1.35;
+}
+.article-list span.annot {
+    font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;
+}
+
+/* ─── FAQ JS-аккордеон (новые хабы) ────────────────────────── */
+/* В старом хабе используется <details>-FAQ из article.css */
+.faq { margin-bottom: 56px; }
+.faq > h2 {
+    font-family: 'Montserrat', sans-serif; font-size: 22px;
+    font-weight: 700; margin-bottom: 24px; color: var(--text-primary);
+}
+.faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+.faq-question {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 0; cursor: pointer;
+    font-size: 15px; font-family: 'Montserrat', sans-serif; font-weight: 600;
+    color: var(--text-primary); gap: 16px; user-select: none;
+}
+.faq-question:hover { color: var(--accent-cyan); }
+.faq-icon {
+    flex-shrink: 0; font-size: 20px; color: rgba(255,255,255,0.4);
+    transition: transform 0.25s; line-height: 1;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-cyan); }
+/* display:none скоуплен на .faq-item — не затрагивает <details> FAQ из article.css */
+.faq-item .faq-answer { display: none; padding: 0 0 18px; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.75; max-width: 720px; }
+.faq-item.open .faq-answer { display: block; }
+
+/* ─── CTA block (старый хаб: левая граница) ────────────────── */
+.cta-block {
+    border-left: 3px solid var(--accent-cyan);
+    background: rgba(77,212,255,0.04);
+    border-radius: 0 16px 16px 0;
+    padding: 28px 32px; max-width: 780px; margin-bottom: 64px;
+}
+.cta-block p { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px; }
+.btn-ku {
+    display: inline-block; background: rgba(77,212,255,0.12);
+    border: 1px solid rgba(77,212,255,0.35); color: var(--accent-cyan);
+    padding: 10px 22px; border-radius: 20px;
+    font-size: 14px; font-weight: 600; font-family: 'Montserrat', sans-serif;
+    text-decoration: none; transition: background 0.2s, border-color 0.2s;
+}
+.btn-ku:hover { background: rgba(77,212,255,0.22); border-color: rgba(77,212,255,0.6); }
+
+/* CTA block: центрированная карточка (новые хабы) */
+body.hub-narrow .cta-block {
+    border-left: none;
+    border: 1px solid rgba(77,212,255,0.25);
+    background: rgba(77,212,255,0.06);
+    border-radius: 20px; padding: 36px 40px;
+    text-align: center; max-width: none; margin-bottom: 56px;
+}
+body.hub-narrow .cta-block h2 {
+    font-family: 'Montserrat', sans-serif; font-size: 22px;
+    font-weight: 700; margin-bottom: 12px;
+}
+body.hub-narrow .cta-block p { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+.btn-cta {
+    display: inline-block; background: var(--accent-cyan); color: #050d1a;
+    font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px;
+    padding: 13px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s;
+}
+.btn-cta:hover { opacity: 0.88; }
+
+/* ─── Other hubs wrapper ────────────────────────────────────── */
+.other-hubs { margin-bottom: 40px; }
+body.hub-narrow .other-hubs-title { font-size: 13px; letter-spacing: 1px; }
+body.hub-narrow .hub-card-desc { font-size: 13px; }
+
+/* hub-card.cyan (ссылка на «Сколько можно пить» из новых хабов) */
+.hub-card.cyan { border: 1px solid rgba(77,212,255,0.2); }
+.hub-card.cyan:hover { box-shadow: 0 8px 24px rgba(77,212,255,0.12); border-color: rgba(77,212,255,0.45); }
+.hub-card.cyan .hub-card-name { color: var(--accent-cyan); }
+
+/* ─── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    body.hub-narrow h1 { font-size: 30px; }
+    body.hub-narrow .cta-block { padding: 28px 24px; }
+}
+@media (max-width: 480px) {
+    body.hub-narrow h1 { font-size: 26px; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   АКЦЕНТНЫЕ ЦВЕТА ПО ХАБАМ
+   ════════════════════════════════════════════════════════════ */
+
+/* ── hub-green: Как меньше пить ─────────────────────────────── */
+body.hub-green .nav a:hover,
+body.hub-green .nav a.active { color: var(--accent-green); }
+body.hub-green .breadcrumbs a:hover { color: var(--accent-green); }
+body.hub-green .anchor-nav a:hover {
+    background: rgba(77,255,176,0.1); border-color: rgba(77,255,176,0.35); color: var(--accent-green);
+}
+body.hub-green .article-list a:hover { color: var(--accent-green); }
+body.hub-green .faq-question:hover { color: var(--accent-green); }
+body.hub-green .faq-item.open .faq-icon { color: var(--accent-green); }
+body.hub-green .section-line { background: rgba(77,255,176,0.18); }
+body.hub-green .cta-block { background: rgba(77,255,176,0.06); border-color: rgba(77,255,176,0.25); }
+body.hub-green .btn-cta { background: var(--accent-green); }
+body.hub-green .footer-links a:hover { color: var(--accent-green); }
+
+/* ── hub-pink: Почему хочется алкоголя ──────────────────────── */
+body.hub-pink .nav a:hover,
+body.hub-pink .nav a.active { color: var(--accent-pink); }
+body.hub-pink .breadcrumbs a:hover { color: var(--accent-pink); }
+body.hub-pink .anchor-nav a:hover {
+    background: rgba(255,107,157,0.1); border-color: rgba(255,107,157,0.35); color: var(--accent-pink);
+}
+body.hub-pink .article-list a:hover { color: var(--accent-pink); }
+body.hub-pink .faq-question:hover { color: var(--accent-pink); }
+body.hub-pink .faq-item.open .faq-icon { color: var(--accent-pink); }
+body.hub-pink .section-line { background: rgba(255,107,157,0.18); }
+body.hub-pink .cta-block { background: rgba(255,107,157,0.06); border-color: rgba(255,107,157,0.25); }
+body.hub-pink .btn-cta { background: var(--accent-pink); }
+body.hub-pink .footer-links a:hover { color: var(--accent-pink); }
+
+/* ── hub-orange: Признаки алкоголизма ──────────────────────── */
+body.hub-orange .nav a:hover,
+body.hub-orange .nav a.active { color: var(--accent-orange); }
+body.hub-orange .breadcrumbs a:hover { color: var(--accent-orange); }
+body.hub-orange .anchor-nav a:hover {
+    background: rgba(255,159,77,0.1); border-color: rgba(255,159,77,0.35); color: var(--accent-orange);
+}
+body.hub-orange .article-list a:hover { color: var(--accent-orange); }
+body.hub-orange .faq-question:hover { color: var(--accent-orange); }
+body.hub-orange .faq-item.open .faq-icon { color: var(--accent-orange); }
+body.hub-orange .section-line { background: rgba(255,159,77,0.18); }
+body.hub-orange .cta-block { background: rgba(255,159,77,0.06); border-color: rgba(255,159,77,0.25); }
+body.hub-orange .btn-cta { background: var(--accent-orange); }
+body.hub-orange .footer-links a:hover { color: var(--accent-orange); }

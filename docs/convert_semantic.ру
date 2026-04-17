@@ -1,0 +1,43 @@
+import csv
+import yaml
+
+input_csv = "semantic.csv"
+output_yaml = "semantic-core.yaml"
+
+data = {"hubs": {}}
+
+with open(input_csv, "r", encoding="utf-8-sig", newline="") as f:
+    reader = csv.DictReader(f, delimiter=';')
+
+    for row in reader:
+        hub = row["hub"].strip()
+        cluster = row["cluster"].strip()
+        keyword = row["keyword"].strip()
+        frequency = row["frequency"].strip()
+        relevance = row["relevance"].strip()
+
+        if not hub or not cluster or not keyword:
+            continue
+
+        if hub not in data["hubs"]:
+            data["hubs"][hub] = {"clusters": {}}
+
+        if cluster not in data["hubs"][hub]["clusters"]:
+            data["hubs"][hub]["clusters"][cluster] = {"keywords": []}
+
+        kw = {
+            "query": keyword
+        }
+
+        if frequency:
+            kw["frequency"] = int(frequency)
+
+        if relevance:
+            kw["relevance"] = relevance
+
+        data["hubs"][hub]["clusters"][cluster]["keywords"].append(kw)
+
+with open(output_yaml, "w", encoding="utf-8") as f:
+    yaml.dump(data, f, allow_unicode=True, sort_keys=False)
+
+print("Готово. Создан файл:", output_yaml)

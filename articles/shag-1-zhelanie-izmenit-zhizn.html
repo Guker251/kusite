@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Шаг 1: Осознание желания изменить свою жизнь — программа 7 шагов КУ | КУ</title>
+    <meta name="description" content="Первый шаг программы КУ: почему человек хочет измениться, ловушка «хочу без усилий» и как проверить готовность к контролируемому употреблению алкоголя.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Starfield Animation */
+        .starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Article */
+        article {
+            padding: 60px 0 100px;
+        }
+
+        .article-
+        .article-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(77,212,255,0.15), rgba(255,107,157,0.15));
+            border: 1px solid rgba(77,212,255,0.35);
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .breadcrumb span {
+            color: rgba(255,255,255,0.25);
+        }
+
+        /* Content */
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin: 50px 0 25px;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 35px 0 20px;
+            color: var(--accent-cyan);
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        ul li, ol li {
+            position: relative;
+            padding: 12px 0 12px 35px;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-size: 16px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li::before {
+            content: counter(item) ".";
+            counter-increment: item;
+            position: absolute;
+            left: 10px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+
+        .cyan-box {
+            border-color: rgba(77,212,255,0.3);
+            background: rgba(77,212,255,0.06);
+        }
+
+        .pink-box {
+            border-color: rgba(255,107,157,0.3);
+            background: rgba(255,107,157,0.06);
+        }
+
+        /* Step box */
+        .step-box {
+            background: var(--glass-white);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 40px rgba(77, 212, 255, 0.2);
+        }
+
+        .step-box h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Quote */
+        .book-quote {
+            border-left: 3px solid var(--accent-cyan);
+            padding: 20px 28px;
+            margin: 30px 0;
+            background: rgba(77,212,255,0.04);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .book-quote p {
+            color: rgba(255,255,255,0.6);
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .book-quote cite {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+            font-style: normal;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, rgba(77, 212, 255, 0.12), rgba(255, 107, 157, 0.12));
+            border: 2px solid var(--accent-cyan);
+            border-radius: 20px;
+            padding: 44px 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin: 0 0 14px;
+            padding: 0;
+            font-size: 28px;
+        }
+
+        .cta-box h2::before {
+            display: none;
+        }
+
+        .cta-box p {
+            font-size: 17px;
+            margin-bottom: 28px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(77,212,255,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(77,212,255,0.45);
+        }
+
+        /* Related links */
+        .related-links {
+            margin: 40px 0;
+        }
+
+        .related-links a {
+            display: block;
+            padding: 14px 22px;
+            background: rgba(77,212,255,0.06);
+            border: 1px solid rgba(77,212,255,0.25);
+            border-radius: 12px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .related-links a:hover {
+            background: rgba(77,212,255,0.12);
+            border-color: var(--accent-cyan);
+            padding-left: 28px;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 30px;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 12px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-1 { animation-delay: 0.1s; opacity: 0; }
+        .delay-2 { animation-delay: 0.2s; opacity: 0; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-header h1 { font-size: 30px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+            p, ul li, ol li { font-size: 16px; }
+            .nav-links { display: none; }
+            .cta-box { padding: 30px 24px; }
+        }
+    </style>
+    <link rel="canonical" href="https://alkonorm.ru/articles/shag-1-zhelanie-izmenit-zhizn.html">
+</head>
+<body>
+
+    <div class="starfield">
+        <div class="stars"></div>
+    </div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <article>
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../index.html">Главная</a>
+                <span>›</span>
+                <a href="7-shagov-ku.html">Программа 7 шагов КУ</a>
+                <span>›</span>
+                Шаг 1
+            </div>
+
+            <div class="article-header fade-in">
+                <div class="article-tag">Шаг 1 из 7</div>
+                <h1>Осознание желания изменить свою жизнь</h1>
+                <div class="article-meta">
+                    <span>Программа <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none;">7 шагов КУ</a></span>
+                    <span>·</span>
+                    <span>Первый шаг — фундамент всего</span>
+                </div>
+            </div>
+
+            <div class="fade-in delay-1">
+
+                <p>Первый шаг программы КУ — самый важный и самый недооценённый. Не потому, что он технически сложный. А потому, что без него всё остальное строится на песке. Желание изменить свою жизнь — это не абстрактное «хочу пить меньше». Это конкретное, честное осознание того, зачем вам это нужно и готовы ли вы прикладывать для этого реальные усилия.</p>
+
+                <div class="book-quote">
+                    <p>Осознание желания изменить свою жизнь — первый шаг программы КУ. Почему человек хочет измениться. Детская роль и ловушка «хочу без усилий». КУ как способ изменить жизнь к лучшему.</p>
+                    <cite>Из книги «На краю Синей Бездны» — практическое руководство по системе КУ</cite>
+                </div>
+
+                <h2>Что значит «желание изменить свою жизнь»</h2>
+
+                <p>В контексте программы КУ желание изменить жизнь — это не просто усталость от последствий. Это активная позиция: я вижу проблему, я хочу её решить, и я готов что-то для этого делать. Звучит просто, но на практике многие застревают именно здесь.</p>
+
+                <p>Проблема не в отсутствии желания — желание есть почти у всех, кто читает такие материалы. Проблема в том, какого рода это желание. Одно дело хотеть результат. Другое — хотеть сам процесс изменений, со всеми его усилиями, неудобствами и временными провалами.</p>
+
+                <h2>Детская роль и ловушка «хочу без усилий»</h2>
+
+                <p>Одна из главных ловушек на старте — это позиция, которую можно назвать «детской ролью». Человек в этой роли ждёт, что изменения произойдут как-то сами. Достаточно захотеть — и станет легче. Достаточно прочитать правильную книгу — и всё встанет на свои места. Достаточно дать себе слово — и оно будет выполнено.</p>
+
+                <p>Эта ловушка особенно коварна потому, что ощущение «я уже работаю над этим» возникает сразу — как только человек начинает читать, думать, планировать. Но реальная работа начинается не тогда, когда вы думаете о изменениях, а тогда, когда вы делаете что-то конкретное вопреки привычке и вопреки тяге.</p>
+
+                <div class="highlight-box cyan-box">
+                    <h3>Признаки «детской роли» в подходе к КУ</h3>
+                    <ul>
+                        <li>«Я стараюсь», но конкретного плана нет;</li>
+                        <li>каждое нарушение объясняется обстоятельствами, а не слабостью системы;</li>
+                        <li>желание результата есть, но к усилиям заранее готовности нет;</li>
+                        <li>ожидание, что КУ «войдёт в привычку» само по себе, без активной работы;</li>
+                        <li>попытки найти способ, при котором не придётся ничего менять в жизни.</li>
+                    </ul>
+                </div>
+
+                <p>КУ — это не магия и не диета. Это система, которая требует постоянного внимания, учёта и корректировки. Особенно на первых этапах. Понять это заранее — значит войти в программу с реалистичными ожиданиями.</p>
+
+                <h2>Есть ли желание менять</h2>
+
+                <p>Первое, что нужно проверить честно — это наличие самого желания. Не желания избавиться от последствий (это есть у всех), а желания изменить именно своё поведение. Разница существенная.</p>
+
+                <div class="step-box">
+                    <h3><span class="step-number">1</span>Проверьте, есть ли желание менять</h3>
+                    <p>Задайте себе вопрос прямо: я хочу изменить своё отношение к алкоголю, или я хочу, чтобы алкоголь перестал создавать проблемы — но при этом остался таким, каким он был в лучшие времена?</p>
+                    <p>Если честный ответ — второй вариант, это нормально. Но тогда важно это признать и понять: именно здесь начинается работа с мотивацией. Потому что <a href="pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px solid rgba(77,212,255,0.3);">желание пить</a> и желание контролировать — это два разных желания, и второе придётся строить сознательно.</p>
+                </div>
+
+                <h2>Готовность прикладывать усилия</h2>
+
+                <p>Желание — это только первая часть. Вторая — готовность к усилиям. КУ требует ведения учёта, соблюдения правил, анализа нарушений и корректировки стратегии. Это не разовая работа, а регулярная система. Если к этому нет готовности — лучше признать это сейчас, чем потратить несколько месяцев на попытки, которые заранее обречены.</p>
+
+                <div class="step-box">
+                    <h3><span class="step-number">2</span>Сформулируйте готовность к усилиям</h3>
+                    <p>Конкретно: я готов вести учёт употребления каждый раз. Я готов анализировать нарушения, а не оправдывать их. Я готов менять план, если он не работает, а не ждать, пока само пройдёт.</p>
+                    <p>Если ответ — «не уверен» или «постараюсь», это не провал. Это точка, с которой нужно работать. Посмотрите на статью <a href="kak-menshe-pit/kak-menshe-pit.html" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px solid rgba(77,212,255,0.3);">о том, как меньше пить</a> — там есть конкретные инструменты для начала, которые не требуют сразу максимальной дисциплины.</p>
+                </div>
+
+                <h2>Что изменится к лучшему в режиме КУ</h2>
+
+                <p>Прежде чем двигаться дальше, важно ответить на вопрос: зачем? Не «зачем бросать пить» — а зачем именно КУ, зачем именно контроль, что конкретно изменится в вашей жизни, если это получится.</p>
+
+                <p>Этот вопрос не формальность. Он нужен для того, чтобы в трудные моменты — когда тяга сильная, а план кажется лишним — было к чему возвращаться. Конкретная картина желаемого будущего работает лучше, чем абстрактное «стану здоровее».</p>
+
+                <div class="step-box">
+                    <h3><span class="step-number">3</span>Определите, что изменится к лучшему</h3>
+                    <p>Запишите от трёх до пяти конкретных изменений, которые произойдут в вашей жизни, если КУ будет работать. Не общие слова, а конкретные вещи: утренняя ясность голова, качество сна, отношения с близким человеком, продуктивность в определённые дни, деньги, которые вы перестанете тратить.</p>
+                    <p>Этот список — ваш личный аргумент. Он нужен вам, а не для отчёта.</p>
+                </div>
+
+                <div class="highlight-box cyan-box">
+                    <h3>Примеры конкретных изменений, которые называют участники форума</h3>
+                    <ul>
+                        <li>утренняя работоспособность в дни после употребления;</li>
+                        <li>меньше тревоги и самокритики на следующий день;</li>
+                        <li>возможность полноценно заниматься с детьми в выходные;</li>
+                        <li>улучшение отношений с партнёром, который переживает из-за употребления;</li>
+                        <li>снижение финансовых потерь от алкоголя и последствий;</li>
+                        <li>ощущение, что я управляю своей жизнью, а не она мной.</li>
+                    </ul>
+                </div>
+
+                <h2>Если нет сильного желания — перейти в полную трезвость</h2>
+
+                <p>Это один из ключевых пунктов первого шага, и его важно воспринять без защитной реакции. КУ — это выбор, доступный не всем и подходящий не всем. Программа честна в этом с самого начала.</p>
+
+                <p>Если желание изменить жизнь слабое — то есть человек хочет, чтобы «само как-нибудь наладилось», но не готов к активной работе — попытка КУ скорее всего создаст иллюзию работы без реального результата. Это опаснее, чем честный выбор в пользу полной трезвости.</p>
+
+                <div class="step-box">
+                    <h3><span class="step-number">4</span>Честная оценка: КУ или трезвость</h3>
+                    <p>Если после первых трёх пунктов вы понимаете, что желание есть, но оно слабое; что усилия кажутся слишком большой ценой; что конкретных улучшений сформулировать не получается — это сигнал.</p>
+                    <p>Полная трезвость — это не поражение и не крайность. Для многих людей это единственно реалистичный путь, и выбрать его осознанно лучше, чем тратить силы на систему контроля, к которой нет внутренней готовности.</p>
+                </div>
+
+                <div class="highlight-box pink-box">
+                    <p style="margin-bottom:0; font-style: italic; color: rgba(255,255,255,0.65);">«Здесь нет правильного ответа для всех. Есть задача выбрать то, что даёт реальный контроль и снижает ущерб именно для вас.» — из книги «На краю Синей Бездны»</p>
+                </div>
+
+                <h2>Итог первого шага</h2>
+
+                <p>Первый шаг пройден, если вы можете честно ответить на четыре вопроса.</p>
+
+                <ol>
+                    <li>Есть ли у меня желание менять именно своё поведение — не только убрать последствия?</li>
+                    <li>Готов ли я прикладывать реальные усилия: учёт, анализ, корректировки?</li>
+                    <li>Что конкретно изменится к лучшему, если КУ заработает?</li>
+                    <li>Честно ли я оцениваю ситуацию — или сопротивляюсь мысли о полной трезвости там, где она может быть единственно реалистичным вариантом?</li>
+                </ol>
+
+                <p>Если на все четыре вопроса есть ясные ответы — можно двигаться дальше, к <a href="7-shagov-ku.html" style="color: var(--accent-cyan); text-decoration: none; border-bottom: 1px solid rgba(77,212,255,0.3);">второму шагу программы: оценке вероятности успешного КУ</a>.</p>
+
+                <!-- Test promo -->
+                <div style="background: rgba(77,212,255,0.07); border: 1px solid rgba(77,212,255,0.3); border-radius: 16px; padding: 28px 32px; margin: 40px 0;">
+                    <p style="font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent-cyan); margin-bottom: 10px; font-family: 'Montserrat', sans-serif;">Тест к Шагу 1</p>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Есть ли у вас желание изменить свою жизнь?</h3>
+                    <p style="color: rgba(255,255,255,0.75); margin-bottom: 20px; font-size: 15px;">12 вопросов — оценка готовности к переменам и выявление «красных зон», требующих внимания.</p>
+                    <a href="test-gotovnost-k-izmeneniyam.html" style="display:inline-block; background: var(--accent-cyan); color: #050d1a; font-weight: 700; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-size: 15px; font-family: 'Montserrat', sans-serif;">Пройти тест →</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta-box">
+                    <h2>Обсудите свой первый шаг на форуме</h2>
+                    <p>Многие участники сообщества начинали именно с этого — с попытки честно ответить себе на вопросы первого шага. На форуме можно поделиться своей ситуацией и получить обратную связь от людей, которые уже прошли этот путь.</p>
+                    <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
+                </div>
+
+                <!-- Related -->
+                <div class="related-links">
+                    <p style="font-size: 16px; color: var(--text-secondary); margin-bottom: 14px;"><strong>Читайте также:</strong></p>
+                    <a href="7-shagov-ku.html">→ Программа 7 шагов КУ — полная схема и все шаги</a>
+                    <a href="pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html">→ Почему хочется алкоголя: причины тяги и как с ней справляться</a>
+                    <a href="kak-menshe-pit/kak-menshe-pit.html">→ Как меньше пить: практические техники контроля</a>
+                    <a href="kniga-ku.html">→ Книга «На краю Синей Бездны» — полное руководство по системе КУ</a>
+                </div>
+
+                <a href="../index.html" class="back-link">← Вернуться на главную</a>
+
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

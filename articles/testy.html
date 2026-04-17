@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107031139', 'ym');
+    ym(107031139, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107031139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.png">
+    <title>Тесты по контролируемому употреблению алкоголя | КУ</title>
+    <meta name="description" content="Четыре теста для самооценки: желание изменить жизнь, вероятность успешного КУ, тест AUDIT и полнота плана контроля употребления.">
+    <meta name="keywords" content="тест контролируемое употребление, тест алкоголь, AUDIT тест, тест КУ">
+    <link rel="canonical" href="https://alkonorm.ru/articles/testy.html">
+    <meta property="og:title" content="Тесты по контролируемому употреблению алкоголя">
+    <meta property="og:description" content="Четыре теста для самооценки: желание изменить жизнь, вероятность успешного КУ, тест AUDIT и полнота плана.">
+    <meta property="og:url" content="https://alkonorm.ru/articles/testy.html">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/article.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cosmic-blue: #0a1e3d;
+            --cosmic-dark: #050d1a;
+            --accent-cyan: #4dd4ff;
+            --accent-green: #4dffb0;
+            --accent-orange: #ff9f4d;
+            --accent-pink: #ff6b9d;
+            --glass-white: rgba(255,255,255,0.1);
+            --glass-border: rgba(255,255,255,0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.8);
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cosmic-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        .starfield {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 60px 70px, white, transparent),
+                radial-gradient(1px 1px at 50px 50px, white, transparent),
+                radial-gradient(1px 1px at 130px 80px, white, transparent),
+                radial-gradient(2px 2px at 90px 10px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 3s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-icon {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--accent-cyan), #0a8fb5);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent-cyan); }
+
+        /* Main */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-
+        .page-header .badge {
+            display: inline-block;
+            background: rgba(77,212,255,0.12);
+            border: 1px solid rgba(77,212,255,0.3);
+            color: var(--accent-cyan);
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Test cards */
+        .tests-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding-bottom: 80px;
+        }
+
+        .test-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            padding: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            transition: border-color 0.3s, background 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .test-card:hover {
+            border-color: rgba(77,212,255,0.4);
+            background: rgba(77,212,255,0.05);
+        }
+
+        .test-card-num {
+            flex-shrink: 0;
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .num-cyan  { background: rgba(77,212,255,0.15); color: var(--accent-cyan); border: 1px solid rgba(77,212,255,0.3); }
+        .num-green { background: rgba(77,255,176,0.12); color: var(--accent-green); border: 1px solid rgba(77,255,176,0.3); }
+        .num-orange{ background: rgba(255,159,77,0.12); color: var(--accent-orange); border: 1px solid rgba(255,159,77,0.3); }
+        .num-pink  { background: rgba(255,107,157,0.12); color: var(--accent-pink); border: 1px solid rgba(255,107,157,0.3); }
+
+        .test-card-body { flex: 1; }
+
+        .test-card-label {
+            font-size: 11px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 8px;
+        }
+
+        .test-card h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .test-card p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .test-card-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            font-size: 13px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 6px;
+            padding: 4px 12px;
+            color: rgba(255,255,255,0.55);
+        }
+
+        .test-card-arrow {
+            flex-shrink: 0;
+            align-self: center;
+            font-size: 22px;
+            color: rgba(255,255,255,0.25);
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .test-card:hover .test-card-arrow {
+            color: var(--accent-cyan);
+            transform: translateX(4px);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: rgba(255,255,255,0.45);
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 56px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover { color: var(--accent-cyan); }
+
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 26px; }
+            .test-card { flex-direction: column; gap: 16px; padding: 24px; }
+            .test-card-arrow { display: none; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="starfield"><div class="stars"></div></div>
+
+    <header class="header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="../favicon-32.png" alt="" width="28" height="28" style="border-radius:6px;">КУ</a>
+        <nav class="nav">
+            <a href="../articles/soobschestvo.html">Сообщество</a>
+            <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
+            <a href="http://kuforum.ru">Форум</a>
+            <a href="../articles/testy.html">Тесты</a>
+            <a href="../articles/knigi/">Книги</a>
+            <a href="../articles/stati/">Статьи</a>
+            <a href="../articles/karta-sayta/">Карта сайта</a>
+            <a href="../articles/faq/">FAQ</a>
+        </nav>
+        <div class="nav-search">🔍</div>
+    </div>
+</header>
+
+    <div class="container">
+        <div class="page-header">
+            <div class="badge">Самодиагностика</div>
+            <h1>Тесты по контролируемому употреблению</h1>
+            <p>Четыре инструмента для честной оценки своей ситуации — от желания меняться до готовности плана.</p>
+        </div>
+
+        <div class="tests-grid">
+
+            <a class="test-card" href="test-gotovnost-k-izmeneniyam.html">
+                <div class="test-card-num num-cyan">1</div>
+                <div class="test-card-body">
+                    <div class="test-card-label">Шаг 1 программы КУ</div>
+                    <h2>Есть ли у вас желание изменить свою жизнь?</h2>
+                    <p>Тест оценивает силу внутреннего мотива к переменам, готовность прикладывать реальные усилия и выявляет «красные зоны» — выученную беспомощность, страх перед ценой усилий и дефицит поддержки.</p>
+                    <div class="test-card-meta">
+                        <span class="meta-tag">12 вопросов</span>
+                        <span class="meta-tag">~5 минут</span>
+                        <span class="meta-tag">Шаг 1</span>
+                    </div>
+                </div>
+                <div class="test-card-arrow">→</div>
+            </a>
+
+            <a class="test-card" href="test-veroyatnost-ku.html">
+                <div class="test-card-num num-orange">2</div>
+                <div class="test-card-body">
+                    <div class="test-card-label">Шаг 2 программы КУ</div>
+                    <h2>Вероятность успешного контролируемого употребления</h2>
+                    <p>Комплексная оценка ресурсов и факторов риска: сила зависимости, психологические и социальные ресурсы, история самоконтроля. Помогает реалистично оценить, насколько КУ выполнимо именно сейчас.</p>
+                    <div class="test-card-meta">
+                        <span class="meta-tag">20 вопросов</span>
+                        <span class="meta-tag">~8 минут</span>
+                        <span class="meta-tag">Шаг 2</span>
+                    </div>
+                </div>
+                <div class="test-card-arrow">→</div>
+            </a>
+
+            <a class="test-card" href="uznaki-alkogolizma/test-audit.html">
+                <div class="test-card-num num-pink">3</div>
+                <div class="test-card-body">
+                    <div class="test-card-label">Валидированный скрининг ВОЗ</div>
+                    <h2>Тест AUDIT — оценка употребления алкоголя</h2>
+                    <p>Стандартизированный тест Всемирной организации здравоохранения для оценки риска, связанного с употреблением алкоголя. Определяет зону риска с учётом пола: от безопасного уровня до признаков зависимости.</p>
+                    <div class="test-card-meta">
+                        <span class="meta-tag">10 вопросов</span>
+                        <span class="meta-tag">~4 минуты</span>
+                        <span class="meta-tag">Скрининг ВОЗ</span>
+                    </div>
+                </div>
+                <div class="test-card-arrow">→</div>
+            </a>
+
+            <a class="test-card" href="test-plan-ku.html">
+                <div class="test-card-num num-green">4</div>
+                <div class="test-card-body">
+                    <div class="test-card-label">Шаг 3 программы КУ</div>
+                    <h2>Полнота и учёт личных особенностей плана КУ</h2>
+                    <p>Оценивает, насколько ваш план стратегии конкретен, проверяем и устойчив. Выявляет слабые места: недостаточную индивидуализацию, слабую систематизацию или уязвимость к психологическим триггерам.</p>
+                    <div class="test-card-meta">
+                        <span class="meta-tag">12 вопросов</span>
+                        <span class="meta-tag">~5 минут</span>
+                        <span class="meta-tag">Шаг 3</span>
+                    </div>
+                </div>
+                <div class="test-card-arrow">→</div>
+            </a>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>Прошли тест — поделитесь на форуме</h2>
+            <p>На kuforum.ru обсуждают результаты тестов, делятся опытом прохождения программы КУ и помогают разобраться, что делать дальше.</p>
+            <a href="https://kuforum.ru" class="btn-primary">Перейти на форум →</a>
+        </div>
+
+        <a href="../index.html" class="back-link">← Вернуться на главную</a>
+    </div>
+</body>
+</html>
