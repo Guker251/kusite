@@ -7,6 +7,9 @@
     <meta name="description" content="Индивидуальная норма алкоголя — доза, вызывающая лёгкое опьянение без асоциальных последствий. Что такое базальный метаболизм этанола, разовая и суточная дозы.">
     <meta name="keywords" content="индивидуальная норма алкоголя, норма алкоголя для человека, социально приемлемая норма алкоголя, норма алкоголя в день, базальный метаболизм этанола, лёгкое опьянение норма">
     <link rel="canonical" href="https://alkonorm.ru/articles/skolko-mozhno-pit/individualnaya-norma-alkogolya/">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../../../favicon-192.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../assets/article.css">
 
@@ -346,16 +349,62 @@
     </div>
 </footer>
 
+<script src="../../../search_index.js"></script>
 <script>
-const searchOverlay = document.getElementById('searchOverlay');
-const searchClose = document.getElementById('searchClose');
-const searchInput = document.getElementById('searchInput');
-const searchResults = document.getElementById('searchResults');
-document.querySelector('.nav-search').addEventListener('click', () => {
-    searchOverlay.classList.add('active');
-    searchInput.focus();
-});
-searchClose.addEventListener('click', () => searchOverlay.classList.remove('active'));
+(function() {
+    const overlay  = document.getElementById('searchOverlay');
+    const input    = document.getElementById('searchInput');
+    const closeBtn = document.getElementById('searchClose');
+    const results  = document.getElementById('searchResults');
+    let debounce;
+    function openSearch() { overlay.classList.add('active'); setTimeout(() => input.focus(), 50); }
+    function closeSearch() { overlay.classList.remove('active'); input.value = ''; results.innerHTML = ''; }
+    function highlight(text, words) {
+        let out = text;
+        words.forEach(w => { if (!w) return; const re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'); out = out.replace(re, '<mark>$1</mark>'); });
+        return out;
+    }
+    function getSnippet(content, words) {
+        const lower = content.toLowerCase(); let best = 0;
+        words.forEach(w => { const idx = lower.indexOf(w.toLowerCase()); if (idx !== -1) best = idx; });
+        const start = Math.max(0, best - 60);
+        let snippet = content.slice(start, start + 200);
+        if (start > 0) snippet = '\u2026' + snippet;
+        if (start + 200 < content.length) snippet += '\u2026';
+        return snippet;
+    }
+    function doSearch() {
+        const q = input.value.trim(); results.innerHTML = '';
+        if (!q || q.length < 2) return;
+        const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+        if (typeof SEARCH_INDEX === 'undefined') { results.innerHTML = '<div class="search-empty">\u0418\u043d\u0434\u0435\u043a\u0441 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0435\u0442\u0441\u044f\u2026</div>'; return; }
+        const scored = SEARCH_INDEX.map(doc => {
+            let score = 0;
+            const titleL = doc.title.toLowerCase(); const contentL = doc.content.toLowerCase();
+            words.forEach(w => {
+                if (titleL.includes(w)) score += 10;
+                if (contentL.includes(w)) score += contentL.split(w).length - 1;
+                (doc.sections || []).forEach(s => { if (s.heading.toLowerCase().includes(w)) score += 5; if (s.text.toLowerCase().includes(w)) score += 2; });
+            });
+            return {doc, score};
+        }).filter(x => x.score > 0).sort((a, b) => b.score - a.score).slice(0, 7);
+        if (!scored.length) { results.innerHTML = '<div class="search-empty">\u041d\u0438\u0447\u0435\u0433\u043e \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e</div>'; return; }
+        scored.forEach(({doc}) => {
+            const snippet = highlight(getSnippet(doc.content, words), words);
+            const title = highlight(doc.title, words);
+            const a = document.createElement('a');
+            a.className = 'search-result'; a.href = doc.url;
+            a.innerHTML = `<div class="search-result-title">${title}</div><div class="search-result-snippet">${snippet}</div><div class="search-result-url">alkonorm.ru${doc.url}</div>`;
+            a.addEventListener('click', closeSearch);
+            results.appendChild(a);
+        });
+    }
+    document.querySelector('.nav-search').addEventListener('click', openSearch);
+    closeBtn.addEventListener('click', closeSearch);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+    input.addEventListener('input', function() { clearTimeout(debounce); debounce = setTimeout(doSearch, 200); });
+})();
 </script>
 
 </body>

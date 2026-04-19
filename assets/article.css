@@ -280,10 +280,10 @@ h1 {
     color: var(--accent-cyan); font-size: 13px; font-weight: 600;
 }
 
-.article-lead a, .article-body a, .quick-answer a, .faq-answer a {
+.article-lead a, .article-body a:not(.btn-primary), .quick-answer a, .faq-answer a {
     color: var(--accent-cyan); text-decoration: none;
 }
-.article-lead a:hover, .article-body a:hover,
+.article-lead a:hover, .article-body a:not(.btn-primary):hover,
 .quick-answer a:hover, .faq-answer a:hover { text-decoration: underline; }
 
 .divider { height: 1px; background: rgba(255,255,255,0.07); margin: 44px 0; }
@@ -983,4 +983,127 @@ a.book-format:hover { background: rgba(77,212,255,0.18); }
     .comparison { grid-template-columns: 1fr; }
     .stat-row { grid-template-columns: 1fr; }
     .step-box { flex-direction: column; gap: 16px; }
+}
+
+/* ─── TOC numbered variant (calc/formula pages) ────────────── */
+.toc {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 22px 24px;
+}
+.toc-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.8px; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-bottom: 14px;
+}
+.toc ol { list-style: none; counter-reset: toc; }
+.toc li { counter-increment: toc; margin-bottom: 10px; }
+.toc li::before {
+    content: counter(toc) '.';
+    color: var(--accent-cyan); font-size: 11px;
+    font-family: 'Montserrat', sans-serif; font-weight: 700;
+    margin-right: 8px;
+}
+.toc a { color: rgba(255,255,255,0.55); font-size: 13px; text-decoration: none; line-height: 1.4; transition: color 0.2s; }
+.toc a:hover { color: var(--accent-cyan); }
+
+/* ─── Quick answer: qa variant ─────────────────────────────── */
+.qa-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--accent-cyan);
+    margin-bottom: 12px;
+}
+.qa-list { list-style: none; }
+.qa-list li {
+    font-size: 14px; color: rgba(255,255,255,0.8);
+    padding: 5px 0 5px 18px; position: relative;
+}
+.qa-list li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--accent-cyan); font-size: 12px;
+}
+
+/* ─── Formula block ─────────────────────────────────────────── */
+.formula-block {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px; padding: 20px 24px; margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.formula-main { font-size: 17px; font-weight: 700; color: var(--accent-cyan); margin-bottom: 12px; }
+.formula-vars { list-style: none; }
+.formula-vars li { font-size: 13px; color: rgba(255,255,255,0.55); padding: 3px 0; }
+.formula-vars li strong { color: rgba(255,255,255,0.8); }
+
+/* ─── Table cell colour variants ────────────────────────────── */
+td.highlight { color: var(--accent-cyan); font-weight: 600; }
+td.warn      { color: var(--accent-orange); }
+td.danger    { color: var(--accent-pink); }
+
+/* ─── Aside note ────────────────────────────────────────────── */
+.aside-note {
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid rgba(255,159,77,0.5);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px; margin: 20px 0;
+    font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7;
+}
+
+/* ─── Calculator ────────────────────────────────────────────── */
+.calc-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(77,212,255,0.2);
+    border-radius: 16px; padding: 28px; margin-top: 4px;
+}
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+.calc-field label {
+    display: block; font-size: 12px; font-family: 'Montserrat', sans-serif;
+    font-weight: 600; letter-spacing: 0.4px; color: rgba(255,255,255,0.45);
+    text-transform: uppercase; margin-bottom: 8px;
+}
+.calc-field select,
+.calc-field input[type="number"] {
+    width: 100%; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
+    padding: 10px 14px; font-family: 'Jost', sans-serif; font-size: 15px;
+    color: #fff; outline: none; transition: border-color 0.2s;
+}
+.calc-field select option { background: #1a2035; }
+.calc-field select:focus,
+.calc-field input[type="number"]:focus { border-color: var(--accent-cyan); }
+.calc-gender { display: flex; gap: 12px; }
+.gender-btn {
+    flex: 1; padding: 10px; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 8px;
+    font-family: 'Jost', sans-serif; font-size: 14px;
+    color: rgba(255,255,255,0.6); cursor: pointer; text-align: center; transition: all 0.2s;
+}
+.gender-btn.active { background: rgba(77,212,255,0.12); border-color: rgba(77,212,255,0.4); color: var(--accent-cyan); }
+.btn-calc {
+    width: 100%; padding: 13px; background: rgba(77,212,255,0.12);
+    border: 1px solid rgba(77,212,255,0.35); border-radius: 10px;
+    font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px;
+    color: var(--accent-cyan); cursor: pointer; transition: background 0.2s; letter-spacing: 0.3px;
+}
+.btn-calc:hover { background: rgba(77,212,255,0.2); }
+.calc-result { display: none; margin-top: 20px; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.calc-result.visible { display: grid; }
+.result-cell { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 14px 12px; text-align: center; }
+.result-label {
+    font-size: 11px; font-family: 'Montserrat', sans-serif; font-weight: 600;
+    letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 6px;
+}
+.result-value { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: var(--accent-cyan); }
+.calc-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 14px; line-height: 1.6; }
+.bac-bar-wrap { margin-top: 16px; }
+.bac-bar-label { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+.bac-bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+.bac-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+
+@media (max-width: 640px) {
+    .calc-grid { grid-template-columns: 1fr; }
+    .calc-result { grid-template-columns: repeat(2, 1fr); }
 }

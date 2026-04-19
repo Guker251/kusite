@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Как рассчитать свою дозу алкоголя: калькулятор и таблица | КУ</title>
-    <meta name="description" content="Количество алкоголя в напитке (ЛЧА) = объём (л) × крепость (%) ÷ 100. Калькулятор, таблица по весу и формула Видмарка — сколько алкоголя можно выпить и что попадёт в кровь.">
+    <meta name="description" content="Как рассчитать дозу алкоголя: формула ЛЧА, онлайн-калькулятор и таблица по напиткам. Сколько алкоголя можно выпить мужчине и женщине в день и в неделю — с пересчётом в промилле.">
     <meta name="keywords" content="сколько алкоголя можно, количество алкоголя, сколько выпил алкоголя, сколько нужно алкоголя, сколько можно выпить алкоголя, таблица нормы алкоголя, доза алкоголя, норма алкоголя, как рассчитать алкоголь">
     <link rel="canonical" href="https://alkonorm.ru/articles/skolko-mozhno-pit/kak-rasschitat-dozu/">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../../../favicon-192.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../assets/article.css">
 
@@ -62,390 +65,6 @@
       ]
     }
     </script>
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --accent-cyan: #4dd4ff;
-            --accent-pink: #ff6b9d;
-            --accent-orange: #ff9f4d;
-            --accent-green: #4dffb0;
-            --glass-border: rgba(255,255,255,0.13);
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255,255,255,0.75);
-        }
-
-        body {
-            font-family: 'Jost', sans-serif;
-            background: #090a0f;
-            color: var(--text-primary);
-            overflow-x: hidden;
-            line-height: 1.7;
-        }
-
-        /* Starfield */
-        .starfield {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 0;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-            pointer-events: none;
-        }
-        .stars {
-            position: absolute; width: 100%; height: 100%;
-            background-image:
-                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
-                radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
-                radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
-                radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 82% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
-                radial-gradient(1px 1px at 90% 45%, rgba(255,255,255,0.7) 0%, transparent 100%),
-                radial-gradient(1px 1px at 15% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
-                radial-gradient(1px 1px at 35% 88%, rgba(255,255,255,0.5) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 60% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
-                radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.5) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 92% 20%, rgba(255,255,255,0.6) 0%, transparent 100%);
-            animation: twinkle 8s ease-in-out infinite alternate;
-        }
-        .stars2 {
-            position: absolute; width: 100%; height: 100%;
-            background-image:
-                radial-gradient(1px 1px at 30% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
-                radial-gradient(1px 1px at 65% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 80% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
-                radial-gradient(1px 1px at 45% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
-                radial-gradient(1.5px 1.5px at 55% 5%, rgba(255,255,255,0.7) 0%, transparent 100%);
-            animation: twinkle 12s ease-in-out infinite alternate-reverse;
-        }
-        @keyframes twinkle { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
-
-
-        /* Layout */
-        .page-wrapper {
-            position: relative; z-index: 10;
-            max-width: 1200px; margin: 0 auto;
-            padding: 0 24px 80px;
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 48px;
-            align-items: start;
-        }
-        .article-body { min-width: 0; }
-
-        /* Sidebar */
-        .sidebar {
-            position: sticky;
-            top: 88px;
-        }
-        .toc {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 22px 24px;
-        }
-        .toc-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px; font-weight: 700;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-            margin-bottom: 14px;
-        }
-        .toc ol { list-style: none; counter-reset: toc; }
-        .toc li { counter-increment: toc; margin-bottom: 10px; }
-        .toc li::before {
-            content: counter(toc) '.';
-            color: var(--accent-cyan); font-size: 11px;
-            font-family: 'Montserrat', sans-serif; font-weight: 700;
-            margin-right: 8px;
-        }
-        .toc a { color: rgba(255,255,255,0.55); font-size: 13px; text-decoration: none; line-height: 1.4; transition: color 0.2s; }
-        .toc a:hover { color: var(--accent-cyan); }
-
-        /* Breadcrumbs */
-        .breadcrumbs { padding: 20px 0 0; font-size: 13px; color: rgba(255,255,255,0.35); }
-        .breadcrumbs a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
-        .breadcrumbs a:hover { color: var(--accent-cyan); }
-        .breadcrumbs span { margin: 0 6px; }
-
-        /* Article header */
-        .article-header { padding: 36px 0 32px; }
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 40px; font-weight: 700; line-height: 1.15;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #fff 40%, var(--accent-cyan));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .article-lead {
-            font-size: 16px; color: var(--text-secondary);
-            line-height: 1.85; border-left: 3px solid var(--accent-cyan);
-            padding-left: 18px; margin-bottom: 28px;
-        }
-
-        /* Quick answer */
-        .quick-answer {
-            background: rgba(77,212,255,0.06);
-            border: 1px solid rgba(77,212,255,0.2);
-            border-radius: 14px;
-            padding: 20px 24px;
-            margin-bottom: 48px;
-        }
-        .qa-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10px; font-weight: 700; letter-spacing: 1px;
-            text-transform: uppercase; color: var(--accent-cyan);
-            margin-bottom: 12px;
-        }
-        .qa-list { list-style: none; }
-        .qa-list li {
-            font-size: 14px; color: rgba(255,255,255,0.8);
-            padding: 5px 0; padding-left: 18px; position: relative;
-        }
-        .qa-list li::before {
-            content: '→'; position: absolute; left: 0;
-            color: var(--accent-cyan); font-size: 12px;
-        }
-
-        /* Content sections */
-        .content-section { margin-bottom: 52px; scroll-margin-top: 88px; }
-
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px; font-weight: 700;
-            margin-bottom: 18px; line-height: 1.3;
-        }
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px; font-weight: 600;
-            margin: 24px 0 12px; color: rgba(255,255,255,0.85);
-        }
-        p { font-size: 15px; color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 16px; }
-        p:last-child { margin-bottom: 0; }
-
-        /* Formula block */
-        .formula-block {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 20px 0;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .formula-main {
-            font-size: 17px; font-weight: 700;
-            color: var(--accent-cyan);
-            margin-bottom: 12px;
-        }
-        .formula-vars { list-style: none; }
-        .formula-vars li {
-            font-size: 13px; color: rgba(255,255,255,0.55);
-            padding: 3px 0;
-        }
-        .formula-vars li strong { color: rgba(255,255,255,0.8); }
-
-        /* Tables */
-        .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: 12px; }
-        table {
-            width: 100%; border-collapse: collapse;
-            font-size: 14px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 12px; overflow: hidden;
-        }
-        thead th {
-            background: rgba(77,212,255,0.08);
-            padding: 12px 16px;
-            text-align: left;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600; font-size: 12px;
-            color: rgba(255,255,255,0.7);
-            white-space: nowrap;
-        }
-        tbody td {
-            padding: 11px 16px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            color: rgba(255,255,255,0.7);
-        }
-        tbody tr:hover td { background: rgba(255,255,255,0.02); }
-        td.highlight { color: var(--accent-cyan); font-weight: 600; }
-        td.warn { color: var(--accent-orange); }
-        td.danger { color: var(--accent-pink); }
-
-        /* Calculator */
-        .calc-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(77,212,255,0.2);
-            border-radius: 16px;
-            padding: 28px;
-            margin-top: 4px;
-        }
-        .calc-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-        .calc-field label {
-            display: block;
-            font-size: 12px; font-family: 'Montserrat', sans-serif;
-            font-weight: 600; letter-spacing: 0.4px;
-            color: rgba(255,255,255,0.45);
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .calc-field select,
-        .calc-field input[type="number"] {
-            width: 100%;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-family: 'Jost', sans-serif;
-            font-size: 15px;
-            color: #fff;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .calc-field select option { background: #1a2035; }
-        .calc-field select:focus,
-        .calc-field input[type="number"]:focus {
-            border-color: var(--accent-cyan);
-        }
-        .calc-gender { display: flex; gap: 12px; }
-        .gender-btn {
-            flex: 1; padding: 10px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 8px;
-            font-family: 'Jost', sans-serif; font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            cursor: pointer; text-align: center;
-            transition: all 0.2s;
-        }
-        .gender-btn.active {
-            background: rgba(77,212,255,0.12);
-            border-color: rgba(77,212,255,0.4);
-            color: var(--accent-cyan);
-        }
-        .btn-calc {
-            width: 100%; padding: 13px;
-            background: rgba(77,212,255,0.12);
-            border: 1px solid rgba(77,212,255,0.35);
-            border-radius: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700; font-size: 14px;
-            color: var(--accent-cyan);
-            cursor: pointer;
-            transition: background 0.2s;
-            letter-spacing: 0.3px;
-        }
-        .btn-calc:hover { background: rgba(77,212,255,0.2); }
-        .calc-result {
-            display: none;
-            margin-top: 20px;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-        .calc-result.visible { display: grid; }
-        .result-cell {
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            padding: 14px 12px;
-            text-align: center;
-        }
-        .result-label {
-            font-size: 11px; font-family: 'Montserrat', sans-serif;
-            font-weight: 600; letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.35);
-            margin-bottom: 6px;
-        }
-        .result-value {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px; font-weight: 700;
-            color: var(--accent-cyan);
-        }
-        .calc-note {
-            font-size: 12px; color: rgba(255,255,255,0.35);
-            margin-top: 14px; line-height: 1.6;
-        }
-        .bac-bar-wrap { margin-top: 16px; }
-        .bac-bar-label { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
-        .bac-bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
-        .bac-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
-
-        /* Note / aside */
-        .aside-note {
-            background: rgba(255,255,255,0.04);
-            border-left: 3px solid rgba(255,159,77,0.5);
-            border-radius: 0 10px 10px 0;
-            padding: 14px 18px;
-            margin: 20px 0;
-            font-size: 14px; color: rgba(255,255,255,0.6);
-            line-height: 1.7;
-        }
-
-        /* FAQ */
-        .faq-list { display: flex; flex-direction: column; gap: 2px; }
-        details {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px; overflow: hidden;
-            transition: border-color 0.2s;
-        }
-        details[open] { border-color: rgba(77,212,255,0.3); }
-        summary {
-            padding: 18px 22px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px; font-weight: 600;
-            cursor: pointer; list-style: none;
-            display: flex; justify-content: space-between; align-items: center; gap: 16px;
-        }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: '+'; font-size: 20px; color: var(--accent-cyan); flex-shrink: 0; transition: transform 0.2s; }
-        details[open] summary::after { transform: rotate(45deg); }
-        .faq-answer { padding: 0 22px 18px; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.8; }
-
-        /* CTA */
-
-        /* Related */
-        .related-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700; font-size: 11px; letter-spacing: 0.8px;
-            text-transform: uppercase; color: rgba(255,255,255,0.35);
-            margin-bottom: 16px;
-        }
-        .related-list { list-style: none; }
-        .related-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: baseline; gap: 12px; }
-        .related-list li:last-child { border-bottom: none; }
-        .related-list a { font-size: 14px; color: var(--accent-cyan); text-decoration: none; transition: opacity 0.2s; }
-        .related-list a:hover { opacity: 0.75; text-decoration: underline; }
-        .related-list span { font-size: 12px; color: rgba(255,255,255,0.3); }
-
-        /* Footer */
-        .footer { position: relative; z-index: 10; border-top: 1px solid var(--glass-border); background: rgba(5,13,26,0.8); }
-        .footer-inner { max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
-        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
-        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { font-size: 12px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
-        .footer-links a:hover { color: var(--accent-cyan); }
-
-        /* Mobile */
-        @media (max-width: 900px) {
-            .page-wrapper { grid-template-columns: 1fr; }
-            .sidebar { display: none; }
-        }
-        @media (max-width: 640px) {
-            h1 { font-size: 28px; }
-            h2 { font-size: 19px; }
-            .calc-grid { grid-template-columns: 1fr; }
-            .calc-result { grid-template-columns: repeat(2, 1fr); }
-        }
-    </style>
 </head>
 <body>
 
@@ -483,7 +102,7 @@
     </div>
 </div>
 
-<div class="page-wrapper">
+<div class="page-wrap">
 <main class="article-body">
 
     <!-- Breadcrumbs -->
@@ -496,7 +115,7 @@
     </nav>
 
     <!-- Article header -->
-    <header class="article-header">
+    <header>
         <h1>Как рассчитать свою дозу алкоголя: калькулятор и таблица</h1>
         <p class="article-lead">
             ЛЧА в напитке = объём (л) × крепость (%) ÷ 100. Одна стандартная единица по российскому стандарту — 10 г спирта (0,0127 ЛЧА): это примерно 250 мл пива, 100 мл вина или 32 мл водки. Ниже — онлайн-калькулятор, таблица количества алкоголя по напиткам и таблица промилле по формуле Видмарка.
@@ -814,7 +433,7 @@
             <a href="../../skolko-mozhno-pit/">Сколько можно пить</a>
             <a href="../../kak-menshe-pit/">Как меньше пить</a>
             <a href="../../pochemu-hochetsya-alkogolya/">Почему хочется алкоголя</a>
-            <a href="../../priznaki-alkogolizma/">Признаки алкоголизма</a>
+            <a href="../../uznaki-alkogolizma/">Признаки алкоголизма</a>
         </div>
     </div>
 </footer>
