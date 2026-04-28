@@ -854,6 +854,34 @@
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(77, 212, 255, 0.6);
 }
+
+.methodology-card .cta-buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.methodology-card .cta-button-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: rgba(77, 212, 255, 0.08);
+    color: var(--accent-cyan);
+    text-decoration: none;
+    border: 1px solid rgba(77, 212, 255, 0.4);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.methodology-card .cta-button-secondary:hover {
+    background: rgba(77, 212, 255, 0.15);
+    border-color: var(--accent-cyan);
+    transform: translateY(-3px);
+}
     </style>
     <script type="application/ld+json">
 {
@@ -902,7 +930,7 @@
         <nav class="nav">
             <a href="articles/soobschestvo.html">Сообщество</a>
             <a href="articles/chto-takoe-ku.html">Принципы КУ</a>
-            <a href="http://kuforum.ru">Форум</a>
+            <a href="https://kuforum.ru">Форум</a>
             <a href="articles/testy.html">Тесты</a>
             <a href="articles/knigi/index.html">Книги</a>
             <a href="articles/stati/index.html">Статьи</a>
@@ -1036,8 +1064,11 @@
         <div class="container">
             <div class="methodology-card">
                 <h2>Программа 7 шагов КУ</h2>
-                <p>Вернуть контроль над алкоголем можно без полного отказа. Наша методика основана на научных публикациях и практическом опыте участников форума.</p>
-                <a href="articles/7-shagov-ku.html" class="cta-button">Подробнее →</a>
+                <p>Вернуть контроль над алкоголем можно без полного отказа. Наша методика основана на научных публикациях и практическом опыте участников форума. Если нет времени читать целиком — есть краткая версия за 3 минуты.</p>
+                <div class="cta-buttons">
+                    <a href="articles/7-shagov-ku.html" class="cta-button">Подробнее →</a>
+                    <a href="articles/7-shagov-ku-za-3-minuty.html" class="cta-button-secondary">Кратко за 3 минуты</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1093,7 +1124,7 @@
                     </div>
                 </div>
                 <div class="situation-card" data-href="articles/alkogol-na-korporative.html" style="cursor:pointer;">
-                    <img src="pic/korporat2.png" alt="Алкоголь на корпоративе">
+                    <img src="pic/korporat2.jpg" alt="Алкоголь на корпоративе">
                     <div class="situation-overlay">
                         <h4>Алкоголь на корпоративе</h4>
                     </div>
@@ -1113,7 +1144,7 @@
         <div class="container">
             <div class="bottom-section">
                 <a href="articles/kniga-ku.html" class="book-card" style="text-decoration: none; display: block; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(77,212,255,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
-    <img src="pic/book.png" alt="На краю Синей Бездны" style="display:block;width:100%;">
+    <img src="pic/book.webp" alt="На краю Синей Бездны" style="display:block;width:100%;">
     <div style="padding: 20px 24px 28px; text-align: center;">
         <div style="font-family:'Montserrat',sans-serif; font-size:16px; font-weight:600; color:#ffffff; margin-bottom:8px; line-height:1.4;">Узнай, как вернуть контроль над своей жизнью</div>
         <div style="font-size:13px; color:rgba(255,255,255,0.5); margin-bottom:20px; letter-spacing:0.5px; text-transform:uppercase;">На краю Синей Бездны</div>

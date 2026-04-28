@@ -1,8 +1,13 @@
+# Кодировка UTF-8
+AddDefaultCharset UTF-8
+AddType "text/html; charset=utf-8" .html
+
 # Отключить кеш для HTML
 <FilesMatch "\.html$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
     Header set Pragma "no-cache"
     Header set Expires 0
+    Header set Content-Type "text/html; charset=utf-8"
 </FilesMatch>
 
 RewriteEngine On
@@ -10,6 +15,9 @@ RewriteEngine On
 # 301 redirect www -> non-www
 RewriteCond %{HTTP_HOST} ^www\.alkonorm\.ru$ [NC]
 RewriteRule ^(.*)$ https://alkonorm.ru/$1 [R=301,L]
+
+# 301 redirect /index.html -> directory (убрать дубли)
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
 
 # 301 redirects: .html -> canonical directory versions
 Redirect 301 /articles/kak-menshe-pit.html https://alkonorm.ru/articles/kak-menshe-pit/
@@ -19,3 +27,5 @@ Redirect 301 /articles/kak-menshe-pit/kak-ne-napitsya.html https://alkonorm.ru/a
 Redirect 301 /articles/pochemu-hochetsya-pit.html https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html
 Redirect 301 /articles/alkogol-v-kompanii.html https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-kompanii.html
 Redirect 301 /articles/skolko-mozno-pit.html https://alkonorm.ru/articles/skolko-mozhno-pit/
+Redirect 301 /articles/uznaki-alkogolizma https://alkonorm.ru/articles/priznak-alkogolizma
+Redirect 301 /articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-piva https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-piva-vecherom

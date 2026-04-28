@@ -24,6 +24,16 @@
     <link rel="canonical" href="https://alkonorm.ru/articles/test-plan-ku.html">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/article.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Главная","item":"https://alkonorm.ru/"},
+        {"@type":"ListItem","position":2,"name":"Тест: полнота плана КУ","item":"https://alkonorm.ru/articles/test-plan-ku.html"}
+      ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -135,7 +145,8 @@
 
         /* Progress */
         .progress-wrap { margin-bottom: 32px; }
-        .progress-        .progress-label { font-size: 13px; color: rgba(255,255,255,0.45); }
+        .progress-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .progress-label { font-size: 13px; color: rgba(255,255,255,0.45); }
         .progress-count { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent-cyan); }
         .progress-bar { height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
         .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-green)); border-radius: 2px; transition: width 0.4s ease; }
@@ -315,7 +326,7 @@
         <nav class="nav">
             <a href="../articles/soobschestvo.html">Сообщество</a>
             <a href="../articles/chto-takoe-ku.html">Принципы КУ</a>
-            <a href="http://kuforum.ru" target="_blank" rel="noopener">Форум</a>
+            <a href="https://kuforum.ru" target="_blank" rel="noopener">Форум</a>
             <a href="../articles/testy.html">Тесты</a>
             <a href="../articles/knigi/index.html">Книги</a>
             <a href="../articles/stati/index.html">Статьи</a>
@@ -340,6 +351,30 @@
     <p class="article-lead">
         Авторский скрининг-тест по оценке полноты и учёта личных особенностей при выполнении <a href="strategiya-ku.html">Шага 3</a>. Оцените свой план КУ по 12 вопросам и получите анализ слабых мест.
     </p>
+
+    <section style="margin-bottom: 40px;">
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:16px;">Что оценивает тест</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,0.72);line-height:1.85;margin-bottom:14px;">
+            Тест проверяет 12 ключевых элементов плана КУ: стратегическую часть с проверяемыми правилами (вопросы 1–2), типы мероприятий и календарный план с талонами (вопросы 3–5), учёт личных триггеров и контуров зависимости (вопросы 6–7), психологическую защиту внутри эпизода (вопросы 8–9), тактику под конкретные ситуации (вопрос 10), подготовку ресурсов (вопрос 11) и механизм регулярного учёта и ревизии (вопрос 12).
+        </p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.72);line-height:1.85;margin-bottom:14px;">
+            Оценивайте реальный документ или конкретные зафиксированные правила — не намерения. Именно разрыв между намерением и записанным правилом чаще всего становится причиной сбоев в КУ.
+        </p>
+
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:16px;margin-top:32px;">Как интерпретировать результат</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,0.72);line-height:1.85;margin-bottom:10px;">
+            <strong style="color:#fff;">0–12 баллов</strong> — план фрагментарный, больше похож на намерения. Приоритет: зафиксировать лимиты в ЛЧА, типы эпизодов и хотя бы один запрет для высокорисковых ситуаций.
+        </p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.72);line-height:1.85;margin-bottom:10px;">
+            <strong style="color:#fff;">13–24 балла</strong> — план рабочий, но хрупкий. Есть элементы системы, но пробелы в триггерах и тактике создают точки импровизации.
+        </p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.72);line-height:1.85;margin-bottom:10px;">
+            <strong style="color:#fff;">25–32 балла</strong> — план в целом системный. Потребует обкатки: собрать данные за 4–6 недель и скорректировать тактику по реальным сбоям.
+        </p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.72);line-height:1.85;">
+            <strong style="color:#fff;">33–36 баллов</strong> — план близок к идеалу. Описывает границы, допуск, тактику и механизмы корректировки. Удерживать дисциплину учёта и проводить регулярные ревизии.
+        </p>
+    </section>
 
     <div class="instruction">
         <div class="instruction-title">Как проходить</div>
@@ -413,14 +448,19 @@
         <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-primary">Перейти на форум →</a>
     </div>
 
-    <div class="cta-block">
-        <p>Обсудить план, задать вопрос или получить обратную связь от сообщества — на форуме КУ.</p>
-        <a href="https://kuforum.ru" target="_blank" rel="noopener" class="btn-ku">Перейти на kuforum.ru →</a>
-    </div>
-
     <div class="footnote">
         Авторский скрининг-тест по оценке Шага 3 программы КУ. Не является клиническим инструментом. Оценивайте реальный документ или конкретные правила — не намерения.
     </div>
+
+    <section style="margin-top:52px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.07);">
+        <div style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:16px;">Читать также</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;">
+            <li><a href="7-shagov-ku.html" style="color:rgba(77,212,255,0.85);text-decoration:none;font-size:14px;">7 шагов контролируемого употребления</a><span style="color:rgba(255,255,255,0.35);font-size:13px;display:block;margin-top:2px;">Пошаговый план от постановки целей до ревизии</span></li>
+            <li><a href="kalendarnyy-plan-lcha.html" style="color:rgba(77,212,255,0.85);text-decoration:none;font-size:14px;">Календарный план ЛЧА</a><span style="color:rgba(255,255,255,0.35);font-size:13px;display:block;margin-top:2px;">Как вести учёт эпизодов и планировать талоны на месяц</span></li>
+            <li><a href="test-veroyatnost-ku.html" style="color:rgba(77,212,255,0.85);text-decoration:none;font-size:14px;">Тест: вероятность успешного КУ</a><span style="color:rgba(255,255,255,0.35);font-size:13px;display:block;margin-top:2px;">20 вопросов для оценки стартовой позиции перед началом КУ</span></li>
+            <li><a href="analiz-uspeshnosti-plana.html" style="color:rgba(77,212,255,0.85);text-decoration:none;font-size:14px;">Анализ успешности плана КУ</a><span style="color:rgba(255,255,255,0.35);font-size:13px;display:block;margin-top:2px;">Как проводить месячную ревизию и корректировать план</span></li>
+        </ul>
+    </section>
 </main>
 
 <script>
