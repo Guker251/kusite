@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+Disallow: /articles/faq/
+Disallow: /articles/karta-sayta/
+Disallow: /articles/knigi/
+Disallow: /articles/stati/
+
 Sitemap: https://alkonorm.ru/sitemap.xml

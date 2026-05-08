@@ -4,7 +4,7 @@
   <!-- Главная -->
   <url>
     <loc>https://alkonorm.ru/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://alkonorm.ru/articles/kak-menshe-pit/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,8 +29,8 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -184,7 +184,7 @@
   </url>
   <url>
     <loc>https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-prazdniki/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -278,12 +278,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-kompanii.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <!-- Хаб: Почему хочется алкоголя -->
   <url>
@@ -330,7 +324,7 @@
   </url>
   <url>
     <loc>https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pyu-ot-stressa/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -358,126 +352,138 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
   <!-- Хаб: Признаки алкоголизма -->
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/alkogolik-ili-pyyanitsa/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/alkogolik-ili-pyyanitsa/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/alkogolnaya-intoksikatsiya/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/alkogolnaya-intoksikatsiya/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/alkogolnaya-zavisimost/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/alkogolnaya-zavisimost/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/brosit-pit/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/brosit-pit/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/kak-ne-spitsya/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/kak-izbavitsya-ot-pokhmele/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/kak-snyat-pokhmelye/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/kak-ne-spitsya/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/pivnoy-alkogolizm/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/kak-snyat-pokhmelye/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/pokhmelye/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/pivnoy-alkogolizm/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/priznaki-alkogolizma/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/pokhmelye/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/provaly-pamyati/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/priznanki-alkogolizma/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/slabost-posle-alkogolya/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/provaly-pamyati/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/toshnit-posle-alkogolya/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/rand-issledovanie-alkogolizm/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/vyvedenie-alkogolya/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/silnoe-pokhmele/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/zhenskiy-alkogolizm/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/slabost-posle-alkogolya/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/uznaki-alkogolizma/test-audit.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/toshnit-posle-alkogolya/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/vyvedenie-alkogolya/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://alkonorm.ru/articles/priznanki-alkogolizma/zhenskiy-alkogolizm/</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Контент-статьи в корне /articles/ -->
+  <!-- Контент-статьи -->
   <url>
-    <loc>https://alkonorm.ru/articles/chto-takoe-ku.html</loc>
+    <loc>https://alkonorm.ru/articles/7-shagov-ku-za-3-minuty.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alkonorm.ru/articles/alkogol-v-otpuske.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alkonorm.ru/articles/cherez-skolko-mozhno-pit.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://alkonorm.ru/articles/alkogol-na-korporative.html</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://alkonorm.ru/articles/7-shagov-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/kniga-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/soobschestvo.html</loc>
+    <loc>https://alkonorm.ru/articles/alkogol-v-prazdniki.html</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -493,256 +499,6 @@
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/cherez-skolko-mozhno-pit.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/alkogol-v-prazdniki.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/alkogol-na-korporative.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/alkogol-v-otpuske.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/nastroy-podschet-lcha.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/kalendarnyy-plan-lcha.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Тесты -->
-  <url>
-    <loc>https://alkonorm.ru/articles/testy.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/test-audit.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/test-gotovnost-k-izmeneniyam.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/test-plan-ku.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/test-veroyatnost-ku.html</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Методология КУ -->
-  <url>
-    <loc>https://alkonorm.ru/articles/strategiya-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/shag-1-zhelanie-izmenit-zhizn.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/taktika-upotrebleniya.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/shablony-upotrebleniya.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/triggery-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/znachimye-i-vrednye-shablony.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/tablitsa-ucheta-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/uchet-epizodov-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/analiz-mesyatsa-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/analiz-uspeshnosti-plana.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/analiz-narusheniy-strategii.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/korrektsiya-strategii-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/korrektsiyu-taktiki-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/reviziya-shablonov-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/reviziya-taktiki-znachimykh.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/resursy-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/podgotovka-resursov-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/matrica-resheniy-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/pamyat-o-strategii-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/distsiplina-ucheta-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/ogranicheniya-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/priznaki-oslableniya-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/sovershenstvovanie-sistemy-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/kontury-zavisimosti.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/sila-zavisimosti-mkb-11.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/reshenie-o-trezvosti.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/gotovnost-k-usiliyam.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/zhelanie-menyatsya.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/esli-net-zhelaniya-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://alkonorm.ru/articles/chto-izmenit-ku.html</loc>
-    <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
 </urlset>
