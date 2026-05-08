@@ -1,10 +1,26 @@
 # Реестр малоценных страниц alkonorm.ru
 
-Обновлён: 2026-05-06  
-Всего: 79 | todo: 0 | done: 31 | indexed: 0 | skip: 51  
+Обновлён: 2026-05-08  
+Всего: 94 | todo: 0 | done: 42 | indexed: 0 | skip: 52  
 
 | url | category | status | found | notes |
 |---|---|---|---|---|
+| https://alkonorm.ru/articles/priznaki-alkogolizma/ | content | done | 2026-05-08 | Sitemap priznanki исправлен (8 букв), .htaccess redirect uznaki→priznanki исправлен; переобход запрошен |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/alkogolnaya-intoksikatsiya/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/alkogolnaya-zavisimost/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/brosit-pit/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/kak-izbavitsya-ot-pokhmele/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/kak-ne-spitsya/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/kak-snyat-pokhmelye/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/pokhmelye/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/priznaki-alkogolizma/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/provaly-pamyati/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/rand-issledovanie-alkogolizm/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/silnoe-pokhmele/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/toshnit-posle-alkogolya/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/vyvedenie-alkogolya/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/zhenskiy-alkogolizm/ | content | done | 2026-05-08 | title=H1 OK; canonical OK; ссылки OK; sitemap+.htaccess исправлены |
+| https://alkonorm.ru/articles/test-audit.html | content | done | 2026-05-08 | title выровнен с H1; добавлены og:url/og:title/BreadcrumbList; ссылки на priznanki; задеплоен
 | https://alkonorm.ru/ | content | done | 2026-05-06 | H1 выровнен с title: «Контролируемое употребление алкоголя — как меньше пить без отказа» |
 | https://alkonorm.ru/articles/7-shagov-ku-za-3-minuty.html | content | done | 2026-05-06 | Добавлены ссылки на хабы: skolko-mozhno-pit, pochemu-hochetsya-alkogolya |
 | https://alkonorm.ru/articles/alkogol-v-otpuske.html | content | done | 2026-05-06 | title выровнен с H1: «сколько можно пить» |
@@ -25,14 +41,13 @@
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/statistika-upotrebleniya-alkogolya/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/vidy-alkogolnykh-napitkov/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/vliyanie-alkogolya-na-cheloveka/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
-| https://alkonorm.ru/articles/priznanki-alkogolizma/ | content | done | 2026-05-06 | title выровнен с H1, задеплоена впервые, 19 страниц |
 | https://alkonorm.ru/articles/priznaki-alkogolizma/pivnoy-alkogolizm/ | content | done | 2026-05-06 | title выровнен с H1, задеплоена в составе раздела priznanki-alkogolizma |
 | https://alkonorm.ru/articles/priznaki-alkogolizma/slabost-posle-alkogolya/ | content | done | 2026-05-06 | title выровнен с H1, задеплоена в составе раздела priznanki-alkogolizma |
 | https://alkonorm.ru/articles/priznaki-alkogolizma/test-audit.html | content | done | 2026-05-06 | title выровнен с H1, задеплоена в составе раздела priznanki-alkogolizma |
-| https://alkonorm.ru/articles/priznanki-alkogolizma/ | content | skip | 2026-05-06 | URL с опечаткой (priznanki), не существует, источник 404 устранён |
 | https://alkonorm.ru/articles/skolko-mozhno-pit/ | content | done | 2026-05-06 | H1 усилен: «нормы для мужчин и женщин» |
 | https://alkonorm.ru/articles/uznaki-alkogolizma/kak-ne-spitsya/ | content | done | 2026-05-06 | priznanki URL исправлен в og:url/BreadcrumbList |
 | https://alkonorm.ru/articles/uznaki-alkogolizma/provaly-pamyati/ | content | done | 2026-05-06 | priznanki URL исправлен в og:url/BreadcrumbList |
+| https://alkonorm.ru/articles/priznanki-alkogolizma/ | content | skip | 2026-05-06 | URL с опечаткой (priznanki), не существует, источник 404 устранён |
 | https://alkonorm.ru/articles/ | forbidden | skip | 2026-05-06 | 403 — закрыта от индексации |
 | https://alkonorm.ru/articles/faq/index.html | duplicate | skip | 2026-05-06 | Дубль — index.html или .html-версия директории |
 | https://alkonorm.ru/articles/kak-menshe-pit/index.html | duplicate | skip | 2026-05-06 | Дубль — index.html или .html-версия директории |
