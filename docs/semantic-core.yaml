@@ -697,6 +697,9 @@ hubs:
         - query: держусь не пью
           frequency: 565
           relevance: частично
+        - query: тест на алкоголизм
+          frequency: 3412
+          relevance: полностью
         - query: тест AUDIT
           frequency: 527
           relevance: частично

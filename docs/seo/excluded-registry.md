@@ -1,78 +1,57 @@
 # Реестр малоценных страниц alkonorm.ru
 
-Обновлён: 2026-05-10  
-Всего: 169 | todo: 50 | done: 56 | indexed: 0 | skip: 63  
+Обновлён: 2026-05-11  
+Всего: 170 | todo: 0 | done: 106 | indexed: 0 | skip: 64  
 
 | url | category | status | found | notes |
 |---|---|---|---|---|
+| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-beremennost/ | content | done | 2026-05-11 | title/H1 переориентированы на «ранние сроки» (144/мес), дифференцированы от дубля в skolko-mozhno-pit |
+| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-semya/ | content | done | 2026-05-11 | добавлены 2 контекстные ссылки в тело статьи |
+| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/kak-zhit-s-pyushchim/ | content | done | 2026-05-11 | добавлены 2 контекстные ссылки в тело статьи |
+| https://alkonorm.ru/articles/priznaki-alkogolizma/priznanki-alkogolizma/ | content | skip | 2026-05-11 | URL с опечаткой (priznanki→priznanki), 301 на /priznanki-alkogolizma/priznanki-alkogolizma/ — уже done |
+| https://alkonorm.ru/articles/shag-1-zhelanie-izmenit-zhizn.html | content | done | 2026-05-11 | добавлены canonical+og-теги в head, H1 выровнен с title |
+| https://alkonorm.ru/articles/sila-zavisimosti-mkb-11.html | content | done | 2026-05-11 | добавлены canonical+og-теги в head, title и H1 переформулированы под запрос, дубль canonical удалён |
+| https://alkonorm.ru/ | content | done | 2026-05-06 | H1 выровнен с title: «Контролируемое употребление алкоголя — как меньше пить без отказа» |
+| https://alkonorm.ru/articles/7-shagov-ku-za-3-minuty.html | content | done | 2026-05-06 | Добавлены ссылки на хабы: skolko-mozhno-pit, pochemu-hochetsya-alkogolya |
 | https://alkonorm.ru/articles/alkogol-na-korporative.html | content | done | 2026-05-10 | canonical+og+BreadcrumbList в порядке, title/H1/первый абзац — ок |
+| https://alkonorm.ru/articles/alkogol-v-otpuske.html | content | done | 2026-05-06 | title выровнен с H1: «сколько можно пить» |
 | https://alkonorm.ru/articles/alkogol-v-prazdniki.html | content | done | 2026-05-10 | canonical+og+BreadcrumbList в порядке, title/H1/первый абзац — ок |
 | https://alkonorm.ru/articles/analiz-narusheniy-strategii.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
 | https://alkonorm.ru/articles/analiz-uspeshnosti-plana.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
+| https://alkonorm.ru/articles/cherez-skolko-mozhno-pit.html | content | done | 2026-05-06 | title выровнен с H1: добавлены «интервалы и правила» |
 | https://alkonorm.ru/articles/gotovnost-k-usiliyam.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
+| https://alkonorm.ru/articles/kak-menshe-pit/ | content | done | 2026-05-06 | H1 усилен: «алкоголь: стратегии и практические решения», вводный абзац переписан |
 | https://alkonorm.ru/articles/kak-menshe-pit/alkogol-i-rabota/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/alkogol-kak-privychka/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-kompanii.html | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
+| https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-prazdniki/ | content | done | 2026-05-06 | title выровнен с H1: добавлены «на Новый год» |
 | https://alkonorm.ru/articles/kak-menshe-pit/kak-izbavitsya-ot-privychki-pit/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/kak-menshe-pit/kak-menshe-pit/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
+| https://alkonorm.ru/articles/kak-menshe-pit/kak-ne-napitsya/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/kak-menshe-pit/kak-ne-pit-alkogol/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/kak-menshe-pit/kak-otkazatsya-v-kompanii/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/kak-menshe-pit/kak-perestat-pit-kazhdyy-vecher/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/kak-pit-i-ne-pyanet/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/kultura-pitiya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/ne-mogu-ostanovitsya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/pivo-kazhdyy-den/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/kak-menshe-pit/pokhmele-na-rabote/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/kak-menshe-pit/pyu-kazhdyy-den/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/snizhenie-potrebleniya-alkogolya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/tolerantnost-k-alkogolyu/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-menshe-pit/umerennoe-upotreblenie/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/kak-ne-napitsya.html | content | done | 2026-05-10 | canonical+og+BreadcrumbList в порядке, title/H1/первый абзац — ок |
 | https://alkonorm.ru/articles/kontury-zavisimosti.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
-| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-beremennost/ | content | todo | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-semya/ | content | todo | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-zhenshchiny/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/kak-zhit-s-pyushchim/ | content | todo | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-piva-vecherom/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/stress-i-alkogol/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/reshenie-o-trezvosti.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
-| https://alkonorm.ru/articles/reviziya-taktiki-znachimykh.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
-| https://alkonorm.ru/articles/shag-1-zhelanie-izmenit-zhizn.html | content | todo | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/sila-zavisimosti-mkb-11.html | content | todo | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-alkogolya.html | content | done | 2026-05-10 | canonical+og+BreadcrumbList в порядке, title/H1/первый абзац — ок |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-beremennost/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-davlenie/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-lekarstva/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-pechen/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-son/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-sport/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogolnaya-depressiya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogolnoe-opyanenie/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/cherez-skolko-mozhno-pit/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/dopustimaya-norma-alkogolya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/individualnaya-norma-alkogolya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/kak-pit-bez-vreda/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/kak-rasschitat-dozu/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/kalkulator-opyaneniya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/mozhno-li-pit/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/norma-alkogolya-dlya-pozhilykh/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/norma-alkogolya-za-rulem/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/skolko-mozhno-pit/skolko-pyut-rossiyane/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
-| https://alkonorm.ru/articles/taktika-upotrebleniya.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
-| https://alkonorm.ru/ | content | done | 2026-05-06 | H1 выровнен с title: «Контролируемое употребление алкоголя — как меньше пить без отказа» |
-| https://alkonorm.ru/articles/7-shagov-ku-za-3-minuty.html | content | done | 2026-05-06 | Добавлены ссылки на хабы: skolko-mozhno-pit, pochemu-hochetsya-alkogolya |
-| https://alkonorm.ru/articles/alkogol-v-otpuske.html | content | done | 2026-05-06 | title выровнен с H1: «сколько можно пить» |
-| https://alkonorm.ru/articles/cherez-skolko-mozhno-pit.html | content | done | 2026-05-06 | title выровнен с H1: добавлены «интервалы и правила» |
-| https://alkonorm.ru/articles/kak-menshe-pit/ | content | done | 2026-05-06 | H1 усилен: «алкоголь: стратегии и практические решения», вводный абзац переписан |
-| https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-kompanii.html | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
-| https://alkonorm.ru/articles/kak-menshe-pit/alkogol-v-prazdniki/ | content | done | 2026-05-06 | title выровнен с H1: добавлены «на Новый год» |
-| https://alkonorm.ru/articles/kak-menshe-pit/kak-menshe-pit/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
-| https://alkonorm.ru/articles/kak-menshe-pit/kak-ne-napitsya/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
-| https://alkonorm.ru/articles/kak-menshe-pit/kak-otkazatsya-v-kompanii/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
-| https://alkonorm.ru/articles/kak-menshe-pit/pokhmele-na-rabote/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/ | content | done | 2026-05-06 | title=H1, вводный абзац отвечает на запрос |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-trevoga/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
+| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/alkogol-i-zhenshchiny/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-pit.html | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
+| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-hochetsya-piva-vecherom/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pochemu-lyudi-pyut/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/prichiny-upotrebleniya/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/pyu-ot-stressa/ | content | done | 2026-05-06 | title выровнен с H1: «почему это не помогает и что делать вместо» |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/statistika-upotrebleniya-alkogolya/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
+| https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/stress-i-alkogol/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/vidy-alkogolnykh-napitkov/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/pochemu-hochetsya-alkogolya/vliyanie-alkogolya-na-cheloveka/ | content | done | 2026-05-06 | title=H1, перелинковка в порядке |
 | https://alkonorm.ru/articles/priznaki-alkogolizma/ | content | done | 2026-05-08 | Sitemap priznanki исправлен (8 букв), .htaccess redirect uznaki→priznanki исправлен; переобход запрошен |
@@ -107,7 +86,29 @@
 | https://alkonorm.ru/articles/priznanki-alkogolizma/toshnit-posle-alkogolya/ | content | done | 2026-05-09 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/priznanki-alkogolizma/vyvedenie-alkogolya/ | content | done | 2026-05-09 | Контентная страница — требует SEO-проверки |
 | https://alkonorm.ru/articles/priznanki-alkogolizma/zhenskiy-alkogolizm/ | content | done | 2026-05-09 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/reshenie-o-trezvosti.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
+| https://alkonorm.ru/articles/reviziya-taktiki-znachimykh.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
+| https://alkonorm.ru/articles/skolko-mozhno-alkogolya.html | content | done | 2026-05-10 | canonical+og+BreadcrumbList в порядке, title/H1/первый абзац — ок |
 | https://alkonorm.ru/articles/skolko-mozhno-pit/ | content | done | 2026-05-06 | H1 усилен: «нормы для мужчин и женщин» |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-beremennost/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-davlenie/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-lekarstva/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-pechen/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-son/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogol-i-sport/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogolnaya-depressiya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/alkogolnoe-opyanenie/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/cherez-skolko-mozhno-pit/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/dopustimaya-norma-alkogolya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/individualnaya-norma-alkogolya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/kak-pit-bez-vreda/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/kak-rasschitat-dozu/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/kalkulator-opyaneniya/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/mozhno-li-pit/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/norma-alkogolya-dlya-pozhilykh/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/norma-alkogolya-za-rulem/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/skolko-mozhno-pit/skolko-pyut-rossiyane/ | content | done | 2026-05-10 | Контентная страница — требует SEO-проверки |
+| https://alkonorm.ru/articles/taktika-upotrebleniya.html | content | done | 2026-05-10 | добавлены og-теги и BreadcrumbList+Article JSON-LD |
 | https://alkonorm.ru/articles/test-audit.html | content | done | 2026-05-08 | title выровнен с H1; добавлены og:url/og:title/BreadcrumbList; ссылки на priznanki; задеплоен |
 | https://alkonorm.ru/articles/uznaki-alkogolizma/kak-ne-spitsya/ | content | done | 2026-05-06 | priznanki URL исправлен в og:url/BreadcrumbList |
 | https://alkonorm.ru/articles/uznaki-alkogolizma/provaly-pamyati/ | content | done | 2026-05-06 | priznanki URL исправлен в og:url/BreadcrumbList |
